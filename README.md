@@ -1,3 +1,7 @@
+Domain: valuechainhackers.xyz
+
+python3 start_services.py --profile cpu --environment public
+
 # Ultimate-OpenWebUI
 Uber WebUi Implementation
 bsolutely. I did a deep pass across Open WebUI’s docs + community guides and pulled everything together into a single, “no-compromises” blueprint that puts Open WebUI at the center and lights up essentially every major capability.
