@@ -1,0 +1,43 @@
+# dynamic/openwebui.yml
+# Traefik file-provider config for the **basic** OpenWebUI compose (port 3000 on the host)
+
+http:
+  routers:
+    openwebui-router:
+      rule: "Host(`openwebui.valuechainhackers.xyz`)"
+      entryPoints:
+        - websecure
+      service: openwebui-service
+      tls:
+        certResolver: letsencrypt
+      # middlewares:
+      #   - openwebui-secure-headers
+
+  services:
+    openwebui-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.8.42:3000"  # <-- change to your OpenWebUI host:port if different
+        passHostHeader: true
+        healthCheck:
+          path: "/api/health"
+          interval: "10s"
+          timeout: "3s"
+      serversTransport: openwebui-transport
+
+  serversTransports:
+    openwebui-transport:
+      forwardingTimeouts:
+        dialTimeout: 10s
+        responseHeaderTimeout: 10s
+        idleConnTimeout: 180s
+
+  # Optional hardening (uncomment if desired)
+  # middlewares:
+  #   openwebui-secure-headers:
+  #     headers:
+  #       frameDeny: true
+  #       contentTypeNosniff: true
+  #       browserXssFilter: true
+  #       customRequestHeaders:
+  #         X-Forwarded-Proto: "https"

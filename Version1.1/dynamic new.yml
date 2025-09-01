@@ -1,0 +1,127 @@
+# dynamic/services.yml
+# Traefik file-provider config routing distinct subdomains to ONE host (10.0.8.42).
+# Fixed: mcpo now points to its default 8000 HTTP port.
+
+http:
+  routers:
+    openwebui-router:
+      rule: "Host(`openwebui.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: openwebui-service
+      tls: { certResolver: letsencrypt }
+
+    ollama-router:
+      rule: "Host(`ollama.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: ollama-service
+      tls: { certResolver: letsencrypt }
+
+    pipelines-router:
+      rule: "Host(`pipelines.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: pipelines-service
+      tls: { certResolver: letsencrypt }
+
+    qdrant-router:
+      rule: "Host(`qdrant.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: qdrant-service
+      tls: { certResolver: letsencrypt }
+
+    searxng-router:
+      rule: "Host(`searxng.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: searxng-service
+      tls: { certResolver: letsencrypt }
+
+    comfyui-router:
+      rule: "Host(`comfyui.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: comfyui-service
+      tls: { certResolver: letsencrypt }
+
+    kokoro-router:
+      rule: "Host(`kokoro.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: kokoro-service
+      tls: { certResolver: letsencrypt }
+
+    litellm-router:
+      rule: "Host(`litellm.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: litellm-service
+      tls: { certResolver: letsencrypt }
+
+    mcpo-router:
+      rule: "Host(`mcpo.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: mcpo-service
+      tls: { certResolver: letsencrypt }
+
+    langfuse-router:
+      rule: "Host(`langfuse.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: langfuse-service
+      tls: { certResolver: letsencrypt }
+
+    jupyter-router:
+      rule: "Host(`jupyter.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: jupyter-service
+      tls: { certResolver: letsencrypt }
+
+  services:
+    openwebui-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:8080" }]
+        passHostHeader: true
+
+    ollama-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:11434" }]
+        passHostHeader: true
+
+    pipelines-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:9099" }]
+        passHostHeader: true
+
+    qdrant-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:6333" }]
+        passHostHeader: true
+
+    searxng-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:8081" }]
+        passHostHeader: true
+
+    comfyui-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:8188" }]
+        passHostHeader: true
+
+    kokoro-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:8880" }]
+        passHostHeader: true
+
+    litellm-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:4000" }]
+        passHostHeader: true
+
+    mcpo-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:8000" }]  # mcpo default HTTP port
+        passHostHeader: true
+
+    langfuse-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:3001" }]
+        passHostHeader: true
+
+    jupyter-service:
+      loadBalancer:
+        servers: [{ url: "http://10.0.8.42:8888" }]
+        passHostHeader: true
