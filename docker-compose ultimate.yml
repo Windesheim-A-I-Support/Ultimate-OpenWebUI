@@ -3,7 +3,7 @@ version: "3.9"
 
 x-env: &default-env
   TZ: Europe/Amsterdam
-  WEBUI_URL: https://ai.example.com  # required for OAuth/SSO & some features
+  WEBUI_URL: https://team1-openwebui.valuechainhackers.xyz  # required for OAuth/SSO & some features
   ENABLE_PERSISTENT_CONFIG: "true"
 
 services:

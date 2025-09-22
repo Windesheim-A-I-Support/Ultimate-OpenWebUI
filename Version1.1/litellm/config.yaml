@@ -1,0 +1,101 @@
+# LiteLLM Configuration for Team1
+# Using only FREE models from OpenRouter + local Ollama
+
+model_list:
+  # Local Ollama Models (Free)
+  - model_name: ollama/llama3.2:3b
+    litellm_params:
+      model: ollama/llama3.2:3b-instruct-q4_0
+      api_base: http://ollama:11434
+      stream: true
+      temperature: 0.7
+
+  - model_name: ollama/phi3:mini
+    litellm_params:
+      model: ollama/phi3:mini
+      api_base: http://ollama:11434
+      stream: true
+      temperature: 0.7
+
+  - model_name: ollama/qwen2.5:0.5b
+    litellm_params:
+      model: ollama/qwen2.5:0.5b-instruct
+      api_base: http://ollama:11434
+      stream: true
+      temperature: 0.7
+
+  # OpenRouter FREE Models Only
+  - model_name: openrouter/llama-3.2-3b-instruct-free
+    litellm_params:
+      model: meta-llama/llama-3.2-3b-instruct:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY
+      stream: true
+
+  - model_name: openrouter/llama-3.2-1b-instruct-free
+    litellm_params:
+      model: meta-llama/llama-3.2-1b-instruct:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY
+      stream: true
+
+  - model_name: openrouter/gemma-2-9b-free
+    litellm_params:
+      model: google/gemma-2-9b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY
+      stream: true
+
+  - model_name: openrouter/phi-3-mini-free
+    litellm_params:
+      model: microsoft/phi-3-mini-128k-instruct:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY
+      stream: true
+
+general_settings:
+  # Default to local model for cost control
+  completion_model: ollama/llama3.2:3b
+  
+  # Rate Limiting (stricter for free models)
+  rpm: 200
+  tpm: 50000
+  
+  # Fallback to local models first
+  fallbacks: [
+    {
+      "openrouter/llama-3.2-3b-instruct-free": ["ollama/llama3.2:3b"]
+    },
+    {
+      "openrouter/gemma-2-9b-free": ["ollama/phi3:mini"]
+    }
+  ]
+  
+  # Caching (important for free models)
+  cache: true
+  cache_params:
+    type: "redis"
+    host: "redis"
+    port: 6379
+    ttl: 3600
+    
+  # Logging
+  set_verbose: false
+  json_logs: true
+  
+  # Load Balancing - prefer local first
+  routing_strategy: "simple-shuffle"
+
+# Router Settings - Conservative for free models
+router_settings:
+  enable_pre_call_checks: true
+  allowed_fails: 2
+  cooldown_time: 60
+  retry_policy: "constant_retry"
+  
+# No budget limits needed since all models are free
+litellm_settings:
+  drop_params: false
+  headers: 
+    "X-Team": "team1"
+  modify_params: true
