@@ -2,7 +2,7 @@
 http:
   routers:
     team1-openwebui-router:
-      rule: "Host(`team5-openwebui.valuechainhackers.xyz`)"
+      rule: "Host(`team1-openwebui.valuechainhackers.xyz`)"
       entryPoints: [websecure]
       service: team1-openwebui-service
       tls:
@@ -12,5 +12,5 @@ http:
     team1-openwebui-service:
       loadBalancer:
         servers:
-          - url: "http://10.0.8.44:8080"
+          - url: "http://10.0.8.40:8080"
         passHostHeader: true

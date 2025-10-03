@@ -3,7 +3,7 @@ services:
   openwebui:
     image: ghcr.io/open-webui/open-webui:main
     container_name: team1-openwebui
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "8080:8080"
     extra_hosts:
@@ -12,7 +12,7 @@ services:
       # Core Configuration
       WEBUI_URL: https://team1-openwebui.valuechainhackers.xyz
       WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY}
-      ENABLE_SIGNUP: "false"
+      ENABLE_SIGNUP: "true"  # Temporarily enable to create first user
       DEFAULT_USER_ROLE: "admin"
       ENABLE_PERSISTENT_CONFIG: "true"
       
@@ -116,7 +116,7 @@ services:
   litellm:
     image: ghcr.io/berriai/litellm:main-latest
     container_name: team1-litellm
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "4000:4000"
     environment:
@@ -142,7 +142,7 @@ services:
   pipelines:
     image: ghcr.io/open-webui/pipelines:main
     container_name: team1-pipelines
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "9099:9099"
     environment:
@@ -166,7 +166,7 @@ services:
   clickhouse:
     image: clickhouse/clickhouse-server:23
     container_name: team1-clickhouse
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "8123:8123"   # HTTP
       - "9000:9000"   # Native
@@ -184,7 +184,7 @@ services:
   postgres:
     image: postgres:15-alpine
     container_name: team1-postgres
-    restart: unless-stopped
+    restart: on-failure:1
     environment:
       POSTGRES_DB: openwebui
       POSTGRES_USER: openwebui
@@ -201,7 +201,7 @@ services:
   ollama:
     image: ollama/ollama:latest
     container_name: team1-ollama
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "11434:11434"
     environment:
@@ -262,7 +262,7 @@ services:
   qdrant:
     image: qdrant/qdrant:latest
     container_name: team1-qdrant
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "6333:6333"
       - "6334:6334"
@@ -283,7 +283,7 @@ services:
   searxng:
     image: searxng/searxng:latest
     container_name: team1-searxng
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "8081:8080"
     volumes:
@@ -308,6 +308,7 @@ services:
   faster-whisper:
     image: lscr.io/linuxserver/faster-whisper:latest
     container_name: team1-faster-whisper
+    restart: on-failure:1
     environment:
       - PUID=1000
       - PGID=1000
@@ -319,7 +320,6 @@ services:
       - faster-whisper-data:/config
     ports:
       - "10300:10300"
-    restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:10300/health"]
       interval: 30s
@@ -330,7 +330,7 @@ services:
   jupyter:
     image: jupyter/datascience-notebook:latest
     container_name: team1-jupyter
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "8888:8888"
     environment:
@@ -360,7 +360,7 @@ services:
   tika:
     image: apache/tika:latest
     container_name: team1-tika
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "9998:9998"
     healthcheck:
@@ -373,7 +373,7 @@ services:
   mcpo:
     image: ghcr.io/open-webui/mcpo:main
     container_name: team1-mcpo
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "8000:8000"
     environment:
@@ -398,7 +398,7 @@ services:
   neo4j:
     image: neo4j:5-community
     container_name: team1-neo4j
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "7474:7474"   # HTTP
       - "7687:7687"   # Bolt
@@ -434,7 +434,7 @@ services:
   redis:
     image: redis:7-alpine
     container_name: team1-redis
-    restart: unless-stopped
+    restart: on-failure:1
     ports:
       - "6379:6379"
     volumes:
@@ -449,7 +449,7 @@ services:
   watchtower:
     image: containrrr/watchtower:latest
     container_name: team1-watchtower
-    restart: unless-stopped
+    restart: on-failure:1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
