@@ -1,0 +1,140 @@
+version: "3.8"
+services:
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    ports:
+      - "3000:8080"
+    volumes:
+      - open-webui:/app/backend/data
+    environment:
+      OPENAI_API_BASE_URL: "${OPENAI_API_BASE_URL}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+      OLLAMA_BASE_URL: "http://ollama:11434"
+      ENABLE_RAG_WEB_SEARCH: "True"
+      RAG_WEB_SEARCH_ENGINE: "searxng"
+      RAG_WEB_SEARCH_RESULT_COUNT: "3"
+      RAG_WEB_SEARCH_CONCURRENT_REQUESTS: "10"
+      SEARXNG_QUERY_URL: "http://searxng:8080/search?q=<query>"
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    # no ports exposed (Open WebUI and n8n access via internal network)
+  pipelines:
+    image: ghcr.io/open-webui/pipelines:main
+    volumes:
+      - pipelines:/app/pipelines
+    environment:
+      PIPELINES_API_KEY: "0p3n-w3bu!"
+    restart: always
+    # no ports exposed (Open WebUI connects via http://pipelines:9099)
+  qdrant:
+    image: qdrant/qdrant:v1.5.5
+    volumes:
+      - qdrant_data:/qdrant/storage
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+  searxng:
+    image: searxng/searxng:latest
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./searxng:/etc/searxng:rw
+    env_file:
+      - .env
+    restart: unless-stopped
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+      - DAC_OVERRIDE
+  langfuse-db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: "${POSTGRES_DB}"
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    volumes:
+      - langfuse_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  langfuse:
+    image: langfuse/langfuse:latest
+    depends_on:
+      - langfuse-db
+    ports:
+      - "5061:3000"
+    environment:
+      DATABASE_URL: "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@langfuse-db:5432/${POSTGRES_DB}?sslmode=disable"
+      NEXTAUTH_URL: "${NEXTAUTH_URL}"
+      NEXTAUTH_SECRET: "${NEXTAUTH_SECRET}"
+      SALT: "${SALT}"
+      AUTH_DISABLE_SIGNUP: "${AUTH_DISABLE_SIGNUP}"
+    restart: unless-stopped
+  whisper:
+    image: onerahmet/openai-whisper-asr-webservice:latest
+    ports:
+      - "9000:9000"
+    environment:
+      ASR_MODEL: "base"
+      ASR_ENGINE: "openai_whisper"
+    volumes:
+      - whisper_cache:/root/.cache
+    restart: unless-stopped
+  openedai-speech:
+    image: ghcr.io/matatonic/openedai-speech:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - openedai_speech_voices:/app/voices
+      - openedai_speech_config:/app/config
+    restart: unless-stopped
+  n8n:
+    image: n8nio/n8n:latest
+    ports:
+      - "5678:5678"
+    environment:
+      N8N_ENCRYPTION_KEY: "${N8N_ENCRYPTION_KEY}"
+    volumes:
+      - n8n_data:/home/node/.n8n
+  jupyterhub:
+    image: jupyterhub/jupyterhub:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - jupyterhub_data:/srv/jupyterhub
+  rstudio:
+    image: rocker/rstudio:latest
+    ports:
+      - "8787:8787"
+    environment:
+      PASSWORD: "${RSTUDIO_PASSWORD}"
+    volumes:
+      - rstudio_data:/home/rstudio
+  neo4j:
+    image: neo4j:5
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: "neo4j/${NEO4J_PASSWORD}"
+    volumes:
+      - neo4j_data:/data
+
+volumes:
+  open-webui:
+  pipelines:
+  ollama_data:
+  qdrant_data:
+  langfuse_db:
+  whisper_cache:
+  openedai_speech_voices:
+  openedai_speech_config:
+  n8n_data:
+  jupyterhub_data:
+  rstudio_data:
+  neo4j_data:

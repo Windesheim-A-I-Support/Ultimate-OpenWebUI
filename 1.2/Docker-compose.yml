@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: openwebui
+    restart: unless-stopped
+    ports:
+      - "3000:8080"                    # expose only the UI (as in docs)
+    environment:
+      ENABLE_PERSISTENT_CONFIG: "true"
+      OLLAMA_BASE_URL: http://ollama:11434
+      OPENAI_API_BASE_URL: http://pipelines:9099
+      OPENAI_API_KEY: ${PIPELINES_API_KEY:-0p3n-w3bu!}
+    volumes:
+      - openwebui_data:/app/backend/data
+    depends_on:
+      - pipelines
+      - ollama
+
+  pipelines:
+    image: ghcr.io/open-webui/pipelines:main
+    container_name: pipelines
+    restart: unless-stopped
+    environment:
+      PIPELINES_API_KEY: ${PIPELINES_API_KEY:-0p3n-w3bu!}
+    volumes:
+      - pipelines_data:/app/pipelines
+    # no ports: internal-only (recommended in Pipelines docs)
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_models:/root/.ollama
+    # no ports: internal-only
+
+volumes:
+  openwebui_data:
+  pipelines_data:
+  ollama_models:
