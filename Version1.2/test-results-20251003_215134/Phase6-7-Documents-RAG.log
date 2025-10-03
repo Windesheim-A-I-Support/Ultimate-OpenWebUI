@@ -1,0 +1,17 @@
+🚀 OpenWebUI Automated Testing Suite
+📍 Target: https://team1-openwebui.valuechainhackers.xyz
+👤 User: Chris@tonomy.foundation
+
+🔍 Testing connection to OpenWebUI...
+✅ Connection successful: {'status': True}
+
+============================================================
+PHASE 6: DOCUMENT PROCESSING TESTS
+============================================================
+
+🔐 Logging in as Chris@tonomy.foundation...
+✅ Login successful
+📝 Test document created: /tmp/openwebui-test-document.txt
+📚 Creating knowledge base: Phase6-Test-KB...
+❌ Failed to create KB: 405 - {"detail":"Method Not Allowed"}
+❌ Cannot test document upload without KB

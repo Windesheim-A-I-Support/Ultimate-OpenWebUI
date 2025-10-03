@@ -1,0 +1,70 @@
+🚀 OpenWebUI Code Execution Testing Suite
+📍 Target: https://team1-openwebui.valuechainhackers.xyz
+👤 User: Chris@tonomy.foundation
+
+
+============================================================
+PHASE 9: CODE EXECUTION TESTS
+============================================================
+
+🔐 Logging in as Chris@tonomy.foundation...
+✅ Login successful
+
+📋 Test 1: Basic Arithmetic
+
+🐍 Executing code:
+   result = 2 + 2
+print(f'2 + 2 = {result}')
+result...
+❌ Request failed: 405 - {"detail":"Method Not Allowed"}
+
+📋 Test 2: Data Processing
+
+🐍 Executing code:
+   
+import pandas as pd
+df = pd.DataFrame({'x': [1, 2, 3, 4, 5], 'y': [2, 4, 6, 8, 10]})
+print(df.descr...
+❌ Request failed: 405 - {"detail":"Method Not Allowed"}
+
+📋 Test 3: Data Visualization
+
+🐍 Executing code:
+   
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = x**2
+
+plt.figur...
+❌ Request failed: 405 - {"detail":"Method Not Allowed"}
+
+📋 Test 4: Variable Persistence
+
+🐍 Executing code:
+   test_var = 'Hello from first execution'...
+❌ Request failed: 405 - {"detail":"Method Not Allowed"}
+
+🐍 Executing code:
+   print(test_var)...
+❌ Request failed: 405 - {"detail":"Method Not Allowed"}
+❌ Variable persistence failed
+
+📋 Test 5: Error Handling
+
+🐍 Executing code:
+   1 / 0  # This should raise ZeroDivisionError...
+❌ Request failed: 405 - {"detail":"Method Not Allowed"}
+❌ Error handling failed
+
+📋 Test 6: Code Execution via Chat
+
+💬 Testing code execution via chat...
+   Message: Calculate the sum of numbers from 1 to 100 using Python code...
+❌ Chat failed: 400 - {"detail":"Model not found"}
+
+============================================================
+⚠️  SOME TESTS FAILED - Check output above
+============================================================
+

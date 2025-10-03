@@ -1,0 +1,32 @@
+🚀 OpenWebUI Web Search Testing Suite
+📍 Target: https://team1-openwebui.valuechainhackers.xyz
+👤 User: Chris@tonomy.foundation
+
+
+============================================================
+PHASE 8: WEB SEARCH INTEGRATION TESTS
+============================================================
+
+🔐 Logging in as Chris@tonomy.foundation...
+✅ Login successful
+
+📋 Testing Direct Search API:
+
+🔍 Testing web search API: 'latest AI news'...
+❌ Search failed: 405 - {"detail":"Method Not Allowed"}
+
+🔍 Testing web search API: 'OpenAI GPT-4 release date'...
+❌ Search failed: 405 - {"detail":"Method Not Allowed"}
+
+📋 Testing Chat with Web Search:
+
+💬 Testing chat with web search: 'What are the latest developments in AI?'...
+❌ Chat failed: 400 - {"detail":"Model not found"}
+
+💬 Testing chat with web search: 'What is the current version of Python?'...
+❌ Chat failed: 400 - {"detail":"Model not found"}
+
+============================================================
+⚠️  SOME TESTS FAILED - Check output above
+============================================================
+
