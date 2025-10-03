@@ -1,0 +1,164 @@
+version: "3.9"
+
+services:
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: openwebui
+    restart: unless-stopped
+    ports:
+      - "3000:8080"
+    environment:
+      # Core & onboarding
+      ENABLE_PERSISTENT_CONFIG: "true"
+      ENABLE_SIGNUP: "true"             # create first user
+      DEFAULT_USER_ROLE: "admin"        # first signup gets admin (adjust later)
+
+      # Local LLMs (CPU via Ollama)
+      OLLAMA_BASE_URL: "http://ollama:11434"
+
+      # Hosted LLMs (OpenAI only by default — avoids OpenRouter model flood)
+      OPENAI_API_BASE_URL: "https://api.openai.com/v1"
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+
+      # RAG (Qdrant)
+      VECTOR_DB: "qdrant"
+      QDRANT_URI: "http://qdrant:6333"
+
+      # Web search (SearxNG)
+      ENABLE_WEB_SEARCH: "true"
+      WEB_SEARCH_ENGINE: "searxng"
+      WEB_SEARCH_RESULT_COUNT: "3"
+      WEB_LOADER_CONCURRENT_REQUESTS: "10"
+      SEARXNG_QUERY_URL: "http://searxng:8080/search?q=<query>"
+
+      # Code execution (Jupyter)
+      ENABLE_CODE_INTERPRETER: "true"
+      CODE_EXECUTION_ENGINE: "jupyter"
+      CODE_EXECUTION_JUPYTER_URL: "http://jupyter:8888"
+      CODE_EXECUTION_JUPYTER_AUTH: "token"
+      CODE_EXECUTION_JUPYTER_AUTH_TOKEN: "${JUPYTER_TOKEN}"
+      CODE_EXECUTION_JUPYTER_TIMEOUT: "60"
+
+      # Pass-through keys for tools/pipelines (available in env for immediate use)
+      PERPLEXITY_API_BASE_URL: "https://api.perplexity.ai"
+      PERPLEXITY_API_KEY: "${PERPLEXITY_API_KEY}"
+      SEMANTIC_SCHOLAR_API_KEY: "${SEMANTIC_SCHOLAR_API_KEY}"
+      ELSEVIER_API_KEY: "${ELSEVIER_API_KEY}"
+      GOOGLE_API_KEY: "${GOOGLE_API_KEY}"                          # if you use API-key based Sheets
+      GOOGLE_SERVICE_ACCOUNT_JSON_B64: "${GOOGLE_SERVICE_ACCOUNT_JSON_B64}"  # if SA-based (base64)
+
+    volumes:
+      - openwebui_data:/app/backend/data
+    depends_on:
+      - pipelines
+      - ollama
+      - qdrant
+      - searxng
+      - jupyter
+
+  pipelines:
+    image: ghcr.io/open-webui/pipelines:main
+    container_name: pipelines
+    restart: unless-stopped
+    environment:
+      PIPELINES_API_KEY: "${PIPELINES_API_KEY}"
+    volumes:
+      - pipelines_data:/app/pipelines
+
+  # Ollama (CPU)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_models:/root/.ollama
+
+  # One-shot init: pre-pull small CPU models
+  ollama-init:
+    image: ollama/ollama:latest
+    container_name: ollama-init
+    depends_on:
+      - ollama
+    environment:
+      OLLAMA_HOST: "http://ollama:11434"
+    entrypoint: >
+      sh -lc '
+      until curl -sf http://ollama:11434/api/tags >/dev/null; do sleep 2; done;
+      ollama pull phi3:mini &&
+      ollama pull llama3.2:3b-instruct-q4_0 &&
+      ollama pull qwen2.5:0.5b || true
+      '
+    restart: "no"
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    restart: unless-stopped
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+  searxng:
+    image: searxng/searxng:latest
+    container_name: searxng
+    restart: unless-stopped
+    environment:
+      - SEARXNG_BASE_URL=http://searxng:8080/
+
+  # Optional local TTS proxy (kept here for completeness; safe to leave running)
+  openedai-speech:
+    image: ghcr.io/matatonic/openedai-speech:latest
+    container_name: openedai-speech
+    restart: unless-stopped
+
+  # Jupyter (for code execution)
+  jupyter:
+    image: jupyter/minimal-notebook:latest
+    container_name: jupyter
+    restart: unless-stopped
+    environment:
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN}
+      - NB_UID=1000
+      - NB_GID=100
+    volumes:
+      - jupyter_data:/home/jovyan/work
+
+  # RStudio (username is "rstudio")
+  rstudio:
+    image: rocker/rstudio:latest
+    container_name: rstudio
+    restart: unless-stopped
+    environment:
+      - USER=rstudio
+      - PASSWORD=${RSTUDIO_PASSWORD}
+    volumes:
+      - rstudio_data:/home/rstudio
+
+  # n8n (automations)
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    environment:
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+  # Neo4j (optional graph DB)
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j
+    restart: unless-stopped
+    environment:
+      - NEO4J_AUTH=neo4j/${NEO4J_PASSWORD}
+    volumes:
+      - neo4j_data:/data
+
+volumes:
+  openwebui_data:
+  pipelines_data:
+  ollama_models:
+  qdrant_data:
+  jupyter_data:
+  rstudio_data:
+  n8n_data:
+  neo4j_data:

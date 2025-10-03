@@ -1,0 +1,25 @@
+http:
+  routers:
+    # Highest-priority: make sure /api always hits Open WebUI backend
+    openwebui-api:
+      rule: "Host(`test.openwebui.valuechainhackers.xyz`) && PathPrefix(`/api`)"
+      entryPoints: [websecure]
+      service: openwebui-service
+      tls:
+        certResolver: letsencrypt
+      priority: 1000
+
+    # Default app router for everything else
+    openwebui-router:
+      rule: "Host(`test.openwebui.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: openwebui-service
+      tls:
+        certResolver: letsencrypt
+
+  services:
+    openwebui-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.8.56:3000"   # <- this is the Open WebUI container port you mapped
+        passHostHeader: true
