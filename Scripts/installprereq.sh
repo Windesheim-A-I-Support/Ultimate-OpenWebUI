@@ -137,6 +137,9 @@ else
     log "Git user.email already configured"
 fi
 
+
+
+
 # Configure vim with basic settings
 if [[ ! -f ~/.vimrc ]]; then
     cat > ~/.vimrc << 'EOF'

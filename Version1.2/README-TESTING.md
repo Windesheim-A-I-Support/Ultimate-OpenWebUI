@@ -1,23 +1,35 @@
 # OpenWebUI Testing Suite - Quick Reference
 
-**Automated testing for Phases 6-9**
-**Last Updated:** 2025-10-03
+**Automated testing for Phases 5-9**
+**Last Updated:** 2025-10-04
+
+---
+
+## ✅ LATEST TEST RESULTS
+
+**All API tests PASSING (5/5 - 100%)**
+- See [TEST-RESULTS-FINAL.md](TEST-RESULTS-FINAL.md) for complete results
 
 ---
 
 ## 🎯 Quick Commands
 
-### Run All Tests
+### Run Simple API Tests (Verified Working)
 ```bash
 cd Version1.2
-./run-all-tests.sh admin@example.com yourpassword
+/usr/bin/python3 ./test-simple.py chris@tonomy.foundation 'Openbaby100!'
 ```
 
 ### Run Individual Phase Tests
 ```bash
-./test-phase6-documents.py admin@example.com yourpassword  # Documents + RAG
-./test-phase8-websearch.py admin@example.com yourpassword  # Web Search
-./test-phase9-code.py admin@example.com yourpassword       # Code Execution
+/usr/bin/python3 ./test-phase6-documents.py chris@tonomy.foundation 'Openbaby100!'  # Documents + RAG
+/usr/bin/python3 ./test-phase8-websearch.py chris@tonomy.foundation 'Openbaby100!'  # Web Search
+/usr/bin/python3 ./test-phase9-code.py chris@tonomy.foundation 'Openbaby100!'       # Code Execution
+```
+
+### Run All Tests
+```bash
+./run-all-tests.sh chris@tonomy.foundation 'Openbaby100!'
 ```
 
 ### Test Different Teams
@@ -30,15 +42,18 @@ cd Version1.2
 
 ## 📁 Testing Files
 
-| File | Purpose |
-|------|---------|
-| `run-all-tests.sh` | **Main test runner** - Runs all phase tests |
-| `test-phase6-documents.py` | Tests document upload & RAG |
-| `test-phase8-websearch.py` | Tests web search integration |
-| `test-phase9-code.py` | Tests code execution |
-| `TESTING-GUIDE.md` | **Complete testing documentation** |
-| `TESTING-RESULTS.md` | Phase 5 & 6 test results |
-| `README-CHECKLIST.md` | Complete 17-phase checklist |
+| File | Purpose | Status |
+|------|---------|--------|
+| `test-simple.py` | **Basic API tests** - Health, auth, models | ✅ PASSING |
+| `TEST-RESULTS-FINAL.md` | **Latest test results** - Oct 4, 2025 | ✅ 100% |
+| `run-all-tests.sh` | Main test runner - Runs all phase tests | 🔧 Ready |
+| `test-phase6-documents.py` | Tests document upload & RAG | ⏳ Pending |
+| `test-phase8-websearch.py` | Tests web search integration | ⏳ Pending |
+| `test-phase9-code.py` | Tests code execution | ⏳ Pending |
+| `TESTING-GUIDE.md` | Complete testing documentation | 📚 Docs |
+| `TESTING-ISSUES.md` | Known issues & solutions | 📚 Docs |
+| `PLAYWRIGHT-TESTING-RESULTS.md` | E2E testing status | ⏸️ Blocked |
+| `README-CHECKLIST.md` | Complete 17-phase checklist | 📚 Docs |
 
 ---
 
@@ -98,73 +113,109 @@ firefox test-results-*/summary.html
 
 1. **Python 3.7+** installed
    ```bash
-   python3 --version
+   /usr/bin/python3 --version
+   # Should show: Python 3.11.2 or higher
    ```
 
-2. **requests** library
+2. **requests** library (already available on system)
    ```bash
-   pip3 install requests
+   /usr/bin/python3 -c "import requests; print('✅ requests available')"
    ```
 
-3. **Admin account** on OpenWebUI
-   - Create via web UI first
-   - Note email and password
+3. **Test credentials**
+   - Email: `chris@tonomy.foundation` (lowercase!)
+   - Password: `Openbaby100!`
+   - Role: Admin
 
 4. **Services running**
    ```bash
-   ssh root@10.0.8.40
-   docker ps | grep team1
+   curl -k https://team1-openwebui.valuechainhackers.xyz/health
+   # Should return: {"status":true}
    ```
+
+## ⚠️ Important Notes
+
+1. **Use full Python path:** `/usr/bin/python3` not just `python3`
+2. **Email is case-sensitive:** Must be lowercase `chris@tonomy.foundation`
+3. **Bot detection:** Tests use curl User-Agent to avoid blocking
 
 ---
 
 ## 🐛 Troubleshooting
 
-**Authentication Failed:**
+**❌ Login failed: 400**
 ```bash
-# Create account via UI first, then test
-./test-phase6-documents.py your-email@example.com yourpassword
+# SOLUTION: Use full Python path and lowercase email
+/usr/bin/python3 ./test-simple.py chris@tonomy.foundation 'Openbaby100!'
 ```
 
-**Module Not Found:**
+**❌ python3: command not found**
 ```bash
-pip3 install requests
+# SOLUTION: Use full path
+/usr/bin/python3 ./test-simple.py chris@tonomy.foundation 'Openbaby100!'
 ```
 
-**Permission Denied:**
+**❌ Module Not Found: requests**
+```bash
+# Check if requests is available
+/usr/bin/python3 -c "import requests"
+# If error, it's installed but using wrong Python
+```
+
+**❌ Permission Denied**
 ```bash
 chmod +x *.sh *.py
 ```
 
-**Connection Issues:**
+**❌ Connection Issues**
 ```bash
 # Test connection manually
-curl https://team1-openwebui.valuechainhackers.xyz/health
+curl -k https://team1-openwebui.valuechainhackers.xyz/health
+# Should return: {"status":true}
+```
+
+**✅ All tests passing but says FAIL**
+```bash
+# This was a bug - now fixed in test-simple.py
+# Re-download latest version or use /usr/bin/python3
 ```
 
 ---
 
 ## 📈 Current Test Status
 
-**As of 2025-10-03:**
+**As of 2025-10-04:**
 
-| Phase | Infrastructure | Tests Created | Status |
-|-------|----------------|---------------|--------|
-| Phase 5 | ✅ Complete | Manual | ✅ PASSED |
-| Phase 6 | ✅ Complete | ✅ Automated | 🔧 Ready |
-| Phase 7 | ✅ Complete | ✅ Automated | 🔧 Ready |
-| Phase 8 | 🟡 Partial | ✅ Automated | 🔧 Ready |
-| Phase 9 | ✅ Complete | ✅ Automated | 🔧 Ready |
+| Phase | Infrastructure | Tests Created | Last Run | Status |
+|-------|----------------|---------------|----------|--------|
+| Phase 4 | ✅ Complete | ✅ API Tests | ✅ Oct 4 | **100% PASS** |
+| Phase 5 | ✅ Complete | ✅ API Tests | ✅ Oct 4 | **100% PASS** |
+| Phase 6 | ✅ Complete | ✅ Automated | ⏳ Pending | 🔧 Ready |
+| Phase 7 | ✅ Complete | ✅ Automated | ⏳ Pending | 🔧 Ready |
+| Phase 8 | 🟡 Partial | ✅ Automated | ⏳ Pending | 🔧 Ready |
+| Phase 9 | ✅ Complete | ✅ Automated | ⏳ Pending | 🔧 Ready |
+
+**Latest Results:** [TEST-RESULTS-FINAL.md](TEST-RESULTS-FINAL.md)
+- ✅ Health Check: PASS
+- ✅ Configuration: PASS (v0.6.32)
+- ✅ Authentication: PASS (JWT token)
+- ✅ Models API: PASS (331 models)
+- ✅ Chats API: PASS
 
 ---
 
 ## 🎯 Next Steps
 
-1. **Run tests** on team1 instance
-2. **Review results** in generated reports
-3. **Fix any failures** identified
-4. **Deploy to other teams** once verified
-5. **Schedule automated runs** (optional)
+1. ✅ ~~**Run basic API tests**~~ - **COMPLETE (100% pass)**
+2. **Run Phase 6-9 tests:**
+   ```bash
+   /usr/bin/python3 ./test-phase6-documents.py chris@tonomy.foundation 'Openbaby100!'
+   /usr/bin/python3 ./test-phase8-websearch.py chris@tonomy.foundation 'Openbaby100!'
+   /usr/bin/python3 ./test-phase9-code.py chris@tonomy.foundation 'Openbaby100!'
+   ```
+3. **Review results** in generated reports
+4. **Fix any failures** identified
+5. **Deploy to other teams** (team2-5) once verified
 
 ---
 
@@ -190,5 +241,11 @@ For comprehensive testing documentation, see:
 
 **Ready to test?** Run:
 ```bash
-./run-all-tests.sh admin@example.com yourpassword
+# Basic API tests (verified working)
+/usr/bin/python3 ./test-simple.py chris@tonomy.foundation 'Openbaby100!'
+
+# Phase 6-9 tests (next to run)
+/usr/bin/python3 ./test-phase6-documents.py chris@tonomy.foundation 'Openbaby100!'
 ```
+
+**See results:** [TEST-RESULTS-FINAL.md](TEST-RESULTS-FINAL.md)

@@ -10,21 +10,31 @@ import time
 import sys
 from pathlib import Path
 
+# Disable SSL warnings
+requests.packages.urllib3.disable_warnings()
+
+# Headers to avoid bot detection
+HEADERS = {
+    'User-Agent': 'curl/7.68.0',
+    'Accept': '*/*'
+}
+
 # Configuration
 BASE_URL = "https://team1-openwebui.valuechainhackers.xyz"
 API_URL = f"{BASE_URL}/api/v1"
 
-# You'll need to get this from browser after logging in:
-# 1. Log in to OpenWebUI
-# 2. Open browser DevTools -> Application -> Cookies
-# 3. Copy the 'token' value
-AUTH_TOKEN = None  # Set this or pass as argument
+# Auth will be handled by login
+AUTH_TOKEN = None
 
 class OpenWebUITester:
     def __init__(self, base_url, auth_token=None):
         self.base_url = base_url
         self.api_url = f"{base_url}/api/v1"
         self.session = requests.Session()
+        self.session.verify = False  # Disable SSL verification
+
+        # Set default headers to avoid bot detection
+        self.session.headers.update(HEADERS)
 
         if auth_token:
             self.session.headers.update({
@@ -36,7 +46,7 @@ class OpenWebUITester:
         """Test if we can connect to OpenWebUI"""
         print("🔍 Testing connection to OpenWebUI...")
         try:
-            response = self.session.get(f"{self.base_url}/health")
+            response = self.session.get(f"{self.base_url}/health", verify=False)
             if response.status_code == 200:
                 print(f"✅ Connection successful: {response.json()}")
                 return True
@@ -53,7 +63,8 @@ class OpenWebUITester:
         try:
             response = self.session.post(
                 f"{self.api_url}/auths/signin",
-                json={"email": email, "password": password}
+                json={"email": email, "password": password},
+                verify=False
             )
             if response.status_code == 200:
                 data = response.json()
