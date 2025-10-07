@@ -1,0 +1,532 @@
+Test Case ID,Priority,Category,Description,Pre-conditions,Test Steps,Expected Result,Actual Result,Status,Notes
+TC-004-001,HIGH,Basic Chat,First Chat Message,User logged in; At least one model available,"1. Navigate to main chat
+2. Select llama3.2:3b model
+3. Type: 'Hello, can you respond with just the word TEST?'
+4. Press Send
+5. Wait for response","- Message appears in chat
+- AI responds with 'TEST'
+- Response time < 10 seconds",,,
+TC-004-002,HIGH,Basic Chat,OpenRouter Model Response,User logged in; OpenRouter configured,"1. Go to model selector
+2. Select OpenRouter model
+3. Send message: 'Reply with the word ROUTER'
+4. Wait for response","- OpenRouter model processes request
+- Response received
+- Response contains 'ROUTER'",,,
+TC-004-003,HIGH,Basic Chat,Model Switching,User logged in; Multiple models available,"1. Send message with llama3.2:3b
+2. Switch to phi3:mini
+3. Send same message
+4. Compare responses","- Both models respond
+- Responses are different
+- No errors during switch",,,
+TC-004-004,MEDIUM,Basic Chat,Long Conversation,User logged in; Model selected,"1. Send 10 consecutive messages
+2. Verify chat history preserved
+3. Ask model to reference earlier message","- All messages preserved
+- Model can reference context
+- No memory issues",,,
+TC-004-005,HIGH,Basic Chat,New Chat Creation,User logged in,"1. Click 'New Chat' button
+2. Verify fresh chat interface
+3. Send test message","- New chat created
+- Previous chat accessible in sidebar
+- New chat has clean state",,,
+TC-004-006,MEDIUM,Basic Chat,Chat History Access,User has existing chats,"1. Navigate to chat history
+2. Select previous chat
+3. Verify messages loaded","- Chat history sidebar visible
+- Previous chats listed
+- Messages load correctly",,,
+TC-004-007,LOW,Basic Chat,Chat Deletion,User has existing chat,"1. Right-click on chat
+2. Select 'Delete'
+3. Confirm deletion","- Chat deleted from sidebar
+- Confirmation dialog shown
+- Chat data removed",,,
+TC-005-001,HIGH,Storage,S3 Configuration,Admin access; S3 credentials available,"1. Go to Admin Settings > Storage
+2. Enable S3 backend
+3. Enter credentials
+4. Test connection
+5. Save settings","- S3 connection successful
+- Configuration saved
+- Test file upload works",,,
+TC-005-002,MEDIUM,Storage,Local Storage,Default OpenWebUI installation,"1. Upload file without S3 configured
+2. Verify file stored locally
+3. Download file","- File uploads successfully
+- File stored in local volume
+- Download works",,,
+TC-005-003,HIGH,Storage,Storage Backend Switching,Admin access; Both backends configured,"1. Upload file with local storage
+2. Switch to S3
+3. Upload another file
+4. Verify both accessible","- Files accessible regardless of backend
+- No data loss during switch
+- Both files downloadable",,,
+TC-005-004,LOW,Storage,Storage Quota,Storage limits configured,"1. Check available storage
+2. Upload files near limit
+3. Attempt to exceed limit","- Quota displayed correctly
+- Warning shown near limit
+- Upload blocked when exceeded",,,
+TC-005-005,MEDIUM,Storage,File Persistence,Files uploaded previously,"1. Restart OpenWebUI container
+2. Login
+3. Access previously uploaded files","- Files still accessible
+- No corruption
+- Metadata preserved",,,
+TC-006-001,HIGH,Documents,PDF Upload,User logged in,"1. Click document upload button
+2. Select test PDF file
+3. Wait for processing
+4. Verify document appears","- PDF uploads successfully
+- Text extracted via Tika
+- Document listed in library",,,
+TC-006-002,HIGH,Documents,DOCX Upload,User logged in,"1. Upload .docx file
+2. Wait for processing
+3. Check extraction","- DOCX processed
+- Text extracted correctly
+- Formatting preserved where possible",,,
+TC-006-003,MEDIUM,Documents,Multiple File Upload,User logged in,"1. Select multiple files (PDF, DOCX, TXT)
+2. Upload simultaneously
+3. Monitor processing","- All files uploaded
+- Processing queue works
+- All files extracted",,,
+TC-006-004,HIGH,Documents,Document Preview,Document uploaded,"1. Click on document in library
+2. View preview
+3. Verify content","- Preview displays correctly
+- Text readable
+- Metadata shown",,,
+TC-006-005,MEDIUM,Documents,Document Deletion,Document uploaded,"1. Select document
+2. Click delete
+3. Confirm deletion
+4. Verify removal","- Delete confirmation shown
+- Document removed from library
+- Associated vectors cleaned up",,,
+TC-007-001,HIGH,RAG,Document Query,Documents uploaded and indexed,"1. Upload document with specific facts
+2. Wait for indexing
+3. Ask question about content
+4. Verify answer cites document","- Answer based on document
+- Citation shown
+- Answer accurate",,,
+TC-007-002,HIGH,RAG,Multi-Document Query,Multiple documents uploaded,"1. Upload 3+ documents
+2. Ask question spanning multiple docs
+3. Check citations","- Answer synthesizes multiple sources
+- Multiple citations shown
+- No hallucination",,,
+TC-007-003,MEDIUM,RAG,Hybrid Search,ENABLE_RAG_HYBRID_SEARCH=true,"1. Upload document
+2. Query with exact phrase
+3. Query with semantic meaning
+4. Compare results","- Exact matches ranked high
+- Semantic matches found
+- Hybrid ranking works",,,
+TC-007-004,HIGH,RAG,Embedding Generation,Document uploaded,"1. Upload test document
+2. Check Qdrant for vectors
+3. Verify embedding created","- Vectors stored in Qdrant
+- Embedding dimensions correct
+- Document ID linked",,,
+TC-007-005,MEDIUM,RAG,RAG Toggle,User logged in; Documents available,"1. Enable RAG for chat
+2. Ask document question
+3. Disable RAG
+4. Ask same question","- RAG toggle works
+- With RAG: uses documents
+- Without RAG: general knowledge only",,,
+TC-007-006,LOW,RAG,Collection Management,Admin access,"1. Create new collection
+2. Add documents to collection
+3. Query collection
+4. Delete collection","- Collections created
+- Documents assigned correctly
+- Collection isolation works
+- Deletion cascades",,,
+TC-008-001,HIGH,Web Search,Basic Web Search,ENABLE_WEB_SEARCH=true; SearxNG running,"1. Enable web search in chat
+2. Ask: 'What is the current weather in Paris?'
+3. Wait for search results
+4. Verify answer","- Web search triggered
+- SearxNG returns results
+- Answer includes current info
+- Sources cited",,,
+TC-008-002,HIGH,Web Search,Search Result Integration,Web search enabled,"1. Ask question requiring current info
+2. Observe search process
+3. Check answer integration","- Search results shown
+- Answer synthesizes results
+- URLs provided
+- No bot detection issues",,,
+TC-008-003,MEDIUM,Web Search,Search Toggle,User logged in,"1. Enable web search
+2. Ask question
+3. Disable web search
+4. Ask same question","- Toggle works
+- With search: current info
+- Without search: knowledge cutoff applies",,,
+TC-008-004,HIGH,Web Search,URL Fetching,Web search enabled,"1. Provide URL in chat
+2. Ask to summarize page
+3. Verify fetch and summary","- URL fetched successfully
+- Content extracted
+- Summary accurate",,,
+TC-008-005,MEDIUM,Web Search,Search Engine Selection,Multiple search engines configured,"1. Go to settings
+2. Select different search engine
+3. Perform search
+4. Verify engine used","- Engine selection available
+- Selected engine used
+- Results appropriate",,,
+TC-008-006,LOW,Web Search,Search Rate Limiting,Web search enabled,"1. Perform 10 searches rapidly
+2. Monitor for rate limits
+3. Check error handling","- Rate limiting works
+- Clear error messages
+- Service recovers gracefully",,,
+TC-009-001,HIGH,Code Exec,Python Code Execution,ENABLE_CODE_INTERPRETER=true; Jupyter running,"1. Ask: 'Run Python: print(2+2)'
+2. Wait for execution
+3. Check output","- Code executed in Jupyter
+- Output shows '4'
+- No errors
+- Execution time < 5 seconds",,,
+TC-009-002,HIGH,Code Exec,Multi-line Code,Code execution enabled,"1. Ask to run multi-line Python script
+2. Include loops and functions
+3. Verify execution","- Complex code executes
+- All lines processed
+- Output correct
+- Variables persist in session",,,
+TC-009-003,HIGH,Code Exec,Data Visualization,Code execution enabled,"1. Ask to create matplotlib plot
+2. Provide sample data
+3. Request visualization","- Plot generated
+- Image returned
+- Graph displays correctly
+- Data accurate",,,
+TC-009-004,MEDIUM,Code Exec,Package Installation,Code execution enabled,"1. Request code using uncommon package
+2. Check if package installs
+3. Verify code runs","- Package installation attempted
+- Clear feedback on success/failure
+- Code executes if package available",,,
+TC-009-005,HIGH,Code Exec,Error Handling,Code execution enabled,"1. Provide code with syntax error
+2. Provide code with runtime error
+3. Check error messages","- Syntax error caught
+- Runtime error reported
+- Error messages clear
+- Session not corrupted",,,
+TC-009-006,MEDIUM,Code Exec,Session Persistence,Code execution enabled,"1. Define variable in first request
+2. Use variable in second request
+3. Verify persistence","- Variable persists
+- Session maintained across requests
+- Scope works correctly",,,
+TC-009-007,LOW,Code Exec,Execution Timeout,Code execution enabled,"1. Request infinite loop or very slow code
+2. Monitor timeout
+3. Check recovery","- Timeout triggered
+- Clear timeout message
+- Kernel restarts if needed
+- Subsequent requests work",,,
+TC-010-001,HIGH,Voice,Speech-to-Text,ENABLE_SPEECH_TO_TEXT=true; Faster-Whisper running,"1. Click microphone button
+2. Allow browser microphone access
+3. Speak: 'Hello OpenWebUI'
+4. Stop recording
+5. Verify transcription","- Microphone activates
+- Audio recorded
+- Transcription accurate
+- Text appears in input field",,,
+TC-010-002,HIGH,Voice,Text-to-Speech,TTS enabled in settings,"1. Enable TTS in chat settings
+2. Send message to AI
+3. Wait for response
+4. Verify audio playback","- TTS toggle available
+- Response spoken aloud
+- Audio quality good
+- Play/pause controls work",,,
+TC-010-003,MEDIUM,Voice,Voice Input Languages,STT enabled; Multiple languages configured,"1. Change STT language to Spanish
+2. Speak in Spanish
+3. Verify transcription
+4. Test other languages","- Language selection available
+- Transcription in correct language
+- Multiple languages supported",,,
+TC-010-004,MEDIUM,Voice,Voice Command,Voice features enabled,"1. Use voice to ask question
+2. Get spoken response
+3. Continue conversation by voice","- Full voice conversation works
+- No manual typing needed
+- Natural conversation flow",,,
+TC-010-005,LOW,Voice,Audio Quality Settings,Voice features enabled,"1. Access audio settings
+2. Adjust quality/speed
+3. Test changes","- Settings accessible
+- Changes take effect
+- Quality adjusts as expected",,,
+TC-010-006,MEDIUM,Voice,Long Audio Transcription,STT enabled,"1. Record 2+ minute audio
+2. Submit for transcription
+3. Verify complete output","- Long audio handled
+- Complete transcription
+- Accuracy maintained
+- No truncation",,,
+TC-010-007,LOW,Voice,Whisper Model Selection,Multiple Whisper models available,"1. Go to admin settings
+2. Select different Whisper model
+3. Test transcription
+4. Compare accuracy","- Model selection works
+- Different models available
+- Trade-off between speed/accuracy visible",,,
+TC-011-001,HIGH,Images,Image Upload,User logged in,"1. Click image upload button
+2. Select test image
+3. Wait for upload
+4. Verify image displays","- Image uploads successfully
+- Thumbnail displayed
+- Image viewable in chat",,,
+TC-011-002,HIGH,Images,Image Analysis,Vision model available,"1. Upload image
+2. Ask: 'What's in this image?'
+3. Wait for analysis","- Model analyzes image
+- Description accurate
+- Details included
+- Response < 30 seconds",,,
+TC-011-003,HIGH,Images,Image Generation,ENABLE_IMAGE_GENERATION=true; Generation backend configured,"1. Ask: 'Generate an image of a sunset'
+2. Wait for generation
+3. Verify image created","- Image generation triggered
+- Image displays in chat
+- Image matches prompt
+- Quality acceptable",,,
+TC-011-004,MEDIUM,Images,Multi-Image Chat,Vision model available,"1. Upload multiple images
+2. Ask question about all images
+3. Verify analysis","- Multiple images handled
+- Analysis references correct images
+- Context maintained",,,
+TC-011-005,LOW,Images,Image Download,Image in chat,"1. Right-click image
+2. Select download
+3. Verify file saved","- Download option available
+- File saves correctly
+- Original quality preserved",,,
+TC-011-006,MEDIUM,Images,Image Generation Parameters,Image generation enabled,"1. Access generation settings
+2. Adjust parameters (size, style)
+3. Generate image
+4. Verify parameters applied","- Parameter controls available
+- Settings affect output
+- Various styles work",,,
+TC-012-001,MEDIUM,Tools,Function Calling,Functions/tools configured,"1. Ask question requiring tool use
+2. Observe function call
+3. Verify result","- Function called automatically
+- Parameters correct
+- Result integrated
+- User notified of tool use",,,
+TC-012-002,HIGH,Tools,Pipelines Integration,Pipelines service running,"1. Configure custom pipeline
+2. Send request through pipeline
+3. Verify processing","- Pipeline receives request
+- Custom processing applied
+- Response returned
+- Logs available",,,
+TC-012-003,MEDIUM,Tools,Tool Installation,Admin access,"1. Go to Tools section
+2. Install new tool/extension
+3. Configure tool
+4. Test functionality","- Tool marketplace accessible
+- Installation succeeds
+- Configuration saved
+- Tool works as expected",,,
+TC-012-004,LOW,Tools,Tool Permissions,User without admin access,"1. Login as regular user
+2. Try to access admin tools
+3. Verify restrictions","- Tool access restricted
+- Clear permission messages
+- No unauthorized access",,,
+TC-012-005,MEDIUM,Tools,Custom Tool Creation,Admin access; Development knowledge,"1. Create custom tool definition
+2. Upload tool manifest
+3. Configure parameters
+4. Test tool","- Custom tool accepted
+- Manifest validated
+- Tool callable
+- Parameters work",,,
+TC-012-006,HIGH,Tools,Tool Chain Execution,Multiple tools configured,"1. Ask complex question requiring multiple tools
+2. Observe tool chain
+3. Verify final result","- Multiple tools called in sequence
+- Data passed between tools
+- Final answer correct
+- Process transparent",,,
+TC-012-007,LOW,Tools,Tool Error Recovery,Tools configured,"1. Trigger tool that will fail
+2. Observe error handling
+3. Verify recovery","- Error caught gracefully
+- Clear error message
+- Fallback behavior works
+- System remains stable",,,
+TC-013-001,HIGH,Advanced,Memory/Context Management,Long conversation active,"1. Have 20+ message conversation
+2. Reference early messages
+3. Verify context retention","- Context maintained
+- Model recalls earlier info
+- No context window errors
+- Memory efficient",,,
+TC-013-002,MEDIUM,Advanced,Prompt Templates,User logged in,"1. Create custom prompt template
+2. Save template
+3. Use template in new chat
+4. Verify behavior","- Template created successfully
+- Template saved
+- Template applies correctly
+- Behavior as expected",,,
+TC-013-003,HIGH,Advanced,Model Parameters,Admin access,"1. Access model settings
+2. Adjust temperature, top_p, etc.
+3. Send test prompts
+4. Compare outputs","- Parameters adjustable
+- Changes affect output
+- Settings persist
+- Different behaviors observable",,,
+TC-013-004,MEDIUM,Advanced,Streaming Responses,User logged in,"1. Send message
+2. Observe response generation
+3. Verify streaming","- Response streams token by token
+- No long wait before first token
+- Smooth streaming
+- Complete response received",,,
+TC-013-005,LOW,Advanced,Response Regeneration,Message received,"1. Click regenerate on AI response
+2. Wait for new response
+3. Compare responses","- Regenerate button available
+- New response generated
+- Different from original
+- Both responses saved",,,
+TC-013-006,MEDIUM,Advanced,Export Chat,Chat with history,"1. Click export button
+2. Select format (JSON/Markdown)
+3. Download file
+4. Verify content","- Export options available
+- File downloads
+- All messages included
+- Format correct",,,
+TC-014-001,HIGH,Collaboration,Chat Sharing,User logged in; Chat exists,"1. Click share button on chat
+2. Generate share link
+3. Open link in incognito
+4. Verify access","- Share link generated
+- Link accessible
+- Chat visible to others
+- Permissions respected",,,
+TC-014-002,MEDIUM,Collaboration,User Management,Admin access,"1. Go to Admin Panel > Users
+2. View user list
+3. Create new user
+4. Assign role","- User list displayed
+- User creation works
+- Roles assignable
+- Permissions apply",,,
+TC-014-003,HIGH,Collaboration,Team Workspaces,Workspace feature enabled,"1. Create new workspace
+2. Invite team members
+3. Share resources
+4. Test access","- Workspace created
+- Invites sent
+- Members can access
+- Resources shared correctly",,,
+TC-014-004,MEDIUM,Collaboration,Shared Documents,Multiple users; Documents uploaded,"1. Upload document as User A
+2. Share with User B
+3. User B queries document
+4. Verify RAG works","- Document sharing works
+- User B sees document
+- RAG queries work for User B
+- Permissions enforced",,,
+TC-014-005,LOW,Collaboration,Comment System,Shared chat,"1. Open shared chat
+2. Add comment
+3. Other user views comment
+4. Reply to comment","- Comments added
+- Comments visible to all
+- Threaded replies work
+- Notifications sent",,,
+TC-014-006,MEDIUM,Collaboration,Activity Logs,Admin access,"1. Go to Admin Panel > Logs
+2. View activity
+3. Filter by user/action
+4. Export logs","- Logs displayed
+- Filtering works
+- All actions logged
+- Export succeeds",,,
+TC-015-001,HIGH,External,OpenRouter Integration,OpenRouter API key configured,"1. Go to Settings > External Services
+2. Enter OpenRouter API key
+3. Enable OpenRouter models
+4. Test chat with OpenRouter model","- API key saved
+- Models listed
+- Chat works
+- Billing tracked",,,
+TC-015-002,MEDIUM,External,LiteLLM Gateway,LiteLLM service running,"1. Verify LiteLLM container running
+2. Check proxy configuration
+3. Send request through LiteLLM
+4. Verify routing","- LiteLLM accessible
+- Proxy routes correctly
+- Response received
+- Logs show routing",,,
+TC-015-003,HIGH,External,External API Keys,Admin access,"1. Go to Settings > API Keys
+2. Add keys for various services
+3. Test each service
+4. Verify secure storage","- Keys saved securely
+- Services authenticate
+- Keys not exposed in logs
+- Encryption confirmed",,,
+TC-015-004,MEDIUM,External,Webhook Integration,Webhooks configured,"1. Set up webhook endpoint
+2. Configure trigger event
+3. Trigger event
+4. Verify webhook called","- Webhook configured
+- Event triggers webhook
+- Payload correct
+- Response handled",,,
+TC-015-005,LOW,External,API Rate Monitoring,External APIs configured,"1. Check API usage dashboard
+2. Make multiple API calls
+3. Verify usage tracking
+4. Check rate limits","- Usage displayed
+- Tracking accurate
+- Rate limits shown
+- Warnings at thresholds",,,
+TC-015-006,HIGH,External,Service Health Check,Multiple external services configured,"1. Go to Admin > Services
+2. View service status
+3. Test connection for each
+4. Identify issues","- All services listed
+- Status indicators accurate
+- Test connection works
+- Issues clearly reported",,,
+TC-016-001,MEDIUM,Customization,UI Theme Customization,Admin access,"1. Go to Settings > Appearance
+2. Change theme/colors
+3. Upload custom logo
+4. Save changes","- Theme changes apply
+- Logo uploaded
+- Changes persist
+- All pages affected",,,
+TC-016-002,LOW,Customization,Custom CSS,Admin access,"1. Go to Settings > Advanced
+2. Add custom CSS
+3. Save
+4. Verify styling","- CSS input available
+- CSS applies
+- No conflicts
+- Changes safe",,,
+TC-016-003,HIGH,Customization,System Prompts,Admin access,"1. Go to Settings > System Prompts
+2. Edit default system prompt
+3. Test with chat
+4. Verify behavior change","- System prompt editable
+- Changes saved
+- Behavior reflects prompt
+- Users inherit setting",,,
+TC-016-004,MEDIUM,Customization,Model Defaults,Admin access,"1. Go to Settings > Models
+2. Set default model
+3. Set default parameters
+4. Test with new chat","- Defaults saved
+- New chats use defaults
+- Users can override
+- Settings persist",,,
+TC-016-005,LOW,Customization,Feature Toggles,Admin access,"1. Go to Admin Panel > Features
+2. Toggle features on/off
+3. Verify UI changes
+4. Test as regular user","- All features toggleable
+- UI updates immediately
+- Users see changes
+- No errors",,,
+TC-016-006,MEDIUM,Customization,Welcome Message,Admin access,"1. Set custom welcome message
+2. Add markdown formatting
+3. Save
+4. Create new chat","- Welcome message editable
+- Markdown renders
+- Shows in new chats
+- Looks professional",,,
+TC-017-001,HIGH,Monitoring,Usage Analytics,Admin access; Neo4j running,"1. Go to Admin Panel > Analytics
+2. View usage metrics
+3. Check user activity
+4. View model usage","- Analytics dashboard loads
+- Metrics displayed
+- Graphs render
+- Data accurate",,,
+TC-017-002,HIGH,Monitoring,Performance Metrics,ClickHouse running,"1. Go to Admin Panel > Performance
+2. View response times
+3. Check error rates
+4. View resource usage","- Performance data shown
+- Metrics updated regularly
+- Trends visible
+- Bottlenecks identified",,,
+TC-017-003,MEDIUM,Monitoring,System Health Dashboard,Admin access; All services running,"1. Go to Admin Panel > Health
+2. View service status
+3. Check resource usage
+4. Review alerts","- All services listed
+- Status accurate
+- Resource graphs shown
+- Alerts configured",,,
+TC-017-004,MEDIUM,Monitoring,Error Tracking,Application running,"1. Trigger various errors
+2. Check error logs
+3. View error dashboard
+4. Verify error details","- Errors logged
+- Stack traces available
+- Error trends shown
+- Alerts triggered",,,
+TC-017-005,LOW,Monitoring,Audit Logs,Admin access,"1. Go to Admin Panel > Audit
+2. View all user actions
+3. Filter by user/action
+4. Export audit log","- All actions logged
+- Timestamps accurate
+- Filtering works
+- Export complete",,,
+TC-017-006,HIGH,Monitoring,Container Monitoring,Docker access,"1. Check container health
+2. View container logs
+3. Monitor resource usage
+4. Verify Watchtower updates","- All 15 containers monitored
+- Logs accessible
+- Resources tracked
+- Watchtower functional",,,
