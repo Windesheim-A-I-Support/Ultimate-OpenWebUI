@@ -44,6 +44,48 @@ Imagine it's 2 AM. You're staring at 47 open browser tabs, three PDFs you can't 
 This workshop is designed for **2.5 hours** with breaks. Each module is 20-30 minutes. You can stop after any module and come back later - each one stands alone.
 :::
 
+## Choosing Your AI Model
+
+This workshop uses **free, local AI models** running on your OpenWebUI server. No API costs, complete privacy, but smaller models than ChatGPT.
+
+### Available Models
+
+Your OpenWebUI instance has these models:
+
+| Model | Best For | Speed | Quality |
+|-------|----------|-------|---------|
+| **llama3.2:3b** | General chat, questions | ⚡⚡⚡ Fast | ⭐⭐⭐ Good |
+| **phi3:mini** | Quick responses | ⚡⚡⚡ Fast | ⭐⭐ Decent |
+| **qwen2.5:0.5b** | Very fast responses | ⚡⚡⚡⚡ Very Fast | ⭐⭐ Basic |
+
+### Recommended Model for This Workshop
+
+**Use `llama3.2:3b` for all modules** - It's the best balance of speed and quality.
+
+::: {.callout-warning}
+## Reality Check: Local Models vs. ChatGPT
+
+These are **small, local models** (3 billion parameters vs. GPT-4's hundreds of billions).
+
+**What they CAN do:**
+- ✅ Have conversations and remember context
+- ✅ Read and summarize your documents
+- ✅ Search the web and synthesize results
+- ✅ Run Python code you provide
+- ✅ Help you iterate and think through problems
+
+**What they STRUGGLE with:**
+- ⚠️ Writing complex code from scratch
+- ⚠️ Perfect citations with page numbers
+- ⚠️ Very long, detailed responses
+- ⚠️ Following complex multi-step instructions
+
+**This is OK!** You're learning **workflows**, not relying on AI magic. These same workflows work even better when you use larger models later.
+
+**For this workshop:** Focus on the PROCESS. The skills you learn apply to any AI model.
+:::
+
+
 ---
 
 # Module 1: The Conversation That Understands You
@@ -100,7 +142,7 @@ Think of OpenWebUI as your research lab, but digital:
 ```markdown
 □ OpenWebUI is open in your browser
 □ You can see the chat interface
-□ There's a model selected (look for "llama3.2" or similar)
+□ Model is set to "llama3.2:3b" (or llama3.2:3b-instruct-q4_0)
 ```
 
 **The Test:**
@@ -113,23 +155,34 @@ Think of OpenWebUI as your research lab, but digital:
    Password: [strong password]
    ```
 
-3. **Send this exact message:**
+3. **Select your model:**
+   - Look for the model dropdown at the top of the chat
+   - Select **"llama3.2:3b"** or **"llama3.2:3b-instruct-q4_0"**
+   - This is our recommended model for the workshop
+
+4. **Send this message:**
    ```
-   Hello! Please respond with exactly these words:
-   "TEST SUCCESSFUL - I am ready to help with your research."
+   Hi! Please respond in a friendly way and tell me you're ready to help with research.
+   Also tell me which model you are.
    ```
 
-4. **Expected result:** Within 10 seconds, you should see a response containing those exact words.
+5. **Expected result:**
+   - Response within 10-30 seconds
+   - Friendly, helpful tone
+   - Mentions "llama" or identifies itself
+   - May not be exactly as requested (small models don't always follow exact instructions)
 
 **✅ Success criteria:**
 - [ ] Message sent without errors
-- [ ] Response received in < 10 seconds
-- [ ] Response contains "TEST SUCCESSFUL"
+- [ ] Response received in < 30 seconds
+- [ ] Response is helpful and conversational
+- [ ] Model is llama3.2:3b
 
 **❌ If it fails:**
 - Check you're logged in (see your email in top right?)
-- Check model is selected (dropdown menu near top)
+- Check model is selected (dropdown menu near top - should say "llama3.2")
 - Try refreshing the page
+- Try a simpler message: "Hello, can you help me?"
 
 ### Going Deeper: Why This Matters
 
@@ -697,71 +750,141 @@ graph LR
 
 **The Test:**
 
-**Step 1: Simple Calculation**
+**Step 1: Test Code Execution Works**
 
-Send this:
+First, let's verify code execution is enabled. Send this:
 ```
-Calculate the compound annual growth rate (CAGR) if an investment
-grows from $100 to $250 over 5 years. Show me the formula and the result.
+Can you run Python code? If yes, please execute: print(2 + 2)
 ```
 
 **Expected behavior:**
-- [ ] AI explains CAGR formula
-- [ ] You see a code block with Python code
-- [ ] Code executes automatically (or has a "Run" button)
-- [ ] Result appears: ~20.11%
+- [ ] AI confirms it can run code
+- [ ] You see output: `4`
 
-**Look for:** A code block that looks like:
+If this doesn't work, code execution isn't enabled - skip to Module 5.
+
+**Step 2: Simple Calculation (Provide the Code)**
+
+Small models aren't great at writing code, so we'll provide it. Send this:
+```
+Please run this Python code to calculate compound annual growth rate (CAGR):
+
 ```python
 initial = 100
 final = 250
 years = 5
 cagr = (final/initial)**(1/years) - 1
+print(f"Investment grew from ${initial} to ${final} over {years} years")
 print(f"CAGR: {cagr*100:.2f}%")
 ```
-
-**Step 2: Create a Visualization**
-
-Send this:
-```
-Create a line graph showing exponential growth from $100 to $250
-over 5 years using the CAGR we just calculated. Label the axes.
 ```
 
 **Expected behavior:**
-- [ ] AI writes matplotlib code
 - [ ] Code executes
-- [ ] **A graph appears in the chat**
-- [ ] Graph shows growth curve
+- [ ] Output shows the calculation
+- [ ] Result appears: ~20.11%
 
-**This is the magic moment** - you just went from question to visualization without leaving the conversation.
+**The key insight:** You don't need AI to WRITE code. You just need it to RUN code in a convenient interface!
 
-**Step 3: Test With Real Data**
+**Step 3: Create a Visualization (Provide the Code)**
 
-Create a simple CSV file or ask AI to create one:
+Now let's create a graph. Send this:
 ```
-Generate a small dataset of 10 cities with their population and
-CO2 emissions. Then create a scatter plot showing if there's a
-correlation. Calculate and show the correlation coefficient.
+Please run this Python code to visualize investment growth:
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+years = np.arange(0, 6)
+initial = 100
+cagr = 0.2011
+values = initial * (1 + cagr)**years
+
+plt.figure(figsize=(8, 5))
+plt.plot(years, values, marker='o', linewidth=2, markersize=8)
+plt.title('Investment Growth Over Time', fontsize=14)
+plt.xlabel('Year', fontsize=12)
+plt.ylabel('Value ($)', fontsize=12)
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.savefig('growth.png', dpi=100)
+plt.show()
+print("Chart created!")
+```
 ```
 
 **Expected behavior:**
-- [ ] AI generates sample data
-- [ ] Creates visualization
-- [ ] Calculates correlation (r value)
-- [ ] Interprets the relationship
+- [ ] Code executes
+- [ ] You see "Chart created!" message
+- [ ] **A graph might appear** (depends on OpenWebUI configuration)
+
+**Note:** If you don't see the image, that's OK - the code still ran! The image is saved, even if not displayed.
+
+**This is the magic moment** - you just went from question to visualization without leaving the conversation (and without knowing matplotlib!)
+
+**Step 4: Test With Data Analysis (Provide the Code)**
+
+Now let's analyze some data. Send this:
+```
+Please run this Python code to generate and analyze sample data:
+
+```python
+import pandas as pd
+import numpy as np
+
+# Generate sample data
+np.random.seed(42)
+cities = ['CityA', 'CityB', 'CityC', 'CityD', 'CityE',
+          'CityF', 'CityG', 'CityH', 'CityI', 'CityJ']
+population = np.random.randint(100000, 2000000, 10)
+co2_emissions = population * np.random.uniform(0.8, 1.2, 10) / 1000
+
+df = pd.DataFrame({
+    'City': cities,
+    'Population': population,
+    'CO2_Emissions_kt': co2_emissions
+})
+
+print("Sample Data:")
+print(df)
+print("\nSummary Statistics:")
+print(df.describe())
+
+# Calculate correlation
+correlation = df['Population'].corr(df['CO2_Emissions_kt'])
+print(f"\nCorrelation between population and CO2: {correlation:.3f}")
+```
+```
+
+**Expected behavior:**
+- [ ] Sample data displayed
+- [ ] Summary statistics shown
+- [ ] Correlation coefficient calculated
+- [ ] Clear relationship visible
 
 ### 🎯 Advanced Challenge
 
-**Upload your own data** (CSV, Excel) and ask:
+**Can the AI write code for you?**
+
+Try asking (this will probably not work well with llama3.2:3b):
 ```
-Analyze this dataset. Show me:
-1. Summary statistics
-2. Distribution of the main variables
-3. Any interesting patterns or outliers
+Write Python code to create a scatter plot of population vs CO2 emissions
+with a trend line. Use the data from before.
 ```
 
-**This tests:** End-to-end research workflow with your real data.
+**If it works:** Great! The AI generated useful code.
+
+**If it doesn't work:** Normal for small models. Just provide the code yourself:
+```python
+plt.scatter(df['Population'], df['CO2_Emissions_kt'])
+plt.xlabel('Population')
+plt.ylabel('CO2 Emissions (kt)')
+plt.title('Population vs CO2 Emissions')
+plt.show()
+```
+
+**The lesson:** With local models, YOU provide code, AI RUNS it. That's still valuable!
 
 ## The Entertainment Piece 🎭
 
