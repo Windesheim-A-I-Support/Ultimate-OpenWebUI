@@ -1,0 +1,173 @@
+/* Workshop Styles */
+
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #3498db;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --light-bg: #ecf0f1;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 10px;
+}
+
+h2 {
+  color: var(--accent-color);
+  margin-top: 40px;
+}
+
+h3 {
+  color: var(--primary-color);
+  margin-top: 30px;
+}
+
+/* Callout boxes */
+.callout {
+  padding: 15px;
+  margin: 20px 0;
+  border-left: 5px solid;
+  border-radius: 5px;
+}
+
+.callout-note {
+  background-color: #e3f2fd;
+  border-color: var(--accent-color);
+}
+
+.callout-warning {
+  background-color: #fff3cd;
+  border-color: var(--warning-color);
+}
+
+.callout-tip {
+  background-color: #d4edda;
+  border-color: var(--success-color);
+}
+
+/* Test case boxes */
+.test-case {
+  background-color: var(--light-bg);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 2px solid var(--accent-color);
+}
+
+/* Code blocks */
+pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Checklists */
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Blockquotes (for quotes) */
+blockquote {
+  border-left: 4px solid var(--accent-color);
+  margin: 20px 0;
+  padding-left: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Module sections */
+.module {
+  background-color: white;
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Success criteria lists */
+.success-criteria {
+  background-color: #d4edda;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 5px solid var(--success-color);
+}
+
+.failure-criteria {
+  background-color: #f8d7da;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 5px solid var(--danger-color);
+}
+
+/* Icons for sections */
+.hook::before { content: "🎣 "; }
+.story::before { content: "📖 "; }
+.education::before { content: "📚 "; }
+.empowerment::before { content: "💪 "; }
+.entertainment::before { content: "🎭 "; }
+.learning::before { content: "🎓 "; }
+.anecdote::before { content: "🗣️ "; }
+.quote::before { content: "💭 "; }
+
+/* Print styles */
+@media print {
+  body {
+    max-width: 100%;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  pre, table {
+    page-break-inside: avoid;
+  }
+}

@@ -1,0 +1,1308 @@
+---
+title: "AI-Powered Research Workshop: From Question to Insight"
+subtitle: "A Hands-On Journey Through Modern Research Tools"
+author: "Research Innovation Lab"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: false
+    theme: cosmo
+    css: workshop-styles.css
+  pdf:
+    toc: true
+    number-sections: true
+execute:
+  echo: true
+  eval: false
+---
+
+# Welcome: Your Research Journey Starts Here
+
+## The Hook 🎣
+
+Imagine it's 2 AM. You're staring at 47 open browser tabs, three PDFs you can't find anymore, and a half-written Python script that crashed two hours ago. Sound familiar?
+
+**Today, you'll learn to do all of that in one place, in under 5 minutes.**
+
+## Workshop Philosophy
+
+> "The goal is not to learn everything about AI tools. The goal is to leave here with ONE workflow that saves you 3 hours this week." - Workshop Design Principle
+
+### How This Workshop Works
+
+**We follow the "Learning Loop" method:**
+1. **Hook** - Why should you care?
+2. **Story** - See it in action
+3. **Practice** - Do it yourself
+4. **Test** - Prove it works
+5. **Reflect** - What did you learn?
+6. **Apply** - Use it tomorrow
+
+::: {.callout-note}
+## Time Investment
+This workshop is designed for **2.5 hours** with breaks. Each module is 20-30 minutes. You can stop after any module and come back later - each one stands alone.
+:::
+
+---
+
+# Module 1: The Conversation That Understands You
+
+## The Hook 🎣
+
+**Quick quiz:** How many times have you copied the same prompt into ChatGPT today?
+
+What if your AI remembered everything you told it - for the entire project?
+
+## The Story 📖
+
+### Meet Dr. Sarah Chen
+
+Dr. Sarah Chen studies urban sustainability. Last month, she spent 6 hours copying data between ChatGPT (for questions), Jupyter (for analysis), and Google Docs (for notes).
+
+Then she discovered OpenWebUI. Now she does everything in one conversation:
+- Ask questions about her research
+- Run data analysis
+- Save the entire workflow
+- Share it with her research partner in Tokyo
+
+**Her time investment to learn:** 15 minutes
+**Her time saved per week:** 4.5 hours
+
+## The Educational Piece 📚
+
+### What is OpenWebUI?
+
+Think of OpenWebUI as your research lab, but digital:
+
+| Traditional Lab | OpenWebUI Lab |
+|----------------|---------------|
+| Multiple tools on different benches | Everything in one interface |
+| Write down every step manually | Auto-saves your entire process |
+| Can't replay experiments exactly | Perfect reproducibility |
+| Work alone or email files | Real-time collaboration |
+
+### The Big Idea
+
+**Context persistence** - The AI remembers everything in your conversation. No more "As I mentioned before..." because you switched tools.
+
+## The Empowering Piece 💪
+
+### Your First AI Conversation
+
+**Learning Objective:** Send a message and get a response in under 2 minutes.
+
+**Why this matters:** This is your foundation. Every advanced feature builds on this.
+
+### 🧪 Test Case #1: First Contact
+
+**Setup checklist:**
+```markdown
+□ OpenWebUI is open in your browser
+□ You can see the chat interface
+□ There's a model selected (look for "llama3.2" or similar)
+```
+
+**The Test:**
+
+1. **Open your browser** and go to: `https://team1-openwebui.valuechainhackers.xyz`
+
+2. **Create your account** (first signup becomes admin):
+   ```
+   Email: [your email]
+   Password: [strong password]
+   ```
+
+3. **Send this exact message:**
+   ```
+   Hello! Please respond with exactly these words:
+   "TEST SUCCESSFUL - I am ready to help with your research."
+   ```
+
+4. **Expected result:** Within 10 seconds, you should see a response containing those exact words.
+
+**✅ Success criteria:**
+- [ ] Message sent without errors
+- [ ] Response received in < 10 seconds
+- [ ] Response contains "TEST SUCCESSFUL"
+
+**❌ If it fails:**
+- Check you're logged in (see your email in top right?)
+- Check model is selected (dropdown menu near top)
+- Try refreshing the page
+
+### Going Deeper: Why This Matters
+
+When you sent that message, here's what happened:
+
+```{mermaid}
+graph LR
+    A[Your Browser] -->|Sends message| B[OpenWebUI Server]
+    B -->|Forwards to| C[AI Model]
+    C -->|Generates response| B
+    B -->|Streams back| A
+```
+
+**The magic:** Your conversation is now saved. Close your browser, come back tomorrow - it's still there.
+
+## The Entertainment Piece 🎭
+
+### The "AI Whisperer" Challenge
+
+**Game:** See how specific you can make the AI's response.
+
+**Try these:**
+1. "Respond with a haiku about research."
+2. "List exactly 3 reasons why coffee is essential for research. Number them."
+3. "Explain your last answer, but make it sound like a pirate."
+
+**Point:** The more specific your instructions, the better your results. This applies to everything you'll do today.
+
+## Key Learnings 🎓
+
+### What You Now Know
+
+1. **OpenWebUI saves context** - No more copying between tools
+2. **Specificity matters** - Clear instructions = better results
+3. **It's conversational** - You can refine, ask follow-ups, iterate
+
+### Questions You Should Answer
+
+1. Where does your conversation history save? *(Answer: In OpenWebUI's database, tied to your account)*
+2. Can you start multiple conversations? *(Answer: Yes! Click "New Chat" anytime)*
+3. What happens if you close your browser? *(Answer: Nothing - log back in and continue)*
+
+## The Anecdote 🗣️
+
+When we first tested OpenWebUI with grad students, one of them said: "Wait, so I don't lose my work if Chrome crashes?"
+
+When we said yes, she literally got up and hugged her laptop.
+
+She'd lost a 3-hour ChatGPT session the day before when her browser crashed.
+
+**That's why we're here.**
+
+## The Quote 💭
+
+> "The future of sustainability research is not just about finding answers, but about asking better questions, faster." - Dr. Kate Raworth, Economist and author of "Doughnut Economics"
+
+---
+
+# Module 2: Teaching Your AI to Read Your Papers
+
+## The Hook 🎣
+
+**Thought experiment:** You have 50 PDFs about circular economy. You need to find every mention of "reverse logistics."
+
+- **Old way:** Open each PDF, Ctrl+F, copy excerpts, 2 hours
+- **New way:** Upload all 50, ask "What do these papers say about reverse logistics?", 2 minutes
+
+**That's RAG. Let's learn it.**
+
+## The Story 📖
+
+### Meet Professor James Okonkwo
+
+James researches waste management in Lagos. He had a problem:
+
+*"I've collected 200 interviews, 80 policy documents, and 30 academic papers. I know the answer to my research question is somewhere in there, but I'll spend 6 months finding it manually."*
+
+He uploaded everything to OpenWebUI. His first question: *"What are the main barriers to waste sorting according to my interview data?"*
+
+**Time to answer:** 30 seconds
+**Accuracy:** Cited 7 specific interviews with exact quotes
+
+## The Educational Piece 📚
+
+### What is RAG (Retrieval Augmented Generation)?
+
+**The problem RAG solves:**
+- AI models only know what they were trained on (data cutoff)
+- They can't read YOUR specific documents
+- They "hallucinate" - make up facts confidently
+
+**The RAG solution:**
+
+```{mermaid}
+graph TD
+    A[Your Question] --> B[Search your documents]
+    B --> C[Find relevant chunks]
+    C --> D[Give chunks to AI]
+    D --> E[AI answers using YOUR documents]
+    E --> F[Response with citations]
+```
+
+**In plain English:**
+1. You upload your PDFs
+2. They get "chunked" and "embedded" (turned into searchable math)
+3. When you ask a question, we find relevant chunks
+4. AI reads THOSE chunks and answers from them
+5. You get citations showing where the answer came from
+
+### Why This Changes Everything
+
+**Before RAG:**
+- "Tell me about X" → AI uses general knowledge (might be wrong)
+
+**With RAG:**
+- "Tell me about X" → AI searches YOUR documents, quotes them, cites them
+
+**You're creating a custom AI that knows YOUR research.**
+
+## The Empowering Piece 💪
+
+### Your First Document Upload
+
+**Learning Objective:** Upload a PDF and ask it a question it can only answer from that document.
+
+### 🧪 Test Case #2: Document Intelligence
+
+**Setup checklist:**
+```markdown
+□ You have a PDF ready (research paper, report, anything)
+□ You're logged into OpenWebUI
+□ You're in a new chat
+```
+
+**Don't have a PDF handy?** Download this sample:
+```bash
+# Sample sustainability report
+https://www.ellenmacarthurfoundation.org/circular-economy-diagram
+```
+
+**The Test:**
+
+**Step 1: Upload Your Document**
+
+1. Look for the **paperclip** 📎 or **"+"** icon in the chat input area
+2. Click it
+3. Select "Upload File"
+4. Choose your PDF
+5. Wait for "Processing complete" message
+
+**Expected:** Green checkmark, filename appears, "Document processed successfully"
+
+**Step 2: Test RAG is Working**
+
+Send this message:
+```
+Based on the document I just uploaded, what are the top 3 main points?
+Use bullet points and quote specific sections.
+```
+
+**Step 3: Verify Citations**
+
+Look for:
+- [ ] Answer is specific to YOUR document (not general knowledge)
+- [ ] You see citations or page references
+- [ ] If you uploaded a circular economy doc, it mentions specific frameworks from that doc
+
+**Step 4: Test the Limits**
+
+Try this:
+```
+What does this document say about quantum computing?
+```
+
+**Expected result:** AI says something like "This document doesn't contain information about quantum computing" or "I don't see any references to quantum computing in the uploaded document."
+
+**Why this test matters:** You're verifying RAG stays grounded in your documents and doesn't hallucinate.
+
+### 🎯 Advanced Challenge
+
+**Upload a second document** and ask:
+```
+What are the similarities and differences between these two documents?
+```
+
+**This tests:** Multi-document RAG (searching across multiple sources)
+
+## The Entertainment Piece 🎭
+
+### The "Citation Scavenger Hunt"
+
+**Game:** Upload a document and challenge a partner:
+
+1. Each person asks a question about the document
+2. The AI answers with citations
+3. First person to find the actual quote in the PDF wins
+4. **Bonus points** if the AI got it wrong (finding AI mistakes is a skill!)
+
+**Why this is fun:** You're learning to trust AND verify AI responses.
+
+## Key Learnings 🎓
+
+### What You Now Know
+
+1. **RAG grounds AI in YOUR documents** - No more hallucination about your research
+2. **Citations are your friend** - Always verify claims against sources
+3. **Multiple documents work** - Upload your entire literature review
+4. **Embeddings are "searchable math"** - Your docs become queryable knowledge
+
+### The Technical Magic (Optional Deep Dive)
+
+When you upload a PDF:
+
+```python
+# Simplified version of what happens
+document = extract_text_from_pdf("your_paper.pdf")
+chunks = split_into_paragraphs(document)
+
+for chunk in chunks:
+    embedding = create_vector(chunk)  # Turns text into numbers
+    store_in_database(embedding, chunk)  # Saves in Qdrant
+```
+
+When you ask a question:
+
+```python
+question_embedding = create_vector("your question")
+similar_chunks = search_database(question_embedding)  # Math finds similar vectors
+ai_response = generate_answer(question, similar_chunks)  # AI reads chunks
+```
+
+**You don't need to understand this. But knowing it exists helps you understand why:**
+- Large documents take longer to process
+- More documents = better coverage
+- Good questions get better chunks
+
+## Questions You Should Answer
+
+1. What does "RAG" stand for? *(Retrieval Augmented Generation)*
+2. Why doesn't the AI just "remember" your PDF after uploading? *(It needs to search it each time - that's how it stays accurate)*
+3. Can you upload Word docs? Images? *(Depends on configuration - PDF definitely works)*
+4. What happens if you ask about something NOT in your documents? *(Good RAG says "I don't know" - bad RAG hallucinates)*
+
+## The Anecdote 🗣️
+
+During a pilot test, a PhD student uploaded her entire thesis draft (200 pages). She asked: "What's my main argument?"
+
+The AI summarized it in 3 sentences. She stared at the screen, then said: "That's... that's actually what I've been trying to say for 4 years."
+
+She used that as her elevator pitch for the next conference.
+
+**Sometimes the AI sees patterns we're too close to notice.**
+
+## The Quote 💭
+
+> "We are drowning in information, while starving for wisdom. The world henceforth will be run by synthesizers, people able to put together the right information at the right time, think critically about it, and make important choices wisely." - E.O. Wilson, Biologist
+
+---
+
+# Module 3: Asking the Internet for Help (Without Opening 50 Tabs)
+
+## The Hook 🎣
+
+**Quick scenario:**
+
+You're writing a paper about carbon offsets. You need:
+- Latest 2024 policy changes
+- Current carbon prices
+- Recent criticism of offset schemes
+
+**Your current workflow:**
+1. Google search
+2. Open 10 tabs
+3. Read each one
+4. Take notes
+5. Lose track of which tab had that one stat
+6. Accidentally close the browser
+7. Cry
+
+**New workflow:** Ask OpenWebUI. Get answer with sources. Done.
+
+## The Story 📖
+
+### Meet Dr. Maria Santos
+
+Maria studies renewable energy policy in Brazil. Her research question: *"How have feed-in tariffs changed in EU countries since 2023?"*
+
+This needs CURRENT data. Her literature is from 2022. ChatGPT's data cutoff is 2023.
+
+**She enabled web search in OpenWebUI and asked:**
+```
+What changes have EU countries made to feed-in tariffs for solar energy
+in 2024? Include specific countries and dates.
+```
+
+**Result:**
+- AI searched the web
+- Found 8 recent sources
+- Synthesized an answer with citations
+- Included links to policy documents
+
+**Time saved:** 2 hours of manual googling
+
+## The Educational Piece 📚
+
+### What is Web Search Integration?
+
+**The problem it solves:**
+- AI models have a knowledge cutoff (e.g., "I only know data up to April 2024")
+- Your research questions need current information
+- Switching between ChatGPT and Google breaks your flow
+
+**The solution:**
+
+```{mermaid}
+graph TD
+    A[Your Question] --> B{Does this need current info?}
+    B -->|Yes| C[Search the web via SearxNG]
+    B -->|No| D[Use AI knowledge]
+    C --> E[Get results]
+    E --> F[AI reads search results]
+    F --> G[Synthesizes answer]
+    G --> H[Response with links]
+```
+
+### When to Use Web Search
+
+**Good use cases:**
+- ✅ Current events, policies, statistics
+- ✅ Latest research publications
+- ✅ Real-time data (prices, weather, trends)
+- ✅ Fact-checking recent claims
+
+**Bad use cases:**
+- ❌ General knowledge questions ("What is photosynthesis?")
+- ❌ Math calculations (waste of a web search)
+- ❌ Questions about YOUR documents (use RAG instead)
+
+## The Empowering Piece 💪
+
+### Your First Web Search Query
+
+**Learning Objective:** Ask a question requiring current information and get a cited answer.
+
+### 🧪 Test Case #3: Real-Time Research
+
+**Setup checklist:**
+```markdown
+□ You're in OpenWebUI
+□ You're in a new chat
+□ Web search is enabled (check settings or toggle)
+```
+
+**How to enable web search:**
+1. Look for a **🌐 globe icon** or "Web Search" toggle near the message input
+2. Click to enable (should turn blue/green)
+3. You should see "Web search enabled" indicator
+
+**The Test:**
+
+**Step 1: Ask a Current Question**
+
+Send this:
+```
+What are the latest (2024-2025) developments in battery recycling
+technology for electric vehicles? Include company names and dates.
+```
+
+**Expected behavior:**
+- [ ] You see "Searching the web..." indicator
+- [ ] Wait 5-15 seconds (web search takes longer)
+- [ ] Response includes recent dates (2024-2025)
+- [ ] Response includes URLs or source names
+
+**Step 2: Verify It's Actually Using Web Search**
+
+Try this control test - **disable web search** and ask:
+```
+What happened in sustainability news yesterday?
+```
+
+**Expected result:** "I don't have access to information about yesterday" or similar.
+
+Now **enable web search** again and ask the same question.
+
+**Expected result:** Actual recent news with dates and sources.
+
+**Step 3: Compare Quality**
+
+Ask this WITH web search enabled:
+```
+What is the current price of carbon credits in the EU ETS?
+```
+
+**You should get:**
+- [ ] A specific number (€X per ton)
+- [ ] A recent date
+- [ ] A source URL
+
+**This is information the AI cannot know without searching.**
+
+## The Entertainment Piece 🎭
+
+### The "Time Traveler" Game
+
+**Challenge:** Ask questions that reveal whether AI is using web search or old knowledge.
+
+**Example questions:**
+1. "Who won the Nobel Prize in Economics this year?"
+2. "What's the latest IPCC report recommendation?"
+3. "How much has global temperature risen since 2020?"
+
+**How to play:**
+- Disable web search → Note the answer
+- Enable web search → Note the answer
+- Compare!
+
+**Point:** This helps you understand when AI is guessing vs. searching.
+
+## Key Learnings 🎓
+
+### What You Now Know
+
+1. **Web search extends AI's knowledge cutoff** - Get current information
+2. **Citations are automatic** - No more bookmarking 50 tabs
+3. **Synthesis is the value** - AI reads multiple sources and summarizes
+4. **Toggle mindfully** - Not every question needs web search
+
+### Behind the Scenes: SearxNG
+
+OpenWebUI uses **SearxNG** - a privacy-respecting meta-search engine that:
+- Searches multiple sources (Google, Bing, DuckDuckGo, etc.)
+- Doesn't track you
+- Returns results to the AI
+- AI synthesizes them into an answer
+
+**Why this matters:** You get broad search coverage without being tracked across the internet.
+
+## Questions You Should Answer
+
+1. When should you enable web search? *(When you need current info or real-time data)*
+2. Why does web search take longer than normal AI responses? *(It has to search the web, fetch results, then read them)*
+3. Can you trust web search results? *(Verify sources - AI can misinterpret search results)*
+4. What's the difference between web search and RAG? *(RAG = your documents, Web search = the internet)*
+
+## The Anecdote 🗣️
+
+A logistics researcher was writing a grant proposal about port automation. He needed current examples of AI implementation in European ports.
+
+He asked OpenWebUI with web search: *"Which European ports implemented AI-driven logistics systems in 2024?"*
+
+The AI found 6 examples he'd never heard of, with links to press releases and pilot project reports.
+
+**He got 3 citations for his grant proposal in 5 minutes.**
+
+The grant got funded.
+
+## The Quote 💭
+
+> "In the age of information abundance, the synthesis of knowledge is more valuable than access to data." - Dr. Johan Rockström, Climate Scientist and Director of the Potsdam Institute
+
+---
+
+# Module 4: From Question to Graph in 60 Seconds
+
+## The Hook 🎣
+
+**Pop quiz:** How long does it take you to:
+1. Export data from Excel
+2. Open Jupyter/Python
+3. Load the data
+4. Write code to analyze it
+5. Generate a graph
+6. Interpret results
+
+**Average answer:** 30-45 minutes
+
+**What if it took 60 seconds?**
+
+## The Story 📖
+
+### Meet Alex Kowalski
+
+Alex is a supply chain researcher studying delivery route efficiency. He has a CSV of 500 delivery routes with distances and times.
+
+**His old workflow:**
+```python
+# 1. Open Jupyter
+# 2. Import libraries (pray they're installed)
+import pandas as pd
+import matplotlib.pyplot as plt
+# 3. Load data (fight with file paths)
+df = pd.read_csv('data.csv')
+# 4. Clean data (find the error)
+# 5. Plot (Google the syntax)
+# 6. Interpret
+```
+
+**Time:** 45 minutes (if everything works)
+
+**His new workflow in OpenWebUI:**
+```
+Here's my delivery data [uploads CSV]. Show me the correlation
+between distance and time, create a scatter plot, and tell me
+if there are any outliers I should investigate.
+```
+
+**Time:** 90 seconds
+
+## The Educational Piece 📚
+
+### What is Code Execution?
+
+**The problem it solves:**
+- You have data but aren't a Python expert
+- You know what question you want answered, not how to code it
+- You switch between ChatGPT (for code) and Jupyter (to run it)
+
+**The solution:**
+
+```{mermaid}
+graph LR
+    A[Your Question] --> B[AI writes Python code]
+    B --> C[Code executes in Jupyter]
+    C --> D[Results/Graphs return]
+    D --> E[AI interprets results]
+    E --> F[You get insights]
+```
+
+**The magic:** Everything happens in one conversation. No copying code. No switching tools.
+
+### What Can You Do With This?
+
+**Data analysis:**
+- Descriptive statistics
+- Correlation analysis
+- Hypothesis testing
+- Time series analysis
+
+**Visualization:**
+- Scatter plots, line graphs, bar charts
+- Heatmaps, distributions
+- Custom plots
+
+**Data processing:**
+- Cleaning messy data
+- Merging datasets
+- Transforming formats
+- Calculating derived metrics
+
+## The Empowering Piece 💪
+
+### Your First Code Execution
+
+**Learning Objective:** Ask AI to perform a calculation and see the code run automatically.
+
+### 🧪 Test Case #4: Calculator on Steroids
+
+**Setup checklist:**
+```markdown
+□ You're in OpenWebUI
+□ Code execution is enabled (should be by default)
+□ You're in a new chat
+```
+
+**The Test:**
+
+**Step 1: Simple Calculation**
+
+Send this:
+```
+Calculate the compound annual growth rate (CAGR) if an investment
+grows from $100 to $250 over 5 years. Show me the formula and the result.
+```
+
+**Expected behavior:**
+- [ ] AI explains CAGR formula
+- [ ] You see a code block with Python code
+- [ ] Code executes automatically (or has a "Run" button)
+- [ ] Result appears: ~20.11%
+
+**Look for:** A code block that looks like:
+```python
+initial = 100
+final = 250
+years = 5
+cagr = (final/initial)**(1/years) - 1
+print(f"CAGR: {cagr*100:.2f}%")
+```
+
+**Step 2: Create a Visualization**
+
+Send this:
+```
+Create a line graph showing exponential growth from $100 to $250
+over 5 years using the CAGR we just calculated. Label the axes.
+```
+
+**Expected behavior:**
+- [ ] AI writes matplotlib code
+- [ ] Code executes
+- [ ] **A graph appears in the chat**
+- [ ] Graph shows growth curve
+
+**This is the magic moment** - you just went from question to visualization without leaving the conversation.
+
+**Step 3: Test With Real Data**
+
+Create a simple CSV file or ask AI to create one:
+```
+Generate a small dataset of 10 cities with their population and
+CO2 emissions. Then create a scatter plot showing if there's a
+correlation. Calculate and show the correlation coefficient.
+```
+
+**Expected behavior:**
+- [ ] AI generates sample data
+- [ ] Creates visualization
+- [ ] Calculates correlation (r value)
+- [ ] Interprets the relationship
+
+### 🎯 Advanced Challenge
+
+**Upload your own data** (CSV, Excel) and ask:
+```
+Analyze this dataset. Show me:
+1. Summary statistics
+2. Distribution of the main variables
+3. Any interesting patterns or outliers
+```
+
+**This tests:** End-to-end research workflow with your real data.
+
+## The Entertainment Piece 🎭
+
+### The "Visualization Remix" Game
+
+**Challenge:** Take the same data and ask for it in different visualization styles.
+
+**Starting prompt:**
+```
+Create sample data of monthly renewable energy production
+(solar, wind, hydro) for a year.
+```
+
+**Then request:**
+1. "Show this as a line graph"
+2. "Show this as a stacked area chart"
+3. "Show this as a heatmap"
+4. "Show this as an interactive plot if possible"
+
+**Point:** Learn what visualization best communicates your insight.
+
+## Key Learnings 🎓
+
+### What You Now Know
+
+1. **Code execution happens in Jupyter** - A real Python environment
+2. **AI writes the code for you** - You describe what you want, it codes it
+3. **Results stay in the conversation** - No more "where did I save that graph?"
+4. **Iteration is fast** - "Now make the bars blue" → done
+5. **Reproducibility is built-in** - All code is saved in the chat
+
+### The Technical Flow
+
+When you ask for analysis:
+
+```python
+# 1. AI interprets your question
+user_intent = understand_request("show me correlation...")
+
+# 2. AI writes Python code
+code = generate_python_code(user_intent)
+
+# 3. Code sent to Jupyter container
+result = jupyter_kernel.execute(code)
+
+# 4. Output captured (text, images, errors)
+output = capture_output(result)
+
+# 5. Displayed in chat
+return_to_user(output)
+```
+
+**Why Jupyter?** It's a standardized Python environment that's:
+- Isolated (your code can't break the system)
+- Stateful (variables persist between executions)
+- Rich (can return plots, dataframes, etc.)
+
+## Questions You Should Answer
+
+1. Where does the Python code actually run? *(In a Jupyter container on the server)*
+2. Can you edit the code before it runs? *(Yes! You can copy it, modify it, and ask AI to run the modified version)*
+3. What Python libraries are available? *(Common ones: pandas, numpy, matplotlib, scipy, scikit-learn)*
+4. What if the code has an error? *(AI sees the error and usually fixes it automatically)*
+
+## The Anecdote 🗣️
+
+A PhD student in environmental science had 2 years of weather data in Excel. She needed to identify "heat wave events" (5+ consecutive days above 35°C).
+
+She'd been manually highlighting cells for a week.
+
+She asked OpenWebUI: *"Find all heat wave events in this data (5+ days above 35°C). Show me when they occurred and how long each lasted."*
+
+**60 seconds later:** Complete analysis, a calendar heatmap visualization, and a table of all 17 heat wave events.
+
+She called her supervisor and said, "I need to change my methodology section."
+
+## The Quote 💭
+
+> "The real problem is not whether machines think but whether humans do." - B.F. Skinner (though he meant it differently, it applies to data analysis)
+
+> "Data is not information, information is not knowledge, knowledge is not understanding, understanding is not wisdom." - Clifford Stoll, Astronomer & Author
+
+---
+
+# Module 5: Bringing It All Together - The Research Power Move
+
+## The Hook 🎣
+
+**The ultimate question:** Can you use ALL four skills in ONE research workflow?
+
+**Answer:** Yes. And it's spectacular.
+
+## The Story 📖
+
+### Meet Dr. Yuki Tanaka
+
+Yuki studies urban heat islands in Asian megacities. Her research question:
+
+*"How do urban green spaces correlate with temperature reduction, and what do recent policy implementations suggest about effectiveness?"*
+
+**This requires:**
+- 📄 RAG - her uploaded research papers
+- 🌐 Web search - current policy implementations
+- 💻 Code execution - correlation analysis
+- 💬 Conversation - synthesis and interpretation
+
+**Her single conversation:**
+
+```
+I've uploaded 15 papers about urban heat islands. Based on these,
+what's the theoretical cooling effect of increasing urban green space by 10%?
+```
+
+*(AI uses RAG, quotes papers)*
+
+```
+Now search the web for cities that implemented urban greening policies
+in 2023-2024. What were their results?
+```
+
+*(AI searches web, finds Seoul, Singapore, Barcelona examples)*
+
+```
+Here's temperature data from Singapore [uploads CSV]. Calculate the
+correlation between green space coverage and temperature reduction.
+Compare this to the theoretical predictions from the papers.
+```
+
+*(AI executes code, creates visualizations, compares empirical vs theoretical)*
+
+```
+Synthesize all of this into a 200-word summary I can use in my paper's
+introduction, with citations.
+```
+
+*(AI writes the summary, drawing from papers, web sources, and data analysis)*
+
+**Time:** 15 minutes
+**Output:** Publication-ready paragraph with citations
+**Old method:** 2 weeks
+
+## The Educational Piece 📚
+
+### The Integrated Research Workflow
+
+**What makes this powerful:**
+
+```{mermaid}
+graph TD
+    A[Research Question] --> B[RAG: Literature Review]
+    B --> C[Web: Current Context]
+    C --> D[Code: Data Analysis]
+    D --> E[AI: Synthesis]
+    E --> F[Actionable Insight]
+    F -.Iterate.-> A
+```
+
+**Each capability enhances the others:**
+
+| Capability | Provides | Used By |
+|------------|----------|---------|
+| RAG | Theoretical foundation | Code (variables to test), Web (context for search) |
+| Web Search | Current examples | RAG (validate theories), Code (real-world data) |
+| Code Execution | Empirical evidence | RAG (test theories), Web (inform what to search) |
+| Conversation | Integration layer | Everything connects here |
+
+## The Empowering Piece 💪
+
+### Your Final Challenge: The Complete Research Cycle
+
+**Learning Objective:** Use all four capabilities in one conversation to answer a research question.
+
+### 🧪 Test Case #5: The Grand Finale
+
+**Setup checklist:**
+```markdown
+□ You have 1-2 PDFs related to your research area
+□ You have a CSV of data (or can generate sample data)
+□ You have a research question in mind
+□ Web search is enabled
+```
+
+**The Test:**
+
+**Your mission:** Answer this question using all four capabilities:
+
+*"What does the literature say about [YOUR TOPIC], what are current real-world examples, and what does the data show?"*
+
+**Step-by-step guide:**
+
+**Step 1: Upload Your Literature (RAG)**
+```
+I'm researching [YOUR TOPIC]. I've uploaded papers about this.
+What are the main findings regarding [SPECIFIC ASPECT]?
+```
+
+**Expected:** Summary with citations from YOUR papers.
+
+**Step 2: Add Current Context (Web Search)**
+```
+Now search the web for recent (2024-2025) examples of [YOUR TOPIC]
+being implemented. What are organizations doing?
+```
+
+**Expected:** Real-world examples with URLs.
+
+**Step 3: Analyze Data (Code Execution)**
+```
+Here's data related to [YOUR TOPIC] [upload CSV or ask AI to generate sample data].
+Analyze it and create a visualization showing [RELATIONSHIP YOU WANT TO EXPLORE].
+```
+
+**Expected:** Code execution, graph, statistical analysis.
+
+**Step 4: Synthesize Everything (Integration)**
+```
+Based on:
+1. The literature I uploaded
+2. The current examples you found
+3. The data analysis we just did
+
+Write a 3-paragraph synthesis that answers: [YOUR RESEARCH QUESTION]
+Include citations and reference the data visualization.
+```
+
+**Expected:** A coherent synthesis drawing from all three sources.
+
+**✅ Success criteria:**
+- [ ] Literature is cited correctly
+- [ ] Web sources are referenced with URLs
+- [ ] Data analysis is mentioned with specific numbers
+- [ ] Synthesis reads coherently (not just pasted together)
+- [ ] You can see the thread connecting all parts
+
+**❌ If it fails:**
+- Break it down - do each step separately first
+- Check each capability works individually before combining
+- Be more specific in your synthesis request
+
+### 🎯 Real-World Application
+
+**Your homework:** Use this workflow for an actual research task this week.
+
+**Ideas:**
+1. Literature review + current policy landscape + statistical validation
+2. Historical data analysis + recent trends + predictive insights
+3. Theoretical framework + case studies + empirical testing
+
+## The Entertainment Piece 🎭
+
+### The "Research Relay Race"
+
+**For group workshops:**
+
+1. **Team 1:** Uploads papers, asks RAG question
+2. **Team 2:** Takes that answer, does web search to expand
+3. **Team 3:** Takes both, analyzes data to validate
+4. **Team 4:** Synthesizes everything
+
+**First team to create a coherent 200-word research summary wins.**
+
+**Why this is fun:** You see how each capability builds on the last.
+
+## Key Learnings 🎓
+
+### What You Now Know
+
+1. **Integration is the superpower** - Individual tools are good; combined, they're transformative
+2. **Conversation is the glue** - Context persistence makes integration possible
+3. **Iteration is cheap** - Refine any part without redoing everything
+4. **Reproducibility is automatic** - Share the conversation = share the entire methodology
+
+### The Meta-Skill: Prompt Engineering
+
+**You've been learning to:**
+- Ask specific questions (Module 1)
+- Request citations (Module 2)
+- Enable/disable features strategically (Module 3)
+- Describe desired outputs (Module 4)
+- Chain complex requests (Module 5)
+
+**This is prompt engineering.** It's the literacy skill of the AI age.
+
+## Questions You Should Answer
+
+1. Which capability should you use first? *(Usually RAG or Web Search to gather information, then Code to analyze)*
+2. Can you go back and change a previous step? *(Yes! Just ask AI to redo that part)*
+3. How do you know if your synthesis is good? *(Check: Are all sources represented? Is the logic clear? Can someone reproduce this?)*
+4. When should you NOT use all capabilities? *(When a simple question needs a simple answer)*
+
+## The Anecdote 🗣️
+
+We ran this workshop with a group of sustainability researchers. One participant, Dr. Amara, was skeptical.
+
+"I've been doing research for 15 years. I know my workflow."
+
+We gave her the final challenge. She chose to analyze plastic waste policy effectiveness.
+
+15 minutes later, she had:
+- Synthesized 8 papers she'd uploaded
+- Found 6 current policy examples from 4 countries
+- Analyzed waste reduction data
+- Generated 3 graphs
+- Written a draft introduction with 14 citations
+
+She looked up and said, "This would have taken me three days."
+
+**Then she said something profound:**
+
+"But the real value isn't the time saved. It's that I can now explore three research directions in an afternoon instead of committing to one for a month. This changes how I think about research questions."
+
+**That's the real transformation.**
+
+## The Quote 💭
+
+> "The real voyage of discovery consists not in seeking new landscapes, but in having new eyes." - Marcel Proust
+
+> "We live in a society absolutely dependent on science and technology and yet have cleverly arranged things so that almost no one understands science and technology. That's a clear prescription for disaster." - Carl Sagan
+
+**Today, you've gained new eyes. Use them.**
+
+---
+
+# Workshop Conclusion: Your Next Steps
+
+## What You've Accomplished Today
+
+In 2.5 hours, you learned to:
+
+✅ Have AI conversations that remember context
+✅ Upload documents and query them with citations
+✅ Search the web without leaving your conversation
+✅ Execute code and create visualizations instantly
+✅ Integrate all four into a research workflow
+
+**More importantly:** You've experienced a new way of doing research.
+
+## The 3-Day Challenge
+
+**Your mission:** Use OpenWebUI for one research task in the next 3 days.
+
+**Why 3 days?** Research on learning retention shows:
+- Use a skill within 24 hours → 65% retention
+- Use within 3 days → 50% retention
+- Wait a week → 20% retention
+
+**Suggested tasks:**
+1. Literature review for a section you're writing
+2. Analyze a dataset that's been sitting in your folder
+3. Fact-check something with current web search
+4. Draft a research summary from multiple sources
+
+## Common Pitfalls (And How to Avoid Them)
+
+### Pitfall 1: Treating AI Like Google
+**Problem:** Vague questions get vague answers
+**Solution:** Be specific. "Summarize this paper" → "What does this paper say about [SPECIFIC CLAIM]?"
+
+### Pitfall 2: Not Verifying Citations
+**Problem:** AI can misquote or misinterpret
+**Solution:** Spot-check citations. Click through to sources. Trust, but verify.
+
+### Pitfall 3: Asking It to Do Everything
+**Problem:** One massive prompt trying to solve your entire research project
+**Solution:** Break it down. Iterate. Refine.
+
+### Pitfall 4: Forgetting It's a Tool, Not Magic
+**Problem:** Expecting AI to understand unstated context
+**Solution:** Provide context. If YOU need background to answer the question, so does the AI.
+
+## Resources for Continued Learning
+
+**Within OpenWebUI:**
+- Check the Admin Panel (if you're admin) for configuration options
+- Explore model settings (temperature, etc.) for different behaviors
+- Try different models for different tasks
+
+**External Resources:**
+- OpenWebUI Documentation: [github.com/open-webui/open-webui](https://github.com/open-webui/open-webui)
+- Prompt Engineering Guide: [promptingguide.ai](https://www.promptingguide.ai/)
+- Research Ethics & AI: [guidelines from your institution]
+
+## Final Reflection Questions
+
+Take 5 minutes to write down:
+
+1. **What surprised you most today?**
+2. **What's one workflow you'll change this week?**
+3. **What's one thing you're still uncertain about?**
+4. **Who else could benefit from learning this?**
+
+## The Last Quote
+
+> "The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn." - Alvin Toffler
+
+**You just learned. Now go use it.**
+
+---
+
+# Appendix: Quick Reference Guide
+
+## Checklist for Each Module
+
+### Module 1: Basic Chat
+- [ ] Create account
+- [ ] Send first message
+- [ ] Receive response < 10 seconds
+- [ ] Start new chat
+- [ ] Access chat history
+
+### Module 2: RAG
+- [ ] Upload PDF
+- [ ] Wait for processing
+- [ ] Ask document-specific question
+- [ ] Verify citation
+- [ ] Test multi-document query
+
+### Module 3: Web Search
+- [ ] Enable web search toggle
+- [ ] Ask current-info question
+- [ ] Receive response with URLs
+- [ ] Compare with/without web search
+- [ ] Verify source quality
+
+### Module 4: Code Execution
+- [ ] Request calculation
+- [ ] See code execute
+- [ ] View result
+- [ ] Generate visualization
+- [ ] Interpret output
+
+### Module 5: Integration
+- [ ] Use RAG + Web + Code in sequence
+- [ ] Request synthesis
+- [ ] Receive coherent output
+- [ ] Verify all sources included
+
+## Troubleshooting Guide
+
+| Problem | Check | Solution |
+|---------|-------|----------|
+| Can't log in | URL correct? | Try https://team1-openwebui.valuechainhackers.xyz |
+| No response | Model selected? | Check dropdown menu at top |
+| Document won't upload | File size? | Try smaller PDF first |
+| Web search not working | Toggle enabled? | Look for 🌐 icon |
+| Code won't execute | Error message? | Share error with AI, it often fixes itself |
+| Everything is slow | Multiple people testing? | Be patient, or try off-peak hours |
+
+## Command Cheat Sheet
+
+### Basic Prompts
+```
+# Good question structure
+"Based on [SOURCE], what does [SUBJECT] indicate about [TOPIC]?"
+
+# Citation request
+"Provide specific quotes and page numbers."
+
+# Refinement
+"Make that more concise / more detailed / more technical."
+```
+
+### RAG Prompts
+```
+"Summarize the main argument of the uploaded document."
+"What do these papers agree/disagree on regarding [TOPIC]?"
+"Find every mention of [TERM] in the documents."
+```
+
+### Web Search Prompts
+```
+"Search for recent developments in [TOPIC] since [DATE]."
+"What are current examples of [CONCEPT] being implemented?"
+"Fact-check this claim: [CLAIM]"
+```
+
+### Code Execution Prompts
+```
+"Calculate [FORMULA] where [VARIABLES]."
+"Create a [PLOT TYPE] showing [RELATIONSHIP]."
+"Analyze this data and tell me [WHAT TO LOOK FOR]."
+```
+
+### Integration Prompts
+```
+"Based on the uploaded papers, web search for current examples,
+and analyze this data, what can we conclude about [QUESTION]?"
+```
+
+## Keyboard Shortcuts
+
+(These depend on OpenWebUI version, but commonly:)
+
+- **Ctrl/Cmd + Enter:** Send message
+- **Ctrl/Cmd + K:** New chat
+- **Ctrl/Cmd + /** : Toggle sidebar
+- **↑ Arrow:** Edit last message
+
+## Getting Help
+
+**During the workshop:**
+- 🙋 Raise your hand
+- Ask your neighbor
+- Check this guide
+
+**After the workshop:**
+- OpenWebUI GitHub Issues
+- Your institution's support
+- AI Stack Exchange
+
+---
+
+# Acknowledgments
+
+This workshop was designed using principles from:
+
+- **Luma Institute** - Visual thinking and human-centered design
+- **Hyper Island** - Experiential learning and reflection
+- **Greg Wilson (Teaching Tech Together)** - Evidence-based teaching methods
+- **Julie Dirksen (Design for How People Learn)** - Learning science
+- **AJ&Smart** - Workshop facilitation and engagement
+- **The Art of Hosting** - Community learning practices
+
+**Special thanks to:**
+- The Open-WebUI community
+- Researchers who piloted this workshop
+- You, for being here
+
+---
+
+# About This Workshop
+
+**Version:** 1.0
+**Last Updated:** 2025
+**License:** CC BY-SA 4.0 (use it, adapt it, share it)
+**Feedback:** [your contact method]
+
+**If this workshop helped you:** Pay it forward. Teach someone else.
+
+---
+
+*"The best way to learn is to teach. The best way to understand is to explain. The best way to master is to share."* - Workshop Philosophy
+
+**Now go do research differently.** 🚀
