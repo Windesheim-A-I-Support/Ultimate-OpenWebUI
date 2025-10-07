@@ -46,43 +46,55 @@ This workshop is designed for **2.5 hours** with breaks. Each module is 20-30 mi
 
 ## Choosing Your AI Model
 
-This workshop uses **free, local AI models** running on your OpenWebUI server. No API costs, complete privacy, but smaller models than ChatGPT.
+This workshop uses **OpenRouter** to access powerful cloud-based AI models. OpenRouter provides access to GPT-4, Claude, and other leading models through a single interface.
 
-### Available Models
+### Available Models via OpenRouter
 
-Your OpenWebUI instance has these models:
+Your OpenWebUI instance has access to these models:
 
 | Model | Best For | Speed | Quality |
 |-------|----------|-------|---------|
-| **llama3.2:3b** | General chat, questions | ⚡⚡⚡ Fast | ⭐⭐⭐ Good |
-| **phi3:mini** | Quick responses | ⚡⚡⚡ Fast | ⭐⭐ Decent |
-| **qwen2.5:0.5b** | Very fast responses | ⚡⚡⚡⚡ Very Fast | ⭐⭐ Basic |
+| **Claude 3.5 Sonnet** | Complex reasoning, code, citations | ⚡⚡ Good | ⭐⭐⭐⭐⭐ Excellent |
+| **GPT-4o** | All-around tasks, fast responses | ⚡⚡⚡ Fast | ⭐⭐⭐⭐⭐ Excellent |
+| **GPT-4** | Complex analysis, code generation | ⚡⚡ Good | ⭐⭐⭐⭐⭐ Excellent |
+| **Claude 3 Haiku** | Quick tasks, basic queries | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐⭐ Good |
 
 ### Recommended Model for This Workshop
 
-**Use `llama3.2:3b` for all modules** - It's the best balance of speed and quality.
+**Use `Claude 3.5 Sonnet` (via OpenRouter) for all modules** - It excels at:
+- 📚 Document analysis with accurate citations
+- 💻 Python code generation
+- 🔗 Synthesizing multiple sources
+- 🎯 Following complex instructions
 
-::: {.callout-warning}
-## Reality Check: Local Models vs. ChatGPT
+**Alternative:** `GPT-4o` - Slightly faster, also excellent quality
 
-These are **small, local models** (3 billion parameters vs. GPT-4's hundreds of billions).
+::: {.callout-note}
+## About OpenRouter
 
-**What they CAN do:**
-- ✅ Have conversations and remember context
-- ✅ Read and summarize your documents
-- ✅ Search the web and synthesize results
-- ✅ Run Python code you provide
-- ✅ Help you iterate and think through problems
+OpenRouter provides access to multiple AI models through API calls. Your workshop organizer has configured access.
 
-**What they STRUGGLE with:**
-- ⚠️ Writing complex code from scratch
-- ⚠️ Perfect citations with page numbers
-- ⚠️ Very long, detailed responses
-- ⚠️ Following complex multi-step instructions
+**Benefits:**
+- ✅ Access to the most capable AI models available
+- ✅ No individual API key setup needed
+- ✅ Works seamlessly through OpenWebUI interface
+- ✅ High-quality outputs for all workshop tasks
 
-**This is OK!** You're learning **workflows**, not relying on AI magic. These same workflows work even better when you use larger models later.
+**Note:** This workshop uses cloud models, not local models. Local models (llama3.2, phi3) are available but run on CPU and are too slow for this workshop.
+:::
 
-**For this workshop:** Focus on the PROCESS. The skills you learn apply to any AI model.
+::: {.callout-tip}
+## How to Select Your Model
+
+1. Look for the **model dropdown** at the top of the chat interface
+2. Look for models with names like:
+   - "Claude 3.5 Sonnet" or "claude-3-5-sonnet"
+   - "GPT-4o" or "gpt-4o"
+   - "GPT-4" or "gpt-4-turbo"
+3. **Select Claude 3.5 Sonnet** for best results
+4. ⚠️ **Avoid local models** (llama3.2, phi3, qwen) - they're CPU-based and too slow
+
+**If you don't see OpenRouter models:** Check with your facilitator - OpenRouter may need to be configured.
 :::
 
 
@@ -142,7 +154,7 @@ Think of OpenWebUI as your research lab, but digital:
 ```markdown
 □ OpenWebUI is open in your browser
 □ You can see the chat interface
-□ Model is set to "llama3.2:3b" (or llama3.2:3b-instruct-q4_0)
+□ Model is set to "Claude 3.5 Sonnet" (via OpenRouter)
 ```
 
 **The Test:**
@@ -156,33 +168,37 @@ Think of OpenWebUI as your research lab, but digital:
    ```
 
 3. **Select your model:**
-   - Look for the model dropdown at the top of the chat
-   - Select **"llama3.2:3b"** or **"llama3.2:3b-instruct-q4_0"**
-   - This is our recommended model for the workshop
+   - Look for the model dropdown at the top of the chat interface
+   - Find and select **"Claude 3.5 Sonnet"** (it may be listed as "claude-3-5-sonnet" or similar)
+   - ⚠️ **IMPORTANT:** Do NOT select local models (llama3.2, phi3, qwen) - they're too slow
+   - If you don't see Claude 3.5 Sonnet, select **"GPT-4o"** or **"GPT-4"**
 
-4. **Send this message:**
+4. **Send this exact message:**
    ```
-   Hi! Please respond in a friendly way and tell me you're ready to help with research.
-   Also tell me which model you are.
+   Hello! Please respond with exactly these words:
+   "TEST SUCCESSFUL - I am ready to help with your research."
+
+   Then tell me which AI model you are.
    ```
 
 5. **Expected result:**
-   - Response within 10-30 seconds
-   - Friendly, helpful tone
-   - Mentions "llama" or identifies itself
-   - May not be exactly as requested (small models don't always follow exact instructions)
+   - Response within 5-10 seconds
+   - Contains "TEST SUCCESSFUL" (or very close to it)
+   - Identifies as Claude, GPT-4, or other cloud model
+   - High-quality, well-formatted response
 
 **✅ Success criteria:**
 - [ ] Message sent without errors
-- [ ] Response received in < 30 seconds
-- [ ] Response is helpful and conversational
-- [ ] Model is llama3.2:3b
+- [ ] Response received in < 10 seconds
+- [ ] Response contains requested text (exactly or very close)
+- [ ] Model identifies as Claude or GPT-4 (NOT llama/phi/qwen)
 
 **❌ If it fails:**
 - Check you're logged in (see your email in top right?)
-- Check model is selected (dropdown menu near top - should say "llama3.2")
+- Check model dropdown - should show "Claude" or "GPT-4", NOT "llama3.2"
+- If you see a local model name, switch to an OpenRouter model
 - Try refreshing the page
-- Try a simpler message: "Hello, can you help me?"
+- Ask facilitator if OpenRouter is configured
 
 ### Going Deeper: Why This Matters
 
@@ -750,141 +766,86 @@ graph LR
 
 **The Test:**
 
-**Step 1: Test Code Execution Works**
+**Step 1: Simple Calculation (AI Writes Code)**
 
-First, let's verify code execution is enabled. Send this:
+Claude and GPT-4 are excellent at writing code. Let's test it:
 ```
-Can you run Python code? If yes, please execute: print(2 + 2)
+Calculate the compound annual growth rate (CAGR) if an investment
+grows from $100 to $250 over 5 years. Show me the formula and write
+Python code to calculate it, then execute the code.
 ```
 
 **Expected behavior:**
-- [ ] AI confirms it can run code
-- [ ] You see output: `4`
+- [ ] AI explains CAGR formula
+- [ ] AI writes Python code
+- [ ] Code executes automatically
+- [ ] Result appears: ~20.11%
 
-If this doesn't work, code execution isn't enabled - skip to Module 5.
-
-**Step 2: Simple Calculation (Provide the Code)**
-
-Small models aren't great at writing code, so we'll provide it. Send this:
-```
-Please run this Python code to calculate compound annual growth rate (CAGR):
-
+**Look for:** A code block that gets executed, something like:
 ```python
 initial = 100
 final = 250
 years = 5
 cagr = (final/initial)**(1/years) - 1
-print(f"Investment grew from ${initial} to ${final} over {years} years")
 print(f"CAGR: {cagr*100:.2f}%")
 ```
+
+**The key insight:** With good models, AI can WRITE and RUN code for you!
+
+**Step 2: Create a Visualization (AI Writes Code)**
+
+Now let's have AI create a graph for us:
+```
+Create a line graph showing exponential growth from $100 to $250
+over 5 years using the CAGR we just calculated. Label the axes
+and make it look professional. Execute the code to generate the plot.
 ```
 
 **Expected behavior:**
-- [ ] Code executes
-- [ ] Output shows the calculation
-- [ ] Result appears: ~20.11%
+- [ ] AI writes matplotlib code
+- [ ] Code executes automatically
+- [ ] **A graph appears in the chat** (or you see "Chart created" message)
+- [ ] Graph shows growth curve with proper labels
 
-**The key insight:** You don't need AI to WRITE code. You just need it to RUN code in a convenient interface!
+**This is the magic moment** - you went from question to visualization in ONE request, without knowing any matplotlib syntax!
 
-**Step 3: Create a Visualization (Provide the Code)**
+**Note:** If you don't see the image inline, that's OK - it may be saved. The important part is the AI wrote and executed the code.
 
-Now let's create a graph. Send this:
+**Step 3: Test With Real Data Analysis (AI Generates Everything)**
+
+Now let's test AI's ability to do complete data analysis:
 ```
-Please run this Python code to visualize investment growth:
-
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-years = np.arange(0, 6)
-initial = 100
-cagr = 0.2011
-values = initial * (1 + cagr)**years
-
-plt.figure(figsize=(8, 5))
-plt.plot(years, values, marker='o', linewidth=2, markersize=8)
-plt.title('Investment Growth Over Time', fontsize=14)
-plt.xlabel('Year', fontsize=12)
-plt.ylabel('Value ($)', fontsize=12)
-plt.grid(True, alpha=0.3)
-plt.tight_layout()
-plt.savefig('growth.png', dpi=100)
-plt.show()
-print("Chart created!")
-```
+Generate a dataset of 10 cities with their population and CO2 emissions.
+Then create a scatter plot showing if there's a correlation.
+Calculate and display the correlation coefficient.
+Execute all the code.
 ```
 
 **Expected behavior:**
-- [ ] Code executes
-- [ ] You see "Chart created!" message
-- [ ] **A graph might appear** (depends on OpenWebUI configuration)
+- [ ] AI generates sample data
+- [ ] Creates visualization
+- [ ] Calculates correlation (r value)
+- [ ] Interprets the relationship
+- [ ] All code executes successfully
 
-**Note:** If you don't see the image, that's OK - the code still ran! The image is saved, even if not displayed.
-
-**This is the magic moment** - you just went from question to visualization without leaving the conversation (and without knowing matplotlib!)
-
-**Step 4: Test With Data Analysis (Provide the Code)**
-
-Now let's analyze some data. Send this:
-```
-Please run this Python code to generate and analyze sample data:
-
-```python
-import pandas as pd
-import numpy as np
-
-# Generate sample data
-np.random.seed(42)
-cities = ['CityA', 'CityB', 'CityC', 'CityD', 'CityE',
-          'CityF', 'CityG', 'CityH', 'CityI', 'CityJ']
-population = np.random.randint(100000, 2000000, 10)
-co2_emissions = population * np.random.uniform(0.8, 1.2, 10) / 1000
-
-df = pd.DataFrame({
-    'City': cities,
-    'Population': population,
-    'CO2_Emissions_kt': co2_emissions
-})
-
-print("Sample Data:")
-print(df)
-print("\nSummary Statistics:")
-print(df.describe())
-
-# Calculate correlation
-correlation = df['Population'].corr(df['CO2_Emissions_kt'])
-print(f"\nCorrelation between population and CO2: {correlation:.3f}")
-```
-```
-
-**Expected behavior:**
-- [ ] Sample data displayed
-- [ ] Summary statistics shown
-- [ ] Correlation coefficient calculated
-- [ ] Clear relationship visible
+**This is powerful:** You described what you want, AI figured out how to do it, wrote the code, executed it, and interpreted results.
 
 ### 🎯 Advanced Challenge
 
-**Can the AI write code for you?**
-
-Try asking (this will probably not work well with llama3.2:3b):
+**Upload your own data** (CSV, Excel) and ask:
 ```
-Write Python code to create a scatter plot of population vs CO2 emissions
-with a trend line. Use the data from before.
-```
+Analyze this dataset. Show me:
+1. Summary statistics
+2. Distribution of the main variables
+3. Any interesting patterns or outliers
+4. Create appropriate visualizations
 
-**If it works:** Great! The AI generated useful code.
-
-**If it doesn't work:** Normal for small models. Just provide the code yourself:
-```python
-plt.scatter(df['Population'], df['CO2_Emissions_kt'])
-plt.xlabel('Population')
-plt.ylabel('CO2 Emissions (kt)')
-plt.title('Population vs CO2 Emissions')
-plt.show()
+Execute all code and explain what you find.
 ```
 
-**The lesson:** With local models, YOU provide code, AI RUNS it. That's still valuable!
+**This tests:** End-to-end research workflow with your real data.
+
+**Expected:** AI explores your data, generates multiple analyses, creates visualizations, and provides insights.
 
 ## The Entertainment Piece 🎭
 
