@@ -1,0 +1,173 @@
+http:
+  routers:
+    weallhavebracelets-openwebui-router:
+      rule: "Host(`weallhavebracelets-openwebui.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: weallhavebracelets-openwebui-service
+      tls:
+        certResolver: myresolver
+
+    weallhavebracelets-flowise-router:
+      rule: "Host(`weallhavebracelets-flowise.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: weallhavebracelets-flowise-service
+      tls:
+        certResolver: myresolver
+
+    weallhavebracelets-n8n-router:
+      rule: "Host(`weallhavebracelets-n8n.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: weallhavebracelets-n8n-service
+      middlewares:
+        - websocket-headers
+      tls:
+        certResolver: myresolver
+
+    weallhavebracelets-langfuse-router:
+      rule: "Host(`weallhavebracelets-langfuse.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: weallhavebracelets-langfuse-service
+      tls:
+        certResolver: myresolver
+
+    weallhavebracelets-neo4j-router:
+      rule: "Host(`weallhavebracelets-neo4j.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: weallhavebracelets-neo4j-service
+      tls:
+        certResolver: myresolver
+
+    weallhavebracelets-searxng-router:
+      rule: "Host(`weallhavebracelets-searxng.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: weallhavebracelets-searxng-service
+      tls:
+        certResolver: myresolver
+
+    weallhavebracelets-minio-router:
+      rule: "Host(`weallhavebracelets-minio.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: weallhavebracelets-minio-service
+      middlewares:
+        - file-upload-limit
+      tls:
+        certResolver: myresolver
+
+    weallhavebracelets-supabase-router:
+      rule: "Host(`weallhavebracelets-supabase.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: weallhavebracelets-supabase-service
+      tls:
+        certResolver: myresolver
+
+  services:
+    weallhavebracelets-openwebui-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.8:8080"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    weallhavebracelets-flowise-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.8:3001"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    weallhavebracelets-n8n-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.8:5678"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    weallhavebracelets-langfuse-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.8:3000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    weallhavebracelets-neo4j-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.8:7474"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    weallhavebracelets-searxng-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.8:8081"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    weallhavebracelets-minio-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.8:9011"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /minio/health/live
+          interval: "30s"
+          timeout: "10s"
+
+    weallhavebracelets-supabase-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.8:8000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+  middlewares:
+    websocket-headers:
+      headers:
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+          X-Forwarded-For: ""
+          X-Real-IP: ""
+        customResponseHeaders:
+          X-Forwarded-Proto: "https"
+
+    file-upload-limit:
+      buffering:
+        maxRequestBodyBytes: 10737418240  # 10GB for file uploads
+        retryExpression: "IsNetworkError() && Attempts() < 3"

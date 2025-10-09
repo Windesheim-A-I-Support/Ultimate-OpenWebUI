@@ -1,0 +1,173 @@
+http:
+  routers:
+    beer-openwebui-router:
+      rule: "Host(`beer-openwebui.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: beer-openwebui-service
+      tls:
+        certResolver: myresolver
+
+    beer-flowise-router:
+      rule: "Host(`beer-flowise.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: beer-flowise-service
+      tls:
+        certResolver: myresolver
+
+    beer-n8n-router:
+      rule: "Host(`beer-n8n.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: beer-n8n-service
+      middlewares:
+        - websocket-headers
+      tls:
+        certResolver: myresolver
+
+    beer-langfuse-router:
+      rule: "Host(`beer-langfuse.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: beer-langfuse-service
+      tls:
+        certResolver: myresolver
+
+    beer-neo4j-router:
+      rule: "Host(`beer-neo4j.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: beer-neo4j-service
+      tls:
+        certResolver: myresolver
+
+    beer-searxng-router:
+      rule: "Host(`beer-searxng.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: beer-searxng-service
+      tls:
+        certResolver: myresolver
+
+    beer-minio-router:
+      rule: "Host(`beer-minio.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: beer-minio-service
+      middlewares:
+        - file-upload-limit
+      tls:
+        certResolver: myresolver
+
+    beer-supabase-router:
+      rule: "Host(`beer-supabase.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: beer-supabase-service
+      tls:
+        certResolver: myresolver
+
+  services:
+    beer-openwebui-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.9:8080"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    beer-flowise-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.9:3001"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    beer-n8n-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.9:5678"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    beer-langfuse-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.9:3000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    beer-neo4j-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.9:7474"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    beer-searxng-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.9:8081"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    beer-minio-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.9:9011"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /minio/health/live
+          interval: "30s"
+          timeout: "10s"
+
+    beer-supabase-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.9:8000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+  middlewares:
+    websocket-headers:
+      headers:
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+          X-Forwarded-For: ""
+          X-Real-IP: ""
+        customResponseHeaders:
+          X-Forwarded-Proto: "https"
+
+    file-upload-limit:
+      buffering:
+        maxRequestBodyBytes: 10737418240  # 10GB for file uploads
+        retryExpression: "IsNetworkError() && Attempts() < 3"

@@ -1,0 +1,173 @@
+http:
+  routers:
+    chocolate-openwebui-router:
+      rule: "Host(`chocolate-openwebui.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: chocolate-openwebui-service
+      tls:
+        certResolver: myresolver
+
+    chocolate-flowise-router:
+      rule: "Host(`chocolate-flowise.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: chocolate-flowise-service
+      tls:
+        certResolver: myresolver
+
+    chocolate-n8n-router:
+      rule: "Host(`chocolate-n8n.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: chocolate-n8n-service
+      middlewares:
+        - websocket-headers
+      tls:
+        certResolver: myresolver
+
+    chocolate-langfuse-router:
+      rule: "Host(`chocolate-langfuse.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: chocolate-langfuse-service
+      tls:
+        certResolver: myresolver
+
+    chocolate-neo4j-router:
+      rule: "Host(`chocolate-neo4j.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: chocolate-neo4j-service
+      tls:
+        certResolver: myresolver
+
+    chocolate-searxng-router:
+      rule: "Host(`chocolate-searxng.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: chocolate-searxng-service
+      tls:
+        certResolver: myresolver
+
+    chocolate-minio-router:
+      rule: "Host(`chocolate-minio.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: chocolate-minio-service
+      middlewares:
+        - file-upload-limit
+      tls:
+        certResolver: myresolver
+
+    chocolate-supabase-router:
+      rule: "Host(`chocolate-supabase.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: chocolate-supabase-service
+      tls:
+        certResolver: myresolver
+
+  services:
+    chocolate-openwebui-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.10:8080"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    chocolate-flowise-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.10:3001"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    chocolate-n8n-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.10:5678"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    chocolate-langfuse-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.10:3000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    chocolate-neo4j-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.10:7474"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    chocolate-searxng-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.10:8081"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    chocolate-minio-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.10:9011"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /minio/health/live
+          interval: "30s"
+          timeout: "10s"
+
+    chocolate-supabase-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.10:8000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+  middlewares:
+    websocket-headers:
+      headers:
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+          X-Forwarded-For: ""
+          X-Real-IP: ""
+        customResponseHeaders:
+          X-Forwarded-Proto: "https"
+
+    file-upload-limit:
+      buffering:
+        maxRequestBodyBytes: 10737418240  # 10GB for file uploads
+        retryExpression: "IsNetworkError() && Attempts() < 3"

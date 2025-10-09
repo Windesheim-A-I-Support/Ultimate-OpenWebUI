@@ -1,0 +1,173 @@
+http:
+  routers:
+    debaguettes-openwebui-router:
+      rule: "Host(`debaguettes-openwebui.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: debaguettes-openwebui-service
+      tls:
+        certResolver: myresolver
+
+    debaguettes-flowise-router:
+      rule: "Host(`debaguettes-flowise.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: debaguettes-flowise-service
+      tls:
+        certResolver: myresolver
+
+    debaguettes-n8n-router:
+      rule: "Host(`debaguettes-n8n.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: debaguettes-n8n-service
+      middlewares:
+        - websocket-headers
+      tls:
+        certResolver: myresolver
+
+    debaguettes-langfuse-router:
+      rule: "Host(`debaguettes-langfuse.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: debaguettes-langfuse-service
+      tls:
+        certResolver: myresolver
+
+    debaguettes-neo4j-router:
+      rule: "Host(`debaguettes-neo4j.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: debaguettes-neo4j-service
+      tls:
+        certResolver: myresolver
+
+    debaguettes-searxng-router:
+      rule: "Host(`debaguettes-searxng.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: debaguettes-searxng-service
+      tls:
+        certResolver: myresolver
+
+    debaguettes-minio-router:
+      rule: "Host(`debaguettes-minio.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: debaguettes-minio-service
+      middlewares:
+        - file-upload-limit
+      tls:
+        certResolver: myresolver
+
+    debaguettes-supabase-router:
+      rule: "Host(`debaguettes-supabase.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: debaguettes-supabase-service
+      tls:
+        certResolver: myresolver
+
+  services:
+    debaguettes-openwebui-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.7:8080"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    debaguettes-flowise-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.7:3001"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    debaguettes-n8n-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.7:5678"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    debaguettes-langfuse-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.7:3000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    debaguettes-neo4j-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.7:7474"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    debaguettes-searxng-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.7:8081"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    debaguettes-minio-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.7:9011"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /minio/health/live
+          interval: "30s"
+          timeout: "10s"
+
+    debaguettes-supabase-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.7:8000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+  middlewares:
+    websocket-headers:
+      headers:
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+          X-Forwarded-For: ""
+          X-Real-IP: ""
+        customResponseHeaders:
+          X-Forwarded-Proto: "https"
+
+    file-upload-limit:
+      buffering:
+        maxRequestBodyBytes: 10737418240  # 10GB for file uploads
+        retryExpression: "IsNetworkError() && Attempts() < 3"

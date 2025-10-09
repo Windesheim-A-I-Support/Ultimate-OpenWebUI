@@ -1,0 +1,173 @@
+http:
+  routers:
+    team6-openwebui-router:
+      rule: "Host(`team6-openwebui.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: team6-openwebui-service
+      tls:
+        certResolver: myresolver
+
+    team6-flowise-router:
+      rule: "Host(`team6-flowise.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: team6-flowise-service
+      tls:
+        certResolver: myresolver
+
+    team6-n8n-router:
+      rule: "Host(`team6-n8n.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: team6-n8n-service
+      middlewares:
+        - websocket-headers
+      tls:
+        certResolver: myresolver
+
+    team6-langfuse-router:
+      rule: "Host(`team6-langfuse.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: team6-langfuse-service
+      tls:
+        certResolver: myresolver
+
+    team6-neo4j-router:
+      rule: "Host(`team6-neo4j.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: team6-neo4j-service
+      tls:
+        certResolver: myresolver
+
+    team6-searxng-router:
+      rule: "Host(`team6-searxng.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: team6-searxng-service
+      tls:
+        certResolver: myresolver
+
+    team6-minio-router:
+      rule: "Host(`team6-minio.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: team6-minio-service
+      middlewares:
+        - file-upload-limit
+      tls:
+        certResolver: myresolver
+
+    team6-supabase-router:
+      rule: "Host(`team6-supabase.valuechainhackers.xyz`)"
+      entryPoints: [websecure]
+      service: team6-supabase-service
+      tls:
+        certResolver: myresolver
+
+  services:
+    team6-openwebui-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.12:8080"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    team6-flowise-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.12:3001"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    team6-n8n-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.12:5678"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    team6-langfuse-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.12:3000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    team6-neo4j-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.12:7474"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    team6-searxng-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.12:8081"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+    team6-minio-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.12:9011"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /minio/health/live
+          interval: "30s"
+          timeout: "10s"
+
+    team6-supabase-service:
+      loadBalancer:
+        servers:
+          - url: "http://10.0.5.12:8000"
+        passHostHeader: true
+        responseForwarding:
+          flushInterval: "1ms"
+        healthCheck:
+          path: /
+          interval: "30s"
+          timeout: "10s"
+
+  middlewares:
+    websocket-headers:
+      headers:
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+          X-Forwarded-For: ""
+          X-Real-IP: ""
+        customResponseHeaders:
+          X-Forwarded-Proto: "https"
+
+    file-upload-limit:
+      buffering:
+        maxRequestBodyBytes: 10737418240  # 10GB for file uploads
+        retryExpression: "IsNetworkError() && Attempts() < 3"
