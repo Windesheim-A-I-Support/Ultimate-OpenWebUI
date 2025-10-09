@@ -171,3 +171,13 @@ http:
       buffering:
         maxRequestBodyBytes: 10737418240  # 10GB for file uploads
         retryExpression: "IsNetworkError() && Attempts() < 3"
+
+
+https://debaguettes-openwebui.valuechainhackers.xyz
+https://debaguettes-flowise.valuechainhackers.xyz
+https://debaguettes-n8n.valuechainhackers.xyz
+https://debaguettes-langfuse.valuechainhackers.xyz
+https://debaguettes-neo4j.valuechainhackers.xyz
+https://debaguettes-searxng.valuechainhackers.xyz
+https://debaguettes-minio.valuechainhackers.xyz
+https://debaguettes-supabase.valuechainhackers.xyz

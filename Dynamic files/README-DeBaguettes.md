@@ -1,245 +1,259 @@
-# 🥖 Team DeBaguettes - Your AI Tools
+# 🥖 Team DeBaguettes - Quick Start Guide
 
 ---
+https://debaguettes-openwebui.valuechainhackers.xyz
+https://debaguettes-flowise.valuechainhackers.xyz
+https://debaguettes-n8n.valuechainhackers.xyz
+https://debaguettes-langfuse.valuechainhackers.xyz
+https://debaguettes-neo4j.valuechainhackers.xyz
+https://debaguettes-searxng.valuechainhackers.xyz
+https://debaguettes-minio.valuechainhackers.xyz
+https://debaguettes-supabase.valuechainhackers.xyz
 
-## 🇬🇧 ENGLISH - Click the links below to use your tools!
 
-### 🤖 1. Talk to AI
+
+## 🇬🇧 ENGLISH
+
+### 🚀 Getting Started in 3 Steps
+
+#### Step 1: Open Your Main AI Chat Interface
 **Link:** https://debaguettes-openwebui.valuechainhackers.xyz
 
-**What is this?**
-This is where you chat with AI. Think of it like ChatGPT - you type questions, the AI answers.
-
-**When do I use this?**
-- Ask AI questions
-- Get help writing text
-- Upload documents and ask questions about them
-- Talk with different AI models
+**First Time Setup:**
+1. Click the link above
+2. Create an account (first user becomes admin - that's you!)
+3. You're ready to chat with AI!
 
 ---
 
-### 🔗 2. Build AI Workflows (Flowise)
-**Link:** https://debaguettes-flowise.valuechainhackers.xyz
+#### Step 2: Add Your OpenRouter API Key
 
-**What is this?**
-Like building with LEGO blocks, but for AI. Drag and drop boxes to create your own AI assistant without coding.
+**What is OpenRouter?**
+It gives you access to ALL the best AI models (GPT-4, Claude, Gemini, etc.) through one simple connection.
 
-**When do I use this?**
-- Want to build a custom chatbot
-- Need to connect AI to other services
-- Create automated AI responses
-- Test different AI combinations
+**Your Team's API Key:**
+```
+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
+```
+
+**How to Add It:**
+1. In Open WebUI, click your profile picture (top right)
+2. Go to **Settings** → **Connections**
+3. Look for **OpenAI API** section
+4. Paste your API key
+5. Change the API URL to: `https://openrouter.ai/api/v1`
+6. Click **Save**
+
+**OpenRouter Login:** `Chris@tonomy.foundation` (SSO login)
 
 ---
 
-### ⚙️ 3. Automate Tasks (n8n)
+#### Step 3: Choose Your AI Model
+
+**In Open WebUI:**
+1. Look for the model selector at the top
+2. Click it and select a model
+
+**Recommended Models:**
+- **For Chat:** `anthropic/claude-3.5-sonnet` (Best quality)
+- **For Quick Answers:** `google/gemini-flash-1.5` (Super fast & cheap)
+- **For Coding:** `anthropic/claude-3.5-sonnet` or `deepseek/deepseek-chat`
+
+---
+
+## 📚 What Can You Do?
+
+### 1. 💬 Basic Chat with AI
+Just type and chat! Ask questions, get help with writing, brainstorm ideas.
+
+**Try asking:**
+- "Explain quantum computing like I'm 5"
+- "Write a professional email about..."
+- "Help me debug this code"
+
+---
+
+### 2. 📄 Upload Documents & Ask Questions (RAG)
+
+**What is RAG?**
+Upload your documents, and the AI can read them and answer questions about them!
+
+**How to use it:**
+1. Click the **📎 paperclip icon** in the chat
+2. Upload your document (PDF, Word, TXT, etc.)
+3. Ask questions like:
+   - "Summarize this document"
+   - "What are the key points in section 3?"
+   - "Find all mentions of [topic]"
+
+**Perfect for:**
+- Reading long reports
+- Analyzing meeting notes
+- Studying from PDFs
+- Searching through documentation
+
+---
+
+## 🎯 Other Useful Tools (Optional)
+
+### 🔗 n8n - Automate Stuff
 **Link:** https://debaguettes-n8n.valuechainhackers.xyz
 
-**What is this?**
-Automate boring repetitive work. For example: "When I get an email, save it to a spreadsheet automatically."
+**First Time:**
+Create your own LOCAL account (not n8n cloud!)
 
-**When do I use this?**
-- Connect different apps together
+**What can you do:**
 - Automate repetitive tasks
-- Schedule things to happen automatically
-- Move data between services
+- Connect different apps together
+- Example: "When I upload to Google Drive, summarize it and send to Slack"
 
 ---
 
-### 📊 4. Monitor AI Usage (Langfuse)
-**Link:** https://debaguettes-langfuse.valuechainhackers.xyz
-
-**What is this?**
-See how much your AI is costing and how well it's working. Like a dashboard for your car but for AI.
-
-**When do I use this?**
-- Check AI costs
-- See how fast AI responds
-- Track which prompts work best
-- Monitor AI quality
-
----
-
-### 🕸️ 5. Explore Data Connections (Neo4j)
-**Link:** https://debaguettes-neo4j.valuechainhackers.xyz
-
-**What is this?**
-See how your data connects together in a visual map. Like a mind map but for your database.
-
-**When do I use this?**
-- Explore relationships in data
-- Visualize how things connect
-- Run database queries
-- Build knowledge graphs
-
----
-
-### 🔍 6. Private Search Engine (SearXNG)
-**Link:** https://debaguettes-searxng.valuechainhackers.xyz
-
-**What is this?**
-Google search but private - nobody tracks what you search for.
-
-**When do I use this?**
-- Search the internet privately
-- Get results from multiple search engines
-- Research without being tracked
-
----
-
-### 📦 7. Store Files (MinIO)
-**Link:** https://debaguettes-minio.valuechainhackers.xyz
-
-**What is this?**
-Like Dropbox or Google Drive - store your files here. Can handle really big files (up to 10GB each!).
-
-**When do I use this?**
-- Upload large files
-- Store documents and data
-- Share files with your team
-- Backup important files
-
----
-
-### 🗄️ 8. Database & Backend (Supabase)
-**Link:** https://debaguettes-supabase.valuechainhackers.xyz
-
-**What is this?**
-The "behind the scenes" database where your app stores information. Think of it as your app's brain.
-
-**When do I use this?**
-- Manage your database
-- Set up user logins
-- Store app data
-- Build backend for your application
-
----
-
-## ⚡ Quick Tips
-
-- **All links work immediately** - just click and go!
-- **Everything is secure** - all connections use HTTPS (the padlock icon)
-- **Having issues?** - Try refreshing the page or clearing your browser cache
-- **Need help?** - Ask your team lead or IT support
-
----
-
-## 🇳🇱 NEDERLANDS - Klik op de links hieronder om je tools te gebruiken!
-
-### 🤖 1. Praat met AI
-**Link:** https://debaguettes-openwebui.valuechainhackers.xyz
-
-**Wat is dit?**
-Hier chat je met AI. Vergelijk het met ChatGPT - jij typt vragen, de AI geeft antwoorden.
-
-**Wanneer gebruik ik dit?**
-- Stel vragen aan AI
-- Krijg hulp bij het schrijven van tekst
-- Upload documenten en stel er vragen over
-- Praat met verschillende AI-modellen
-
----
-
-### 🔗 2. Bouw AI Workflows (Flowise)
+### 🔗 Flowise - Build AI Chatbots (No Code)
 **Link:** https://debaguettes-flowise.valuechainhackers.xyz
 
-**Wat is dit?**
-Zoals bouwen met LEGO-blokken, maar dan voor AI. Sleep vakjes om je eigen AI-assistent te maken zonder te programmeren.
-
-**Wanneer gebruik ik dit?**
-- Je wilt een aangepaste chatbot bouwen
-- Je moet AI verbinden met andere services
-- Maak geautomatiseerde AI-antwoorden
-- Test verschillende AI-combinaties
+Drag-and-drop builder for creating custom AI chatbots.
 
 ---
 
-### ⚙️ 3. Automatiseer Taken (n8n)
-**Link:** https://debaguettes-n8n.valuechainhackers.xyz
-
-**Wat is dit?**
-Automatiseer saai herhalend werk. Bijvoorbeeld: "Als ik een email krijg, zet deze automatisch in een spreadsheet."
-
-**Wanneer gebruik ik dit?**
-- Verbind verschillende apps met elkaar
-- Automatiseer repetitieve taken
-- Plan dingen die automatisch gebeuren
-- Verplaats data tussen services
-
----
-
-### 📊 4. Monitor AI Gebruik (Langfuse)
-**Link:** https://debaguettes-langfuse.valuechainhackers.xyz
-
-**Wat is dit?**
-Zie hoeveel je AI kost en hoe goed het werkt. Zoals een dashboard voor je auto maar dan voor AI.
-
-**Wanneer gebruik ik dit?**
-- Controleer AI-kosten
-- Zie hoe snel AI reageert
-- Volg welke prompts het beste werken
-- Monitor AI-kwaliteit
-
----
-
-### 🕸️ 5. Verken Data Verbindingen (Neo4j)
-**Link:** https://debaguettes-neo4j.valuechainhackers.xyz
-
-**Wat is dit?**
-Zie hoe je data met elkaar verbonden is in een visuele kaart. Zoals een mindmap maar voor je database.
-
-**Wanneer gebruik ik dit?**
-- Verken relaties in data
-- Visualiseer hoe dingen verbonden zijn
-- Voer database queries uit
-- Bouw kennisgrafen
-
----
-
-### 🔍 6. Privé Zoekmachine (SearXNG)
-**Link:** https://debaguettes-searxng.valuechainhackers.xyz
-
-**Wat is dit?**
-Google zoeken maar privé - niemand volgt wat je zoekt.
-
-**Wanneer gebruik ik dit?**
-- Zoek privé op internet
-- Krijg resultaten van meerdere zoekmachines
-- Onderzoek doen zonder getraceerd te worden
-
----
-
-### 📦 7. Bewaar Bestanden (MinIO)
+### 📦 MinIO - Store Big Files
 **Link:** https://debaguettes-minio.valuechainhackers.xyz
 
-**Wat is dit?**
-Zoals Dropbox of Google Drive - bewaar hier je bestanden. Kan heel grote bestanden aan (tot 10GB per stuk!).
+**Login:** Username: `minioadmin` / Password: (check .env file)
 
-**Wanneer gebruik ik dit?**
-- Upload grote bestanden
-- Bewaar documenten en data
-- Deel bestanden met je team
-- Backup belangrijke bestanden
+Like Dropbox but on your own server. Can handle files up to 10GB!
 
 ---
 
-### 🗄️ 8. Database & Backend (Supabase)
-**Link:** https://debaguettes-supabase.valuechainhackers.xyz
+### 🗄️ Neo4j - Knowledge Graphs (Advanced)
+**Link:** https://debaguettes-neo4j.valuechainhackers.xyz
 
-**Wat is dit?**
-De "achter de schermen" database waar je app informatie opslaat. Zie het als het brein van je app.
+**Login:** Username: `neo4j` / Password: `neopass42`
 
-**Wanneer gebruik ik dit?**
-- Beheer je database
-- Stel gebruikerslogins in
-- Bewaar app-data
-- Bouw backend voor je applicatie
+See how your data connects together in a visual map.
 
 ---
 
-## ⚡ Snelle Tips
+### 🔍 SearXNG - Private Search
+**Link:** https://debaguettes-searxng.valuechainhackers.xyz
 
-- **Alle links werken meteen** - gewoon klikken en gaan!
-- **Alles is veilig** - alle verbindingen gebruiken HTTPS (het slotjes-icoon)
-- **Problemen?** - Probeer de pagina te vernieuwen of je browsercache te wissen
-- **Hulp nodig?** - Vraag je teamleider of IT-support
+Search engine that doesn't track you. No login needed!
+
+---
+
+## 🆘 Troubleshooting
+
+**"I can't log in!"**
+- Create an account first
+- Check the link is correct (https)
+- Clear your browser cache
+
+**"AI isn't responding!"**
+- Check your OpenRouter API key is correct
+- Make sure you selected a model
+- Verify your OpenRouter account has credits
+
+**"Document upload isn't working!"**
+- Check file size (max 10GB)
+- Try a different file format
+- Ensure document isn't password-protected
+
+---
+
+## 💡 Pro Tips
+
+1. **Save favorite prompts** - Use "Save Message" feature
+2. **Try different models** - Each AI has different strengths
+3. **Use system prompts** - Tell AI how to behave (Settings → Personalization)
+4. **Organize with folders** - Keep your chats organized
+
+---
+
+## 🇳🇱 NEDERLANDS
+
+### 🚀 Aan de Slag in 3 Stappen
+
+#### Stap 1: Open Je Hoofd AI Chat Interface
+**Link:** https://debaguettes-openwebui.valuechainhackers.xyz
+
+**Eerste Keer:**
+1. Klik op de link
+2. Maak een account aan (eerste gebruiker wordt admin!)
+3. Klaar om te chatten met AI!
+
+---
+
+#### Stap 2: Voeg Je OpenRouter API Key Toe
+
+**Wat is OpenRouter?**
+Toegang tot ALLE beste AI-modellen (GPT-4, Claude, Gemini, etc.) via één verbinding.
+
+**Jouw Team's API Key:**
+```
+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
+```
+
+**Hoe Toe te Voegen:**
+1. Klik op je profielfoto (rechtsboven)
+2. Ga naar **Settings** → **Connections**
+3. Zoek **OpenAI API** sectie
+4. Plak je API key
+5. Verander API URL naar: `https://openrouter.ai/api/v1`
+6. Klik **Save**
+
+**OpenRouter Login:** `Chris@tonomy.foundation` (SSO login)
+
+---
+
+#### Stap 3: Kies Je AI Model
+
+**Aanbevolen Modellen:**
+- **Voor Chat:** `anthropic/claude-3.5-sonnet`
+- **Voor Snelle Antwoorden:** `google/gemini-flash-1.5`
+- **Voor Programmeren:** `anthropic/claude-3.5-sonnet` of `deepseek/deepseek-chat`
+
+---
+
+## 📚 Wat Kun Je Doen?
+
+### 1. 💬 Basis Chat met AI
+Gewoon typen en chatten!
+
+**Probeer:**
+- "Leg quantumcomputing uit alsof ik 5 ben"
+- "Schrijf een professionele email over..."
+- "Help me deze code te debuggen"
+
+---
+
+### 2. 📄 Upload Documenten & Stel Vragen (RAG)
+
+**Hoe te gebruiken:**
+1. Klik op **📎 paperclip icoon**
+2. Upload je document
+3. Stel vragen over de inhoud
+
+**Perfect voor:**
+- Lange rapporten lezen
+- Meeting notities analyseren
+- Studeren van PDF's
+
+---
+
+## 🆘 Probleemoplossing
+
+**"Ik kan niet inloggen!"**
+- Maak eerst een account aan
+- Check de link (https)
+- Wis je browsercache
+
+**"AI reageert niet!"**
+- Check je OpenRouter API key
+- Selecteer een model
+- Controleer OpenRouter credits
+
+---
+
+## 📞 Hulp Nodig?
+
+Vraag je teamleider of IT-support!
