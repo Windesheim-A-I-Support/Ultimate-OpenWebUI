@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.8.25" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<meta name="author" content="Research Innovation Lab" />
+
+<title>AI-Powered Research Workshop: From Question to Insight</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<!-- htmldependencies:E3FAD763 -->
+<script  src="workshop_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script  src="workshop_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link  href="workshop_files/libs/quarto-diagram/mermaid.css" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="workshop-styles.css" />
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <div id="quarto-toc-target"></div>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AI-Powered Research Workshop: From Question to Insight</h1>
+<p class="subtitle lead">A Hands-On Journey Through Modern Research Tools</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Research Innovation Lab </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#welcome-your-research-journey-starts-here" id="toc-welcome-your-research-journey-starts-here">Welcome: Your Research Journey Starts Here</a>
+  <ul>
+  <li><a href="#the-hook" id="toc-the-hook">The Hook 🎣</a></li>
+  <li><a href="#workshop-philosophy" id="toc-workshop-philosophy">Workshop Philosophy</a>
+  <ul>
+  <li><a href="#how-this-workshop-works" id="toc-how-this-workshop-works">How This Workshop Works</a></li>
+  </ul></li>
+  <li><a href="#choosing-your-ai-model" id="toc-choosing-your-ai-model">Choosing Your AI Model</a>
+  <ul>
+  <li><a href="#available-free-models-via-openrouter-2025" id="toc-available-free-models-via-openrouter-2025">Available FREE Models via OpenRouter (2025)</a></li>
+  <li><a href="#recommended-models-for-this-workshop" id="toc-recommended-models-for-this-workshop">Recommended Models for This Workshop</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#module-1-the-conversation-that-understands-you" id="toc-module-1-the-conversation-that-understands-you">Module 1: The Conversation That Understands You</a>
+  <ul>
+  <li><a href="#the-hook-1" id="toc-the-hook-1">The Hook 🎣</a></li>
+  <li><a href="#the-story" id="toc-the-story">The Story 📖</a>
+  <ul>
+  <li><a href="#meet-dr.-sarah-chen" id="toc-meet-dr.-sarah-chen">Meet Dr. Sarah Chen</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece" id="toc-the-educational-piece">The Educational Piece 📚</a>
+  <ul>
+  <li><a href="#what-is-openwebui" id="toc-what-is-openwebui">What is OpenWebUI?</a></li>
+  <li><a href="#the-big-idea" id="toc-the-big-idea">The Big Idea</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece" id="toc-the-empowering-piece">The Empowering Piece 💪</a>
+  <ul>
+  <li><a href="#your-first-ai-conversation" id="toc-your-first-ai-conversation">Your First AI Conversation</a></li>
+  <li><a href="#test-case-1-first-contact" id="toc-test-case-1-first-contact">🧪 Test Case #1: First Contact</a></li>
+  <li><a href="#going-deeper-why-this-matters" id="toc-going-deeper-why-this-matters">Going Deeper: Why This Matters</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece" id="toc-the-entertainment-piece">The Entertainment Piece 🎭</a>
+  <ul>
+  <li><a href="#model-comparison-exercise-1-speed-vs-reasoning" id="toc-model-comparison-exercise-1-speed-vs-reasoning">🎯 Model Comparison Exercise #1: Speed vs Reasoning</a></li>
+  <li><a href="#the-ai-whisperer-challenge" id="toc-the-ai-whisperer-challenge">The “AI Whisperer” Challenge</a></li>
+  </ul></li>
+  <li><a href="#key-learnings" id="toc-key-learnings">Key Learnings 🎓</a>
+  <ul>
+  <li><a href="#what-you-now-know" id="toc-what-you-now-know">What You Now Know</a></li>
+  <li><a href="#questions-you-should-answer" id="toc-questions-you-should-answer">Questions You Should Answer</a></li>
+  </ul></li>
+  <li><a href="#the-anecdote" id="toc-the-anecdote">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote" id="toc-the-quote">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#module-2-teaching-your-ai-to-read-your-papers" id="toc-module-2-teaching-your-ai-to-read-your-papers">Module 2: Teaching Your AI to Read Your Papers</a>
+  <ul>
+  <li><a href="#the-hook-2" id="toc-the-hook-2">The Hook 🎣</a></li>
+  <li><a href="#the-story-1" id="toc-the-story-1">The Story 📖</a>
+  <ul>
+  <li><a href="#meet-professor-james-okonkwo" id="toc-meet-professor-james-okonkwo">Meet Professor James Okonkwo</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece-1" id="toc-the-educational-piece-1">The Educational Piece 📚</a>
+  <ul>
+  <li><a href="#what-is-rag-retrieval-augmented-generation" id="toc-what-is-rag-retrieval-augmented-generation">What is RAG (Retrieval Augmented Generation)?</a></li>
+  <li><a href="#why-this-changes-everything" id="toc-why-this-changes-everything">Why This Changes Everything</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece-1" id="toc-the-empowering-piece-1">The Empowering Piece 💪</a>
+  <ul>
+  <li><a href="#your-first-document-upload" id="toc-your-first-document-upload">Your First Document Upload</a></li>
+  <li><a href="#test-case-2-document-intelligence" id="toc-test-case-2-document-intelligence">🧪 Test Case #2: Document Intelligence</a></li>
+  <li><a href="#advanced-challenge" id="toc-advanced-challenge">🎯 Advanced Challenge</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece-1" id="toc-the-entertainment-piece-1">The Entertainment Piece 🎭</a>
+  <ul>
+  <li><a href="#model-comparison-exercise-2-citation-accuracy-test" id="toc-model-comparison-exercise-2-citation-accuracy-test">🎯 Model Comparison Exercise #2: Citation Accuracy Test</a></li>
+  <li><a href="#the-citation-scavenger-hunt" id="toc-the-citation-scavenger-hunt">The “Citation Scavenger Hunt”</a></li>
+  </ul></li>
+  <li><a href="#key-learnings-1" id="toc-key-learnings-1">Key Learnings 🎓</a>
+  <ul>
+  <li><a href="#what-you-now-know-1" id="toc-what-you-now-know-1">What You Now Know</a></li>
+  <li><a href="#the-technical-magic-optional-deep-dive" id="toc-the-technical-magic-optional-deep-dive">The Technical Magic (Optional Deep Dive)</a></li>
+  </ul></li>
+  <li><a href="#questions-you-should-answer-1" id="toc-questions-you-should-answer-1">Questions You Should Answer</a></li>
+  <li><a href="#the-anecdote-1" id="toc-the-anecdote-1">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote-1" id="toc-the-quote-1">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#module-3-asking-the-internet-for-help-without-opening-50-tabs" id="toc-module-3-asking-the-internet-for-help-without-opening-50-tabs">Module 3: Asking the Internet for Help (Without Opening 50 Tabs)</a>
+  <ul>
+  <li><a href="#the-hook-3" id="toc-the-hook-3">The Hook 🎣</a></li>
+  <li><a href="#the-story-2" id="toc-the-story-2">The Story 📖</a>
+  <ul>
+  <li><a href="#meet-dr.-maria-santos" id="toc-meet-dr.-maria-santos">Meet Dr. Maria Santos</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece-2" id="toc-the-educational-piece-2">The Educational Piece 📚</a>
+  <ul>
+  <li><a href="#what-is-web-search-integration" id="toc-what-is-web-search-integration">What is Web Search Integration?</a></li>
+  <li><a href="#when-to-use-web-search" id="toc-when-to-use-web-search">When to Use Web Search</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece-2" id="toc-the-empowering-piece-2">The Empowering Piece 💪</a>
+  <ul>
+  <li><a href="#your-first-web-search-query" id="toc-your-first-web-search-query">Your First Web Search Query</a></li>
+  <li><a href="#test-case-3-real-time-research" id="toc-test-case-3-real-time-research">🧪 Test Case #3: Real-Time Research</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece-2" id="toc-the-entertainment-piece-2">The Entertainment Piece 🎭</a>
+  <ul>
+  <li><a href="#the-time-traveler-game" id="toc-the-time-traveler-game">The “Time Traveler” Game</a></li>
+  </ul></li>
+  <li><a href="#key-learnings-2" id="toc-key-learnings-2">Key Learnings 🎓</a>
+  <ul>
+  <li><a href="#what-you-now-know-2" id="toc-what-you-now-know-2">What You Now Know</a></li>
+  <li><a href="#behind-the-scenes-searxng" id="toc-behind-the-scenes-searxng">Behind the Scenes: SearxNG</a></li>
+  </ul></li>
+  <li><a href="#questions-you-should-answer-2" id="toc-questions-you-should-answer-2">Questions You Should Answer</a></li>
+  <li><a href="#the-anecdote-2" id="toc-the-anecdote-2">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote-2" id="toc-the-quote-2">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#module-4-from-question-to-graph-in-60-seconds" id="toc-module-4-from-question-to-graph-in-60-seconds">Module 4: From Question to Graph in 60 Seconds</a>
+  <ul>
+  <li><a href="#the-hook-4" id="toc-the-hook-4">The Hook 🎣</a></li>
+  <li><a href="#the-story-3" id="toc-the-story-3">The Story 📖</a>
+  <ul>
+  <li><a href="#meet-alex-kowalski" id="toc-meet-alex-kowalski">Meet Alex Kowalski</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece-3" id="toc-the-educational-piece-3">The Educational Piece 📚</a>
+  <ul>
+  <li><a href="#what-is-code-execution" id="toc-what-is-code-execution">What is Code Execution?</a></li>
+  <li><a href="#what-can-you-do-with-this" id="toc-what-can-you-do-with-this">What Can You Do With This?</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece-3" id="toc-the-empowering-piece-3">The Empowering Piece 💪</a>
+  <ul>
+  <li><a href="#your-first-code-execution" id="toc-your-first-code-execution">Your First Code Execution</a></li>
+  <li><a href="#test-case-4-calculator-on-steroids" id="toc-test-case-4-calculator-on-steroids">🧪 Test Case #4: Calculator on Steroids</a></li>
+  <li><a href="#advanced-challenge-1" id="toc-advanced-challenge-1">🎯 Advanced Challenge</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece-3" id="toc-the-entertainment-piece-3">The Entertainment Piece 🎭</a>
+  <ul>
+  <li><a href="#model-comparison-exercise-3-code-quality-battle" id="toc-model-comparison-exercise-3-code-quality-battle">🎯 Model Comparison Exercise #3: Code Quality Battle</a></li>
+  <li><a href="#the-visualization-remix-game" id="toc-the-visualization-remix-game">The “Visualization Remix” Game</a></li>
+  </ul></li>
+  <li><a href="#key-learnings-3" id="toc-key-learnings-3">Key Learnings 🎓</a>
+  <ul>
+  <li><a href="#what-you-now-know-3" id="toc-what-you-now-know-3">What You Now Know</a></li>
+  <li><a href="#the-technical-flow" id="toc-the-technical-flow">The Technical Flow</a></li>
+  </ul></li>
+  <li><a href="#questions-you-should-answer-3" id="toc-questions-you-should-answer-3">Questions You Should Answer</a></li>
+  <li><a href="#the-anecdote-3" id="toc-the-anecdote-3">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote-3" id="toc-the-quote-3">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#module-5-bringing-it-all-together---the-research-power-move" id="toc-module-5-bringing-it-all-together---the-research-power-move">Module 5: Bringing It All Together - The Research Power Move</a>
+  <ul>
+  <li><a href="#the-hook-5" id="toc-the-hook-5">The Hook 🎣</a></li>
+  <li><a href="#the-story-4" id="toc-the-story-4">The Story 📖</a>
+  <ul>
+  <li><a href="#meet-dr.-yuki-tanaka" id="toc-meet-dr.-yuki-tanaka">Meet Dr. Yuki Tanaka</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece-4" id="toc-the-educational-piece-4">The Educational Piece 📚</a>
+  <ul>
+  <li><a href="#the-integrated-research-workflow" id="toc-the-integrated-research-workflow">The Integrated Research Workflow</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece-4" id="toc-the-empowering-piece-4">The Empowering Piece 💪</a>
+  <ul>
+  <li><a href="#your-final-challenge-the-complete-research-cycle" id="toc-your-final-challenge-the-complete-research-cycle">Your Final Challenge: The Complete Research Cycle</a></li>
+  <li><a href="#test-case-5-the-grand-finale" id="toc-test-case-5-the-grand-finale">🧪 Test Case #5: The Grand Finale</a></li>
+  <li><a href="#real-world-application" id="toc-real-world-application">🎯 Real-World Application</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece-4" id="toc-the-entertainment-piece-4">The Entertainment Piece 🎭</a>
+  <ul>
+  <li><a href="#ultimate-model-comparison-exercise-the-perfect-workflow" id="toc-ultimate-model-comparison-exercise-the-perfect-workflow">🎯 ULTIMATE Model Comparison Exercise: The Perfect Workflow</a></li>
+  <li><a href="#the-research-relay-race" id="toc-the-research-relay-race">The “Research Relay Race”</a></li>
+  </ul></li>
+  <li><a href="#key-learnings-4" id="toc-key-learnings-4">Key Learnings 🎓</a>
+  <ul>
+  <li><a href="#what-you-now-know-4" id="toc-what-you-now-know-4">What You Now Know</a></li>
+  <li><a href="#the-meta-skills-prompt-engineering-model-selection" id="toc-the-meta-skills-prompt-engineering-model-selection">The Meta-Skills: Prompt Engineering &amp; Model Selection</a></li>
+  </ul></li>
+  <li><a href="#questions-you-should-answer-4" id="toc-questions-you-should-answer-4">Questions You Should Answer</a></li>
+  <li><a href="#the-anecdote-4" id="toc-the-anecdote-4">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote-4" id="toc-the-quote-4">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#workshop-conclusion-your-next-steps" id="toc-workshop-conclusion-your-next-steps">Workshop Conclusion: Your Next Steps</a>
+  <ul>
+  <li><a href="#what-youve-accomplished-today" id="toc-what-youve-accomplished-today">What You’ve Accomplished Today</a>
+  <ul>
+  <li><a href="#your-model-arsenal-quick-reference" id="toc-your-model-arsenal-quick-reference">Your Model Arsenal (Quick Reference)</a></li>
+  </ul></li>
+  <li><a href="#the-3-day-challenge" id="toc-the-3-day-challenge">The 3-Day Challenge</a></li>
+  <li><a href="#common-pitfalls-and-how-to-avoid-them" id="toc-common-pitfalls-and-how-to-avoid-them">Common Pitfalls (And How to Avoid Them)</a>
+  <ul>
+  <li><a href="#pitfall-1-treating-ai-like-google" id="toc-pitfall-1-treating-ai-like-google">Pitfall 1: Treating AI Like Google</a></li>
+  <li><a href="#pitfall-2-not-verifying-citations" id="toc-pitfall-2-not-verifying-citations">Pitfall 2: Not Verifying Citations</a></li>
+  <li><a href="#pitfall-3-asking-it-to-do-everything" id="toc-pitfall-3-asking-it-to-do-everything">Pitfall 3: Asking It to Do Everything</a></li>
+  <li><a href="#pitfall-4-forgetting-its-a-tool-not-magic" id="toc-pitfall-4-forgetting-its-a-tool-not-magic">Pitfall 4: Forgetting It’s a Tool, Not Magic</a></li>
+  <li><a href="#pitfall-5-using-the-wrong-model-for-the-task-new" id="toc-pitfall-5-using-the-wrong-model-for-the-task-new">Pitfall 5: Using the Wrong Model for the Task ⚠️ NEW!</a></li>
+  <li><a href="#pitfall-6-staying-with-one-model-the-whole-time-new" id="toc-pitfall-6-staying-with-one-model-the-whole-time-new">Pitfall 6: Staying with One Model the Whole Time ⚠️ NEW!</a></li>
+  </ul></li>
+  <li><a href="#resources-for-continued-learning" id="toc-resources-for-continued-learning">Resources for Continued Learning</a></li>
+  <li><a href="#final-reflection-questions" id="toc-final-reflection-questions">Final Reflection Questions</a></li>
+  <li><a href="#the-last-quote" id="toc-the-last-quote">The Last Quote</a></li>
+  </ul></li>
+  <li><a href="#appendix-quick-reference-guide" id="toc-appendix-quick-reference-guide">Appendix: Quick Reference Guide</a>
+  <ul>
+  <li><a href="#checklist-for-each-module" id="toc-checklist-for-each-module">Checklist for Each Module</a>
+  <ul>
+  <li><a href="#module-1-basic-chat" id="toc-module-1-basic-chat">Module 1: Basic Chat</a></li>
+  <li><a href="#module-2-rag" id="toc-module-2-rag">Module 2: RAG</a></li>
+  <li><a href="#module-3-web-search" id="toc-module-3-web-search">Module 3: Web Search</a></li>
+  <li><a href="#module-4-code-execution" id="toc-module-4-code-execution">Module 4: Code Execution</a></li>
+  <li><a href="#module-5-integration" id="toc-module-5-integration">Module 5: Integration</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting-guide" id="toc-troubleshooting-guide">Troubleshooting Guide</a></li>
+  <li><a href="#model-selection-cheat-sheet" id="toc-model-selection-cheat-sheet">Model Selection Cheat Sheet 🆕</a>
+  <ul>
+  <li><a href="#quick-decision-tree" id="toc-quick-decision-tree">Quick Decision Tree</a></li>
+  <li><a href="#detailed-model-comparison" id="toc-detailed-model-comparison">Detailed Model Comparison</a></li>
+  </ul></li>
+  <li><a href="#command-cheat-sheet" id="toc-command-cheat-sheet">Command Cheat Sheet</a>
+  <ul>
+  <li><a href="#basic-prompts" id="toc-basic-prompts">Basic Prompts</a></li>
+  <li><a href="#rag-prompts" id="toc-rag-prompts">RAG Prompts</a></li>
+  <li><a href="#web-search-prompts" id="toc-web-search-prompts">Web Search Prompts</a></li>
+  <li><a href="#code-execution-prompts" id="toc-code-execution-prompts">Code Execution Prompts</a></li>
+  <li><a href="#integration-prompts" id="toc-integration-prompts">Integration Prompts</a></li>
+  </ul></li>
+  <li><a href="#keyboard-shortcuts" id="toc-keyboard-shortcuts">Keyboard Shortcuts</a></li>
+  <li><a href="#getting-help" id="toc-getting-help">Getting Help</a></li>
+  </ul></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments">Acknowledgments</a></li>
+  <li><a href="#about-this-workshop" id="toc-about-this-workshop">About This Workshop</a></li>
+  </ul>
+</nav>
+<section id="welcome-your-research-journey-starts-here" class="level1">
+<h1>Welcome: Your Research Journey Starts Here</h1>
+<section id="the-hook" class="level2">
+<h2>The Hook 🎣</h2>
+<p>Imagine it’s 2 AM. You’re staring at 47 open browser tabs, three PDFs you can’t find anymore, and a half-written Python script that crashed two hours ago. Sound familiar?</p>
+<p><strong>Today, you’ll learn to do all of that in one place, in under 5 minutes.</strong></p>
+</section>
+<section id="workshop-philosophy" class="level2">
+<h2>Workshop Philosophy</h2>
+<blockquote>
+<p>“The goal is not to learn everything about AI tools. The goal is to leave here with ONE workflow that saves you 3 hours this week.” - Workshop Design Principle</p>
+</blockquote>
+<section id="how-this-workshop-works" class="level3">
+<h3>How This Workshop Works</h3>
+<p><strong>We follow the “Learning Loop” method:</strong> 1. <strong>Hook</strong> - Why should you care? 2. <strong>Story</strong> - See it in action 3. <strong>Practice</strong> - Do it yourself 4. <strong>Test</strong> - Prove it works 5. <strong>Reflect</strong> - What did you learn? 6. <strong>Apply</strong> - Use it tomorrow</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Time Investment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This workshop is designed for <strong>2.5 hours</strong> with breaks. Each module is 20-30 minutes. You can stop after any module and come back later - each one stands alone.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="choosing-your-ai-model" class="level2">
+<h2>Choosing Your AI Model</h2>
+<p>This workshop uses <strong>FREE models from OpenRouter</strong> - powerful AI models available at no cost. OpenRouter provides access to cutting-edge open-source and free models through a single interface.</p>
+<section id="available-free-models-via-openrouter-2025" class="level3">
+<h3>Available FREE Models via OpenRouter (2025)</h3>
+<p>Your OpenWebUI instance has access to these <strong>FREE</strong> models:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 20%" />
+<col style="width: 14%" />
+<col style="width: 18%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Best For</th>
+<th>Speed</th>
+<th>Quality</th>
+<th>Context Window*</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>DeepSeek Chat V3</strong> (<code>deepseek-chat-v3:free</code>)</td>
+<td>Code generation, technical tasks</td>
+<td>⚡⚡⚡ Fast</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+<td>128K tokens (~300 pages)</td>
+</tr>
+<tr class="even">
+<td><strong>Gemini 2.5 Flash</strong> (<code>gemini-2.5-flash:free</code>)</td>
+<td>Quick reasoning, fast responses</td>
+<td>⚡⚡⚡⚡ Very Fast</td>
+<td>⭐⭐⭐⭐ Very Good</td>
+<td>1M tokens (~2,500 pages!)</td>
+</tr>
+<tr class="odd">
+<td><strong>Llama 4 Maverick</strong> (<code>llama-4-maverick:free</code>)</td>
+<td>Complex reasoning, long documents</td>
+<td>⚡⚡ Good</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+<td>256K tokens (~600 pages)</td>
+</tr>
+<tr class="even">
+<td><strong>Mistral Small</strong> (<code>mistral-small:free</code>)</td>
+<td>Balanced tasks, citations</td>
+<td>⚡⚡⚡ Fast</td>
+<td>⭐⭐⭐⭐ Very Good</td>
+<td>96K tokens (~240 pages)</td>
+</tr>
+</tbody>
+</table>
+<p>*<strong>Context Window = How much text the AI can “remember” at once (including your conversation + uploaded documents)</strong></p>
+</section>
+<section id="recommended-models-for-this-workshop" class="level3">
+<h3>Recommended Models for This Workshop</h3>
+<p><strong>Different models excel at different tasks!</strong> In this workshop, you’ll learn which model to use when:</p>
+<ul>
+<li>🐳 <strong>DeepSeek Chat V3</strong> - BEST for Python code generation and technical analysis</li>
+<li>⚡ <strong>Gemini 2.5 Flash</strong> - BEST for quick questions and web search synthesis</li>
+<li>📚 <strong>Llama 4 Maverick</strong> - BEST for analyzing long documents and complex reasoning</li>
+<li>🎯 <strong>Mistral Small</strong> - BEST for balanced tasks and accurate citations</li>
+</ul>
+<p><strong>You’ll switch between models throughout the workshop to see their strengths!</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>About OpenRouter FREE Models
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>OpenRouter provides access to multiple FREE AI models through API calls. Your workshop organizer has configured access to free models only.</p>
+<p><strong>Benefits:</strong> - ✅ <strong>100% FREE</strong> - No costs, no credits needed - ✅ Access to cutting-edge open-source models - ✅ No individual API key setup needed - ✅ Works seamlessly through OpenWebUI interface - ✅ High-quality outputs comparable to paid models</p>
+<p><strong>Important Notes:</strong> - <strong>Rate limits:</strong> Free models have usage limits to prevent abuse - <strong>What this means:</strong> You can send 50-1000 messages per day (plenty for this workshop!) - <strong>For this workshop:</strong> Rate limits won’t affect you - we’ll use ~20-40 messages total - <strong>If you hit a limit:</strong> You’ll see a message like “Rate limit exceeded” - just wait a few minutes or try a different model - All free models work through OpenRouter API (your facilitator configured this) - You’ll learn which model is best for which task throughout the workshop!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>How to Select Your Model
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Look for the <strong>model dropdown</strong> at the top of the chat interface</li>
+<li>Look for FREE models with names ending in <code>:free</code>:
+<ul>
+<li>“deepseek-chat-v3:free” or “DeepSeek Chat V3 Free”</li>
+<li>“gemini-2.5-flash:free” or “Gemini 2.5 Flash Free”</li>
+<li>“llama-4-maverick:free” or “Llama 4 Maverick Free”</li>
+<li>“mistral-small:free” or “Mistral Small Free”</li>
+</ul></li>
+<li><strong>You’ll use DIFFERENT models for different tasks</strong> in this workshop</li>
+<li>⚠️ <strong>Avoid local models</strong> (llama3.2, phi3, qwen) - they’re CPU-based and too slow</li>
+</ol>
+<p><strong>If you don’t see OpenRouter FREE models:</strong> Check with your facilitator - OpenRouter may need to be configured.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Common Confusions - Read This First! ⚠️
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>“Do I need to know how to code?”</strong> - ❌ NO! The AI writes the code for you. You just describe what you want.</p>
+<p><strong>“Will switching models delete my conversation?”</strong> - ❌ NO! Your conversation stays when you switch models. The new model can see your history.</p>
+<p><strong>“What if I don’t have any PDFs?”</strong> - ✅ We provide sample documents, or you can use any PDF you have.</p>
+<p><strong>“Are these really free?”</strong> - ✅ YES! 100% free, no credit card, no tricks. OpenRouter provides these at no cost.</p>
+<p><strong>“What if I make a mistake?”</strong> - ✅ Just start a new chat! Click “New Chat” anytime.</p>
+<p><strong>“Will I remember all this?”</strong> - ✅ You’ll get reference guides to take home. Focus on understanding the concepts today.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Quick Model Selection Guide
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Use this throughout the workshop:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 42%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Task Type</th>
+<th>Best Model</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>💬 Quick questions, simple lookups</td>
+<td><strong>Gemini 2.5 Flash</strong></td>
+<td>Fastest, great for simple tasks</td>
+</tr>
+<tr class="even">
+<td>🔍 Web search &amp; current info</td>
+<td><strong>Gemini 2.5 Flash</strong></td>
+<td>Built for web content, fast synthesis</td>
+</tr>
+<tr class="odd">
+<td>📚 Document analysis, long texts</td>
+<td><strong>Llama 4 Maverick</strong></td>
+<td>256K context, best reasoning</td>
+</tr>
+<tr class="even">
+<td>📖 Citations &amp; academic accuracy</td>
+<td><strong>Mistral Small</strong></td>
+<td>Excellent citation precision</td>
+</tr>
+<tr class="odd">
+<td>💻 Python code &amp; data analysis</td>
+<td><strong>DeepSeek Chat V3</strong></td>
+<td>Trained specifically on code</td>
+</tr>
+<tr class="even">
+<td>🤔 Complex multi-step reasoning</td>
+<td><strong>Llama 4 Maverick</strong></td>
+<td>Best logical reasoning</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pro tip:</strong> You can switch models mid-conversation! Start with Gemini for quick exploration, switch to DeepSeek for code, switch to Mistral for citations.</p>
+</div>
+</div>
+<hr />
+</section>
+</section>
+</section>
+<section id="module-1-the-conversation-that-understands-you" class="level1">
+<h1>Module 1: The Conversation That Understands You</h1>
+<section id="the-hook-1" class="level2">
+<h2>The Hook 🎣</h2>
+<p><strong>Quick quiz:</strong> How many times have you copied the same prompt into ChatGPT today?</p>
+<p>What if your AI remembered everything you told it - for the entire project?</p>
+</section>
+<section id="the-story" class="level2">
+<h2>The Story 📖</h2>
+<section id="meet-dr.-sarah-chen" class="level3">
+<h3>Meet Dr. Sarah Chen</h3>
+<p>Dr. Sarah Chen studies urban sustainability. Last month, she spent 6 hours copying data between ChatGPT (for questions), Jupyter (for analysis), and Google Docs (for notes).</p>
+<p>Then she discovered OpenWebUI. Now she does everything in one conversation: - Ask questions about her research - Run data analysis - Save the entire workflow - Share it with her research partner in Tokyo</p>
+<p><strong>Her time investment to learn:</strong> 15 minutes <strong>Her time saved per week:</strong> 4.5 hours</p>
+</section>
+</section>
+<section id="the-educational-piece" class="level2">
+<h2>The Educational Piece 📚</h2>
+<section id="what-is-openwebui" class="level3">
+<h3>What is OpenWebUI?</h3>
+<p>Think of OpenWebUI as your research lab, but digital:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Traditional Lab</th>
+<th>OpenWebUI Lab</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Multiple tools on different benches</td>
+<td>Everything in one interface</td>
+</tr>
+<tr class="even">
+<td>Write down every step manually</td>
+<td>Auto-saves your entire process</td>
+</tr>
+<tr class="odd">
+<td>Can’t replay experiments exactly</td>
+<td>Perfect reproducibility</td>
+</tr>
+<tr class="even">
+<td>Work alone or email files</td>
+<td>Real-time collaboration</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-big-idea" class="level3">
+<h3>The Big Idea</h3>
+<p><strong>Context persistence</strong> - The AI remembers everything in your conversation. No more “As I mentioned before…” because you switched tools.</p>
+</section>
+</section>
+<section id="the-empowering-piece" class="level2">
+<h2>The Empowering Piece 💪</h2>
+<section id="your-first-ai-conversation" class="level3">
+<h3>Your First AI Conversation</h3>
+<p><strong>Learning Objective:</strong> Send a message and get a response in under 2 minutes.</p>
+<p><strong>Why this matters:</strong> This is your foundation. Every advanced feature builds on this.</p>
+</section>
+<section id="test-case-1-first-contact" class="level3">
+<h3>🧪 Test Case #1: First Contact</h3>
+<p><strong>Setup checklist:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>□ OpenWebUI is open in your browser</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>□ You can see the chat interface</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>□ Model is set to a FREE OpenRouter model (ending in :free)</span></code></pre></div>
+<p><strong>The Test:</strong></p>
+<ol type="1">
+<li><p><strong>Open your browser</strong> and go to: <code>https://team1-openwebui.valuechainhackers.xyz</code></p></li>
+<li><p><strong>Create your account</strong> (first signup becomes admin):</p>
+<pre><code>Email: [your email]
+Password: [strong password]</code></pre></li>
+<li><p><strong>Select your model:</strong></p>
+<p><strong>WHERE TO LOOK:</strong></p>
+<ul>
+<li>Look at the <strong>TOP</strong> of the screen in the chat interface</li>
+<li>You’ll see a dropdown menu or button showing the current model name</li>
+<li>It might say “Select Model” or show a model name like “llama3.2”</li>
+</ul>
+<p><strong>HOW TO SELECT:</strong></p>
+<ul>
+<li>Click on the model name/dropdown</li>
+<li>A list of available models appears</li>
+<li>Scroll through to find <strong>“Gemini 2.5 Flash Free”</strong> (fastest for first contact)</li>
+<li>The exact name might be:
+<ul>
+<li>“gemini-2.5-flash:free”</li>
+<li>“Google Gemini 2.5 Flash (Free)”</li>
+<li>“Gemini Flash Free”</li>
+</ul></li>
+<li>Click to select it</li>
+</ul>
+<p>⚠️ <strong>IMPORTANT:</strong></p>
+<ul>
+<li>Look for models ending in <code>:free</code> or with “Free” in the name</li>
+<li>Do NOT select local models like “llama3.2”, “phi3”, or “qwen” - they’re too slow for this workshop</li>
+</ul></li>
+<li><p><strong>Send this exact message:</strong></p>
+<pre><code>Hello! Please respond with exactly these words:
+&quot;TEST SUCCESSFUL - I am ready to help with your research.&quot;
+
+Then tell me which AI model you are and what you&#39;re best at.</code></pre></li>
+<li><p><strong>Expected result:</strong></p>
+<ul>
+<li>Response within 3-7 seconds (Gemini Flash is FAST!)</li>
+<li>Contains “TEST SUCCESSFUL” (or very close to it)</li>
+<li>Identifies as Gemini 2.5 Flash</li>
+<li>High-quality, well-formatted response</li>
+</ul></li>
+</ol>
+<p><strong>✅ Success criteria:</strong> - [ ] Message sent without errors - [ ] Response received in &lt; 10 seconds - [ ] Response contains requested text (exactly or very close) - [ ] Model identifies as a FREE OpenRouter model (NOT llama/phi/qwen)</p>
+<p><strong>❌ If it fails:</strong> - Check you’re logged in (see your email in top right?) - Check model dropdown - should show a model ending in <code>:free</code> - If you see a local model name, switch to a FREE OpenRouter model - Try refreshing the page - Ask facilitator if OpenRouter is configured</p>
+</section>
+<section id="going-deeper-why-this-matters" class="level3">
+<h3>Going Deeper: Why This Matters</h3>
+<p>When you sent that message, here’s what happened:</p>
+<div class="cell" data-layout-align="default">
+<div class="sourceCode" id="cb4"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>graph LR</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    A[Your Browser] --&gt;|Sends message| B[OpenWebUI Server]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    B --&gt;|Forwards to| C[AI Model]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    C --&gt;|Generates response| B</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    B --&gt;|Streams back| A</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<p><figure class=''></p>
+<div>
+
+</div>
+<p></figure></p>
+</div>
+</div>
+</div>
+<p><strong>The magic:</strong> Your conversation is now saved. Close your browser, come back tomorrow - it’s still there.</p>
+</section>
+</section>
+<section id="the-entertainment-piece" class="level2">
+<h2>The Entertainment Piece 🎭</h2>
+<section id="model-comparison-exercise-1-speed-vs-reasoning" class="level3">
+<h3>🎯 Model Comparison Exercise #1: Speed vs Reasoning</h3>
+<p><strong>Goal:</strong> Discover which model is best for quick questions vs complex analysis.</p>
+<p><strong>Part A: Quick Question (Test Gemini 2.5 Flash)</strong></p>
+<p><strong>HOW TO SWITCH MODELS:</strong> 1. Look at the top of your chat interface 2. Find the <strong>dropdown menu</strong> that shows your current model name 3. Click on it to see all available models 4. Select <strong>“Gemini 2.5 Flash Free”</strong> (or similar name with “Gemini” and “Flash”) 5. The page may refresh - that’s normal!</p>
+<p>Now ask:</p>
+<pre><code>What is the capital of Brazil?</code></pre>
+<p><strong>Note the response time</strong> (should be 2-4 seconds)</p>
+<p><strong>Part B: Complex Reasoning (Test Llama 4 Maverick)</strong></p>
+<p><strong>Now switch models</strong> using the same steps above, but select <strong>“Llama 4 Maverick Free”</strong></p>
+<p>⚠️ <strong>Important:</strong> When you switch models, your conversation history stays! The new model can see your previous messages.</p>
+<p>Now ask:</p>
+<pre><code>Explain the relationship between circular economy principles and carbon
+reduction targets in urban planning. Use specific examples.</code></pre>
+<p><strong>Compare:</strong> - [ ] Gemini was faster for the simple question - [ ] Llama provided deeper, more nuanced reasoning for the complex question - [ ] Both gave correct answers, but different levels of detail</p>
+<p><strong>Key Insight:</strong> Use <strong>Gemini Flash</strong> for quick lookups, <strong>Llama Maverick</strong> for complex thinking!</p>
+<hr />
+</section>
+<section id="the-ai-whisperer-challenge" class="level3">
+<h3>The “AI Whisperer” Challenge</h3>
+<p><strong>Game:</strong> See how specific you can make the AI’s response.</p>
+<p><strong>Try these with Gemini Flash (for speed):</strong> 1. “Respond with a haiku about research.” 2. “List exactly 3 reasons why coffee is essential for research. Number them.” 3. “Explain your last answer, but make it sound like a pirate.”</p>
+<p><strong>Point:</strong> The more specific your instructions, the better your results. This applies to everything you’ll do today.</p>
+</section>
+</section>
+<section id="key-learnings" class="level2">
+<h2>Key Learnings 🎓</h2>
+<section id="what-you-now-know" class="level3">
+<h3>What You Now Know</h3>
+<ol type="1">
+<li><strong>OpenWebUI saves context</strong> - No more copying between tools</li>
+<li><strong>Specificity matters</strong> - Clear instructions = better results</li>
+<li><strong>It’s conversational</strong> - You can refine, ask follow-ups, iterate</li>
+</ol>
+</section>
+<section id="questions-you-should-answer" class="level3">
+<h3>Questions You Should Answer</h3>
+<ol type="1">
+<li>Where does your conversation history save? <em>(Answer: In OpenWebUI’s database, tied to your account)</em></li>
+<li>Can you start multiple conversations? <em>(Answer: Yes! Click “New Chat” anytime)</em></li>
+<li>What happens if you close your browser? <em>(Answer: Nothing - log back in and continue)</em></li>
+</ol>
+</section>
+</section>
+<section id="the-anecdote" class="level2">
+<h2>The Anecdote 🗣️</h2>
+<p>When we first tested OpenWebUI with grad students, one of them said: “Wait, so I don’t lose my work if Chrome crashes?”</p>
+<p>When we said yes, she literally got up and hugged her laptop.</p>
+<p>She’d lost a 3-hour ChatGPT session the day before when her browser crashed.</p>
+<p><strong>That’s why we’re here.</strong></p>
+</section>
+<section id="the-quote" class="level2">
+<h2>The Quote 💭</h2>
+<blockquote>
+<p>“The future of sustainability research is not just about finding answers, but about asking better questions, faster.” - Dr. Kate Raworth, Economist and author of “Doughnut Economics”</p>
+</blockquote>
+<hr />
+</section>
+</section>
+<section id="module-2-teaching-your-ai-to-read-your-papers" class="level1">
+<h1>Module 2: Teaching Your AI to Read Your Papers</h1>
+<section id="the-hook-2" class="level2">
+<h2>The Hook 🎣</h2>
+<p><strong>Thought experiment:</strong> You have 50 PDFs about circular economy. You need to find every mention of “reverse logistics.”</p>
+<ul>
+<li><strong>Old way:</strong> Open each PDF, Ctrl+F, copy excerpts, 2 hours</li>
+<li><strong>New way:</strong> Upload all 50, ask “What do these papers say about reverse logistics?”, 2 minutes</li>
+</ul>
+<p><strong>That’s RAG. Let’s learn it.</strong></p>
+</section>
+<section id="the-story-1" class="level2">
+<h2>The Story 📖</h2>
+<section id="meet-professor-james-okonkwo" class="level3">
+<h3>Meet Professor James Okonkwo</h3>
+<p>James researches waste management in Lagos. He had a problem:</p>
+<p><em>“I’ve collected 200 interviews, 80 policy documents, and 30 academic papers. I know the answer to my research question is somewhere in there, but I’ll spend 6 months finding it manually.”</em></p>
+<p>He uploaded everything to OpenWebUI. His first question: <em>“What are the main barriers to waste sorting according to my interview data?”</em></p>
+<p><strong>Time to answer:</strong> 30 seconds <strong>Accuracy:</strong> Cited 7 specific interviews with exact quotes</p>
+</section>
+</section>
+<section id="the-educational-piece-1" class="level2">
+<h2>The Educational Piece 📚</h2>
+<section id="what-is-rag-retrieval-augmented-generation" class="level3">
+<h3>What is RAG (Retrieval Augmented Generation)?</h3>
+<p><strong>The problem RAG solves:</strong> - AI models only know what they were trained on (data cutoff) - They can’t read YOUR specific documents - They “hallucinate” - make up facts confidently</p>
+<p><strong>The RAG solution:</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="sourceCode" id="cb7"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    A[Your Question] --&gt; B[Search your documents]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[Find relevant chunks]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    C --&gt; D[Give chunks to AI]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    D --&gt; E[AI answers using YOUR documents]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[Response with citations]</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<p><figure class=''></p>
+<div>
+
+</div>
+<p></figure></p>
+</div>
+</div>
+</div>
+<p><strong>In plain English:</strong> 1. <strong>You upload your PDFs</strong> - Your documents are sent to OpenWebUI 2. <strong>They get processed</strong> - Documents are split into smaller sections (like paragraphs) and converted into a searchable format - Think of it like creating an index in the back of a book - Each section gets a unique “fingerprint” so it can be found quickly 3. <strong>You ask a question</strong> - OpenWebUI searches through all sections to find the most relevant ones 4. <strong>AI reads the relevant sections</strong> - Not the whole document, just the parts that match your question 5. <strong>You get an answer with citations</strong> - The AI tells you where it found the information</p>
+<p><strong>Key point:</strong> RAG doesn’t require the AI to “remember” your entire document - it searches and retrieves the relevant parts when needed!</p>
+</section>
+<section id="why-this-changes-everything" class="level3">
+<h3>Why This Changes Everything</h3>
+<p><strong>Before RAG:</strong> - “Tell me about X” → AI uses general knowledge (might be wrong)</p>
+<p><strong>With RAG:</strong> - “Tell me about X” → AI searches YOUR documents, quotes them, cites them</p>
+<p><strong>You’re creating a custom AI that knows YOUR research.</strong></p>
+</section>
+</section>
+<section id="the-empowering-piece-1" class="level2">
+<h2>The Empowering Piece 💪</h2>
+<section id="your-first-document-upload" class="level3">
+<h3>Your First Document Upload</h3>
+<p><strong>Learning Objective:</strong> Upload a PDF and ask it a question it can only answer from that document.</p>
+</section>
+<section id="test-case-2-document-intelligence" class="level3">
+<h3>🧪 Test Case #2: Document Intelligence</h3>
+<p><strong>Setup checklist:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>□ You have a PDF ready (research paper, report, anything)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>□ You&#39;re logged into OpenWebUI</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in a new chat</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to &quot;Llama 4 Maverick Free&quot; (best for document analysis)</span></code></pre></div>
+<p><strong>Why Llama 4 Maverick for this task?</strong> - <strong>256K token context</strong> - Can process up to ~600 pages at once (like 3 entire research papers!) - <strong>Excellent at extracting specific information</strong> - Won’t miss details in long documents - <strong>Strong citation accuracy</strong> - Remembers where information came from</p>
+<p><strong>What does “256K tokens” mean?</strong> - A “token” is roughly 3/4 of a word - 256K tokens ≈ 190,000 words ≈ 600 pages - This means you can upload a 200-page thesis and it will read the ENTIRE thing!</p>
+<p><strong>Don’t have a PDF handy?</strong> Download this sample:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample sustainability report</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://www.ellenmacarthurfoundation.org/circular-economy-diagram</span></span></code></pre></div>
+<p><strong>The Test:</strong></p>
+<p><strong>Step 1: Upload Your Document</strong></p>
+<ol type="1">
+<li>Look for the <strong>paperclip</strong> 📎 or <strong>“+”</strong> icon in the chat input area (usually bottom left or right)</li>
+<li>Click it to open the file selector</li>
+<li>Select “Upload File” or “Choose File”</li>
+<li>Choose your PDF from your computer</li>
+<li><strong>Wait for processing</strong> - You’ll see:
+<ul>
+<li>A progress bar or loading animation</li>
+<li>The filename appearing in your chat</li>
+<li>A green checkmark ✅ when complete</li>
+<li>OR a message like “Document processed successfully” or “Ready to query”</li>
+</ul></li>
+</ol>
+<p>⏱️ <strong>How long?</strong> Small PDFs (10-20 pages): 5-15 seconds. Large PDFs (100+ pages): 30-60 seconds.</p>
+<p><strong>Expected:</strong> Green checkmark ✅, filename visible, ready to ask questions!</p>
+<p><strong>Step 2: Test RAG is Working</strong></p>
+<p>Send this message:</p>
+<pre><code>Based on the document I just uploaded, what are the top 3 main points?
+Use bullet points and quote specific sections.</code></pre>
+<p><strong>Step 3: Verify Citations</strong></p>
+<p>Look for: - [ ] Answer is specific to YOUR document (not general knowledge) - [ ] You see citations or page references - [ ] If you uploaded a circular economy doc, it mentions specific frameworks from that doc</p>
+<p><strong>Step 4: Test the Limits</strong></p>
+<p>Try this:</p>
+<pre><code>What does this document say about quantum computing?</code></pre>
+<p><strong>Expected result:</strong> AI says something like “This document doesn’t contain information about quantum computing” or “I don’t see any references to quantum computing in the uploaded document.”</p>
+<p><strong>Why this test matters:</strong> You’re verifying RAG stays grounded in your documents and doesn’t hallucinate.</p>
+</section>
+<section id="advanced-challenge" class="level3">
+<h3>🎯 Advanced Challenge</h3>
+<p><strong>Upload a second document</strong> and ask:</p>
+<pre><code>What are the similarities and differences between these two documents?</code></pre>
+<p><strong>This tests:</strong> Multi-document RAG (searching across multiple sources)</p>
+</section>
+</section>
+<section id="the-entertainment-piece-1" class="level2">
+<h2>The Entertainment Piece 🎭</h2>
+<section id="model-comparison-exercise-2-citation-accuracy-test" class="level3">
+<h3>🎯 Model Comparison Exercise #2: Citation Accuracy Test</h3>
+<p><strong>Goal:</strong> See which model is most accurate with citations and document analysis.</p>
+<p><strong>Setup:</strong> Keep your uploaded document open in a chat.</p>
+<p><strong>Part A: Test with Mistral Small (Citation Specialist)</strong></p>
+<p>Switch to <strong>Mistral Small Free</strong> and ask:</p>
+<pre><code>List 5 specific claims from this document with exact quotes and page numbers.</code></pre>
+<p><strong>Part B: Test with Gemini Flash (Speed Reader)</strong></p>
+<p>Switch to <strong>Gemini 2.5 Flash Free</strong> and ask the same question:</p>
+<pre><code>List 5 specific claims from this document with exact quotes and page numbers.</code></pre>
+<p><strong>Compare the results:</strong> - [ ] Which model provided more accurate page numbers? - [ ] Which model gave longer, more complete quotes? - [ ] Which model was faster? - [ ] Which model better understood context?</p>
+<p><strong>Expected Results:</strong> - <strong>Mistral Small</strong> should give more precise citations - <strong>Gemini Flash</strong> should be faster but may be less precise - Both should correctly avoid making up content</p>
+<p><strong>Key Insight:</strong> Use <strong>Mistral Small</strong> when citation accuracy is critical, <strong>Gemini Flash</strong> when you need quick document summaries!</p>
+<hr />
+</section>
+<section id="the-citation-scavenger-hunt" class="level3">
+<h3>The “Citation Scavenger Hunt”</h3>
+<p><strong>Game:</strong> Upload a document and challenge a partner:</p>
+<ol type="1">
+<li>Each person asks a question about the document</li>
+<li>The AI answers with citations</li>
+<li>First person to find the actual quote in the PDF wins</li>
+<li><strong>Bonus points</strong> if the AI got it wrong (finding AI mistakes is a skill!)</li>
+</ol>
+<p><strong>Why this is fun:</strong> You’re learning to trust AND verify AI responses.</p>
+</section>
+</section>
+<section id="key-learnings-1" class="level2">
+<h2>Key Learnings 🎓</h2>
+<section id="what-you-now-know-1" class="level3">
+<h3>What You Now Know</h3>
+<ol type="1">
+<li><strong>RAG grounds AI in YOUR documents</strong> - No more hallucination about your research</li>
+<li><strong>Citations are your friend</strong> - Always verify claims against sources</li>
+<li><strong>Multiple documents work</strong> - Upload your entire literature review</li>
+<li><strong>Embeddings are “searchable math”</strong> - Your docs become queryable knowledge</li>
+</ol>
+</section>
+<section id="the-technical-magic-optional-deep-dive" class="level3">
+<h3>The Technical Magic (Optional Deep Dive)</h3>
+<p>When you upload a PDF:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simplified version of what happens</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>document <span class="op">=</span> extract_text_from_pdf(<span class="st">&quot;your_paper.pdf&quot;</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>chunks <span class="op">=</span> split_into_paragraphs(document)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> chunk <span class="kw">in</span> chunks:</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    embedding <span class="op">=</span> create_vector(chunk)  <span class="co"># Turns text into numbers</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    store_in_database(embedding, chunk)  <span class="co"># Saves in Qdrant</span></span></code></pre></div>
+<p>When you ask a question:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>question_embedding <span class="op">=</span> create_vector(<span class="st">&quot;your question&quot;</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>similar_chunks <span class="op">=</span> search_database(question_embedding)  <span class="co"># Math finds similar vectors</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>ai_response <span class="op">=</span> generate_answer(question, similar_chunks)  <span class="co"># AI reads chunks</span></span></code></pre></div>
+<p><strong>You don’t need to understand this. But knowing it exists helps you understand why:</strong> - Large documents take longer to process - More documents = better coverage - Good questions get better chunks</p>
+</section>
+</section>
+<section id="questions-you-should-answer-1" class="level2">
+<h2>Questions You Should Answer</h2>
+<ol type="1">
+<li>What does “RAG” stand for? <em>(Retrieval Augmented Generation)</em></li>
+<li>Why doesn’t the AI just “remember” your PDF after uploading? <em>(It needs to search it each time - that’s how it stays accurate)</em></li>
+<li>Can you upload Word docs? Images? <em>(Depends on configuration - PDF definitely works)</em></li>
+<li>What happens if you ask about something NOT in your documents? <em>(Good RAG says “I don’t know” - bad RAG hallucinates)</em></li>
+</ol>
+</section>
+<section id="the-anecdote-1" class="level2">
+<h2>The Anecdote 🗣️</h2>
+<p>During a pilot test, a PhD student uploaded her entire thesis draft (200 pages). She asked: “What’s my main argument?”</p>
+<p>The AI summarized it in 3 sentences. She stared at the screen, then said: “That’s… that’s actually what I’ve been trying to say for 4 years.”</p>
+<p>She used that as her elevator pitch for the next conference.</p>
+<p><strong>Sometimes the AI sees patterns we’re too close to notice.</strong></p>
+</section>
+<section id="the-quote-1" class="level2">
+<h2>The Quote 💭</h2>
+<blockquote>
+<p>“We are drowning in information, while starving for wisdom. The world henceforth will be run by synthesizers, people able to put together the right information at the right time, think critically about it, and make important choices wisely.” - E.O. Wilson, Biologist</p>
+</blockquote>
+<hr />
+</section>
+</section>
+<section id="module-3-asking-the-internet-for-help-without-opening-50-tabs" class="level1">
+<h1>Module 3: Asking the Internet for Help (Without Opening 50 Tabs)</h1>
+<section id="the-hook-3" class="level2">
+<h2>The Hook 🎣</h2>
+<p><strong>Quick scenario:</strong></p>
+<p>You’re writing a paper about carbon offsets. You need: - Latest 2024 policy changes - Current carbon prices - Recent criticism of offset schemes</p>
+<p><strong>Your current workflow:</strong> 1. Google search 2. Open 10 tabs 3. Read each one 4. Take notes 5. Lose track of which tab had that one stat 6. Accidentally close the browser 7. Cry</p>
+<p><strong>New workflow:</strong> Ask OpenWebUI. Get answer with sources. Done.</p>
+</section>
+<section id="the-story-2" class="level2">
+<h2>The Story 📖</h2>
+<section id="meet-dr.-maria-santos" class="level3">
+<h3>Meet Dr. Maria Santos</h3>
+<p>Maria studies renewable energy policy in Brazil. Her research question: <em>“How have feed-in tariffs changed in EU countries since 2023?”</em></p>
+<p>This needs CURRENT data. Her literature is from 2022. ChatGPT’s data cutoff is 2023.</p>
+<p><strong>She enabled web search in OpenWebUI and asked:</strong></p>
+<pre><code>What changes have EU countries made to feed-in tariffs for solar energy
+in 2024? Include specific countries and dates.</code></pre>
+<p><strong>Result:</strong> - AI searched the web - Found 8 recent sources - Synthesized an answer with citations - Included links to policy documents</p>
+<p><strong>Time saved:</strong> 2 hours of manual googling</p>
+</section>
+</section>
+<section id="the-educational-piece-2" class="level2">
+<h2>The Educational Piece 📚</h2>
+<section id="what-is-web-search-integration" class="level3">
+<h3>What is Web Search Integration?</h3>
+<p><strong>The problem it solves:</strong> - AI models have a knowledge cutoff (e.g., “I only know data up to April 2024”) - Your research questions need current information - Switching between ChatGPT and Google breaks your flow</p>
+<p><strong>The solution:</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="sourceCode" id="cb18"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    A[Your Question] --&gt; B{Does this need current info?}</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    B --&gt;|Yes| C[Search the web via SearxNG]</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    B --&gt;|No| D[Use AI knowledge]</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    C --&gt; E[Get results]</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[AI reads search results]</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    F --&gt; G[Synthesizes answer]</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    G --&gt; H[Response with links]</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<p><figure class=''></p>
+<div>
+
+</div>
+<p></figure></p>
+</div>
+</div>
+</div>
+</section>
+<section id="when-to-use-web-search" class="level3">
+<h3>When to Use Web Search</h3>
+<p><strong>Good use cases:</strong> - ✅ Current events, policies, statistics - ✅ Latest research publications - ✅ Real-time data (prices, weather, trends) - ✅ Fact-checking recent claims</p>
+<p><strong>Bad use cases:</strong> - ❌ General knowledge questions (“What is photosynthesis?”) - ❌ Math calculations (waste of a web search) - ❌ Questions about YOUR documents (use RAG instead)</p>
+</section>
+</section>
+<section id="the-empowering-piece-2" class="level2">
+<h2>The Empowering Piece 💪</h2>
+<section id="your-first-web-search-query" class="level3">
+<h3>Your First Web Search Query</h3>
+<p><strong>Learning Objective:</strong> Ask a question requiring current information and get a cited answer.</p>
+</section>
+<section id="test-case-3-real-time-research" class="level3">
+<h3>🧪 Test Case #3: Real-Time Research</h3>
+<p><strong>Setup checklist:</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in OpenWebUI</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in a new chat</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>□ Web search is enabled (check settings or toggle)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to &quot;Gemini 2.5 Flash Free&quot; (BEST for web search)</span></code></pre></div>
+<p><strong>Why Gemini 2.5 Flash for this task?</strong> - Fastest response time for web queries - Excellent at synthesizing multiple sources - 1M token context can handle many search results - Built by Google, optimized for web content</p>
+<p><strong>How to enable web search:</strong></p>
+<p><strong>Option 1: Toggle Button (Most Common)</strong> 1. Look <strong>near the message input box</strong> at the bottom of the screen 2. Find a <strong>🌐 globe icon</strong> or button labeled “Web Search” or “Search” 3. Click it once - it should change color (gray → blue/green = enabled) 4. You’ll see a small badge or text saying “Web search enabled” or the icon will be highlighted</p>
+<p><strong>Option 2: Settings Menu</strong> 1. Click the <strong>settings icon</strong> (⚙️ or three dots) near the chat 2. Look for “Enable Web Search” checkbox 3. Check the box 4. Close settings</p>
+<p><strong>How to tell it’s working:</strong> When you send a message, you’ll see “Searching the web…” or “🔍 Searching…” before the response</p>
+<p><strong>The Test:</strong></p>
+<p><strong>Step 1: Ask a Current Question</strong></p>
+<p>Send this:</p>
+<pre><code>What are the latest (2024-2025) developments in battery recycling
+technology for electric vehicles? Include company names and dates.</code></pre>
+<p><strong>Expected behavior:</strong> - [ ] You see “Searching the web…” indicator - [ ] Wait 5-15 seconds (web search takes longer) - [ ] Response includes recent dates (2024-2025) - [ ] Response includes URLs or source names</p>
+<p><strong>Step 2: Verify It’s Actually Using Web Search</strong></p>
+<p>Try this control test - <strong>disable web search</strong> and ask:</p>
+<pre><code>What happened in sustainability news yesterday?</code></pre>
+<p><strong>Expected result:</strong> “I don’t have access to information about yesterday” or similar.</p>
+<p>Now <strong>enable web search</strong> again and ask the same question.</p>
+<p><strong>Expected result:</strong> Actual recent news with dates and sources.</p>
+<p><strong>Step 3: Compare Quality</strong></p>
+<p>Ask this WITH web search enabled:</p>
+<pre><code>What is the current price of carbon credits in the EU ETS?</code></pre>
+<p><strong>You should get:</strong> - [ ] A specific number (€X per ton) - [ ] A recent date - [ ] A source URL</p>
+<p><strong>This is information the AI cannot know without searching.</strong></p>
+</section>
+</section>
+<section id="the-entertainment-piece-2" class="level2">
+<h2>The Entertainment Piece 🎭</h2>
+<section id="the-time-traveler-game" class="level3">
+<h3>The “Time Traveler” Game</h3>
+<p><strong>Challenge:</strong> Ask questions that reveal whether AI is using web search or old knowledge.</p>
+<p><strong>Example questions:</strong> 1. “Who won the Nobel Prize in Economics this year?” 2. “What’s the latest IPCC report recommendation?” 3. “How much has global temperature risen since 2020?”</p>
+<p><strong>How to play:</strong> - Disable web search → Note the answer - Enable web search → Note the answer - Compare!</p>
+<p><strong>Point:</strong> This helps you understand when AI is guessing vs. searching.</p>
+</section>
+</section>
+<section id="key-learnings-2" class="level2">
+<h2>Key Learnings 🎓</h2>
+<section id="what-you-now-know-2" class="level3">
+<h3>What You Now Know</h3>
+<ol type="1">
+<li><strong>Web search extends AI’s knowledge cutoff</strong> - Get current information</li>
+<li><strong>Citations are automatic</strong> - No more bookmarking 50 tabs</li>
+<li><strong>Synthesis is the value</strong> - AI reads multiple sources and summarizes</li>
+<li><strong>Toggle mindfully</strong> - Not every question needs web search</li>
+</ol>
+</section>
+<section id="behind-the-scenes-searxng" class="level3">
+<h3>Behind the Scenes: SearxNG</h3>
+<p>OpenWebUI uses <strong>SearxNG</strong> - a privacy-respecting meta-search engine that: - Searches multiple sources (Google, Bing, DuckDuckGo, etc.) - Doesn’t track you - Returns results to the AI - AI synthesizes them into an answer</p>
+<p><strong>Why this matters:</strong> You get broad search coverage without being tracked across the internet.</p>
+</section>
+</section>
+<section id="questions-you-should-answer-2" class="level2">
+<h2>Questions You Should Answer</h2>
+<ol type="1">
+<li>When should you enable web search? <em>(When you need current info or real-time data)</em></li>
+<li>Why does web search take longer than normal AI responses? <em>(It has to search the web, fetch results, then read them)</em></li>
+<li>Can you trust web search results? <em>(Verify sources - AI can misinterpret search results)</em></li>
+<li>What’s the difference between web search and RAG? <em>(RAG = your documents, Web search = the internet)</em></li>
+</ol>
+</section>
+<section id="the-anecdote-2" class="level2">
+<h2>The Anecdote 🗣️</h2>
+<p>A logistics researcher was writing a grant proposal about port automation. He needed current examples of AI implementation in European ports.</p>
+<p>He asked OpenWebUI with web search: <em>“Which European ports implemented AI-driven logistics systems in 2024?”</em></p>
+<p>The AI found 6 examples he’d never heard of, with links to press releases and pilot project reports.</p>
+<p><strong>He got 3 citations for his grant proposal in 5 minutes.</strong></p>
+<p>The grant got funded.</p>
+</section>
+<section id="the-quote-2" class="level2">
+<h2>The Quote 💭</h2>
+<blockquote>
+<p>“In the age of information abundance, the synthesis of knowledge is more valuable than access to data.” - Dr. Johan Rockström, Climate Scientist and Director of the Potsdam Institute</p>
+</blockquote>
+<hr />
+</section>
+</section>
+<section id="module-4-from-question-to-graph-in-60-seconds" class="level1">
+<h1>Module 4: From Question to Graph in 60 Seconds</h1>
+<section id="the-hook-4" class="level2">
+<h2>The Hook 🎣</h2>
+<p><strong>Pop quiz:</strong> How long does it take you to: 1. Export data from Excel 2. Open Jupyter/Python 3. Load the data 4. Write code to analyze it 5. Generate a graph 6. Interpret results</p>
+<p><strong>Average answer:</strong> 30-45 minutes</p>
+<p><strong>What if it took 60 seconds?</strong></p>
+</section>
+<section id="the-story-3" class="level2">
+<h2>The Story 📖</h2>
+<section id="meet-alex-kowalski" class="level3">
+<h3>Meet Alex Kowalski</h3>
+<p>Alex is a supply chain researcher studying delivery route efficiency. He has a CSV of 500 delivery routes with distances and times.</p>
+<p><strong>His old workflow:</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Open Jupyter</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Import libraries (pray they&#39;re installed)</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Load data (fight with file paths)</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;data.csv&#39;</span>)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Clean data (find the error)</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Plot (Google the syntax)</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Interpret</span></span></code></pre></div>
+<p><strong>Time:</strong> 45 minutes (if everything works)</p>
+<p><strong>His new workflow in OpenWebUI:</strong></p>
+<pre><code>Here&#39;s my delivery data [uploads CSV]. Show me the correlation
+between distance and time, create a scatter plot, and tell me
+if there are any outliers I should investigate.</code></pre>
+<p><strong>Time:</strong> 90 seconds</p>
+</section>
+</section>
+<section id="the-educational-piece-3" class="level2">
+<h2>The Educational Piece 📚</h2>
+<section id="what-is-code-execution" class="level3">
+<h3>What is Code Execution?</h3>
+<p><strong>The problem it solves:</strong> - You have data but aren’t a Python expert - You know what question you want answered, not how to code it - You switch between ChatGPT (for code) and Jupyter (to run it)</p>
+<p><strong>The solution:</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="sourceCode" id="cb25"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>graph LR</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    A[Your Question] --&gt; B[AI writes Python code]</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[Code executes in Jupyter]</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    C --&gt; D[Results/Graphs return]</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    D --&gt; E[AI interprets results]</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[You get insights]</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<p><figure class=''></p>
+<div>
+
+</div>
+<p></figure></p>
+</div>
+</div>
+</div>
+<p><strong>The magic:</strong> Everything happens in one conversation. No copying code. No switching tools.</p>
+</section>
+<section id="what-can-you-do-with-this" class="level3">
+<h3>What Can You Do With This?</h3>
+<p><strong>Data analysis:</strong> - Descriptive statistics - Correlation analysis - Hypothesis testing - Time series analysis</p>
+<p><strong>Visualization:</strong> - Scatter plots, line graphs, bar charts - Heatmaps, distributions - Custom plots</p>
+<p><strong>Data processing:</strong> - Cleaning messy data - Merging datasets - Transforming formats - Calculating derived metrics</p>
+</section>
+</section>
+<section id="the-empowering-piece-3" class="level2">
+<h2>The Empowering Piece 💪</h2>
+<section id="your-first-code-execution" class="level3">
+<h3>Your First Code Execution</h3>
+<p><strong>Learning Objective:</strong> Ask AI to perform a calculation and see the code run automatically.</p>
+</section>
+<section id="test-case-4-calculator-on-steroids" class="level3">
+<h3>🧪 Test Case #4: Calculator on Steroids</h3>
+<p><strong>Setup checklist:</strong></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in OpenWebUI</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>□ Code execution is enabled (should be by default)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in a new chat</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to &quot;DeepSeek Chat V3 Free&quot; (BEST for code generation)</span></code></pre></div>
+<p><strong>Why DeepSeek Chat V3 for this task?</strong> - <strong>Specifically trained on code</strong> - Exceptional at Python - Excellent at debugging and explaining code - Strong mathematical reasoning - Great at data analysis tasks</p>
+<p><strong>The Test:</strong></p>
+<p><strong>Step 1: Simple Calculation (AI Writes Code)</strong></p>
+<p>DeepSeek is excellent at writing code. Let’s test it:</p>
+<pre><code>Calculate the compound annual growth rate (CAGR) if an investment
+grows from $100 to $250 over 5 years. Show me the formula and write
+Python code to calculate it, then execute the code.</code></pre>
+<p><strong>What you’ll see (step by step):</strong></p>
+<ol type="1">
+<li><strong>AI explains the formula</strong> - Text explanation of CAGR</li>
+<li><strong>AI writes code</strong> - You’ll see a Python code block (gray/dark box with colored text)</li>
+<li><strong>Code runs automatically</strong> - Look for:
+<ul>
+<li>A “▶️ Running…” or “Executing code…” message</li>
+<li>The code block may get a green border or checkmark</li>
+<li>Results appear below the code (either text output or “CAGR: 20.11%”)</li>
+</ul></li>
+<li><strong>AI interprets results</strong> - Explains what the answer means</li>
+</ol>
+<p><strong>What does code execution look like?</strong> - Code appears in a <strong>special box</strong> with syntax highlighting (colors) - You might see a <strong>“Run”</strong> button or it runs automatically - Output appears <strong>directly below the code</strong> (not in a new message) - Result: ~20.11%</p>
+<p><strong>Example of what you’ll see:</strong></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>initial <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>final <span class="op">=</span> <span class="dv">250</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>cagr <span class="op">=</span> (final<span class="op">/</span>initial)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>years) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;CAGR: </span><span class="sc">{</span>cagr<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss">%&quot;</span>)</span></code></pre></div>
+<p><strong>The key insight:</strong> With good models, AI can WRITE and RUN code for you!</p>
+<p><strong>Step 2: Create a Visualization (AI Writes Code)</strong></p>
+<p>Now let’s have AI create a graph for us:</p>
+<pre><code>Create a line graph showing exponential growth from $100 to $250
+over 5 years using the CAGR we just calculated. Label the axes
+and make it look professional. Execute the code to generate the plot.</code></pre>
+<p><strong>What you’ll see:</strong> - [ ] AI writes matplotlib/plotting code (Python library for graphs) - [ ] Code executes automatically - [ ] <strong>A graph appears!</strong> You’ll see one of these: - <strong>Best case:</strong> Image displays directly in the chat (inline) - <strong>Alternative:</strong> A message like “Chart created” or “Visualization saved” - <strong>Or:</strong> A clickable link/filename to view the image - [ ] Graph shows: - Growth curve from $100 to $250 - X-axis labeled (years: 0-5) - Y-axis labeled (dollars: $100-$250) - Professional appearance (colors, grid, title)</p>
+<p><strong>What if I don’t see the image?</strong> - Don’t worry! The code ran successfully - Some setups show images inline, others save them as files - The important learning: AI wrote code that creates professional visualizations - If there’s a filename, you can download it</p>
+<p><strong>This is the magic moment</strong> - you went from question to visualization in ONE request, without knowing any matplotlib syntax!</p>
+<p><strong>Step 3: Test With Real Data Analysis (AI Generates Everything)</strong></p>
+<p>Now let’s test AI’s ability to do complete data analysis:</p>
+<pre><code>Generate a dataset of 10 cities with their population and CO2 emissions.
+Then create a scatter plot showing if there&#39;s a correlation.
+Calculate and display the correlation coefficient.
+Execute all the code.</code></pre>
+<p><strong>Expected behavior:</strong> - [ ] AI generates sample data - [ ] Creates visualization - [ ] Calculates correlation (r value) - [ ] Interprets the relationship - [ ] All code executes successfully</p>
+<p><strong>This is powerful:</strong> You described what you want, AI figured out how to do it, wrote the code, executed it, and interpreted results.</p>
+</section>
+<section id="advanced-challenge-1" class="level3">
+<h3>🎯 Advanced Challenge</h3>
+<p><strong>Upload your own data</strong> (CSV, Excel) and ask:</p>
+<pre><code>Analyze this dataset. Show me:
+1. Summary statistics
+2. Distribution of the main variables
+3. Any interesting patterns or outliers
+4. Create appropriate visualizations
+
+Execute all code and explain what you find.</code></pre>
+<p><strong>This tests:</strong> End-to-end research workflow with your real data.</p>
+<p><strong>Expected:</strong> AI explores your data, generates multiple analyses, creates visualizations, and provides insights.</p>
+</section>
+</section>
+<section id="the-entertainment-piece-3" class="level2">
+<h2>The Entertainment Piece 🎭</h2>
+<section id="model-comparison-exercise-3-code-quality-battle" class="level3">
+<h3>🎯 Model Comparison Exercise #3: Code Quality Battle</h3>
+<p><strong>Goal:</strong> See which model writes better Python code for data analysis.</p>
+<p><strong>Part A: Test DeepSeek Chat V3 (Code Specialist)</strong></p>
+<p>Switch to <strong>DeepSeek Chat V3 Free</strong> and ask:</p>
+<pre><code>Create a Python function that:
+1. Generates 100 random data points following a normal distribution
+2. Calculates mean, median, and standard deviation
+3. Creates a histogram with the distribution curve overlay
+4. Returns all statistics in a dictionary
+
+Execute the code and show the results.</code></pre>
+<p><strong>Observe:</strong> - Code quality and structure - Explanation clarity - Execution success - Visualization quality</p>
+<p><strong>Part B: Test Gemini Flash (Generalist)</strong></p>
+<p>Switch to <strong>Gemini 2.5 Flash Free</strong> and ask the <strong>exact same question</strong>.</p>
+<p><strong>Compare:</strong> - [ ] Which model’s code was more readable? - [ ] Which model added better comments? - [ ] Which model created a better visualization? - [ ] Which model executed without errors? - [ ] Which was faster?</p>
+<p><strong>Expected Results:</strong> - <strong>DeepSeek</strong> should have cleaner, more professional code structure - <strong>DeepSeek</strong> should handle edge cases better - <strong>Gemini</strong> should be faster but code may be simpler - Both should work, but quality will differ</p>
+<p><strong>Key Insight:</strong> Use <strong>DeepSeek Chat V3</strong> for all serious coding tasks, <strong>Gemini</strong> for quick one-off calculations!</p>
+<p><strong>Part C: The “Impossible” Challenge (DeepSeek’s Specialty)</strong></p>
+<p>Now try something complex that really shows DeepSeek’s coding prowess. Use <strong>DeepSeek Chat V3</strong>:</p>
+<pre><code>Write a Python function that:
+1. Simulates a Monte Carlo analysis for portfolio risk
+2. Takes 3 stock tickers, investment amounts, and number of simulations
+3. Uses random walk model for price movements
+4. Calculates Value at Risk (VaR) at 95% confidence
+5. Creates visualization showing distribution of outcomes
+6. Returns comprehensive risk metrics
+
+Use realistic parameters and execute the code.</code></pre>
+<p><strong>Now try the SAME prompt with Gemini Flash.</strong></p>
+<p><strong>What you’ll see:</strong> - <strong>DeepSeek</strong> will write sophisticated, production-quality code with proper error handling - <strong>Gemini</strong> will write simpler code that may work but lacks polish - <strong>DeepSeek</strong> will better explain the financial concepts - <strong>DeepSeek</strong> will create more professional visualizations</p>
+<p><strong>This is the DRAMATIC difference</strong> - for complex technical tasks, specialist models shine!</p>
+<hr />
+</section>
+<section id="the-visualization-remix-game" class="level3">
+<h3>The “Visualization Remix” Game</h3>
+<p><strong>Challenge:</strong> Take the same data and ask for it in different visualization styles.</p>
+<p><strong>Use DeepSeek Chat V3</strong> for this (best at visualization code)</p>
+<p><strong>Starting prompt:</strong></p>
+<pre><code>Create sample data of monthly renewable energy production
+(solar, wind, hydro) for a year.</code></pre>
+<p><strong>Then request:</strong> 1. “Show this as a line graph” 2. “Show this as a stacked area chart” 3. “Show this as a heatmap” 4. “Show this as an interactive plot if possible”</p>
+<p><strong>Point:</strong> Learn what visualization best communicates your insight.</p>
+</section>
+</section>
+<section id="key-learnings-3" class="level2">
+<h2>Key Learnings 🎓</h2>
+<section id="what-you-now-know-3" class="level3">
+<h3>What You Now Know</h3>
+<ol type="1">
+<li><strong>Code execution happens in Jupyter</strong> - A real Python environment</li>
+<li><strong>AI writes the code for you</strong> - You describe what you want, it codes it</li>
+<li><strong>Results stay in the conversation</strong> - No more “where did I save that graph?”</li>
+<li><strong>Iteration is fast</strong> - “Now make the bars blue” → done</li>
+<li><strong>Reproducibility is built-in</strong> - All code is saved in the chat</li>
+</ol>
+</section>
+<section id="the-technical-flow" class="level3">
+<h3>The Technical Flow</h3>
+<p>When you ask for analysis:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. AI interprets your question</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>user_intent <span class="op">=</span> understand_request(<span class="st">&quot;show me correlation...&quot;</span>)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. AI writes Python code</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> generate_python_code(user_intent)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Code sent to Jupyter container</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> jupyter_kernel.execute(code)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Output captured (text, images, errors)</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> capture_output(result)</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Displayed in chat</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>return_to_user(output)</span></code></pre></div>
+<p><strong>Why Jupyter?</strong> It’s a standardized Python environment that’s: - Isolated (your code can’t break the system) - Stateful (variables persist between executions) - Rich (can return plots, dataframes, etc.)</p>
+</section>
+</section>
+<section id="questions-you-should-answer-3" class="level2">
+<h2>Questions You Should Answer</h2>
+<ol type="1">
+<li>Where does the Python code actually run? <em>(In a Jupyter container on the server)</em></li>
+<li>Can you edit the code before it runs? <em>(Yes! You can copy it, modify it, and ask AI to run the modified version)</em></li>
+<li>What Python libraries are available? <em>(Common ones: pandas, numpy, matplotlib, scipy, scikit-learn)</em></li>
+<li>What if the code has an error? <em>(AI sees the error and usually fixes it automatically)</em></li>
+</ol>
+</section>
+<section id="the-anecdote-3" class="level2">
+<h2>The Anecdote 🗣️</h2>
+<p>A PhD student in environmental science had 2 years of weather data in Excel. She needed to identify “heat wave events” (5+ consecutive days above 35°C).</p>
+<p>She’d been manually highlighting cells for a week.</p>
+<p>She asked OpenWebUI: <em>“Find all heat wave events in this data (5+ days above 35°C). Show me when they occurred and how long each lasted.”</em></p>
+<p><strong>60 seconds later:</strong> Complete analysis, a calendar heatmap visualization, and a table of all 17 heat wave events.</p>
+<p>She called her supervisor and said, “I need to change my methodology section.”</p>
+</section>
+<section id="the-quote-3" class="level2">
+<h2>The Quote 💭</h2>
+<blockquote>
+<p>“The real problem is not whether machines think but whether humans do.” - B.F. Skinner (though he meant it differently, it applies to data analysis)</p>
+</blockquote>
+<blockquote>
+<p>“Data is not information, information is not knowledge, knowledge is not understanding, understanding is not wisdom.” - Clifford Stoll, Astronomer &amp; Author</p>
+</blockquote>
+<hr />
+</section>
+</section>
+<section id="module-5-bringing-it-all-together---the-research-power-move" class="level1">
+<h1>Module 5: Bringing It All Together - The Research Power Move</h1>
+<section id="the-hook-5" class="level2">
+<h2>The Hook 🎣</h2>
+<p><strong>The ultimate question:</strong> Can you use ALL four skills in ONE research workflow?</p>
+<p><strong>Answer:</strong> Yes. And it’s spectacular.</p>
+</section>
+<section id="the-story-4" class="level2">
+<h2>The Story 📖</h2>
+<section id="meet-dr.-yuki-tanaka" class="level3">
+<h3>Meet Dr. Yuki Tanaka</h3>
+<p>Yuki studies urban heat islands in Asian megacities. Her research question:</p>
+<p><em>“How do urban green spaces correlate with temperature reduction, and what do recent policy implementations suggest about effectiveness?”</em></p>
+<p><strong>This requires:</strong> - 📄 RAG - her uploaded research papers - 🌐 Web search - current policy implementations - 💻 Code execution - correlation analysis - 💬 Conversation - synthesis and interpretation</p>
+<p><strong>Her single conversation:</strong></p>
+<pre><code>I&#39;ve uploaded 15 papers about urban heat islands. Based on these,
+what&#39;s the theoretical cooling effect of increasing urban green space by 10%?</code></pre>
+<p><em>(AI uses RAG, quotes papers)</em></p>
+<pre><code>Now search the web for cities that implemented urban greening policies
+in 2023-2024. What were their results?</code></pre>
+<p><em>(AI searches web, finds Seoul, Singapore, Barcelona examples)</em></p>
+<pre><code>Here&#39;s temperature data from Singapore [uploads CSV]. Calculate the
+correlation between green space coverage and temperature reduction.
+Compare this to the theoretical predictions from the papers.</code></pre>
+<p><em>(AI executes code, creates visualizations, compares empirical vs theoretical)</em></p>
+<pre><code>Synthesize all of this into a 200-word summary I can use in my paper&#39;s
+introduction, with citations.</code></pre>
+<p><em>(AI writes the summary, drawing from papers, web sources, and data analysis)</em></p>
+<p><strong>Time:</strong> 15 minutes <strong>Output:</strong> Publication-ready paragraph with citations <strong>Old method:</strong> 2 weeks</p>
+</section>
+</section>
+<section id="the-educational-piece-4" class="level2">
+<h2>The Educational Piece 📚</h2>
+<section id="the-integrated-research-workflow" class="level3">
+<h3>The Integrated Research Workflow</h3>
+<p><strong>What makes this powerful:</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="sourceCode" id="cb40"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    A[Research Question] --&gt; B[RAG: Literature Review]</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[Web: Current Context]</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    C --&gt; D[Code: Data Analysis]</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    D --&gt; E[AI: Synthesis]</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[Actionable Insight]</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    F -.Iterate.-&gt; A</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<p><figure class=''></p>
+<div>
+
+</div>
+<p></figure></p>
+</div>
+</div>
+</div>
+<p><strong>Each capability enhances the others:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 32%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Capability</th>
+<th>Provides</th>
+<th>Used By</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RAG</td>
+<td>Theoretical foundation</td>
+<td>Code (variables to test), Web (context for search)</td>
+</tr>
+<tr class="even">
+<td>Web Search</td>
+<td>Current examples</td>
+<td>RAG (validate theories), Code (real-world data)</td>
+</tr>
+<tr class="odd">
+<td>Code Execution</td>
+<td>Empirical evidence</td>
+<td>RAG (test theories), Web (inform what to search)</td>
+</tr>
+<tr class="even">
+<td>Conversation</td>
+<td>Integration layer</td>
+<td>Everything connects here</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="the-empowering-piece-4" class="level2">
+<h2>The Empowering Piece 💪</h2>
+<section id="your-final-challenge-the-complete-research-cycle" class="level3">
+<h3>Your Final Challenge: The Complete Research Cycle</h3>
+<p><strong>Learning Objective:</strong> Use all four capabilities in one conversation to answer a research question.</p>
+</section>
+<section id="test-case-5-the-grand-finale" class="level3">
+<h3>🧪 Test Case #5: The Grand Finale</h3>
+<p><strong>Setup checklist:</strong></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>□ You have 1-2 PDFs related to your research area</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>□ You have a CSV of data (or can generate sample data)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>□ You have a research question in mind</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>□ Web search is enabled</span></code></pre></div>
+<p><strong>The Test:</strong></p>
+<p><strong>Your mission:</strong> Answer this question using all four capabilities:</p>
+<p><em>“What does the literature say about [YOUR TOPIC], what are current real-world examples, and what does the data show?”</em></p>
+<p><strong>Step-by-step guide:</strong></p>
+<p><strong>Step 1: Upload Your Literature (RAG)</strong></p>
+<pre><code>I&#39;m researching [YOUR TOPIC]. I&#39;ve uploaded papers about this.
+What are the main findings regarding [SPECIFIC ASPECT]?</code></pre>
+<p><strong>Expected:</strong> Summary with citations from YOUR papers.</p>
+<p><strong>Step 2: Add Current Context (Web Search)</strong></p>
+<pre><code>Now search the web for recent (2024-2025) examples of [YOUR TOPIC]
+being implemented. What are organizations doing?</code></pre>
+<p><strong>Expected:</strong> Real-world examples with URLs.</p>
+<p><strong>Step 3: Analyze Data (Code Execution)</strong></p>
+<pre><code>Here&#39;s data related to [YOUR TOPIC] [upload CSV or ask AI to generate sample data].
+Analyze it and create a visualization showing [RELATIONSHIP YOU WANT TO EXPLORE].</code></pre>
+<p><strong>Expected:</strong> Code execution, graph, statistical analysis.</p>
+<p><strong>Step 4: Synthesize Everything (Integration)</strong></p>
+<pre><code>Based on:
+1. The literature I uploaded
+2. The current examples you found
+3. The data analysis we just did
+
+Write a 3-paragraph synthesis that answers: [YOUR RESEARCH QUESTION]
+Include citations and reference the data visualization.</code></pre>
+<p><strong>Expected:</strong> A coherent synthesis drawing from all three sources.</p>
+<p><strong>✅ Success criteria:</strong> - [ ] Literature is cited correctly - [ ] Web sources are referenced with URLs - [ ] Data analysis is mentioned with specific numbers - [ ] Synthesis reads coherently (not just pasted together) - [ ] You can see the thread connecting all parts</p>
+<p><strong>❌ If it fails:</strong> - Break it down - do each step separately first - Check each capability works individually before combining - Be more specific in your synthesis request</p>
+</section>
+<section id="real-world-application" class="level3">
+<h3>🎯 Real-World Application</h3>
+<p><strong>Your homework:</strong> Use this workflow for an actual research task this week.</p>
+<p><strong>Ideas:</strong> 1. Literature review + current policy landscape + statistical validation 2. Historical data analysis + recent trends + predictive insights 3. Theoretical framework + case studies + empirical testing</p>
+</section>
+</section>
+<section id="the-entertainment-piece-4" class="level2">
+<h2>The Entertainment Piece 🎭</h2>
+<section id="ultimate-model-comparison-exercise-the-perfect-workflow" class="level3">
+<h3>🎯 ULTIMATE Model Comparison Exercise: The Perfect Workflow</h3>
+<p><strong>Goal:</strong> Use the RIGHT model for each step of a complete research workflow.</p>
+<p><strong>The Challenge:</strong> Research the topic “AI in sustainable agriculture” using optimal models for each task.</p>
+<p><strong>Step 1: Web Search for Current Examples (Use Gemini 2.5 Flash)</strong></p>
+<pre><code>Search for the latest (2024-2025) AI applications in sustainable farming.
+What companies are implementing this? What results are they seeing?</code></pre>
+<p><strong>Expected:</strong> Fast response with current examples and URLs (2-3 min)</p>
+<p><strong>Step 2: Document Analysis (Switch to Llama 4 Maverick)</strong></p>
+<p>Upload 1-2 research papers about AI and agriculture, then ask:</p>
+<pre><code>Based on these papers, what are the theoretical benefits and challenges
+of AI in sustainable agriculture? Provide detailed citations.</code></pre>
+<p><strong>Expected:</strong> Deep analysis with accurate quotes (3-4 min)</p>
+<p><strong>Step 3: Citation Verification (Switch to Mistral Small)</strong></p>
+<pre><code>Review the previous response. Provide page-specific citations for each
+major claim about AI benefits and challenges.</code></pre>
+<p><strong>Expected:</strong> Precise citations and quote verification (2-3 min)</p>
+<p><strong>Step 4: Data Analysis (Switch to DeepSeek Chat V3)</strong></p>
+<p>Generate or upload sample data, then ask:</p>
+<pre><code>Generate sample data showing crop yield improvements with AI vs traditional
+methods (30 farms, 2 years). Perform statistical analysis and create
+visualizations. Calculate if the difference is significant.</code></pre>
+<p><strong>Expected:</strong> Clean code, professional visualizations, statistical analysis (3-4 min)</p>
+<p><strong>Step 5: Final Synthesis (Use Llama 4 Maverick for complex reasoning)</strong></p>
+<pre><code>Based on:
+1. Current industry examples (from web search)
+2. Academic literature (from uploaded papers)
+3. Statistical analysis (from our data analysis)
+
+Write a 300-word executive summary about AI in sustainable agriculture.
+Include citations, data references, and practical recommendations.</code></pre>
+<p><strong>Expected:</strong> Coherent synthesis connecting all sources (3-4 min)</p>
+<p><strong>Total Time:</strong> 15-20 minutes for complete research cycle!</p>
+<p><strong>Compare this to:</strong> Using ONE model for everything (would be slower and lower quality) or using the WRONG models for each task.</p>
+<p><strong>Success Criteria:</strong> - [ ] Each model performed better at its specialized task - [ ] Total output is publication-quality - [ ] All sources properly cited - [ ] Data analysis is rigorous - [ ] Synthesis is coherent</p>
+<p><strong>Key Insight:</strong> The power isn’t just in the tools—it’s in knowing WHICH tool to use WHEN!</p>
+<hr />
+</section>
+<section id="the-research-relay-race" class="level3">
+<h3>The “Research Relay Race”</h3>
+<p><strong>For group workshops:</strong></p>
+<ol type="1">
+<li><strong>Team 1:</strong> Uploads papers, asks RAG question (choose best model!)</li>
+<li><strong>Team 2:</strong> Takes that answer, does web search to expand (choose best model!)</li>
+<li><strong>Team 3:</strong> Takes both, analyzes data to validate (choose best model!)</li>
+<li><strong>Team 4:</strong> Synthesizes everything (choose best model!)</li>
+</ol>
+<p><strong>First team to create a coherent 200-word research summary with the FASTEST time and BEST quality wins.</strong></p>
+<p><strong>Twist:</strong> Teams are judged on model selection strategy!</p>
+<p><strong>Why this is fun:</strong> You see how each capability builds on the last, AND you learn optimal model selection.</p>
+</section>
+</section>
+<section id="key-learnings-4" class="level2">
+<h2>Key Learnings 🎓</h2>
+<section id="what-you-now-know-4" class="level3">
+<h3>What You Now Know</h3>
+<ol type="1">
+<li><strong>Integration is the superpower</strong> - Individual tools are good; combined, they’re transformative</li>
+<li><strong>Model selection matters</strong> - Using the RIGHT model for each task dramatically improves results</li>
+<li><strong>Conversation is the glue</strong> - Context persistence makes integration possible</li>
+<li><strong>Iteration is cheap</strong> - Refine any part without redoing everything</li>
+<li><strong>Reproducibility is automatic</strong> - Share the conversation = share the entire methodology</li>
+<li><strong>Free doesn’t mean inferior</strong> - Free OpenRouter models rival paid options when used correctly</li>
+</ol>
+</section>
+<section id="the-meta-skills-prompt-engineering-model-selection" class="level3">
+<h3>The Meta-Skills: Prompt Engineering &amp; Model Selection</h3>
+<p><strong>You’ve been learning to:</strong> - Ask specific questions (Module 1) - Request citations (Module 2) - Enable/disable features strategically (Module 3) - Describe desired outputs (Module 4) - Chain complex requests (Module 5) - <strong>Choose the right model for each task</strong> (All modules)</p>
+<p><strong>This is prompt engineering + model selection.</strong> These are the literacy skills of the AI age.</p>
+<p><strong>Model Selection Summary:</strong> - 🐳 <strong>DeepSeek Chat V3</strong> → Code, technical analysis, data science - ⚡ <strong>Gemini 2.5 Flash</strong> → Quick questions, web search, speed - 📚 <strong>Llama 4 Maverick</strong> → Long documents, complex reasoning, synthesis - 🎯 <strong>Mistral Small</strong> → Citations, academic accuracy, balanced tasks</p>
+</section>
+</section>
+<section id="questions-you-should-answer-4" class="level2">
+<h2>Questions You Should Answer</h2>
+<ol type="1">
+<li>Which capability should you use first? <em>(Usually RAG or Web Search to gather information, then Code to analyze)</em></li>
+<li>Which model should you use for coding tasks? <em>(DeepSeek Chat V3 - it’s trained specifically on code)</em></li>
+<li>Which model is fastest for simple questions? <em>(Gemini 2.5 Flash - optimized for speed)</em></li>
+<li>Can you switch models mid-conversation? <em>(Yes! This is a key strategy for optimal results)</em></li>
+<li>Can you go back and change a previous step? <em>(Yes! Just ask AI to redo that part)</em></li>
+<li>How do you know if your synthesis is good? <em>(Check: Are all sources represented? Is the logic clear? Can someone reproduce this?)</em></li>
+<li>When should you NOT use all capabilities? <em>(When a simple question needs a simple answer)</em></li>
+<li>Are free models really as good as paid ones? <em>(Yes, when used correctly! DeepSeek rivals GPT-4 for code, Llama 4 rivals Claude for reasoning)</em></li>
+</ol>
+</section>
+<section id="the-anecdote-4" class="level2">
+<h2>The Anecdote 🗣️</h2>
+<p>We ran this workshop with a group of sustainability researchers. One participant, Dr. Amara, was skeptical.</p>
+<p>“I’ve been doing research for 15 years. I know my workflow.”</p>
+<p>We gave her the final challenge. She chose to analyze plastic waste policy effectiveness.</p>
+<p>15 minutes later, she had: - Synthesized 8 papers she’d uploaded - Found 6 current policy examples from 4 countries - Analyzed waste reduction data - Generated 3 graphs - Written a draft introduction with 14 citations</p>
+<p>She looked up and said, “This would have taken me three days.”</p>
+<p><strong>Then she said something profound:</strong></p>
+<p>“But the real value isn’t the time saved. It’s that I can now explore three research directions in an afternoon instead of committing to one for a month. This changes how I think about research questions.”</p>
+<p><strong>That’s the real transformation.</strong></p>
+</section>
+<section id="the-quote-4" class="level2">
+<h2>The Quote 💭</h2>
+<blockquote>
+<p>“The real voyage of discovery consists not in seeking new landscapes, but in having new eyes.” - Marcel Proust</p>
+</blockquote>
+<blockquote>
+<p>“We live in a society absolutely dependent on science and technology and yet have cleverly arranged things so that almost no one understands science and technology. That’s a clear prescription for disaster.” - Carl Sagan</p>
+</blockquote>
+<p><strong>Today, you’ve gained new eyes. Use them.</strong></p>
+<hr />
+</section>
+</section>
+<section id="workshop-conclusion-your-next-steps" class="level1">
+<h1>Workshop Conclusion: Your Next Steps</h1>
+<section id="what-youve-accomplished-today" class="level2">
+<h2>What You’ve Accomplished Today</h2>
+<p>In 2.5 hours, you learned to:</p>
+<p>✅ Have AI conversations that remember context ✅ Upload documents and query them with citations ✅ Search the web without leaving your conversation ✅ Execute code and create visualizations instantly ✅ Integrate all four into a research workflow ✅ <strong>Select the optimal FREE model for each task type</strong></p>
+<p><strong>More importantly:</strong> You’ve experienced a new way of doing research.</p>
+<p><strong>And you did it all with 100% FREE models!</strong></p>
+<section id="your-model-arsenal-quick-reference" class="level3">
+<h3>Your Model Arsenal (Quick Reference)</h3>
+<p>Remember, you now have access to 4 specialized FREE models:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>When you need to…</th>
+<th>Use this model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Write Python code, analyze data</td>
+<td><strong>DeepSeek Chat V3</strong> 🐳</td>
+</tr>
+<tr class="even">
+<td>Get quick answers, search the web</td>
+<td><strong>Gemini 2.5 Flash</strong> ⚡</td>
+</tr>
+<tr class="odd">
+<td>Analyze long documents, complex reasoning</td>
+<td><strong>Llama 4 Maverick</strong> 📚</td>
+</tr>
+<tr class="even">
+<td>Get precise citations, balanced tasks</td>
+<td><strong>Mistral Small</strong> 🎯</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pro Strategy:</strong> Start with Gemini for exploration, switch to specialists when needed!</p>
+</section>
+</section>
+<section id="the-3-day-challenge" class="level2">
+<h2>The 3-Day Challenge</h2>
+<p><strong>Your mission:</strong> Use OpenWebUI for one research task in the next 3 days.</p>
+<p><strong>Why 3 days?</strong> Research on learning retention shows: - Use a skill within 24 hours → 65% retention - Use within 3 days → 50% retention - Wait a week → 20% retention</p>
+<p><strong>Suggested tasks:</strong> 1. Literature review for a section you’re writing 2. Analyze a dataset that’s been sitting in your folder 3. Fact-check something with current web search 4. Draft a research summary from multiple sources</p>
+</section>
+<section id="common-pitfalls-and-how-to-avoid-them" class="level2">
+<h2>Common Pitfalls (And How to Avoid Them)</h2>
+<section id="pitfall-1-treating-ai-like-google" class="level3">
+<h3>Pitfall 1: Treating AI Like Google</h3>
+<p><strong>Problem:</strong> Vague questions get vague answers <strong>Solution:</strong> Be specific. “Summarize this paper” → “What does this paper say about [SPECIFIC CLAIM]?”</p>
+</section>
+<section id="pitfall-2-not-verifying-citations" class="level3">
+<h3>Pitfall 2: Not Verifying Citations</h3>
+<p><strong>Problem:</strong> AI can misquote or misinterpret <strong>Solution:</strong> Spot-check citations. Click through to sources. Trust, but verify.</p>
+</section>
+<section id="pitfall-3-asking-it-to-do-everything" class="level3">
+<h3>Pitfall 3: Asking It to Do Everything</h3>
+<p><strong>Problem:</strong> One massive prompt trying to solve your entire research project <strong>Solution:</strong> Break it down. Iterate. Refine.</p>
+</section>
+<section id="pitfall-4-forgetting-its-a-tool-not-magic" class="level3">
+<h3>Pitfall 4: Forgetting It’s a Tool, Not Magic</h3>
+<p><strong>Problem:</strong> Expecting AI to understand unstated context <strong>Solution:</strong> Provide context. If YOU need background to answer the question, so does the AI.</p>
+</section>
+<section id="pitfall-5-using-the-wrong-model-for-the-task-new" class="level3">
+<h3>Pitfall 5: Using the Wrong Model for the Task ⚠️ NEW!</h3>
+<p><strong>Problem:</strong> Using Gemini Flash for complex coding, or DeepSeek for quick lookups (slower than needed) <strong>Solution:</strong> Match the model to the task: - <strong>Code?</strong> → DeepSeek Chat V3 - <strong>Quick question?</strong> → Gemini 2.5 Flash - <strong>Long document?</strong> → Llama 4 Maverick - <strong>Need citations?</strong> → Mistral Small</p>
+</section>
+<section id="pitfall-6-staying-with-one-model-the-whole-time-new" class="level3">
+<h3>Pitfall 6: Staying with One Model the Whole Time ⚠️ NEW!</h3>
+<p><strong>Problem:</strong> Missing out on specialized capabilities <strong>Solution:</strong> Switch models as your task changes! Start with Gemini for exploration, switch to DeepSeek when you need code, switch to Mistral for citations. It takes 2 seconds!</p>
+</section>
+</section>
+<section id="resources-for-continued-learning" class="level2">
+<h2>Resources for Continued Learning</h2>
+<p><strong>Within OpenWebUI:</strong> - Check the Admin Panel (if you’re admin) for configuration options - Explore model settings (temperature, etc.) for different behaviors - Try different models for different tasks</p>
+<p><strong>External Resources:</strong> - OpenWebUI Documentation: <a href="https://github.com/open-webui/open-webui">github.com/open-webui/open-webui</a> - Prompt Engineering Guide: <a href="https://www.promptingguide.ai/">promptingguide.ai</a> - Research Ethics &amp; AI: [guidelines from your institution]</p>
+</section>
+<section id="final-reflection-questions" class="level2">
+<h2>Final Reflection Questions</h2>
+<p>Take 5 minutes to write down:</p>
+<ol type="1">
+<li><strong>What surprised you most today?</strong></li>
+<li><strong>What’s one workflow you’ll change this week?</strong></li>
+<li><strong>What’s one thing you’re still uncertain about?</strong></li>
+<li><strong>Who else could benefit from learning this?</strong></li>
+</ol>
+</section>
+<section id="the-last-quote" class="level2">
+<h2>The Last Quote</h2>
+<blockquote>
+<p>“The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.” - Alvin Toffler</p>
+</blockquote>
+<p><strong>You just learned. Now go use it.</strong></p>
+<hr />
+</section>
+</section>
+<section id="appendix-quick-reference-guide" class="level1">
+<h1>Appendix: Quick Reference Guide</h1>
+<section id="checklist-for-each-module" class="level2">
+<h2>Checklist for Each Module</h2>
+<section id="module-1-basic-chat" class="level3">
+<h3>Module 1: Basic Chat</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Create account</label></li>
+<li><label><input type="checkbox" />Send first message</label></li>
+<li><label><input type="checkbox" />Receive response &lt; 10 seconds</label></li>
+<li><label><input type="checkbox" />Start new chat</label></li>
+<li><label><input type="checkbox" />Access chat history</label></li>
+</ul>
+</section>
+<section id="module-2-rag" class="level3">
+<h3>Module 2: RAG</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Upload PDF</label></li>
+<li><label><input type="checkbox" />Wait for processing</label></li>
+<li><label><input type="checkbox" />Ask document-specific question</label></li>
+<li><label><input type="checkbox" />Verify citation</label></li>
+<li><label><input type="checkbox" />Test multi-document query</label></li>
+</ul>
+</section>
+<section id="module-3-web-search" class="level3">
+<h3>Module 3: Web Search</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Enable web search toggle</label></li>
+<li><label><input type="checkbox" />Ask current-info question</label></li>
+<li><label><input type="checkbox" />Receive response with URLs</label></li>
+<li><label><input type="checkbox" />Compare with/without web search</label></li>
+<li><label><input type="checkbox" />Verify source quality</label></li>
+</ul>
+</section>
+<section id="module-4-code-execution" class="level3">
+<h3>Module 4: Code Execution</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Request calculation</label></li>
+<li><label><input type="checkbox" />See code execute</label></li>
+<li><label><input type="checkbox" />View result</label></li>
+<li><label><input type="checkbox" />Generate visualization</label></li>
+<li><label><input type="checkbox" />Interpret output</label></li>
+</ul>
+</section>
+<section id="module-5-integration" class="level3">
+<h3>Module 5: Integration</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Use RAG + Web + Code in sequence</label></li>
+<li><label><input type="checkbox" />Request synthesis</label></li>
+<li><label><input type="checkbox" />Receive coherent output</label></li>
+<li><label><input type="checkbox" />Verify all sources included</label></li>
+</ul>
+</section>
+</section>
+<section id="troubleshooting-guide" class="level2">
+<h2>Troubleshooting Guide</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 26%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Check</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Can’t log in</td>
+<td>URL correct?</td>
+<td>Try https://team1-openwebui.valuechainhackers.xyz</td>
+</tr>
+<tr class="even">
+<td>No response</td>
+<td>Model selected?</td>
+<td>Check dropdown menu at top</td>
+</tr>
+<tr class="odd">
+<td>Document won’t upload</td>
+<td>File size?</td>
+<td>Try smaller PDF first</td>
+</tr>
+<tr class="even">
+<td>Web search not working</td>
+<td>Toggle enabled?</td>
+<td>Look for 🌐 icon</td>
+</tr>
+<tr class="odd">
+<td>Code won’t execute</td>
+<td>Error message?</td>
+<td>Share error with AI, it often fixes itself</td>
+</tr>
+<tr class="even">
+<td>Everything is slow</td>
+<td>Multiple people testing?</td>
+<td>Be patient, or try off-peak hours</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="model-selection-cheat-sheet" class="level2">
+<h2>Model Selection Cheat Sheet 🆕</h2>
+<p><strong>Print this out and keep it handy!</strong></p>
+<section id="quick-decision-tree" class="level3">
+<h3>Quick Decision Tree</h3>
+<pre><code>Need to write code or analyze data?
+  └─→ Use DeepSeek Chat V3 🐳
+
+Quick question or web search?
+  └─→ Use Gemini 2.5 Flash ⚡
+
+Long document or complex reasoning?
+  └─→ Use Llama 4 Maverick 📚
+
+Need precise citations?
+  └─→ Use Mistral Small 🎯
+
+Not sure? Start with Gemini, switch later!</code></pre>
+</section>
+<section id="detailed-model-comparison" class="level3">
+<h3>Detailed Model Comparison</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 23%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>DeepSeek V3</th>
+<th>Gemini Flash</th>
+<th>Llama 4</th>
+<th>Mistral Small</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Speed</strong></td>
+<td>⚡⚡⚡ Fast</td>
+<td>⚡⚡⚡⚡ Very Fast</td>
+<td>⚡⚡ Good</td>
+<td>⚡⚡⚡ Fast</td>
+</tr>
+<tr class="even">
+<td><strong>Code Quality</strong></td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr class="odd">
+<td><strong>Reasoning</strong></td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr class="even">
+<td><strong>Citations</strong></td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr class="odd">
+<td><strong>Context Size</strong></td>
+<td>128K</td>
+<td>1M</td>
+<td>256K</td>
+<td>96K</td>
+</tr>
+<tr class="even">
+<td><strong>Best For</strong></td>
+<td>Python/Code</td>
+<td>Speed/Web</td>
+<td>Long docs</td>
+<td>Accuracy</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="command-cheat-sheet" class="level2">
+<h2>Command Cheat Sheet</h2>
+<section id="basic-prompts" class="level3">
+<h3>Basic Prompts</h3>
+<pre><code># Good question structure
+&quot;Based on [SOURCE], what does [SUBJECT] indicate about [TOPIC]?&quot;
+
+# Citation request
+&quot;Provide specific quotes and page numbers.&quot;
+
+# Refinement
+&quot;Make that more concise / more detailed / more technical.&quot;
+
+# Model switching (during conversation)
+&quot;Let me switch to DeepSeek for the coding part...&quot;
+[Change model in dropdown]
+&quot;Now write the Python code for...&quot;</code></pre>
+</section>
+<section id="rag-prompts" class="level3">
+<h3>RAG Prompts</h3>
+<pre><code>&quot;Summarize the main argument of the uploaded document.&quot;
+&quot;What do these papers agree/disagree on regarding [TOPIC]?&quot;
+&quot;Find every mention of [TERM] in the documents.&quot;</code></pre>
+</section>
+<section id="web-search-prompts" class="level3">
+<h3>Web Search Prompts</h3>
+<pre><code>&quot;Search for recent developments in [TOPIC] since [DATE].&quot;
+&quot;What are current examples of [CONCEPT] being implemented?&quot;
+&quot;Fact-check this claim: [CLAIM]&quot;</code></pre>
+</section>
+<section id="code-execution-prompts" class="level3">
+<h3>Code Execution Prompts</h3>
+<pre><code>&quot;Calculate [FORMULA] where [VARIABLES].&quot;
+&quot;Create a [PLOT TYPE] showing [RELATIONSHIP].&quot;
+&quot;Analyze this data and tell me [WHAT TO LOOK FOR].&quot;</code></pre>
+</section>
+<section id="integration-prompts" class="level3">
+<h3>Integration Prompts</h3>
+<pre><code>&quot;Based on the uploaded papers, web search for current examples,
+and analyze this data, what can we conclude about [QUESTION]?&quot;</code></pre>
+</section>
+</section>
+<section id="keyboard-shortcuts" class="level2">
+<h2>Keyboard Shortcuts</h2>
+<p>(These depend on OpenWebUI version, but commonly:)</p>
+<ul>
+<li><strong>Ctrl/Cmd + Enter:</strong> Send message</li>
+<li><strong>Ctrl/Cmd + K:</strong> New chat</li>
+<li><strong>Ctrl/Cmd + /</strong> : Toggle sidebar</li>
+<li><strong>↑ Arrow:</strong> Edit last message</li>
+</ul>
+</section>
+<section id="getting-help" class="level2">
+<h2>Getting Help</h2>
+<p><strong>During the workshop:</strong> - 🙋 Raise your hand - Ask your neighbor - Check this guide</p>
+<p><strong>After the workshop:</strong> - OpenWebUI GitHub Issues - Your institution’s support - AI Stack Exchange</p>
+<hr />
+</section>
+</section>
+<section id="acknowledgments" class="level1">
+<h1>Acknowledgments</h1>
+<p>This workshop was designed using principles from:</p>
+<ul>
+<li><strong>Luma Institute</strong> - Visual thinking and human-centered design</li>
+<li><strong>Hyper Island</strong> - Experiential learning and reflection</li>
+<li><strong>Greg Wilson (Teaching Tech Together)</strong> - Evidence-based teaching methods</li>
+<li><strong>Julie Dirksen (Design for How People Learn)</strong> - Learning science</li>
+<li><strong>AJ&amp;Smart</strong> - Workshop facilitation and engagement</li>
+<li><strong>The Art of Hosting</strong> - Community learning practices</li>
+</ul>
+<p><strong>Special thanks to:</strong> - The Open-WebUI community - Researchers who piloted this workshop - You, for being here</p>
+<hr />
+</section>
+<section id="about-this-workshop" class="level1">
+<h1>About This Workshop</h1>
+<p><strong>Version:</strong> 1.0 <strong>Last Updated:</strong> 2025 <strong>License:</strong> CC BY-SA 4.0 (use it, adapt it, share it) <strong>Feedback:</strong> [your contact method]</p>
+<p><strong>If this workshop helped you:</strong> Pay it forward. Teach someone else.</p>
+<hr />
+<p><em>“The best way to learn is to teach. The best way to understand is to explain. The best way to master is to share.”</em> - Workshop Philosophy</p>
+<p><strong>Now go do research differently.</strong> 🚀</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id = "quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+</body>
+
+</html>

@@ -9,7 +9,7 @@ http:
 
     debaguettes-flowise-router:
       rule: "Host(`debaguettes-flowise.valuechainhackers.xyz`)"
-      entryPoints: [websecure]
+      entryPoints: [websecure `````````````````
       service: debaguettes-flowise-service
       tls:
         certResolver: myresolver

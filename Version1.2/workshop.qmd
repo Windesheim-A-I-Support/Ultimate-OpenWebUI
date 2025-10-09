@@ -46,55 +46,105 @@ This workshop is designed for **2.5 hours** with breaks. Each module is 20-30 mi
 
 ## Choosing Your AI Model
 
-This workshop uses **OpenRouter** to access powerful cloud-based AI models. OpenRouter provides access to GPT-4, Claude, and other leading models through a single interface.
+This workshop uses **FREE models from OpenRouter** - powerful AI models available at no cost. OpenRouter provides access to cutting-edge open-source and free models through a single interface.
 
-### Available Models via OpenRouter
+### Available FREE Models via OpenRouter (2025)
 
-Your OpenWebUI instance has access to these models:
+Your OpenWebUI instance has access to these **FREE** models:
 
-| Model | Best For | Speed | Quality |
-|-------|----------|-------|---------|
-| **Claude 3.5 Sonnet** | Complex reasoning, code, citations | ⚡⚡ Good | ⭐⭐⭐⭐⭐ Excellent |
-| **GPT-4o** | All-around tasks, fast responses | ⚡⚡⚡ Fast | ⭐⭐⭐⭐⭐ Excellent |
-| **GPT-4** | Complex analysis, code generation | ⚡⚡ Good | ⭐⭐⭐⭐⭐ Excellent |
-| **Claude 3 Haiku** | Quick tasks, basic queries | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐⭐ Good |
+| Model | Best For | Speed | Quality | Context Window* |
+|-------|----------|-------|---------|-----------------|
+| **DeepSeek Chat V3** (`deepseek-chat-v3:free`) | Code generation, technical tasks | ⚡⚡⚡ Fast | ⭐⭐⭐⭐⭐ Excellent | 128K tokens (~300 pages) |
+| **Gemini 2.5 Flash** (`gemini-2.5-flash:free`) | Quick reasoning, fast responses | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐⭐ Very Good | 1M tokens (~2,500 pages!) |
+| **Llama 4 Maverick** (`llama-4-maverick:free`) | Complex reasoning, long documents | ⚡⚡ Good | ⭐⭐⭐⭐⭐ Excellent | 256K tokens (~600 pages) |
+| **Mistral Small** (`mistral-small:free`) | Balanced tasks, citations | ⚡⚡⚡ Fast | ⭐⭐⭐⭐ Very Good | 96K tokens (~240 pages) |
 
-### Recommended Model for This Workshop
+***Context Window = How much text the AI can "remember" at once (including your conversation + uploaded documents)**
 
-**Use `Claude 3.5 Sonnet` (via OpenRouter) for all modules** - It excels at:
-- 📚 Document analysis with accurate citations
-- 💻 Python code generation
-- 🔗 Synthesizing multiple sources
-- 🎯 Following complex instructions
+### Recommended Models for This Workshop
 
-**Alternative:** `GPT-4o` - Slightly faster, also excellent quality
+**Different models excel at different tasks!** In this workshop, you'll learn which model to use when:
+
+- 🐳 **DeepSeek Chat V3** - BEST for Python code generation and technical analysis
+- ⚡ **Gemini 2.5 Flash** - BEST for quick questions and web search synthesis
+- 📚 **Llama 4 Maverick** - BEST for analyzing long documents and complex reasoning
+- 🎯 **Mistral Small** - BEST for balanced tasks and accurate citations
+
+**You'll switch between models throughout the workshop to see their strengths!**
 
 ::: {.callout-note}
-## About OpenRouter
+## About OpenRouter FREE Models
 
-OpenRouter provides access to multiple AI models through API calls. Your workshop organizer has configured access.
+OpenRouter provides access to multiple FREE AI models through API calls. Your workshop organizer has configured access to free models only.
 
 **Benefits:**
-- ✅ Access to the most capable AI models available
+- ✅ **100% FREE** - No costs, no credits needed
+- ✅ Access to cutting-edge open-source models
 - ✅ No individual API key setup needed
 - ✅ Works seamlessly through OpenWebUI interface
-- ✅ High-quality outputs for all workshop tasks
+- ✅ High-quality outputs comparable to paid models
 
-**Note:** This workshop uses cloud models, not local models. Local models (llama3.2, phi3) are available but run on CPU and are too slow for this workshop.
+**Important Notes:**
+- **Rate limits:** Free models have usage limits to prevent abuse
+  - **What this means:** You can send 50-1000 messages per day (plenty for this workshop!)
+  - **For this workshop:** Rate limits won't affect you - we'll use ~20-40 messages total
+  - **If you hit a limit:** You'll see a message like "Rate limit exceeded" - just wait a few minutes or try a different model
+- All free models work through OpenRouter API (your facilitator configured this)
+- You'll learn which model is best for which task throughout the workshop!
 :::
 
 ::: {.callout-tip}
 ## How to Select Your Model
 
 1. Look for the **model dropdown** at the top of the chat interface
-2. Look for models with names like:
-   - "Claude 3.5 Sonnet" or "claude-3-5-sonnet"
-   - "GPT-4o" or "gpt-4o"
-   - "GPT-4" or "gpt-4-turbo"
-3. **Select Claude 3.5 Sonnet** for best results
+2. Look for FREE models with names ending in `:free`:
+   - "deepseek-chat-v3:free" or "DeepSeek Chat V3 Free"
+   - "gemini-2.5-flash:free" or "Gemini 2.5 Flash Free"
+   - "llama-4-maverick:free" or "Llama 4 Maverick Free"
+   - "mistral-small:free" or "Mistral Small Free"
+3. **You'll use DIFFERENT models for different tasks** in this workshop
 4. ⚠️ **Avoid local models** (llama3.2, phi3, qwen) - they're CPU-based and too slow
 
-**If you don't see OpenRouter models:** Check with your facilitator - OpenRouter may need to be configured.
+**If you don't see OpenRouter FREE models:** Check with your facilitator - OpenRouter may need to be configured.
+:::
+
+::: {.callout-warning}
+## Common Confusions - Read This First! ⚠️
+
+**"Do I need to know how to code?"**
+- ❌ NO! The AI writes the code for you. You just describe what you want.
+
+**"Will switching models delete my conversation?"**
+- ❌ NO! Your conversation stays when you switch models. The new model can see your history.
+
+**"What if I don't have any PDFs?"**
+- ✅ We provide sample documents, or you can use any PDF you have.
+
+**"Are these really free?"**
+- ✅ YES! 100% free, no credit card, no tricks. OpenRouter provides these at no cost.
+
+**"What if I make a mistake?"**
+- ✅ Just start a new chat! Click "New Chat" anytime.
+
+**"Will I remember all this?"**
+- ✅ You'll get reference guides to take home. Focus on understanding the concepts today.
+:::
+
+::: {.callout-important}
+## Quick Model Selection Guide
+
+**Use this throughout the workshop:**
+
+| Task Type | Best Model | Why |
+|-----------|------------|-----|
+| 💬 Quick questions, simple lookups | **Gemini 2.5 Flash** | Fastest, great for simple tasks |
+| 🔍 Web search & current info | **Gemini 2.5 Flash** | Built for web content, fast synthesis |
+| 📚 Document analysis, long texts | **Llama 4 Maverick** | 256K context, best reasoning |
+| 📖 Citations & academic accuracy | **Mistral Small** | Excellent citation precision |
+| 💻 Python code & data analysis | **DeepSeek Chat V3** | Trained specifically on code |
+| 🤔 Complex multi-step reasoning | **Llama 4 Maverick** | Best logical reasoning |
+
+**Pro tip:** You can switch models mid-conversation! Start with Gemini for quick exploration, switch to DeepSeek for code, switch to Mistral for citations.
 :::
 
 
@@ -154,7 +204,7 @@ Think of OpenWebUI as your research lab, but digital:
 ```markdown
 □ OpenWebUI is open in your browser
 □ You can see the chat interface
-□ Model is set to "Claude 3.5 Sonnet" (via OpenRouter)
+□ Model is set to a FREE OpenRouter model (ending in :free)
 ```
 
 **The Test:**
@@ -168,35 +218,50 @@ Think of OpenWebUI as your research lab, but digital:
    ```
 
 3. **Select your model:**
-   - Look for the model dropdown at the top of the chat interface
-   - Find and select **"Claude 3.5 Sonnet"** (it may be listed as "claude-3-5-sonnet" or similar)
-   - ⚠️ **IMPORTANT:** Do NOT select local models (llama3.2, phi3, qwen) - they're too slow
-   - If you don't see Claude 3.5 Sonnet, select **"GPT-4o"** or **"GPT-4"**
+
+   **WHERE TO LOOK:**
+   - Look at the **TOP** of the screen in the chat interface
+   - You'll see a dropdown menu or button showing the current model name
+   - It might say "Select Model" or show a model name like "llama3.2"
+
+   **HOW TO SELECT:**
+   - Click on the model name/dropdown
+   - A list of available models appears
+   - Scroll through to find **"Gemini 2.5 Flash Free"** (fastest for first contact)
+   - The exact name might be:
+     - "gemini-2.5-flash:free"
+     - "Google Gemini 2.5 Flash (Free)"
+     - "Gemini Flash Free"
+   - Click to select it
+
+   ⚠️ **IMPORTANT:**
+   - Look for models ending in `:free` or with "Free" in the name
+   - Do NOT select local models like "llama3.2", "phi3", or "qwen" - they're too slow for this workshop
 
 4. **Send this exact message:**
    ```
    Hello! Please respond with exactly these words:
    "TEST SUCCESSFUL - I am ready to help with your research."
 
-   Then tell me which AI model you are.
+   Then tell me which AI model you are and what you're best at.
    ```
 
 5. **Expected result:**
-   - Response within 5-10 seconds
+   - Response within 3-7 seconds (Gemini Flash is FAST!)
    - Contains "TEST SUCCESSFUL" (or very close to it)
-   - Identifies as Claude, GPT-4, or other cloud model
+   - Identifies as Gemini 2.5 Flash
    - High-quality, well-formatted response
 
 **✅ Success criteria:**
 - [ ] Message sent without errors
 - [ ] Response received in < 10 seconds
 - [ ] Response contains requested text (exactly or very close)
-- [ ] Model identifies as Claude or GPT-4 (NOT llama/phi/qwen)
+- [ ] Model identifies as a FREE OpenRouter model (NOT llama/phi/qwen)
 
 **❌ If it fails:**
 - Check you're logged in (see your email in top right?)
-- Check model dropdown - should show "Claude" or "GPT-4", NOT "llama3.2"
-- If you see a local model name, switch to an OpenRouter model
+- Check model dropdown - should show a model ending in `:free`
+- If you see a local model name, switch to a FREE OpenRouter model
 - Try refreshing the page
 - Ask facilitator if OpenRouter is configured
 
@@ -216,11 +281,52 @@ graph LR
 
 ## The Entertainment Piece 🎭
 
+### 🎯 Model Comparison Exercise #1: Speed vs Reasoning
+
+**Goal:** Discover which model is best for quick questions vs complex analysis.
+
+**Part A: Quick Question (Test Gemini 2.5 Flash)**
+
+**HOW TO SWITCH MODELS:**
+1. Look at the top of your chat interface
+2. Find the **dropdown menu** that shows your current model name
+3. Click on it to see all available models
+4. Select **"Gemini 2.5 Flash Free"** (or similar name with "Gemini" and "Flash")
+5. The page may refresh - that's normal!
+
+Now ask:
+```
+What is the capital of Brazil?
+```
+
+**Note the response time** (should be 2-4 seconds)
+
+**Part B: Complex Reasoning (Test Llama 4 Maverick)**
+
+**Now switch models** using the same steps above, but select **"Llama 4 Maverick Free"**
+
+⚠️ **Important:** When you switch models, your conversation history stays! The new model can see your previous messages.
+
+Now ask:
+```
+Explain the relationship between circular economy principles and carbon
+reduction targets in urban planning. Use specific examples.
+```
+
+**Compare:**
+- [ ] Gemini was faster for the simple question
+- [ ] Llama provided deeper, more nuanced reasoning for the complex question
+- [ ] Both gave correct answers, but different levels of detail
+
+**Key Insight:** Use **Gemini Flash** for quick lookups, **Llama Maverick** for complex thinking!
+
+---
+
 ### The "AI Whisperer" Challenge
 
 **Game:** See how specific you can make the AI's response.
 
-**Try these:**
+**Try these with Gemini Flash (for speed):**
 1. "Respond with a haiku about research."
 2. "List exactly 3 reasons why coffee is essential for research. Number them."
 3. "Explain your last answer, but make it sound like a pirate."
@@ -302,11 +408,15 @@ graph TD
 ```
 
 **In plain English:**
-1. You upload your PDFs
-2. They get "chunked" and "embedded" (turned into searchable math)
-3. When you ask a question, we find relevant chunks
-4. AI reads THOSE chunks and answers from them
-5. You get citations showing where the answer came from
+1. **You upload your PDFs** - Your documents are sent to OpenWebUI
+2. **They get processed** - Documents are split into smaller sections (like paragraphs) and converted into a searchable format
+   - Think of it like creating an index in the back of a book
+   - Each section gets a unique "fingerprint" so it can be found quickly
+3. **You ask a question** - OpenWebUI searches through all sections to find the most relevant ones
+4. **AI reads the relevant sections** - Not the whole document, just the parts that match your question
+5. **You get an answer with citations** - The AI tells you where it found the information
+
+**Key point:** RAG doesn't require the AI to "remember" your entire document - it searches and retrieves the relevant parts when needed!
 
 ### Why This Changes Everything
 
@@ -331,7 +441,18 @@ graph TD
 □ You have a PDF ready (research paper, report, anything)
 □ You're logged into OpenWebUI
 □ You're in a new chat
+□ Model is set to "Llama 4 Maverick Free" (best for document analysis)
 ```
+
+**Why Llama 4 Maverick for this task?**
+- **256K token context** - Can process up to ~600 pages at once (like 3 entire research papers!)
+- **Excellent at extracting specific information** - Won't miss details in long documents
+- **Strong citation accuracy** - Remembers where information came from
+
+**What does "256K tokens" mean?**
+- A "token" is roughly 3/4 of a word
+- 256K tokens ≈ 190,000 words ≈ 600 pages
+- This means you can upload a 200-page thesis and it will read the ENTIRE thing!
 
 **Don't have a PDF handy?** Download this sample:
 ```bash
@@ -343,13 +464,19 @@ https://www.ellenmacarthurfoundation.org/circular-economy-diagram
 
 **Step 1: Upload Your Document**
 
-1. Look for the **paperclip** 📎 or **"+"** icon in the chat input area
-2. Click it
-3. Select "Upload File"
-4. Choose your PDF
-5. Wait for "Processing complete" message
+1. Look for the **paperclip** 📎 or **"+"** icon in the chat input area (usually bottom left or right)
+2. Click it to open the file selector
+3. Select "Upload File" or "Choose File"
+4. Choose your PDF from your computer
+5. **Wait for processing** - You'll see:
+   - A progress bar or loading animation
+   - The filename appearing in your chat
+   - A green checkmark ✅ when complete
+   - OR a message like "Document processed successfully" or "Ready to query"
 
-**Expected:** Green checkmark, filename appears, "Document processed successfully"
+⏱️ **How long?** Small PDFs (10-20 pages): 5-15 seconds. Large PDFs (100+ pages): 30-60 seconds.
+
+**Expected:** Green checkmark ✅, filename visible, ready to ask questions!
 
 **Step 2: Test RAG is Working**
 
@@ -387,6 +514,41 @@ What are the similarities and differences between these two documents?
 **This tests:** Multi-document RAG (searching across multiple sources)
 
 ## The Entertainment Piece 🎭
+
+### 🎯 Model Comparison Exercise #2: Citation Accuracy Test
+
+**Goal:** See which model is most accurate with citations and document analysis.
+
+**Setup:** Keep your uploaded document open in a chat.
+
+**Part A: Test with Mistral Small (Citation Specialist)**
+
+Switch to **Mistral Small Free** and ask:
+```
+List 5 specific claims from this document with exact quotes and page numbers.
+```
+
+**Part B: Test with Gemini Flash (Speed Reader)**
+
+Switch to **Gemini 2.5 Flash Free** and ask the same question:
+```
+List 5 specific claims from this document with exact quotes and page numbers.
+```
+
+**Compare the results:**
+- [ ] Which model provided more accurate page numbers?
+- [ ] Which model gave longer, more complete quotes?
+- [ ] Which model was faster?
+- [ ] Which model better understood context?
+
+**Expected Results:**
+- **Mistral Small** should give more precise citations
+- **Gemini Flash** should be faster but may be less precise
+- Both should correctly avoid making up content
+
+**Key Insight:** Use **Mistral Small** when citation accuracy is critical, **Gemini Flash** when you need quick document summaries!
+
+---
 
 ### The "Citation Scavenger Hunt"
 
@@ -550,12 +712,30 @@ graph TD
 □ You're in OpenWebUI
 □ You're in a new chat
 □ Web search is enabled (check settings or toggle)
+□ Model is set to "Gemini 2.5 Flash Free" (BEST for web search)
 ```
 
+**Why Gemini 2.5 Flash for this task?**
+- Fastest response time for web queries
+- Excellent at synthesizing multiple sources
+- 1M token context can handle many search results
+- Built by Google, optimized for web content
+
 **How to enable web search:**
-1. Look for a **🌐 globe icon** or "Web Search" toggle near the message input
-2. Click to enable (should turn blue/green)
-3. You should see "Web search enabled" indicator
+
+**Option 1: Toggle Button (Most Common)**
+1. Look **near the message input box** at the bottom of the screen
+2. Find a **🌐 globe icon** or button labeled "Web Search" or "Search"
+3. Click it once - it should change color (gray → blue/green = enabled)
+4. You'll see a small badge or text saying "Web search enabled" or the icon will be highlighted
+
+**Option 2: Settings Menu**
+1. Click the **settings icon** (⚙️ or three dots) near the chat
+2. Look for "Enable Web Search" checkbox
+3. Check the box
+4. Close settings
+
+**How to tell it's working:** When you send a message, you'll see "Searching the web..." or "🔍 Searching..." before the response
 
 **The Test:**
 
@@ -762,26 +942,43 @@ graph LR
 □ You're in OpenWebUI
 □ Code execution is enabled (should be by default)
 □ You're in a new chat
+□ Model is set to "DeepSeek Chat V3 Free" (BEST for code generation)
 ```
+
+**Why DeepSeek Chat V3 for this task?**
+- **Specifically trained on code** - Exceptional at Python
+- Excellent at debugging and explaining code
+- Strong mathematical reasoning
+- Great at data analysis tasks
 
 **The Test:**
 
 **Step 1: Simple Calculation (AI Writes Code)**
 
-Claude and GPT-4 are excellent at writing code. Let's test it:
+DeepSeek is excellent at writing code. Let's test it:
 ```
 Calculate the compound annual growth rate (CAGR) if an investment
 grows from $100 to $250 over 5 years. Show me the formula and write
 Python code to calculate it, then execute the code.
 ```
 
-**Expected behavior:**
-- [ ] AI explains CAGR formula
-- [ ] AI writes Python code
-- [ ] Code executes automatically
-- [ ] Result appears: ~20.11%
+**What you'll see (step by step):**
 
-**Look for:** A code block that gets executed, something like:
+1. **AI explains the formula** - Text explanation of CAGR
+2. **AI writes code** - You'll see a Python code block (gray/dark box with colored text)
+3. **Code runs automatically** - Look for:
+   - A "▶️ Running..." or "Executing code..." message
+   - The code block may get a green border or checkmark
+   - Results appear below the code (either text output or "CAGR: 20.11%")
+4. **AI interprets results** - Explains what the answer means
+
+**What does code execution look like?**
+- Code appears in a **special box** with syntax highlighting (colors)
+- You might see a **"Run"** button or it runs automatically
+- Output appears **directly below the code** (not in a new message)
+- Result: ~20.11%
+
+**Example of what you'll see:**
 ```python
 initial = 100
 final = 250
@@ -801,15 +998,26 @@ over 5 years using the CAGR we just calculated. Label the axes
 and make it look professional. Execute the code to generate the plot.
 ```
 
-**Expected behavior:**
-- [ ] AI writes matplotlib code
+**What you'll see:**
+- [ ] AI writes matplotlib/plotting code (Python library for graphs)
 - [ ] Code executes automatically
-- [ ] **A graph appears in the chat** (or you see "Chart created" message)
-- [ ] Graph shows growth curve with proper labels
+- [ ] **A graph appears!** You'll see one of these:
+   - **Best case:** Image displays directly in the chat (inline)
+   - **Alternative:** A message like "Chart created" or "Visualization saved"
+   - **Or:** A clickable link/filename to view the image
+- [ ] Graph shows:
+   - Growth curve from $100 to $250
+   - X-axis labeled (years: 0-5)
+   - Y-axis labeled (dollars: $100-$250)
+   - Professional appearance (colors, grid, title)
+
+**What if I don't see the image?**
+- Don't worry! The code ran successfully
+- Some setups show images inline, others save them as files
+- The important learning: AI wrote code that creates professional visualizations
+- If there's a filename, you can download it
 
 **This is the magic moment** - you went from question to visualization in ONE request, without knowing any matplotlib syntax!
-
-**Note:** If you don't see the image inline, that's OK - it may be saved. The important part is the AI wrote and executed the code.
 
 **Step 3: Test With Real Data Analysis (AI Generates Everything)**
 
@@ -849,9 +1057,81 @@ Execute all code and explain what you find.
 
 ## The Entertainment Piece 🎭
 
+### 🎯 Model Comparison Exercise #3: Code Quality Battle
+
+**Goal:** See which model writes better Python code for data analysis.
+
+**Part A: Test DeepSeek Chat V3 (Code Specialist)**
+
+Switch to **DeepSeek Chat V3 Free** and ask:
+```
+Create a Python function that:
+1. Generates 100 random data points following a normal distribution
+2. Calculates mean, median, and standard deviation
+3. Creates a histogram with the distribution curve overlay
+4. Returns all statistics in a dictionary
+
+Execute the code and show the results.
+```
+
+**Observe:**
+- Code quality and structure
+- Explanation clarity
+- Execution success
+- Visualization quality
+
+**Part B: Test Gemini Flash (Generalist)**
+
+Switch to **Gemini 2.5 Flash Free** and ask the **exact same question**.
+
+**Compare:**
+- [ ] Which model's code was more readable?
+- [ ] Which model added better comments?
+- [ ] Which model created a better visualization?
+- [ ] Which model executed without errors?
+- [ ] Which was faster?
+
+**Expected Results:**
+- **DeepSeek** should have cleaner, more professional code structure
+- **DeepSeek** should handle edge cases better
+- **Gemini** should be faster but code may be simpler
+- Both should work, but quality will differ
+
+**Key Insight:** Use **DeepSeek Chat V3** for all serious coding tasks, **Gemini** for quick one-off calculations!
+
+**Part C: The "Impossible" Challenge (DeepSeek's Specialty)**
+
+Now try something complex that really shows DeepSeek's coding prowess. Use **DeepSeek Chat V3**:
+
+```
+Write a Python function that:
+1. Simulates a Monte Carlo analysis for portfolio risk
+2. Takes 3 stock tickers, investment amounts, and number of simulations
+3. Uses random walk model for price movements
+4. Calculates Value at Risk (VaR) at 95% confidence
+5. Creates visualization showing distribution of outcomes
+6. Returns comprehensive risk metrics
+
+Use realistic parameters and execute the code.
+```
+
+**Now try the SAME prompt with Gemini Flash.**
+
+**What you'll see:**
+- **DeepSeek** will write sophisticated, production-quality code with proper error handling
+- **Gemini** will write simpler code that may work but lacks polish
+- **DeepSeek** will better explain the financial concepts
+- **DeepSeek** will create more professional visualizations
+
+**This is the DRAMATIC difference** - for complex technical tasks, specialist models shine!
+
+---
+
 ### The "Visualization Remix" Game
 
 **Challenge:** Take the same data and ask for it in different visualization styles.
+
+**Use DeepSeek Chat V3** for this (best at visualization code)
 
 **Starting prompt:**
 ```
@@ -1096,29 +1376,99 @@ Include citations and reference the data visualization.
 
 ## The Entertainment Piece 🎭
 
+### 🎯 ULTIMATE Model Comparison Exercise: The Perfect Workflow
+
+**Goal:** Use the RIGHT model for each step of a complete research workflow.
+
+**The Challenge:** Research the topic "AI in sustainable agriculture" using optimal models for each task.
+
+**Step 1: Web Search for Current Examples (Use Gemini 2.5 Flash)**
+```
+Search for the latest (2024-2025) AI applications in sustainable farming.
+What companies are implementing this? What results are they seeing?
+```
+**Expected:** Fast response with current examples and URLs (2-3 min)
+
+**Step 2: Document Analysis (Switch to Llama 4 Maverick)**
+
+Upload 1-2 research papers about AI and agriculture, then ask:
+```
+Based on these papers, what are the theoretical benefits and challenges
+of AI in sustainable agriculture? Provide detailed citations.
+```
+**Expected:** Deep analysis with accurate quotes (3-4 min)
+
+**Step 3: Citation Verification (Switch to Mistral Small)**
+```
+Review the previous response. Provide page-specific citations for each
+major claim about AI benefits and challenges.
+```
+**Expected:** Precise citations and quote verification (2-3 min)
+
+**Step 4: Data Analysis (Switch to DeepSeek Chat V3)**
+
+Generate or upload sample data, then ask:
+```
+Generate sample data showing crop yield improvements with AI vs traditional
+methods (30 farms, 2 years). Perform statistical analysis and create
+visualizations. Calculate if the difference is significant.
+```
+**Expected:** Clean code, professional visualizations, statistical analysis (3-4 min)
+
+**Step 5: Final Synthesis (Use Llama 4 Maverick for complex reasoning)**
+```
+Based on:
+1. Current industry examples (from web search)
+2. Academic literature (from uploaded papers)
+3. Statistical analysis (from our data analysis)
+
+Write a 300-word executive summary about AI in sustainable agriculture.
+Include citations, data references, and practical recommendations.
+```
+**Expected:** Coherent synthesis connecting all sources (3-4 min)
+
+**Total Time:** 15-20 minutes for complete research cycle!
+
+**Compare this to:** Using ONE model for everything (would be slower and lower quality) or using the WRONG models for each task.
+
+**Success Criteria:**
+- [ ] Each model performed better at its specialized task
+- [ ] Total output is publication-quality
+- [ ] All sources properly cited
+- [ ] Data analysis is rigorous
+- [ ] Synthesis is coherent
+
+**Key Insight:** The power isn't just in the tools—it's in knowing WHICH tool to use WHEN!
+
+---
+
 ### The "Research Relay Race"
 
 **For group workshops:**
 
-1. **Team 1:** Uploads papers, asks RAG question
-2. **Team 2:** Takes that answer, does web search to expand
-3. **Team 3:** Takes both, analyzes data to validate
-4. **Team 4:** Synthesizes everything
+1. **Team 1:** Uploads papers, asks RAG question (choose best model!)
+2. **Team 2:** Takes that answer, does web search to expand (choose best model!)
+3. **Team 3:** Takes both, analyzes data to validate (choose best model!)
+4. **Team 4:** Synthesizes everything (choose best model!)
 
-**First team to create a coherent 200-word research summary wins.**
+**First team to create a coherent 200-word research summary with the FASTEST time and BEST quality wins.**
 
-**Why this is fun:** You see how each capability builds on the last.
+**Twist:** Teams are judged on model selection strategy!
+
+**Why this is fun:** You see how each capability builds on the last, AND you learn optimal model selection.
 
 ## Key Learnings 🎓
 
 ### What You Now Know
 
 1. **Integration is the superpower** - Individual tools are good; combined, they're transformative
-2. **Conversation is the glue** - Context persistence makes integration possible
-3. **Iteration is cheap** - Refine any part without redoing everything
-4. **Reproducibility is automatic** - Share the conversation = share the entire methodology
+2. **Model selection matters** - Using the RIGHT model for each task dramatically improves results
+3. **Conversation is the glue** - Context persistence makes integration possible
+4. **Iteration is cheap** - Refine any part without redoing everything
+5. **Reproducibility is automatic** - Share the conversation = share the entire methodology
+6. **Free doesn't mean inferior** - Free OpenRouter models rival paid options when used correctly
 
-### The Meta-Skill: Prompt Engineering
+### The Meta-Skills: Prompt Engineering & Model Selection
 
 **You've been learning to:**
 - Ask specific questions (Module 1)
@@ -1126,15 +1476,26 @@ Include citations and reference the data visualization.
 - Enable/disable features strategically (Module 3)
 - Describe desired outputs (Module 4)
 - Chain complex requests (Module 5)
+- **Choose the right model for each task** (All modules)
 
-**This is prompt engineering.** It's the literacy skill of the AI age.
+**This is prompt engineering + model selection.** These are the literacy skills of the AI age.
+
+**Model Selection Summary:**
+- 🐳 **DeepSeek Chat V3** → Code, technical analysis, data science
+- ⚡ **Gemini 2.5 Flash** → Quick questions, web search, speed
+- 📚 **Llama 4 Maverick** → Long documents, complex reasoning, synthesis
+- 🎯 **Mistral Small** → Citations, academic accuracy, balanced tasks
 
 ## Questions You Should Answer
 
 1. Which capability should you use first? *(Usually RAG or Web Search to gather information, then Code to analyze)*
-2. Can you go back and change a previous step? *(Yes! Just ask AI to redo that part)*
-3. How do you know if your synthesis is good? *(Check: Are all sources represented? Is the logic clear? Can someone reproduce this?)*
-4. When should you NOT use all capabilities? *(When a simple question needs a simple answer)*
+2. Which model should you use for coding tasks? *(DeepSeek Chat V3 - it's trained specifically on code)*
+3. Which model is fastest for simple questions? *(Gemini 2.5 Flash - optimized for speed)*
+4. Can you switch models mid-conversation? *(Yes! This is a key strategy for optimal results)*
+5. Can you go back and change a previous step? *(Yes! Just ask AI to redo that part)*
+6. How do you know if your synthesis is good? *(Check: Are all sources represented? Is the logic clear? Can someone reproduce this?)*
+7. When should you NOT use all capabilities? *(When a simple question needs a simple answer)*
+8. Are free models really as good as paid ones? *(Yes, when used correctly! DeepSeek rivals GPT-4 for code, Llama 4 rivals Claude for reasoning)*
 
 ## The Anecdote 🗣️
 
@@ -1180,8 +1541,24 @@ In 2.5 hours, you learned to:
 ✅ Search the web without leaving your conversation
 ✅ Execute code and create visualizations instantly
 ✅ Integrate all four into a research workflow
+✅ **Select the optimal FREE model for each task type**
 
 **More importantly:** You've experienced a new way of doing research.
+
+**And you did it all with 100% FREE models!**
+
+### Your Model Arsenal (Quick Reference)
+
+Remember, you now have access to 4 specialized FREE models:
+
+| When you need to... | Use this model |
+|---------------------|----------------|
+| Write Python code, analyze data | **DeepSeek Chat V3** 🐳 |
+| Get quick answers, search the web | **Gemini 2.5 Flash** ⚡ |
+| Analyze long documents, complex reasoning | **Llama 4 Maverick** 📚 |
+| Get precise citations, balanced tasks | **Mistral Small** 🎯 |
+
+**Pro Strategy:** Start with Gemini for exploration, switch to specialists when needed!
 
 ## The 3-Day Challenge
 
@@ -1215,6 +1592,18 @@ In 2.5 hours, you learned to:
 ### Pitfall 4: Forgetting It's a Tool, Not Magic
 **Problem:** Expecting AI to understand unstated context
 **Solution:** Provide context. If YOU need background to answer the question, so does the AI.
+
+### Pitfall 5: Using the Wrong Model for the Task ⚠️ NEW!
+**Problem:** Using Gemini Flash for complex coding, or DeepSeek for quick lookups (slower than needed)
+**Solution:** Match the model to the task:
+- **Code?** → DeepSeek Chat V3
+- **Quick question?** → Gemini 2.5 Flash
+- **Long document?** → Llama 4 Maverick
+- **Need citations?** → Mistral Small
+
+### Pitfall 6: Staying with One Model the Whole Time ⚠️ NEW!
+**Problem:** Missing out on specialized capabilities
+**Solution:** Switch models as your task changes! Start with Gemini for exploration, switch to DeepSeek when you need code, switch to Mistral for citations. It takes 2 seconds!
 
 ## Resources for Continued Learning
 
@@ -1294,6 +1683,39 @@ Take 5 minutes to write down:
 | Code won't execute | Error message? | Share error with AI, it often fixes itself |
 | Everything is slow | Multiple people testing? | Be patient, or try off-peak hours |
 
+## Model Selection Cheat Sheet 🆕
+
+**Print this out and keep it handy!**
+
+### Quick Decision Tree
+
+```
+Need to write code or analyze data?
+  └─→ Use DeepSeek Chat V3 🐳
+
+Quick question or web search?
+  └─→ Use Gemini 2.5 Flash ⚡
+
+Long document or complex reasoning?
+  └─→ Use Llama 4 Maverick 📚
+
+Need precise citations?
+  └─→ Use Mistral Small 🎯
+
+Not sure? Start with Gemini, switch later!
+```
+
+### Detailed Model Comparison
+
+| Feature | DeepSeek V3 | Gemini Flash | Llama 4 | Mistral Small |
+|---------|-------------|--------------|---------|---------------|
+| **Speed** | ⚡⚡⚡ Fast | ⚡⚡⚡⚡ Very Fast | ⚡⚡ Good | ⚡⚡⚡ Fast |
+| **Code Quality** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Reasoning** | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Citations** | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **Context Size** | 128K | 1M | 256K | 96K |
+| **Best For** | Python/Code | Speed/Web | Long docs | Accuracy |
+
 ## Command Cheat Sheet
 
 ### Basic Prompts
@@ -1306,6 +1728,11 @@ Take 5 minutes to write down:
 
 # Refinement
 "Make that more concise / more detailed / more technical."
+
+# Model switching (during conversation)
+"Let me switch to DeepSeek for the coding part..."
+[Change model in dropdown]
+"Now write the Python code for..."
 ```
 
 ### RAG Prompts
