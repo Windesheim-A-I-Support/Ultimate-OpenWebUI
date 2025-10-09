@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.23">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.8.25" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-<meta name="author" content="Research Innovation Lab" />
+<meta name="author" content="Research Innovation Lab">
 
 <title>AI-Powered Research Workshop: From Question to Insight</title>
 <style>
@@ -60,20 +58,254 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
-<script  src="workshop_files/libs/quarto-diagram/mermaid.min.js"></script>
-<script  src="workshop_files/libs/quarto-diagram/mermaid-init.js"></script>
-<link  href="workshop_files/libs/quarto-diagram/mermaid.css" rel="stylesheet" />
+
+<script src="workshop_files/libs/clipboard/clipboard.min.js"></script>
+<script src="workshop_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="workshop_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="workshop_files/libs/quarto-html/popper.min.js"></script>
+<script src="workshop_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="workshop_files/libs/quarto-html/anchor.min.js"></script>
+<link href="workshop_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="workshop_files/libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="workshop_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="workshop_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="workshop_files/libs/bootstrap/bootstrap-4d5cdba1e59023d104418e560b599aaf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="workshop_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="workshop_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="workshop_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="workshop-styles.css" />
+<link rel="stylesheet" href="workshop-styles.css">
 </head>
 
-<body>
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <div id="quarto-toc-target"></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#welcome-your-research-journey-starts-here" id="toc-welcome-your-research-journey-starts-here" class="nav-link active" data-scroll-target="#welcome-your-research-journey-starts-here">Welcome: Your Research Journey Starts Here</a>
+  <ul class="collapse">
+  <li><a href="#the-hook" id="toc-the-hook" class="nav-link" data-scroll-target="#the-hook">The Hook 🎣</a></li>
+  <li><a href="#workshop-philosophy" id="toc-workshop-philosophy" class="nav-link" data-scroll-target="#workshop-philosophy">Workshop Philosophy</a>
+  <ul class="collapse">
+  <li><a href="#how-this-workshop-works" id="toc-how-this-workshop-works" class="nav-link" data-scroll-target="#how-this-workshop-works">How This Workshop Works</a></li>
+  </ul></li>
+  <li><a href="#choosing-your-ai-model" id="toc-choosing-your-ai-model" class="nav-link" data-scroll-target="#choosing-your-ai-model">Choosing Your AI Model</a>
+  <ul class="collapse">
+  <li><a href="#available-free-models-via-openrouter-2025" id="toc-available-free-models-via-openrouter-2025" class="nav-link" data-scroll-target="#available-free-models-via-openrouter-2025">Available FREE Models via OpenRouter (2025)</a></li>
+  <li><a href="#recommended-models-for-this-workshop" id="toc-recommended-models-for-this-workshop" class="nav-link" data-scroll-target="#recommended-models-for-this-workshop">Recommended Models for This Workshop</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#module-1-the-conversation-that-understands-you" id="toc-module-1-the-conversation-that-understands-you" class="nav-link" data-scroll-target="#module-1-the-conversation-that-understands-you">Module 1: The Conversation That Understands You</a>
+  <ul class="collapse">
+  <li><a href="#the-hook-1" id="toc-the-hook-1" class="nav-link" data-scroll-target="#the-hook-1">The Hook 🎣</a></li>
+  <li><a href="#the-story" id="toc-the-story" class="nav-link" data-scroll-target="#the-story">The Story 📖</a>
+  <ul class="collapse">
+  <li><a href="#meet-dr.-emma-bakker" id="toc-meet-dr.-emma-bakker" class="nav-link" data-scroll-target="#meet-dr.-emma-bakker">Meet Dr.&nbsp;Emma Bakker</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece" id="toc-the-educational-piece" class="nav-link" data-scroll-target="#the-educational-piece">The Educational Piece 📚</a>
+  <ul class="collapse">
+  <li><a href="#what-is-openwebui" id="toc-what-is-openwebui" class="nav-link" data-scroll-target="#what-is-openwebui">What is OpenWebUI?</a></li>
+  <li><a href="#the-big-idea" id="toc-the-big-idea" class="nav-link" data-scroll-target="#the-big-idea">The Big Idea</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece" id="toc-the-empowering-piece" class="nav-link" data-scroll-target="#the-empowering-piece">The Empowering Piece 💪</a>
+  <ul class="collapse">
+  <li><a href="#your-first-ai-conversation" id="toc-your-first-ai-conversation" class="nav-link" data-scroll-target="#your-first-ai-conversation">Your First AI Conversation</a></li>
+  <li><a href="#test-case-1-first-contact" id="toc-test-case-1-first-contact" class="nav-link" data-scroll-target="#test-case-1-first-contact">🧪 Test Case #1: First Contact</a></li>
+  <li><a href="#going-deeper-why-this-matters" id="toc-going-deeper-why-this-matters" class="nav-link" data-scroll-target="#going-deeper-why-this-matters">Going Deeper: Why This Matters</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece" id="toc-the-entertainment-piece" class="nav-link" data-scroll-target="#the-entertainment-piece">The Entertainment Piece 🎭</a>
+  <ul class="collapse">
+  <li><a href="#model-comparison-exercise-1-speed-vs-reasoning" id="toc-model-comparison-exercise-1-speed-vs-reasoning" class="nav-link" data-scroll-target="#model-comparison-exercise-1-speed-vs-reasoning">🎯 Model Comparison Exercise #1: Speed vs Reasoning</a></li>
+  <li><a href="#the-ai-whisperer-challenge" id="toc-the-ai-whisperer-challenge" class="nav-link" data-scroll-target="#the-ai-whisperer-challenge">The “AI Whisperer” Challenge</a></li>
+  </ul></li>
+  <li><a href="#key-learnings" id="toc-key-learnings" class="nav-link" data-scroll-target="#key-learnings">Key Learnings 🎓</a>
+  <ul class="collapse">
+  <li><a href="#what-you-now-know" id="toc-what-you-now-know" class="nav-link" data-scroll-target="#what-you-now-know">What You Now Know</a></li>
+  <li><a href="#questions-you-should-answer" id="toc-questions-you-should-answer" class="nav-link" data-scroll-target="#questions-you-should-answer">Questions You Should Answer</a></li>
+  </ul></li>
+  <li><a href="#the-anecdote" id="toc-the-anecdote" class="nav-link" data-scroll-target="#the-anecdote">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote" id="toc-the-quote" class="nav-link" data-scroll-target="#the-quote">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#module-2-teaching-your-ai-to-read-your-papers" id="toc-module-2-teaching-your-ai-to-read-your-papers" class="nav-link" data-scroll-target="#module-2-teaching-your-ai-to-read-your-papers">Module 2: Teaching Your AI to Read Your Papers</a>
+  <ul class="collapse">
+  <li><a href="#the-hook-2" id="toc-the-hook-2" class="nav-link" data-scroll-target="#the-hook-2">The Hook 🎣</a></li>
+  <li><a href="#the-story-1" id="toc-the-story-1" class="nav-link" data-scroll-target="#the-story-1">The Story 📖</a>
+  <ul class="collapse">
+  <li><a href="#meet-professor-james-okonkwo" id="toc-meet-professor-james-okonkwo" class="nav-link" data-scroll-target="#meet-professor-james-okonkwo">Meet Professor James Okonkwo</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece-1" id="toc-the-educational-piece-1" class="nav-link" data-scroll-target="#the-educational-piece-1">The Educational Piece 📚</a>
+  <ul class="collapse">
+  <li><a href="#what-is-rag-retrieval-augmented-generation" id="toc-what-is-rag-retrieval-augmented-generation" class="nav-link" data-scroll-target="#what-is-rag-retrieval-augmented-generation">What is RAG (Retrieval Augmented Generation)?</a></li>
+  <li><a href="#why-this-changes-everything" id="toc-why-this-changes-everything" class="nav-link" data-scroll-target="#why-this-changes-everything">Why This Changes Everything</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece-1" id="toc-the-empowering-piece-1" class="nav-link" data-scroll-target="#the-empowering-piece-1">The Empowering Piece 💪</a>
+  <ul class="collapse">
+  <li><a href="#your-first-document-upload" id="toc-your-first-document-upload" class="nav-link" data-scroll-target="#your-first-document-upload">Your First Document Upload</a></li>
+  <li><a href="#test-case-2-document-intelligence" id="toc-test-case-2-document-intelligence" class="nav-link" data-scroll-target="#test-case-2-document-intelligence">🧪 Test Case #2: Document Intelligence</a></li>
+  <li><a href="#advanced-challenge" id="toc-advanced-challenge" class="nav-link" data-scroll-target="#advanced-challenge">🎯 Advanced Challenge</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece-1" id="toc-the-entertainment-piece-1" class="nav-link" data-scroll-target="#the-entertainment-piece-1">The Entertainment Piece 🎭</a>
+  <ul class="collapse">
+  <li><a href="#model-comparison-exercise-2-citation-accuracy-test" id="toc-model-comparison-exercise-2-citation-accuracy-test" class="nav-link" data-scroll-target="#model-comparison-exercise-2-citation-accuracy-test">🎯 Model Comparison Exercise #2: Citation Accuracy Test</a></li>
+  <li><a href="#the-citation-scavenger-hunt" id="toc-the-citation-scavenger-hunt" class="nav-link" data-scroll-target="#the-citation-scavenger-hunt">The “Citation Scavenger Hunt”</a></li>
+  </ul></li>
+  <li><a href="#key-learnings-1" id="toc-key-learnings-1" class="nav-link" data-scroll-target="#key-learnings-1">Key Learnings 🎓</a>
+  <ul class="collapse">
+  <li><a href="#what-you-now-know-1" id="toc-what-you-now-know-1" class="nav-link" data-scroll-target="#what-you-now-know-1">What You Now Know</a></li>
+  <li><a href="#the-technical-magic-optional-deep-dive" id="toc-the-technical-magic-optional-deep-dive" class="nav-link" data-scroll-target="#the-technical-magic-optional-deep-dive">The Technical Magic (Optional Deep Dive)</a></li>
+  </ul></li>
+  <li><a href="#questions-you-should-answer-1" id="toc-questions-you-should-answer-1" class="nav-link" data-scroll-target="#questions-you-should-answer-1">Questions You Should Answer</a></li>
+  <li><a href="#the-anecdote-1" id="toc-the-anecdote-1" class="nav-link" data-scroll-target="#the-anecdote-1">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote-1" id="toc-the-quote-1" class="nav-link" data-scroll-target="#the-quote-1">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#module-3-asking-the-internet-for-help-without-opening-50-tabs" id="toc-module-3-asking-the-internet-for-help-without-opening-50-tabs" class="nav-link" data-scroll-target="#module-3-asking-the-internet-for-help-without-opening-50-tabs">Module 3: Asking the Internet for Help (Without Opening 50 Tabs)</a>
+  <ul class="collapse">
+  <li><a href="#the-hook-3" id="toc-the-hook-3" class="nav-link" data-scroll-target="#the-hook-3">The Hook 🎣</a></li>
+  <li><a href="#the-story-2" id="toc-the-story-2" class="nav-link" data-scroll-target="#the-story-2">The Story 📖</a>
+  <ul class="collapse">
+  <li><a href="#meet-dr.-javier-torres" id="toc-meet-dr.-javier-torres" class="nav-link" data-scroll-target="#meet-dr.-javier-torres">Meet Dr.&nbsp;Javier Torres</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece-2" id="toc-the-educational-piece-2" class="nav-link" data-scroll-target="#the-educational-piece-2">The Educational Piece 📚</a>
+  <ul class="collapse">
+  <li><a href="#what-is-web-search-integration" id="toc-what-is-web-search-integration" class="nav-link" data-scroll-target="#what-is-web-search-integration">What is Web Search Integration?</a></li>
+  <li><a href="#when-to-use-web-search" id="toc-when-to-use-web-search" class="nav-link" data-scroll-target="#when-to-use-web-search">When to Use Web Search</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece-2" id="toc-the-empowering-piece-2" class="nav-link" data-scroll-target="#the-empowering-piece-2">The Empowering Piece 💪</a>
+  <ul class="collapse">
+  <li><a href="#your-first-web-search-query" id="toc-your-first-web-search-query" class="nav-link" data-scroll-target="#your-first-web-search-query">Your First Web Search Query</a></li>
+  <li><a href="#test-case-3-real-time-research" id="toc-test-case-3-real-time-research" class="nav-link" data-scroll-target="#test-case-3-real-time-research">🧪 Test Case #3: Real-Time Research</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece-2" id="toc-the-entertainment-piece-2" class="nav-link" data-scroll-target="#the-entertainment-piece-2">The Entertainment Piece 🎭</a>
+  <ul class="collapse">
+  <li><a href="#the-time-traveler-game" id="toc-the-time-traveler-game" class="nav-link" data-scroll-target="#the-time-traveler-game">The “Time Traveler” Game</a></li>
+  </ul></li>
+  <li><a href="#key-learnings-2" id="toc-key-learnings-2" class="nav-link" data-scroll-target="#key-learnings-2">Key Learnings 🎓</a>
+  <ul class="collapse">
+  <li><a href="#what-you-now-know-2" id="toc-what-you-now-know-2" class="nav-link" data-scroll-target="#what-you-now-know-2">What You Now Know</a></li>
+  <li><a href="#behind-the-scenes-searxng" id="toc-behind-the-scenes-searxng" class="nav-link" data-scroll-target="#behind-the-scenes-searxng">Behind the Scenes: SearxNG</a></li>
+  </ul></li>
+  <li><a href="#questions-you-should-answer-2" id="toc-questions-you-should-answer-2" class="nav-link" data-scroll-target="#questions-you-should-answer-2">Questions You Should Answer</a></li>
+  <li><a href="#the-anecdote-2" id="toc-the-anecdote-2" class="nav-link" data-scroll-target="#the-anecdote-2">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote-2" id="toc-the-quote-2" class="nav-link" data-scroll-target="#the-quote-2">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#module-4-from-question-to-graph-in-60-seconds" id="toc-module-4-from-question-to-graph-in-60-seconds" class="nav-link" data-scroll-target="#module-4-from-question-to-graph-in-60-seconds">Module 4: From Question to Graph in 60 Seconds</a>
+  <ul class="collapse">
+  <li><a href="#the-hook-4" id="toc-the-hook-4" class="nav-link" data-scroll-target="#the-hook-4">The Hook 🎣</a></li>
+  <li><a href="#the-story-3" id="toc-the-story-3" class="nav-link" data-scroll-target="#the-story-3">The Story 📖</a>
+  <ul class="collapse">
+  <li><a href="#meet-alex-kowalski" id="toc-meet-alex-kowalski" class="nav-link" data-scroll-target="#meet-alex-kowalski">Meet Alex Kowalski</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece-3" id="toc-the-educational-piece-3" class="nav-link" data-scroll-target="#the-educational-piece-3">The Educational Piece 📚</a>
+  <ul class="collapse">
+  <li><a href="#what-is-code-execution" id="toc-what-is-code-execution" class="nav-link" data-scroll-target="#what-is-code-execution">What is Code Execution?</a></li>
+  <li><a href="#what-can-you-do-with-this" id="toc-what-can-you-do-with-this" class="nav-link" data-scroll-target="#what-can-you-do-with-this">What Can You Do With This?</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece-3" id="toc-the-empowering-piece-3" class="nav-link" data-scroll-target="#the-empowering-piece-3">The Empowering Piece 💪</a>
+  <ul class="collapse">
+  <li><a href="#your-first-code-execution" id="toc-your-first-code-execution" class="nav-link" data-scroll-target="#your-first-code-execution">Your First Code Execution</a></li>
+  <li><a href="#test-case-4-calculator-on-steroids" id="toc-test-case-4-calculator-on-steroids" class="nav-link" data-scroll-target="#test-case-4-calculator-on-steroids">🧪 Test Case #4: Calculator on Steroids</a></li>
+  <li><a href="#advanced-challenge-1" id="toc-advanced-challenge-1" class="nav-link" data-scroll-target="#advanced-challenge-1">🎯 Advanced Challenge</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece-3" id="toc-the-entertainment-piece-3" class="nav-link" data-scroll-target="#the-entertainment-piece-3">The Entertainment Piece 🎭</a>
+  <ul class="collapse">
+  <li><a href="#model-comparison-exercise-3-code-quality-battle" id="toc-model-comparison-exercise-3-code-quality-battle" class="nav-link" data-scroll-target="#model-comparison-exercise-3-code-quality-battle">🎯 Model Comparison Exercise #3: Code Quality Battle</a></li>
+  <li><a href="#the-visualization-remix-game" id="toc-the-visualization-remix-game" class="nav-link" data-scroll-target="#the-visualization-remix-game">The “Visualization Remix” Game</a></li>
+  </ul></li>
+  <li><a href="#key-learnings-3" id="toc-key-learnings-3" class="nav-link" data-scroll-target="#key-learnings-3">Key Learnings 🎓</a>
+  <ul class="collapse">
+  <li><a href="#what-you-now-know-3" id="toc-what-you-now-know-3" class="nav-link" data-scroll-target="#what-you-now-know-3">What You Now Know</a></li>
+  <li><a href="#the-technical-flow" id="toc-the-technical-flow" class="nav-link" data-scroll-target="#the-technical-flow">The Technical Flow</a></li>
+  </ul></li>
+  <li><a href="#questions-you-should-answer-3" id="toc-questions-you-should-answer-3" class="nav-link" data-scroll-target="#questions-you-should-answer-3">Questions You Should Answer</a></li>
+  <li><a href="#the-anecdote-3" id="toc-the-anecdote-3" class="nav-link" data-scroll-target="#the-anecdote-3">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote-3" id="toc-the-quote-3" class="nav-link" data-scroll-target="#the-quote-3">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#module-5-bringing-it-all-together---the-research-power-move" id="toc-module-5-bringing-it-all-together---the-research-power-move" class="nav-link" data-scroll-target="#module-5-bringing-it-all-together---the-research-power-move">Module 5: Bringing It All Together - The Research Power Move</a>
+  <ul class="collapse">
+  <li><a href="#the-hook-5" id="toc-the-hook-5" class="nav-link" data-scroll-target="#the-hook-5">The Hook 🎣</a></li>
+  <li><a href="#the-story-4" id="toc-the-story-4" class="nav-link" data-scroll-target="#the-story-4">The Story 📖</a>
+  <ul class="collapse">
+  <li><a href="#meet-dr.-yuki-tanaka" id="toc-meet-dr.-yuki-tanaka" class="nav-link" data-scroll-target="#meet-dr.-yuki-tanaka">Meet Dr.&nbsp;Yuki Tanaka</a></li>
+  </ul></li>
+  <li><a href="#the-educational-piece-4" id="toc-the-educational-piece-4" class="nav-link" data-scroll-target="#the-educational-piece-4">The Educational Piece 📚</a>
+  <ul class="collapse">
+  <li><a href="#the-integrated-research-workflow" id="toc-the-integrated-research-workflow" class="nav-link" data-scroll-target="#the-integrated-research-workflow">The Integrated Research Workflow</a></li>
+  </ul></li>
+  <li><a href="#the-empowering-piece-4" id="toc-the-empowering-piece-4" class="nav-link" data-scroll-target="#the-empowering-piece-4">The Empowering Piece 💪</a>
+  <ul class="collapse">
+  <li><a href="#your-final-challenge-the-complete-research-cycle" id="toc-your-final-challenge-the-complete-research-cycle" class="nav-link" data-scroll-target="#your-final-challenge-the-complete-research-cycle">Your Final Challenge: The Complete Research Cycle</a></li>
+  <li><a href="#test-case-5-the-grand-finale" id="toc-test-case-5-the-grand-finale" class="nav-link" data-scroll-target="#test-case-5-the-grand-finale">🧪 Test Case #5: The Grand Finale</a></li>
+  <li><a href="#real-world-application" id="toc-real-world-application" class="nav-link" data-scroll-target="#real-world-application">🎯 Real-World Application</a></li>
+  </ul></li>
+  <li><a href="#the-entertainment-piece-4" id="toc-the-entertainment-piece-4" class="nav-link" data-scroll-target="#the-entertainment-piece-4">The Entertainment Piece 🎭</a>
+  <ul class="collapse">
+  <li><a href="#ultimate-model-comparison-exercise-the-perfect-workflow" id="toc-ultimate-model-comparison-exercise-the-perfect-workflow" class="nav-link" data-scroll-target="#ultimate-model-comparison-exercise-the-perfect-workflow">🎯 ULTIMATE Model Comparison Exercise: The Perfect Workflow</a></li>
+  <li><a href="#the-research-relay-race" id="toc-the-research-relay-race" class="nav-link" data-scroll-target="#the-research-relay-race">The “Research Relay Race”</a></li>
+  </ul></li>
+  <li><a href="#key-learnings-4" id="toc-key-learnings-4" class="nav-link" data-scroll-target="#key-learnings-4">Key Learnings 🎓</a>
+  <ul class="collapse">
+  <li><a href="#what-you-now-know-4" id="toc-what-you-now-know-4" class="nav-link" data-scroll-target="#what-you-now-know-4">What You Now Know</a></li>
+  <li><a href="#the-meta-skills-prompt-engineering-model-selection" id="toc-the-meta-skills-prompt-engineering-model-selection" class="nav-link" data-scroll-target="#the-meta-skills-prompt-engineering-model-selection">The Meta-Skills: Prompt Engineering &amp; Model Selection</a></li>
+  </ul></li>
+  <li><a href="#questions-you-should-answer-4" id="toc-questions-you-should-answer-4" class="nav-link" data-scroll-target="#questions-you-should-answer-4">Questions You Should Answer</a></li>
+  <li><a href="#the-anecdote-4" id="toc-the-anecdote-4" class="nav-link" data-scroll-target="#the-anecdote-4">The Anecdote 🗣️</a></li>
+  <li><a href="#the-quote-4" id="toc-the-quote-4" class="nav-link" data-scroll-target="#the-quote-4">The Quote 💭</a></li>
+  </ul></li>
+  <li><a href="#workshop-conclusion-your-next-steps" id="toc-workshop-conclusion-your-next-steps" class="nav-link" data-scroll-target="#workshop-conclusion-your-next-steps">Workshop Conclusion: Your Next Steps</a>
+  <ul class="collapse">
+  <li><a href="#what-youve-accomplished-today" id="toc-what-youve-accomplished-today" class="nav-link" data-scroll-target="#what-youve-accomplished-today">What You’ve Accomplished Today</a>
+  <ul class="collapse">
+  <li><a href="#your-model-arsenal-quick-reference" id="toc-your-model-arsenal-quick-reference" class="nav-link" data-scroll-target="#your-model-arsenal-quick-reference">Your Model Arsenal (Quick Reference)</a></li>
+  </ul></li>
+  <li><a href="#the-3-day-challenge" id="toc-the-3-day-challenge" class="nav-link" data-scroll-target="#the-3-day-challenge">The 3-Day Challenge</a></li>
+  <li><a href="#common-pitfalls-and-how-to-avoid-them" id="toc-common-pitfalls-and-how-to-avoid-them" class="nav-link" data-scroll-target="#common-pitfalls-and-how-to-avoid-them">Common Pitfalls (And How to Avoid Them)</a>
+  <ul class="collapse">
+  <li><a href="#pitfall-1-treating-ai-like-google" id="toc-pitfall-1-treating-ai-like-google" class="nav-link" data-scroll-target="#pitfall-1-treating-ai-like-google">Pitfall 1: Treating AI Like Google</a></li>
+  <li><a href="#pitfall-2-not-verifying-citations" id="toc-pitfall-2-not-verifying-citations" class="nav-link" data-scroll-target="#pitfall-2-not-verifying-citations">Pitfall 2: Not Verifying Citations</a></li>
+  <li><a href="#pitfall-3-asking-it-to-do-everything" id="toc-pitfall-3-asking-it-to-do-everything" class="nav-link" data-scroll-target="#pitfall-3-asking-it-to-do-everything">Pitfall 3: Asking It to Do Everything</a></li>
+  <li><a href="#pitfall-4-forgetting-its-a-tool-not-magic" id="toc-pitfall-4-forgetting-its-a-tool-not-magic" class="nav-link" data-scroll-target="#pitfall-4-forgetting-its-a-tool-not-magic">Pitfall 4: Forgetting It’s a Tool, Not Magic</a></li>
+  <li><a href="#pitfall-5-using-the-wrong-model-for-the-task-new" id="toc-pitfall-5-using-the-wrong-model-for-the-task-new" class="nav-link" data-scroll-target="#pitfall-5-using-the-wrong-model-for-the-task-new">Pitfall 5: Using the Wrong Model for the Task ⚠️ NEW!</a></li>
+  <li><a href="#pitfall-6-staying-with-one-model-the-whole-time-new" id="toc-pitfall-6-staying-with-one-model-the-whole-time-new" class="nav-link" data-scroll-target="#pitfall-6-staying-with-one-model-the-whole-time-new">Pitfall 6: Staying with One Model the Whole Time ⚠️ NEW!</a></li>
+  </ul></li>
+  <li><a href="#resources-for-continued-learning" id="toc-resources-for-continued-learning" class="nav-link" data-scroll-target="#resources-for-continued-learning">Resources for Continued Learning</a></li>
+  <li><a href="#final-reflection-questions" id="toc-final-reflection-questions" class="nav-link" data-scroll-target="#final-reflection-questions">Final Reflection Questions</a></li>
+  <li><a href="#the-last-quote" id="toc-the-last-quote" class="nav-link" data-scroll-target="#the-last-quote">The Last Quote</a></li>
+  </ul></li>
+  <li><a href="#appendix-quick-reference-guide" id="toc-appendix-quick-reference-guide" class="nav-link" data-scroll-target="#appendix-quick-reference-guide">Appendix: Quick Reference Guide</a>
+  <ul class="collapse">
+  <li><a href="#checklist-for-each-module" id="toc-checklist-for-each-module" class="nav-link" data-scroll-target="#checklist-for-each-module">Checklist for Each Module</a>
+  <ul class="collapse">
+  <li><a href="#module-1-basic-chat" id="toc-module-1-basic-chat" class="nav-link" data-scroll-target="#module-1-basic-chat">Module 1: Basic Chat</a></li>
+  <li><a href="#module-2-rag" id="toc-module-2-rag" class="nav-link" data-scroll-target="#module-2-rag">Module 2: RAG</a></li>
+  <li><a href="#module-3-web-search" id="toc-module-3-web-search" class="nav-link" data-scroll-target="#module-3-web-search">Module 3: Web Search</a></li>
+  <li><a href="#module-4-code-execution" id="toc-module-4-code-execution" class="nav-link" data-scroll-target="#module-4-code-execution">Module 4: Code Execution</a></li>
+  <li><a href="#module-5-integration" id="toc-module-5-integration" class="nav-link" data-scroll-target="#module-5-integration">Module 5: Integration</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting-guide" id="toc-troubleshooting-guide" class="nav-link" data-scroll-target="#troubleshooting-guide">Troubleshooting Guide</a></li>
+  <li><a href="#model-selection-cheat-sheet" id="toc-model-selection-cheat-sheet" class="nav-link" data-scroll-target="#model-selection-cheat-sheet">Model Selection Cheat Sheet 🆕</a>
+  <ul class="collapse">
+  <li><a href="#quick-decision-tree" id="toc-quick-decision-tree" class="nav-link" data-scroll-target="#quick-decision-tree">Quick Decision Tree</a></li>
+  <li><a href="#detailed-model-comparison" id="toc-detailed-model-comparison" class="nav-link" data-scroll-target="#detailed-model-comparison">Detailed Model Comparison</a></li>
+  </ul></li>
+  <li><a href="#command-cheat-sheet" id="toc-command-cheat-sheet" class="nav-link" data-scroll-target="#command-cheat-sheet">Command Cheat Sheet</a>
+  <ul class="collapse">
+  <li><a href="#basic-prompts" id="toc-basic-prompts" class="nav-link" data-scroll-target="#basic-prompts">Basic Prompts</a></li>
+  <li><a href="#rag-prompts" id="toc-rag-prompts" class="nav-link" data-scroll-target="#rag-prompts">RAG Prompts</a></li>
+  <li><a href="#web-search-prompts" id="toc-web-search-prompts" class="nav-link" data-scroll-target="#web-search-prompts">Web Search Prompts</a></li>
+  <li><a href="#code-execution-prompts" id="toc-code-execution-prompts" class="nav-link" data-scroll-target="#code-execution-prompts">Code Execution Prompts</a></li>
+  <li><a href="#integration-prompts" id="toc-integration-prompts" class="nav-link" data-scroll-target="#integration-prompts">Integration Prompts</a></li>
+  </ul></li>
+  <li><a href="#keyboard-shortcuts" id="toc-keyboard-shortcuts" class="nav-link" data-scroll-target="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a></li>
+  </ul></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#about-this-workshop" id="toc-about-this-workshop" class="nav-link" data-scroll-target="#about-this-workshop">About This Workshop</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="workshop.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -102,252 +334,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#welcome-your-research-journey-starts-here" id="toc-welcome-your-research-journey-starts-here">Welcome: Your Research Journey Starts Here</a>
-  <ul>
-  <li><a href="#the-hook" id="toc-the-hook">The Hook 🎣</a></li>
-  <li><a href="#workshop-philosophy" id="toc-workshop-philosophy">Workshop Philosophy</a>
-  <ul>
-  <li><a href="#how-this-workshop-works" id="toc-how-this-workshop-works">How This Workshop Works</a></li>
-  </ul></li>
-  <li><a href="#choosing-your-ai-model" id="toc-choosing-your-ai-model">Choosing Your AI Model</a>
-  <ul>
-  <li><a href="#available-free-models-via-openrouter-2025" id="toc-available-free-models-via-openrouter-2025">Available FREE Models via OpenRouter (2025)</a></li>
-  <li><a href="#recommended-models-for-this-workshop" id="toc-recommended-models-for-this-workshop">Recommended Models for This Workshop</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#module-1-the-conversation-that-understands-you" id="toc-module-1-the-conversation-that-understands-you">Module 1: The Conversation That Understands You</a>
-  <ul>
-  <li><a href="#the-hook-1" id="toc-the-hook-1">The Hook 🎣</a></li>
-  <li><a href="#the-story" id="toc-the-story">The Story 📖</a>
-  <ul>
-  <li><a href="#meet-dr.-sarah-chen" id="toc-meet-dr.-sarah-chen">Meet Dr. Sarah Chen</a></li>
-  </ul></li>
-  <li><a href="#the-educational-piece" id="toc-the-educational-piece">The Educational Piece 📚</a>
-  <ul>
-  <li><a href="#what-is-openwebui" id="toc-what-is-openwebui">What is OpenWebUI?</a></li>
-  <li><a href="#the-big-idea" id="toc-the-big-idea">The Big Idea</a></li>
-  </ul></li>
-  <li><a href="#the-empowering-piece" id="toc-the-empowering-piece">The Empowering Piece 💪</a>
-  <ul>
-  <li><a href="#your-first-ai-conversation" id="toc-your-first-ai-conversation">Your First AI Conversation</a></li>
-  <li><a href="#test-case-1-first-contact" id="toc-test-case-1-first-contact">🧪 Test Case #1: First Contact</a></li>
-  <li><a href="#going-deeper-why-this-matters" id="toc-going-deeper-why-this-matters">Going Deeper: Why This Matters</a></li>
-  </ul></li>
-  <li><a href="#the-entertainment-piece" id="toc-the-entertainment-piece">The Entertainment Piece 🎭</a>
-  <ul>
-  <li><a href="#model-comparison-exercise-1-speed-vs-reasoning" id="toc-model-comparison-exercise-1-speed-vs-reasoning">🎯 Model Comparison Exercise #1: Speed vs Reasoning</a></li>
-  <li><a href="#the-ai-whisperer-challenge" id="toc-the-ai-whisperer-challenge">The “AI Whisperer” Challenge</a></li>
-  </ul></li>
-  <li><a href="#key-learnings" id="toc-key-learnings">Key Learnings 🎓</a>
-  <ul>
-  <li><a href="#what-you-now-know" id="toc-what-you-now-know">What You Now Know</a></li>
-  <li><a href="#questions-you-should-answer" id="toc-questions-you-should-answer">Questions You Should Answer</a></li>
-  </ul></li>
-  <li><a href="#the-anecdote" id="toc-the-anecdote">The Anecdote 🗣️</a></li>
-  <li><a href="#the-quote" id="toc-the-quote">The Quote 💭</a></li>
-  </ul></li>
-  <li><a href="#module-2-teaching-your-ai-to-read-your-papers" id="toc-module-2-teaching-your-ai-to-read-your-papers">Module 2: Teaching Your AI to Read Your Papers</a>
-  <ul>
-  <li><a href="#the-hook-2" id="toc-the-hook-2">The Hook 🎣</a></li>
-  <li><a href="#the-story-1" id="toc-the-story-1">The Story 📖</a>
-  <ul>
-  <li><a href="#meet-professor-james-okonkwo" id="toc-meet-professor-james-okonkwo">Meet Professor James Okonkwo</a></li>
-  </ul></li>
-  <li><a href="#the-educational-piece-1" id="toc-the-educational-piece-1">The Educational Piece 📚</a>
-  <ul>
-  <li><a href="#what-is-rag-retrieval-augmented-generation" id="toc-what-is-rag-retrieval-augmented-generation">What is RAG (Retrieval Augmented Generation)?</a></li>
-  <li><a href="#why-this-changes-everything" id="toc-why-this-changes-everything">Why This Changes Everything</a></li>
-  </ul></li>
-  <li><a href="#the-empowering-piece-1" id="toc-the-empowering-piece-1">The Empowering Piece 💪</a>
-  <ul>
-  <li><a href="#your-first-document-upload" id="toc-your-first-document-upload">Your First Document Upload</a></li>
-  <li><a href="#test-case-2-document-intelligence" id="toc-test-case-2-document-intelligence">🧪 Test Case #2: Document Intelligence</a></li>
-  <li><a href="#advanced-challenge" id="toc-advanced-challenge">🎯 Advanced Challenge</a></li>
-  </ul></li>
-  <li><a href="#the-entertainment-piece-1" id="toc-the-entertainment-piece-1">The Entertainment Piece 🎭</a>
-  <ul>
-  <li><a href="#model-comparison-exercise-2-citation-accuracy-test" id="toc-model-comparison-exercise-2-citation-accuracy-test">🎯 Model Comparison Exercise #2: Citation Accuracy Test</a></li>
-  <li><a href="#the-citation-scavenger-hunt" id="toc-the-citation-scavenger-hunt">The “Citation Scavenger Hunt”</a></li>
-  </ul></li>
-  <li><a href="#key-learnings-1" id="toc-key-learnings-1">Key Learnings 🎓</a>
-  <ul>
-  <li><a href="#what-you-now-know-1" id="toc-what-you-now-know-1">What You Now Know</a></li>
-  <li><a href="#the-technical-magic-optional-deep-dive" id="toc-the-technical-magic-optional-deep-dive">The Technical Magic (Optional Deep Dive)</a></li>
-  </ul></li>
-  <li><a href="#questions-you-should-answer-1" id="toc-questions-you-should-answer-1">Questions You Should Answer</a></li>
-  <li><a href="#the-anecdote-1" id="toc-the-anecdote-1">The Anecdote 🗣️</a></li>
-  <li><a href="#the-quote-1" id="toc-the-quote-1">The Quote 💭</a></li>
-  </ul></li>
-  <li><a href="#module-3-asking-the-internet-for-help-without-opening-50-tabs" id="toc-module-3-asking-the-internet-for-help-without-opening-50-tabs">Module 3: Asking the Internet for Help (Without Opening 50 Tabs)</a>
-  <ul>
-  <li><a href="#the-hook-3" id="toc-the-hook-3">The Hook 🎣</a></li>
-  <li><a href="#the-story-2" id="toc-the-story-2">The Story 📖</a>
-  <ul>
-  <li><a href="#meet-dr.-maria-santos" id="toc-meet-dr.-maria-santos">Meet Dr. Maria Santos</a></li>
-  </ul></li>
-  <li><a href="#the-educational-piece-2" id="toc-the-educational-piece-2">The Educational Piece 📚</a>
-  <ul>
-  <li><a href="#what-is-web-search-integration" id="toc-what-is-web-search-integration">What is Web Search Integration?</a></li>
-  <li><a href="#when-to-use-web-search" id="toc-when-to-use-web-search">When to Use Web Search</a></li>
-  </ul></li>
-  <li><a href="#the-empowering-piece-2" id="toc-the-empowering-piece-2">The Empowering Piece 💪</a>
-  <ul>
-  <li><a href="#your-first-web-search-query" id="toc-your-first-web-search-query">Your First Web Search Query</a></li>
-  <li><a href="#test-case-3-real-time-research" id="toc-test-case-3-real-time-research">🧪 Test Case #3: Real-Time Research</a></li>
-  </ul></li>
-  <li><a href="#the-entertainment-piece-2" id="toc-the-entertainment-piece-2">The Entertainment Piece 🎭</a>
-  <ul>
-  <li><a href="#the-time-traveler-game" id="toc-the-time-traveler-game">The “Time Traveler” Game</a></li>
-  </ul></li>
-  <li><a href="#key-learnings-2" id="toc-key-learnings-2">Key Learnings 🎓</a>
-  <ul>
-  <li><a href="#what-you-now-know-2" id="toc-what-you-now-know-2">What You Now Know</a></li>
-  <li><a href="#behind-the-scenes-searxng" id="toc-behind-the-scenes-searxng">Behind the Scenes: SearxNG</a></li>
-  </ul></li>
-  <li><a href="#questions-you-should-answer-2" id="toc-questions-you-should-answer-2">Questions You Should Answer</a></li>
-  <li><a href="#the-anecdote-2" id="toc-the-anecdote-2">The Anecdote 🗣️</a></li>
-  <li><a href="#the-quote-2" id="toc-the-quote-2">The Quote 💭</a></li>
-  </ul></li>
-  <li><a href="#module-4-from-question-to-graph-in-60-seconds" id="toc-module-4-from-question-to-graph-in-60-seconds">Module 4: From Question to Graph in 60 Seconds</a>
-  <ul>
-  <li><a href="#the-hook-4" id="toc-the-hook-4">The Hook 🎣</a></li>
-  <li><a href="#the-story-3" id="toc-the-story-3">The Story 📖</a>
-  <ul>
-  <li><a href="#meet-alex-kowalski" id="toc-meet-alex-kowalski">Meet Alex Kowalski</a></li>
-  </ul></li>
-  <li><a href="#the-educational-piece-3" id="toc-the-educational-piece-3">The Educational Piece 📚</a>
-  <ul>
-  <li><a href="#what-is-code-execution" id="toc-what-is-code-execution">What is Code Execution?</a></li>
-  <li><a href="#what-can-you-do-with-this" id="toc-what-can-you-do-with-this">What Can You Do With This?</a></li>
-  </ul></li>
-  <li><a href="#the-empowering-piece-3" id="toc-the-empowering-piece-3">The Empowering Piece 💪</a>
-  <ul>
-  <li><a href="#your-first-code-execution" id="toc-your-first-code-execution">Your First Code Execution</a></li>
-  <li><a href="#test-case-4-calculator-on-steroids" id="toc-test-case-4-calculator-on-steroids">🧪 Test Case #4: Calculator on Steroids</a></li>
-  <li><a href="#advanced-challenge-1" id="toc-advanced-challenge-1">🎯 Advanced Challenge</a></li>
-  </ul></li>
-  <li><a href="#the-entertainment-piece-3" id="toc-the-entertainment-piece-3">The Entertainment Piece 🎭</a>
-  <ul>
-  <li><a href="#model-comparison-exercise-3-code-quality-battle" id="toc-model-comparison-exercise-3-code-quality-battle">🎯 Model Comparison Exercise #3: Code Quality Battle</a></li>
-  <li><a href="#the-visualization-remix-game" id="toc-the-visualization-remix-game">The “Visualization Remix” Game</a></li>
-  </ul></li>
-  <li><a href="#key-learnings-3" id="toc-key-learnings-3">Key Learnings 🎓</a>
-  <ul>
-  <li><a href="#what-you-now-know-3" id="toc-what-you-now-know-3">What You Now Know</a></li>
-  <li><a href="#the-technical-flow" id="toc-the-technical-flow">The Technical Flow</a></li>
-  </ul></li>
-  <li><a href="#questions-you-should-answer-3" id="toc-questions-you-should-answer-3">Questions You Should Answer</a></li>
-  <li><a href="#the-anecdote-3" id="toc-the-anecdote-3">The Anecdote 🗣️</a></li>
-  <li><a href="#the-quote-3" id="toc-the-quote-3">The Quote 💭</a></li>
-  </ul></li>
-  <li><a href="#module-5-bringing-it-all-together---the-research-power-move" id="toc-module-5-bringing-it-all-together---the-research-power-move">Module 5: Bringing It All Together - The Research Power Move</a>
-  <ul>
-  <li><a href="#the-hook-5" id="toc-the-hook-5">The Hook 🎣</a></li>
-  <li><a href="#the-story-4" id="toc-the-story-4">The Story 📖</a>
-  <ul>
-  <li><a href="#meet-dr.-yuki-tanaka" id="toc-meet-dr.-yuki-tanaka">Meet Dr. Yuki Tanaka</a></li>
-  </ul></li>
-  <li><a href="#the-educational-piece-4" id="toc-the-educational-piece-4">The Educational Piece 📚</a>
-  <ul>
-  <li><a href="#the-integrated-research-workflow" id="toc-the-integrated-research-workflow">The Integrated Research Workflow</a></li>
-  </ul></li>
-  <li><a href="#the-empowering-piece-4" id="toc-the-empowering-piece-4">The Empowering Piece 💪</a>
-  <ul>
-  <li><a href="#your-final-challenge-the-complete-research-cycle" id="toc-your-final-challenge-the-complete-research-cycle">Your Final Challenge: The Complete Research Cycle</a></li>
-  <li><a href="#test-case-5-the-grand-finale" id="toc-test-case-5-the-grand-finale">🧪 Test Case #5: The Grand Finale</a></li>
-  <li><a href="#real-world-application" id="toc-real-world-application">🎯 Real-World Application</a></li>
-  </ul></li>
-  <li><a href="#the-entertainment-piece-4" id="toc-the-entertainment-piece-4">The Entertainment Piece 🎭</a>
-  <ul>
-  <li><a href="#ultimate-model-comparison-exercise-the-perfect-workflow" id="toc-ultimate-model-comparison-exercise-the-perfect-workflow">🎯 ULTIMATE Model Comparison Exercise: The Perfect Workflow</a></li>
-  <li><a href="#the-research-relay-race" id="toc-the-research-relay-race">The “Research Relay Race”</a></li>
-  </ul></li>
-  <li><a href="#key-learnings-4" id="toc-key-learnings-4">Key Learnings 🎓</a>
-  <ul>
-  <li><a href="#what-you-now-know-4" id="toc-what-you-now-know-4">What You Now Know</a></li>
-  <li><a href="#the-meta-skills-prompt-engineering-model-selection" id="toc-the-meta-skills-prompt-engineering-model-selection">The Meta-Skills: Prompt Engineering &amp; Model Selection</a></li>
-  </ul></li>
-  <li><a href="#questions-you-should-answer-4" id="toc-questions-you-should-answer-4">Questions You Should Answer</a></li>
-  <li><a href="#the-anecdote-4" id="toc-the-anecdote-4">The Anecdote 🗣️</a></li>
-  <li><a href="#the-quote-4" id="toc-the-quote-4">The Quote 💭</a></li>
-  </ul></li>
-  <li><a href="#workshop-conclusion-your-next-steps" id="toc-workshop-conclusion-your-next-steps">Workshop Conclusion: Your Next Steps</a>
-  <ul>
-  <li><a href="#what-youve-accomplished-today" id="toc-what-youve-accomplished-today">What You’ve Accomplished Today</a>
-  <ul>
-  <li><a href="#your-model-arsenal-quick-reference" id="toc-your-model-arsenal-quick-reference">Your Model Arsenal (Quick Reference)</a></li>
-  </ul></li>
-  <li><a href="#the-3-day-challenge" id="toc-the-3-day-challenge">The 3-Day Challenge</a></li>
-  <li><a href="#common-pitfalls-and-how-to-avoid-them" id="toc-common-pitfalls-and-how-to-avoid-them">Common Pitfalls (And How to Avoid Them)</a>
-  <ul>
-  <li><a href="#pitfall-1-treating-ai-like-google" id="toc-pitfall-1-treating-ai-like-google">Pitfall 1: Treating AI Like Google</a></li>
-  <li><a href="#pitfall-2-not-verifying-citations" id="toc-pitfall-2-not-verifying-citations">Pitfall 2: Not Verifying Citations</a></li>
-  <li><a href="#pitfall-3-asking-it-to-do-everything" id="toc-pitfall-3-asking-it-to-do-everything">Pitfall 3: Asking It to Do Everything</a></li>
-  <li><a href="#pitfall-4-forgetting-its-a-tool-not-magic" id="toc-pitfall-4-forgetting-its-a-tool-not-magic">Pitfall 4: Forgetting It’s a Tool, Not Magic</a></li>
-  <li><a href="#pitfall-5-using-the-wrong-model-for-the-task-new" id="toc-pitfall-5-using-the-wrong-model-for-the-task-new">Pitfall 5: Using the Wrong Model for the Task ⚠️ NEW!</a></li>
-  <li><a href="#pitfall-6-staying-with-one-model-the-whole-time-new" id="toc-pitfall-6-staying-with-one-model-the-whole-time-new">Pitfall 6: Staying with One Model the Whole Time ⚠️ NEW!</a></li>
-  </ul></li>
-  <li><a href="#resources-for-continued-learning" id="toc-resources-for-continued-learning">Resources for Continued Learning</a></li>
-  <li><a href="#final-reflection-questions" id="toc-final-reflection-questions">Final Reflection Questions</a></li>
-  <li><a href="#the-last-quote" id="toc-the-last-quote">The Last Quote</a></li>
-  </ul></li>
-  <li><a href="#appendix-quick-reference-guide" id="toc-appendix-quick-reference-guide">Appendix: Quick Reference Guide</a>
-  <ul>
-  <li><a href="#checklist-for-each-module" id="toc-checklist-for-each-module">Checklist for Each Module</a>
-  <ul>
-  <li><a href="#module-1-basic-chat" id="toc-module-1-basic-chat">Module 1: Basic Chat</a></li>
-  <li><a href="#module-2-rag" id="toc-module-2-rag">Module 2: RAG</a></li>
-  <li><a href="#module-3-web-search" id="toc-module-3-web-search">Module 3: Web Search</a></li>
-  <li><a href="#module-4-code-execution" id="toc-module-4-code-execution">Module 4: Code Execution</a></li>
-  <li><a href="#module-5-integration" id="toc-module-5-integration">Module 5: Integration</a></li>
-  </ul></li>
-  <li><a href="#troubleshooting-guide" id="toc-troubleshooting-guide">Troubleshooting Guide</a></li>
-  <li><a href="#model-selection-cheat-sheet" id="toc-model-selection-cheat-sheet">Model Selection Cheat Sheet 🆕</a>
-  <ul>
-  <li><a href="#quick-decision-tree" id="toc-quick-decision-tree">Quick Decision Tree</a></li>
-  <li><a href="#detailed-model-comparison" id="toc-detailed-model-comparison">Detailed Model Comparison</a></li>
-  </ul></li>
-  <li><a href="#command-cheat-sheet" id="toc-command-cheat-sheet">Command Cheat Sheet</a>
-  <ul>
-  <li><a href="#basic-prompts" id="toc-basic-prompts">Basic Prompts</a></li>
-  <li><a href="#rag-prompts" id="toc-rag-prompts">RAG Prompts</a></li>
-  <li><a href="#web-search-prompts" id="toc-web-search-prompts">Web Search Prompts</a></li>
-  <li><a href="#code-execution-prompts" id="toc-code-execution-prompts">Code Execution Prompts</a></li>
-  <li><a href="#integration-prompts" id="toc-integration-prompts">Integration Prompts</a></li>
-  </ul></li>
-  <li><a href="#keyboard-shortcuts" id="toc-keyboard-shortcuts">Keyboard Shortcuts</a></li>
-  <li><a href="#getting-help" id="toc-getting-help">Getting Help</a></li>
-  </ul></li>
-  <li><a href="#acknowledgments" id="toc-acknowledgments">Acknowledgments</a></li>
-  <li><a href="#about-this-workshop" id="toc-about-this-workshop">About This Workshop</a></li>
-  </ul>
-</nav>
+
 <section id="welcome-your-research-journey-starts-here" class="level1">
 <h1>Welcome: Your Research Journey Starts Here</h1>
 <section id="the-hook" class="level2">
-<h2>The Hook 🎣</h2>
+<h2 class="anchored" data-anchor-id="the-hook">The Hook 🎣</h2>
 <p>Imagine it’s 2 AM. You’re staring at 47 open browser tabs, three PDFs you can’t find anymore, and a half-written Python script that crashed two hours ago. Sound familiar?</p>
 <p><strong>Today, you’ll learn to do all of that in one place, in under 5 minutes.</strong></p>
 </section>
 <section id="workshop-philosophy" class="level2">
-<h2>Workshop Philosophy</h2>
-<blockquote>
+<h2 class="anchored" data-anchor-id="workshop-philosophy">Workshop Philosophy</h2>
+<blockquote class="blockquote">
 <p>“The goal is not to learn everything about AI tools. The goal is to leave here with ONE workflow that saves you 3 hours this week.” - Workshop Design Principle</p>
 </blockquote>
 <section id="how-this-workshop-works" class="level3">
-<h3>How This Workshop Works</h3>
+<h3 class="anchored" data-anchor-id="how-this-workshop-works">How This Workshop Works</h3>
 <p><strong>We follow the “Learning Loop” method:</strong> 1. <strong>Hook</strong> - Why should you care? 2. <strong>Story</strong> - See it in action 3. <strong>Practice</strong> - Do it yourself 4. <strong>Test</strong> - Prove it works 5. <strong>Reflect</strong> - What did you learn? 6. <strong>Apply</strong> - Use it tomorrow</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class='callout-icon'></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Time Investment
+Time Investment
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -357,18 +366,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="choosing-your-ai-model" class="level2">
-<h2>Choosing Your AI Model</h2>
+<h2 class="anchored" data-anchor-id="choosing-your-ai-model">Choosing Your AI Model</h2>
 <p>This workshop uses <strong>FREE models from OpenRouter</strong> - powerful AI models available at no cost. OpenRouter provides access to cutting-edge open-source and free models through a single interface.</p>
 <section id="available-free-models-via-openrouter-2025" class="level3">
-<h3>Available FREE Models via OpenRouter (2025)</h3>
+<h3 class="anchored" data-anchor-id="available-free-models-via-openrouter-2025">Available FREE Models via OpenRouter (2025)</h3>
 <p>Your OpenWebUI instance has access to these <strong>FREE</strong> models:</p>
-<table class="caption-top">
+<table class="caption-top table">
 <colgroup>
-<col style="width: 14%" />
-<col style="width: 20%" />
-<col style="width: 14%" />
-<col style="width: 18%" />
-<col style="width: 34%" />
+<col style="width: 14%">
+<col style="width: 20%">
+<col style="width: 14%">
+<col style="width: 18%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -413,7 +422,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>*<strong>Context Window = How much text the AI can “remember” at once (including your conversation + uploaded documents)</strong></p>
 </section>
 <section id="recommended-models-for-this-workshop" class="level3">
-<h3>Recommended Models for This Workshop</h3>
+<h3 class="anchored" data-anchor-id="recommended-models-for-this-workshop">Recommended Models for This Workshop</h3>
 <p><strong>Different models excel at different tasks!</strong> In this workshop, you’ll learn which model to use when:</p>
 <ul>
 <li>🐳 <strong>DeepSeek Chat V3</strong> - BEST for Python code generation and technical analysis</li>
@@ -425,10 +434,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class='callout-icon'></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>About OpenRouter FREE Models
+About OpenRouter FREE Models
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -440,10 +449,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class='callout-icon'></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>How to Select Your Model
+How to Select Your Model
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -465,10 +474,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class='callout-icon'></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Common Confusions - Read This First! ⚠️
+Common Confusions - Read This First! ⚠️
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -483,19 +492,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class='callout-icon'></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Quick Model Selection Guide
+Quick Model Selection Guide
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>Use this throughout the workshop:</strong></p>
-<table class="caption-top">
+<table class="caption-top table">
 <colgroup>
-<col style="width: 39%" />
-<col style="width: 42%" />
-<col style="width: 17%" />
+<col style="width: 39%">
+<col style="width: 42%">
+<col style="width: 17%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -540,32 +549,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Pro tip:</strong> You can switch models mid-conversation! Start with Gemini for quick exploration, switch to DeepSeek for code, switch to Mistral for citations.</p>
 </div>
 </div>
-<hr />
+<hr>
 </section>
 </section>
 </section>
 <section id="module-1-the-conversation-that-understands-you" class="level1">
 <h1>Module 1: The Conversation That Understands You</h1>
 <section id="the-hook-1" class="level2">
-<h2>The Hook 🎣</h2>
+<h2 class="anchored" data-anchor-id="the-hook-1">The Hook 🎣</h2>
 <p><strong>Quick quiz:</strong> How many times have you copied the same prompt into ChatGPT today?</p>
 <p>What if your AI remembered everything you told it - for the entire project?</p>
 </section>
 <section id="the-story" class="level2">
-<h2>The Story 📖</h2>
-<section id="meet-dr.-sarah-chen" class="level3">
-<h3>Meet Dr. Sarah Chen</h3>
-<p>Dr. Sarah Chen studies urban sustainability. Last month, she spent 6 hours copying data between ChatGPT (for questions), Jupyter (for analysis), and Google Docs (for notes).</p>
-<p>Then she discovered OpenWebUI. Now she does everything in one conversation: - Ask questions about her research - Run data analysis - Save the entire workflow - Share it with her research partner in Tokyo</p>
-<p><strong>Her time investment to learn:</strong> 15 minutes <strong>Her time saved per week:</strong> 4.5 hours</p>
+<h2 class="anchored" data-anchor-id="the-story">The Story 📖</h2>
+<section id="meet-dr.-emma-bakker" class="level3">
+<h3 class="anchored" data-anchor-id="meet-dr.-emma-bakker">Meet Dr.&nbsp;Emma Bakker</h3>
+<p>Dr.&nbsp;Emma Bakker researches circular economy in food systems, specifically bread waste valorization. Last month, she spent 6 hours copying data between ChatGPT (for questions), Jupyter (for analysis), and Google Docs (for notes) while analyzing bakery supply chain data.</p>
+<p>Then she discovered OpenWebUI. Now she does everything in one conversation: - Ask questions about bread waste statistics - Analyze data from 50+ bakeries - Compare her findings with Toast Ale’s circular economy model - Share the entire workflow with her research partner in Amsterdam</p>
+<p><strong>Her time investment to learn:</strong> 15 minutes <strong>Her time saved per week:</strong> 4.5 hours <strong>Real impact:</strong> She discovered that 51% of bread waste happens at the supplier-retailer interface - exactly what recent 2024 research confirmed!</p>
 </section>
 </section>
 <section id="the-educational-piece" class="level2">
-<h2>The Educational Piece 📚</h2>
+<h2 class="anchored" data-anchor-id="the-educational-piece">The Educational Piece 📚</h2>
 <section id="what-is-openwebui" class="level3">
-<h3>What is OpenWebUI?</h3>
+<h3 class="anchored" data-anchor-id="what-is-openwebui">What is OpenWebUI?</h3>
 <p>Think of OpenWebUI as your research lab, but digital:</p>
-<table class="caption-top">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Traditional Lab</th>
@@ -593,23 +602,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 <section id="the-big-idea" class="level3">
-<h3>The Big Idea</h3>
+<h3 class="anchored" data-anchor-id="the-big-idea">The Big Idea</h3>
 <p><strong>Context persistence</strong> - The AI remembers everything in your conversation. No more “As I mentioned before…” because you switched tools.</p>
 </section>
 </section>
 <section id="the-empowering-piece" class="level2">
-<h2>The Empowering Piece 💪</h2>
+<h2 class="anchored" data-anchor-id="the-empowering-piece">The Empowering Piece 💪</h2>
 <section id="your-first-ai-conversation" class="level3">
-<h3>Your First AI Conversation</h3>
+<h3 class="anchored" data-anchor-id="your-first-ai-conversation">Your First AI Conversation</h3>
 <p><strong>Learning Objective:</strong> Send a message and get a response in under 2 minutes.</p>
 <p><strong>Why this matters:</strong> This is your foundation. Every advanced feature builds on this.</p>
 </section>
 <section id="test-case-1-first-contact" class="level3">
-<h3>🧪 Test Case #1: First Contact</h3>
+<h3 class="anchored" data-anchor-id="test-case-1-first-contact">🧪 Test Case #1: First Contact</h3>
 <p><strong>Setup checklist:</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>□ OpenWebUI is open in your browser</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>□ OpenWebUI is open in your browser</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>□ You can see the chat interface</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>□ Model is set to a FREE OpenRouter model (ending in :free)</span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>□ Model is set to a FREE OpenRouter model (ending in :free)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>The Test:</strong></p>
 <ol type="1">
 <li><p><strong>Open your browser</strong> and go to: <code>https://team1-openwebui.valuechainhackers.xyz</code></p></li>
@@ -643,9 +652,9 @@ Password: [strong password]</code></pre></li>
 </ul></li>
 <li><p><strong>Send this exact message:</strong></p>
 <pre><code>Hello! Please respond with exactly these words:
-&quot;TEST SUCCESSFUL - I am ready to help with your research.&quot;
+"TEST SUCCESSFUL - I am ready to help with your research."
 
-Then tell me which AI model you are and what you&#39;re best at.</code></pre></li>
+Then tell me which AI model you are and what you're best at.</code></pre></li>
 <li><p><strong>Expected result:</strong></p>
 <ul>
 <li>Response within 3-7 seconds (Gemini Flash is FAST!)</li>
@@ -658,21 +667,21 @@ Then tell me which AI model you are and what you&#39;re best at.</code></pre></l
 <p><strong>❌ If it fails:</strong> - Check you’re logged in (see your email in top right?) - Check model dropdown - should show a model ending in <code>:free</code> - If you see a local model name, switch to a FREE OpenRouter model - Try refreshing the page - Ask facilitator if OpenRouter is configured</p>
 </section>
 <section id="going-deeper-why-this-matters" class="level3">
-<h3>Going Deeper: Why This Matters</h3>
+<h3 class="anchored" data-anchor-id="going-deeper-why-this-matters">Going Deeper: Why This Matters</h3>
 <p>When you sent that message, here’s what happened:</p>
 <div class="cell" data-layout-align="default">
-<div class="sourceCode" id="cb4"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>graph LR</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>graph LR</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    A[Your Browser] --&gt;|Sends message| B[OpenWebUI Server]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    B --&gt;|Forwards to| C[AI Model]</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    C --&gt;|Generates response| B</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    B --&gt;|Streams back| A</span></code></pre></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    B --&gt;|Streams back| A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<p><figure class=''></p>
+<p></p><figure class="figure"><p></p>
 <div>
 
 </div>
-<p></figure></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -680,9 +689,9 @@ Then tell me which AI model you are and what you&#39;re best at.</code></pre></l
 </section>
 </section>
 <section id="the-entertainment-piece" class="level2">
-<h2>The Entertainment Piece 🎭</h2>
+<h2 class="anchored" data-anchor-id="the-entertainment-piece">The Entertainment Piece 🎭</h2>
 <section id="model-comparison-exercise-1-speed-vs-reasoning" class="level3">
-<h3>🎯 Model Comparison Exercise #1: Speed vs Reasoning</h3>
+<h3 class="anchored" data-anchor-id="model-comparison-exercise-1-speed-vs-reasoning">🎯 Model Comparison Exercise #1: Speed vs Reasoning</h3>
 <p><strong>Goal:</strong> Discover which model is best for quick questions vs complex analysis.</p>
 <p><strong>Part A: Quick Question (Test Gemini 2.5 Flash)</strong></p>
 <p><strong>HOW TO SWITCH MODELS:</strong> 1. Look at the top of your chat interface 2. Find the <strong>dropdown menu</strong> that shows your current model name 3. Click on it to see all available models 4. Select <strong>“Gemini 2.5 Flash Free”</strong> (or similar name with “Gemini” and “Flash”) 5. The page may refresh - that’s normal!</p>
@@ -697,19 +706,19 @@ Then tell me which AI model you are and what you&#39;re best at.</code></pre></l
 reduction targets in urban planning. Use specific examples.</code></pre>
 <p><strong>Compare:</strong> - [ ] Gemini was faster for the simple question - [ ] Llama provided deeper, more nuanced reasoning for the complex question - [ ] Both gave correct answers, but different levels of detail</p>
 <p><strong>Key Insight:</strong> Use <strong>Gemini Flash</strong> for quick lookups, <strong>Llama Maverick</strong> for complex thinking!</p>
-<hr />
+<hr>
 </section>
 <section id="the-ai-whisperer-challenge" class="level3">
-<h3>The “AI Whisperer” Challenge</h3>
+<h3 class="anchored" data-anchor-id="the-ai-whisperer-challenge">The “AI Whisperer” Challenge</h3>
 <p><strong>Game:</strong> See how specific you can make the AI’s response.</p>
 <p><strong>Try these with Gemini Flash (for speed):</strong> 1. “Respond with a haiku about research.” 2. “List exactly 3 reasons why coffee is essential for research. Number them.” 3. “Explain your last answer, but make it sound like a pirate.”</p>
 <p><strong>Point:</strong> The more specific your instructions, the better your results. This applies to everything you’ll do today.</p>
 </section>
 </section>
 <section id="key-learnings" class="level2">
-<h2>Key Learnings 🎓</h2>
+<h2 class="anchored" data-anchor-id="key-learnings">Key Learnings 🎓</h2>
 <section id="what-you-now-know" class="level3">
-<h3>What You Now Know</h3>
+<h3 class="anchored" data-anchor-id="what-you-now-know">What You Now Know</h3>
 <ol type="1">
 <li><strong>OpenWebUI saves context</strong> - No more copying between tools</li>
 <li><strong>Specificity matters</strong> - Clear instructions = better results</li>
@@ -717,7 +726,7 @@ reduction targets in urban planning. Use specific examples.</code></pre>
 </ol>
 </section>
 <section id="questions-you-should-answer" class="level3">
-<h3>Questions You Should Answer</h3>
+<h3 class="anchored" data-anchor-id="questions-you-should-answer">Questions You Should Answer</h3>
 <ol type="1">
 <li>Where does your conversation history save? <em>(Answer: In OpenWebUI’s database, tied to your account)</em></li>
 <li>Can you start multiple conversations? <em>(Answer: Yes! Click “New Chat” anytime)</em></li>
@@ -726,24 +735,24 @@ reduction targets in urban planning. Use specific examples.</code></pre>
 </section>
 </section>
 <section id="the-anecdote" class="level2">
-<h2>The Anecdote 🗣️</h2>
+<h2 class="anchored" data-anchor-id="the-anecdote">The Anecdote 🗣️</h2>
 <p>When we first tested OpenWebUI with grad students, one of them said: “Wait, so I don’t lose my work if Chrome crashes?”</p>
 <p>When we said yes, she literally got up and hugged her laptop.</p>
 <p>She’d lost a 3-hour ChatGPT session the day before when her browser crashed.</p>
 <p><strong>That’s why we’re here.</strong></p>
 </section>
 <section id="the-quote" class="level2">
-<h2>The Quote 💭</h2>
-<blockquote>
-<p>“The future of sustainability research is not just about finding answers, but about asking better questions, faster.” - Dr. Kate Raworth, Economist and author of “Doughnut Economics”</p>
+<h2 class="anchored" data-anchor-id="the-quote">The Quote 💭</h2>
+<blockquote class="blockquote">
+<p>“The future of sustainability research is not just about finding answers, but about asking better questions, faster.” - Dr.&nbsp;Kate Raworth, Economist and author of “Doughnut Economics”</p>
 </blockquote>
-<hr />
+<hr>
 </section>
 </section>
 <section id="module-2-teaching-your-ai-to-read-your-papers" class="level1">
 <h1>Module 2: Teaching Your AI to Read Your Papers</h1>
 <section id="the-hook-2" class="level2">
-<h2>The Hook 🎣</h2>
+<h2 class="anchored" data-anchor-id="the-hook-2">The Hook 🎣</h2>
 <p><strong>Thought experiment:</strong> You have 50 PDFs about circular economy. You need to find every mention of “reverse logistics.”</p>
 <ul>
 <li><strong>Old way:</strong> Open each PDF, Ctrl+F, copy excerpts, 2 hours</li>
@@ -752,9 +761,9 @@ reduction targets in urban planning. Use specific examples.</code></pre>
 <p><strong>That’s RAG. Let’s learn it.</strong></p>
 </section>
 <section id="the-story-1" class="level2">
-<h2>The Story 📖</h2>
+<h2 class="anchored" data-anchor-id="the-story-1">The Story 📖</h2>
 <section id="meet-professor-james-okonkwo" class="level3">
-<h3>Meet Professor James Okonkwo</h3>
+<h3 class="anchored" data-anchor-id="meet-professor-james-okonkwo">Meet Professor James Okonkwo</h3>
 <p>James researches waste management in Lagos. He had a problem:</p>
 <p><em>“I’ve collected 200 interviews, 80 policy documents, and 30 academic papers. I know the answer to my research question is somewhere in there, but I’ll spend 6 months finding it manually.”</em></p>
 <p>He uploaded everything to OpenWebUI. His first question: <em>“What are the main barriers to waste sorting according to my interview data?”</em></p>
@@ -762,25 +771,25 @@ reduction targets in urban planning. Use specific examples.</code></pre>
 </section>
 </section>
 <section id="the-educational-piece-1" class="level2">
-<h2>The Educational Piece 📚</h2>
+<h2 class="anchored" data-anchor-id="the-educational-piece-1">The Educational Piece 📚</h2>
 <section id="what-is-rag-retrieval-augmented-generation" class="level3">
-<h3>What is RAG (Retrieval Augmented Generation)?</h3>
+<h3 class="anchored" data-anchor-id="what-is-rag-retrieval-augmented-generation">What is RAG (Retrieval Augmented Generation)?</h3>
 <p><strong>The problem RAG solves:</strong> - AI models only know what they were trained on (data cutoff) - They can’t read YOUR specific documents - They “hallucinate” - make up facts confidently</p>
 <p><strong>The RAG solution:</strong></p>
 <div class="cell" data-layout-align="default">
-<div class="sourceCode" id="cb7"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    A[Your Question] --&gt; B[Search your documents]</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[Find relevant chunks]</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    C --&gt; D[Give chunks to AI]</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    D --&gt; E[AI answers using YOUR documents]</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[Response with citations]</span></code></pre></div>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[Response with citations]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<p><figure class=''></p>
+<p></p><figure class="figure"><p></p>
 <div>
 
 </div>
-<p></figure></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -788,30 +797,30 @@ reduction targets in urban planning. Use specific examples.</code></pre>
 <p><strong>Key point:</strong> RAG doesn’t require the AI to “remember” your entire document - it searches and retrieves the relevant parts when needed!</p>
 </section>
 <section id="why-this-changes-everything" class="level3">
-<h3>Why This Changes Everything</h3>
+<h3 class="anchored" data-anchor-id="why-this-changes-everything">Why This Changes Everything</h3>
 <p><strong>Before RAG:</strong> - “Tell me about X” → AI uses general knowledge (might be wrong)</p>
 <p><strong>With RAG:</strong> - “Tell me about X” → AI searches YOUR documents, quotes them, cites them</p>
 <p><strong>You’re creating a custom AI that knows YOUR research.</strong></p>
 </section>
 </section>
 <section id="the-empowering-piece-1" class="level2">
-<h2>The Empowering Piece 💪</h2>
+<h2 class="anchored" data-anchor-id="the-empowering-piece-1">The Empowering Piece 💪</h2>
 <section id="your-first-document-upload" class="level3">
-<h3>Your First Document Upload</h3>
+<h3 class="anchored" data-anchor-id="your-first-document-upload">Your First Document Upload</h3>
 <p><strong>Learning Objective:</strong> Upload a PDF and ask it a question it can only answer from that document.</p>
 </section>
 <section id="test-case-2-document-intelligence" class="level3">
-<h3>🧪 Test Case #2: Document Intelligence</h3>
+<h3 class="anchored" data-anchor-id="test-case-2-document-intelligence">🧪 Test Case #2: Document Intelligence</h3>
 <p><strong>Setup checklist:</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>□ You have a PDF ready (research paper, report, anything)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>□ You&#39;re logged into OpenWebUI</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in a new chat</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to &quot;Llama 4 Maverick Free&quot; (best for document analysis)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>□ You have a PDF ready (research paper, report, anything)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>□ You're logged into OpenWebUI</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>□ You're in a new chat</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to "Llama 4 Maverick Free" (best for document analysis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Why Llama 4 Maverick for this task?</strong> - <strong>256K token context</strong> - Can process up to ~600 pages at once (like 3 entire research papers!) - <strong>Excellent at extracting specific information</strong> - Won’t miss details in long documents - <strong>Strong citation accuracy</strong> - Remembers where information came from</p>
 <p><strong>What does “256K tokens” mean?</strong> - A “token” is roughly 3/4 of a word - 256K tokens ≈ 190,000 words ≈ 600 pages - This means you can upload a 200-page thesis and it will read the ENTIRE thing!</p>
 <p><strong>Don’t have a PDF handy?</strong> Download this sample:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample sustainability report</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://www.ellenmacarthurfoundation.org/circular-economy-diagram</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample sustainability report</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://www.ellenmacarthurfoundation.org/circular-economy-diagram</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>The Test:</strong></p>
 <p><strong>Step 1: Upload Your Document</strong></p>
 <ol type="1">
@@ -842,16 +851,16 @@ Use bullet points and quote specific sections.</code></pre>
 <p><strong>Why this test matters:</strong> You’re verifying RAG stays grounded in your documents and doesn’t hallucinate.</p>
 </section>
 <section id="advanced-challenge" class="level3">
-<h3>🎯 Advanced Challenge</h3>
+<h3 class="anchored" data-anchor-id="advanced-challenge">🎯 Advanced Challenge</h3>
 <p><strong>Upload a second document</strong> and ask:</p>
 <pre><code>What are the similarities and differences between these two documents?</code></pre>
 <p><strong>This tests:</strong> Multi-document RAG (searching across multiple sources)</p>
 </section>
 </section>
 <section id="the-entertainment-piece-1" class="level2">
-<h2>The Entertainment Piece 🎭</h2>
+<h2 class="anchored" data-anchor-id="the-entertainment-piece-1">The Entertainment Piece 🎭</h2>
 <section id="model-comparison-exercise-2-citation-accuracy-test" class="level3">
-<h3>🎯 Model Comparison Exercise #2: Citation Accuracy Test</h3>
+<h3 class="anchored" data-anchor-id="model-comparison-exercise-2-citation-accuracy-test">🎯 Model Comparison Exercise #2: Citation Accuracy Test</h3>
 <p><strong>Goal:</strong> See which model is most accurate with citations and document analysis.</p>
 <p><strong>Setup:</strong> Keep your uploaded document open in a chat.</p>
 <p><strong>Part A: Test with Mistral Small (Citation Specialist)</strong></p>
@@ -863,10 +872,10 @@ Use bullet points and quote specific sections.</code></pre>
 <p><strong>Compare the results:</strong> - [ ] Which model provided more accurate page numbers? - [ ] Which model gave longer, more complete quotes? - [ ] Which model was faster? - [ ] Which model better understood context?</p>
 <p><strong>Expected Results:</strong> - <strong>Mistral Small</strong> should give more precise citations - <strong>Gemini Flash</strong> should be faster but may be less precise - Both should correctly avoid making up content</p>
 <p><strong>Key Insight:</strong> Use <strong>Mistral Small</strong> when citation accuracy is critical, <strong>Gemini Flash</strong> when you need quick document summaries!</p>
-<hr />
+<hr>
 </section>
 <section id="the-citation-scavenger-hunt" class="level3">
-<h3>The “Citation Scavenger Hunt”</h3>
+<h3 class="anchored" data-anchor-id="the-citation-scavenger-hunt">The “Citation Scavenger Hunt”</h3>
 <p><strong>Game:</strong> Upload a document and challenge a partner:</p>
 <ol type="1">
 <li>Each person asks a question about the document</li>
@@ -878,9 +887,9 @@ Use bullet points and quote specific sections.</code></pre>
 </section>
 </section>
 <section id="key-learnings-1" class="level2">
-<h2>Key Learnings 🎓</h2>
+<h2 class="anchored" data-anchor-id="key-learnings-1">Key Learnings 🎓</h2>
 <section id="what-you-now-know-1" class="level3">
-<h3>What You Now Know</h3>
+<h3 class="anchored" data-anchor-id="what-you-now-know-1">What You Now Know</h3>
 <ol type="1">
 <li><strong>RAG grounds AI in YOUR documents</strong> - No more hallucination about your research</li>
 <li><strong>Citations are your friend</strong> - Always verify claims against sources</li>
@@ -889,24 +898,24 @@ Use bullet points and quote specific sections.</code></pre>
 </ol>
 </section>
 <section id="the-technical-magic-optional-deep-dive" class="level3">
-<h3>The Technical Magic (Optional Deep Dive)</h3>
+<h3 class="anchored" data-anchor-id="the-technical-magic-optional-deep-dive">The Technical Magic (Optional Deep Dive)</h3>
 <p>When you upload a PDF:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simplified version of what happens</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>document <span class="op">=</span> extract_text_from_pdf(<span class="st">&quot;your_paper.pdf&quot;</span>)</span>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simplified version of what happens</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>document <span class="op">=</span> extract_text_from_pdf(<span class="st">"your_paper.pdf"</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>chunks <span class="op">=</span> split_into_paragraphs(document)</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> chunk <span class="kw">in</span> chunks:</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    embedding <span class="op">=</span> create_vector(chunk)  <span class="co"># Turns text into numbers</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    store_in_database(embedding, chunk)  <span class="co"># Saves in Qdrant</span></span></code></pre></div>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    store_in_database(embedding, chunk)  <span class="co"># Saves in Qdrant</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When you ask a question:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>question_embedding <span class="op">=</span> create_vector(<span class="st">&quot;your question&quot;</span>)</span>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>question_embedding <span class="op">=</span> create_vector(<span class="st">"your question"</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>similar_chunks <span class="op">=</span> search_database(question_embedding)  <span class="co"># Math finds similar vectors</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>ai_response <span class="op">=</span> generate_answer(question, similar_chunks)  <span class="co"># AI reads chunks</span></span></code></pre></div>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>ai_response <span class="op">=</span> generate_answer(question, similar_chunks)  <span class="co"># AI reads chunks</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>You don’t need to understand this. But knowing it exists helps you understand why:</strong> - Large documents take longer to process - More documents = better coverage - Good questions get better chunks</p>
 </section>
 </section>
 <section id="questions-you-should-answer-1" class="level2">
-<h2>Questions You Should Answer</h2>
+<h2 class="anchored" data-anchor-id="questions-you-should-answer-1">Questions You Should Answer</h2>
 <ol type="1">
 <li>What does “RAG” stand for? <em>(Retrieval Augmented Generation)</em></li>
 <li>Why doesn’t the AI just “remember” your PDF after uploading? <em>(It needs to search it each time - that’s how it stays accurate)</em></li>
@@ -915,87 +924,88 @@ Use bullet points and quote specific sections.</code></pre>
 </ol>
 </section>
 <section id="the-anecdote-1" class="level2">
-<h2>The Anecdote 🗣️</h2>
+<h2 class="anchored" data-anchor-id="the-anecdote-1">The Anecdote 🗣️</h2>
 <p>During a pilot test, a PhD student uploaded her entire thesis draft (200 pages). She asked: “What’s my main argument?”</p>
 <p>The AI summarized it in 3 sentences. She stared at the screen, then said: “That’s… that’s actually what I’ve been trying to say for 4 years.”</p>
 <p>She used that as her elevator pitch for the next conference.</p>
 <p><strong>Sometimes the AI sees patterns we’re too close to notice.</strong></p>
 </section>
 <section id="the-quote-1" class="level2">
-<h2>The Quote 💭</h2>
-<blockquote>
+<h2 class="anchored" data-anchor-id="the-quote-1">The Quote 💭</h2>
+<blockquote class="blockquote">
 <p>“We are drowning in information, while starving for wisdom. The world henceforth will be run by synthesizers, people able to put together the right information at the right time, think critically about it, and make important choices wisely.” - E.O. Wilson, Biologist</p>
 </blockquote>
-<hr />
+<hr>
 </section>
 </section>
 <section id="module-3-asking-the-internet-for-help-without-opening-50-tabs" class="level1">
 <h1>Module 3: Asking the Internet for Help (Without Opening 50 Tabs)</h1>
 <section id="the-hook-3" class="level2">
-<h2>The Hook 🎣</h2>
+<h2 class="anchored" data-anchor-id="the-hook-3">The Hook 🎣</h2>
 <p><strong>Quick scenario:</strong></p>
-<p>You’re writing a paper about carbon offsets. You need: - Latest 2024 policy changes - Current carbon prices - Recent criticism of offset schemes</p>
-<p><strong>Your current workflow:</strong> 1. Google search 2. Open 10 tabs 3. Read each one 4. Take notes 5. Lose track of which tab had that one stat 6. Accidentally close the browser 7. Cry</p>
-<p><strong>New workflow:</strong> Ask OpenWebUI. Get answer with sources. Done.</p>
+<p>You’re writing a paper about sustainable beer brewing and circular economy. You need: - Latest 2024-2025 brewery sustainability initiatives - Current water-to-beer ratios for sustainable breweries - Toast Ale’s verified CO2 savings from using surplus bread - HEINEKEN’s net zero commitments</p>
+<p><strong>Your current workflow:</strong> 1. Google search “sustainable brewing 2024” 2. Open 15 tabs (company reports, research papers, news articles) 3. Read each one, take notes 4. Lose track of which tab had Toast Ale’s exact CO2 numbers 5. Find the stat, accidentally close the tab 6. Can’t remember which site it was from 7. Start over</p>
+<p><strong>New workflow:</strong> Ask OpenWebUI with web search. Get answer with sources. Done in 2 minutes.</p>
 </section>
 <section id="the-story-2" class="level2">
-<h2>The Story 📖</h2>
-<section id="meet-dr.-maria-santos" class="level3">
-<h3>Meet Dr. Maria Santos</h3>
-<p>Maria studies renewable energy policy in Brazil. Her research question: <em>“How have feed-in tariffs changed in EU countries since 2023?”</em></p>
-<p>This needs CURRENT data. Her literature is from 2022. ChatGPT’s data cutoff is 2023.</p>
-<p><strong>She enabled web search in OpenWebUI and asked:</strong></p>
-<pre><code>What changes have EU countries made to feed-in tariffs for solar energy
-in 2024? Include specific countries and dates.</code></pre>
-<p><strong>Result:</strong> - AI searched the web - Found 8 recent sources - Synthesized an answer with citations - Included links to policy documents</p>
-<p><strong>Time saved:</strong> 2 hours of manual googling</p>
+<h2 class="anchored" data-anchor-id="the-story-2">The Story 📖</h2>
+<section id="meet-dr.-javier-torres" class="level3">
+<h3 class="anchored" data-anchor-id="meet-dr.-javier-torres">Meet Dr.&nbsp;Javier Torres</h3>
+<p>Javier studies sustainable cocoa sourcing and deforestation. His research question: <em>“What progress has Barry Callebaut made on farm-level traceability in 2024?”</em></p>
+<p>This needs CURRENT data. His literature is from 2022. The Forever Chocolate initiative releases new reports annually.</p>
+<p><strong>He enabled web search in OpenWebUI and asked:</strong></p>
+<pre><code>What is Barry Callebaut's latest progress on cocoa farm traceability
+and deforestation-free sourcing in their 2023/24 Forever Chocolate report?
+Include specific numbers for farm plots mapped and percentage traceable.</code></pre>
+<p><strong>Result:</strong> - AI searched the web - Found the 2023/24 Forever Chocolate Progress Report - Extracted specific data: 669,174 farm plots mapped, 46.5% deforestation-free - Synthesized answer with citations - Included links to official reports and CFI updates</p>
+<p><strong>Time saved:</strong> 2 hours of manual googling through corporate sustainability reports</p>
 </section>
 </section>
 <section id="the-educational-piece-2" class="level2">
-<h2>The Educational Piece 📚</h2>
+<h2 class="anchored" data-anchor-id="the-educational-piece-2">The Educational Piece 📚</h2>
 <section id="what-is-web-search-integration" class="level3">
-<h3>What is Web Search Integration?</h3>
+<h3 class="anchored" data-anchor-id="what-is-web-search-integration">What is Web Search Integration?</h3>
 <p><strong>The problem it solves:</strong> - AI models have a knowledge cutoff (e.g., “I only know data up to April 2024”) - Your research questions need current information - Switching between ChatGPT and Google breaks your flow</p>
 <p><strong>The solution:</strong></p>
 <div class="cell" data-layout-align="default">
-<div class="sourceCode" id="cb18"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    A[Your Question] --&gt; B{Does this need current info?}</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    B --&gt;|Yes| C[Search the web via SearxNG]</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    B --&gt;|No| D[Use AI knowledge]</span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    C --&gt; E[Get results]</span>
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[AI reads search results]</span>
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    F --&gt; G[Synthesizes answer]</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    G --&gt; H[Response with links]</span></code></pre></div>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    G --&gt; H[Response with links]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<p><figure class=''></p>
+<p></p><figure class="figure"><p></p>
 <div>
 
 </div>
-<p></figure></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
 </section>
 <section id="when-to-use-web-search" class="level3">
-<h3>When to Use Web Search</h3>
+<h3 class="anchored" data-anchor-id="when-to-use-web-search">When to Use Web Search</h3>
 <p><strong>Good use cases:</strong> - ✅ Current events, policies, statistics - ✅ Latest research publications - ✅ Real-time data (prices, weather, trends) - ✅ Fact-checking recent claims</p>
 <p><strong>Bad use cases:</strong> - ❌ General knowledge questions (“What is photosynthesis?”) - ❌ Math calculations (waste of a web search) - ❌ Questions about YOUR documents (use RAG instead)</p>
 </section>
 </section>
 <section id="the-empowering-piece-2" class="level2">
-<h2>The Empowering Piece 💪</h2>
+<h2 class="anchored" data-anchor-id="the-empowering-piece-2">The Empowering Piece 💪</h2>
 <section id="your-first-web-search-query" class="level3">
-<h3>Your First Web Search Query</h3>
+<h3 class="anchored" data-anchor-id="your-first-web-search-query">Your First Web Search Query</h3>
 <p><strong>Learning Objective:</strong> Ask a question requiring current information and get a cited answer.</p>
 </section>
 <section id="test-case-3-real-time-research" class="level3">
-<h3>🧪 Test Case #3: Real-Time Research</h3>
+<h3 class="anchored" data-anchor-id="test-case-3-real-time-research">🧪 Test Case #3: Real-Time Research</h3>
 <p><strong>Setup checklist:</strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in OpenWebUI</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in a new chat</span>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>□ You're in OpenWebUI</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>□ You're in a new chat</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>□ Web search is enabled (check settings or toggle)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to &quot;Gemini 2.5 Flash Free&quot; (BEST for web search)</span></code></pre></div>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to "Gemini 2.5 Flash Free" (BEST for web search)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Why Gemini 2.5 Flash for this task?</strong> - Fastest response time for web queries - Excellent at synthesizing multiple sources - 1M token context can handle many search results - Built by Google, optimized for web content</p>
 <p><strong>How to enable web search:</strong></p>
 <p><strong>Option 1: Toggle Button (Most Common)</strong> 1. Look <strong>near the message input box</strong> at the bottom of the screen 2. Find a <strong>🌐 globe icon</strong> or button labeled “Web Search” or “Search” 3. Click it once - it should change color (gray → blue/green = enabled) 4. You’ll see a small badge or text saying “Web search enabled” or the icon will be highlighted</p>
@@ -1004,8 +1014,9 @@ in 2024? Include specific countries and dates.</code></pre>
 <p><strong>The Test:</strong></p>
 <p><strong>Step 1: Ask a Current Question</strong></p>
 <p>Send this:</p>
-<pre><code>What are the latest (2024-2025) developments in battery recycling
-technology for electric vehicles? Include company names and dates.</code></pre>
+<pre><code>What are the latest (2024-2025) sustainability initiatives in the brewing
+industry? Include specific companies, their water reduction targets, and
+verified CO2 savings. Focus on circular economy approaches.</code></pre>
 <p><strong>Expected behavior:</strong> - [ ] You see “Searching the web…” indicator - [ ] Wait 5-15 seconds (web search takes longer) - [ ] Response includes recent dates (2024-2025) - [ ] Response includes URLs or source names</p>
 <p><strong>Step 2: Verify It’s Actually Using Web Search</strong></p>
 <p>Try this control test - <strong>disable web search</strong> and ask:</p>
@@ -1015,25 +1026,26 @@ technology for electric vehicles? Include company names and dates.</code></pre>
 <p><strong>Expected result:</strong> Actual recent news with dates and sources.</p>
 <p><strong>Step 3: Compare Quality</strong></p>
 <p>Ask this WITH web search enabled:</p>
-<pre><code>What is the current price of carbon credits in the EU ETS?</code></pre>
-<p><strong>You should get:</strong> - [ ] A specific number (€X per ton) - [ ] A recent date - [ ] A source URL</p>
-<p><strong>This is information the AI cannot know without searching.</strong></p>
+<pre><code>How much CO2 has Toast Ale saved by using surplus bread instead of
+malted barley? What is their verified 2023 carbon footprint?</code></pre>
+<p><strong>You should get:</strong> - [ ] Specific number (5.3 tonnes CO2e avoided in 2023) - [ ] Their total footprint (150 tCO2e in 2023) - [ ] A source URL (toastbrewing.com or similar) - [ ] Context about their circular economy model</p>
+<p><strong>This is information the AI cannot know without searching</strong> - it’s from Toast Ale’s 2024 sustainability report!</p>
 </section>
 </section>
 <section id="the-entertainment-piece-2" class="level2">
-<h2>The Entertainment Piece 🎭</h2>
+<h2 class="anchored" data-anchor-id="the-entertainment-piece-2">The Entertainment Piece 🎭</h2>
 <section id="the-time-traveler-game" class="level3">
-<h3>The “Time Traveler” Game</h3>
+<h3 class="anchored" data-anchor-id="the-time-traveler-game">The “Time Traveler” Game</h3>
 <p><strong>Challenge:</strong> Ask questions that reveal whether AI is using web search or old knowledge.</p>
 <p><strong>Example questions:</strong> 1. “Who won the Nobel Prize in Economics this year?” 2. “What’s the latest IPCC report recommendation?” 3. “How much has global temperature risen since 2020?”</p>
 <p><strong>How to play:</strong> - Disable web search → Note the answer - Enable web search → Note the answer - Compare!</p>
-<p><strong>Point:</strong> This helps you understand when AI is guessing vs. searching.</p>
+<p><strong>Point:</strong> This helps you understand when AI is guessing vs.&nbsp;searching.</p>
 </section>
 </section>
 <section id="key-learnings-2" class="level2">
-<h2>Key Learnings 🎓</h2>
+<h2 class="anchored" data-anchor-id="key-learnings-2">Key Learnings 🎓</h2>
 <section id="what-you-now-know-2" class="level3">
-<h3>What You Now Know</h3>
+<h3 class="anchored" data-anchor-id="what-you-now-know-2">What You Now Know</h3>
 <ol type="1">
 <li><strong>Web search extends AI’s knowledge cutoff</strong> - Get current information</li>
 <li><strong>Citations are automatic</strong> - No more bookmarking 50 tabs</li>
@@ -1042,13 +1054,13 @@ technology for electric vehicles? Include company names and dates.</code></pre>
 </ol>
 </section>
 <section id="behind-the-scenes-searxng" class="level3">
-<h3>Behind the Scenes: SearxNG</h3>
+<h3 class="anchored" data-anchor-id="behind-the-scenes-searxng">Behind the Scenes: SearxNG</h3>
 <p>OpenWebUI uses <strong>SearxNG</strong> - a privacy-respecting meta-search engine that: - Searches multiple sources (Google, Bing, DuckDuckGo, etc.) - Doesn’t track you - Returns results to the AI - AI synthesizes them into an answer</p>
 <p><strong>Why this matters:</strong> You get broad search coverage without being tracked across the internet.</p>
 </section>
 </section>
 <section id="questions-you-should-answer-2" class="level2">
-<h2>Questions You Should Answer</h2>
+<h2 class="anchored" data-anchor-id="questions-you-should-answer-2">Questions You Should Answer</h2>
 <ol type="1">
 <li>When should you enable web search? <em>(When you need current info or real-time data)</em></li>
 <li>Why does web search take longer than normal AI responses? <em>(It has to search the web, fetch results, then read them)</em></li>
@@ -1057,97 +1069,97 @@ technology for electric vehicles? Include company names and dates.</code></pre>
 </ol>
 </section>
 <section id="the-anecdote-2" class="level2">
-<h2>The Anecdote 🗣️</h2>
-<p>A logistics researcher was writing a grant proposal about port automation. He needed current examples of AI implementation in European ports.</p>
-<p>He asked OpenWebUI with web search: <em>“Which European ports implemented AI-driven logistics systems in 2024?”</em></p>
-<p>The AI found 6 examples he’d never heard of, with links to press releases and pilot project reports.</p>
-<p><strong>He got 3 citations for his grant proposal in 5 minutes.</strong></p>
-<p>The grant got funded.</p>
+<h2 class="anchored" data-anchor-id="the-anecdote-2">The Anecdote 🗣️</h2>
+<p>A food systems researcher was writing a grant proposal about circular economy in brewing. She needed current examples of breweries using waste bread.</p>
+<p>She asked OpenWebUI with web search: <em>“Which breweries are using surplus bread to replace malted barley in 2024? What are their verified environmental impacts?”</em></p>
+<p>The AI found: - Toast Ale’s complete circular economy model - Their verified 2023 data (2.9 million slices, 5.3 tonnes CO2e saved) - Links to their sustainability report and Ellen MacArthur Foundation case study - Similar initiatives in other countries</p>
+<p><strong>She got 4 citations with specific numbers for her grant proposal in 5 minutes.</strong></p>
+<p>The grant got funded. Her research now analyzes scaling potential for bread-to-beer circular models across Europe.</p>
 </section>
 <section id="the-quote-2" class="level2">
-<h2>The Quote 💭</h2>
-<blockquote>
-<p>“In the age of information abundance, the synthesis of knowledge is more valuable than access to data.” - Dr. Johan Rockström, Climate Scientist and Director of the Potsdam Institute</p>
+<h2 class="anchored" data-anchor-id="the-quote-2">The Quote 💭</h2>
+<blockquote class="blockquote">
+<p>“In the age of information abundance, the synthesis of knowledge is more valuable than access to data.” - Dr.&nbsp;Johan Rockström, Climate Scientist and Director of the Potsdam Institute</p>
 </blockquote>
-<hr />
+<hr>
 </section>
 </section>
 <section id="module-4-from-question-to-graph-in-60-seconds" class="level1">
 <h1>Module 4: From Question to Graph in 60 Seconds</h1>
 <section id="the-hook-4" class="level2">
-<h2>The Hook 🎣</h2>
+<h2 class="anchored" data-anchor-id="the-hook-4">The Hook 🎣</h2>
 <p><strong>Pop quiz:</strong> How long does it take you to: 1. Export data from Excel 2. Open Jupyter/Python 3. Load the data 4. Write code to analyze it 5. Generate a graph 6. Interpret results</p>
 <p><strong>Average answer:</strong> 30-45 minutes</p>
 <p><strong>What if it took 60 seconds?</strong></p>
 </section>
 <section id="the-story-3" class="level2">
-<h2>The Story 📖</h2>
+<h2 class="anchored" data-anchor-id="the-story-3">The Story 📖</h2>
 <section id="meet-alex-kowalski" class="level3">
-<h3>Meet Alex Kowalski</h3>
+<h3 class="anchored" data-anchor-id="meet-alex-kowalski">Meet Alex Kowalski</h3>
 <p>Alex is a supply chain researcher studying delivery route efficiency. He has a CSV of 500 delivery routes with distances and times.</p>
 <p><strong>His old workflow:</strong></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Open Jupyter</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Import libraries (pray they&#39;re installed)</span></span>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Open Jupyter</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Import libraries (pray they're installed)</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Load data (fight with file paths)</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;data.csv&#39;</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data.csv'</span>)</span>
 <span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Clean data (find the error)</span></span>
 <span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Plot (Google the syntax)</span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Interpret</span></span></code></pre></div>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Interpret</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Time:</strong> 45 minutes (if everything works)</p>
 <p><strong>His new workflow in OpenWebUI:</strong></p>
-<pre><code>Here&#39;s my delivery data [uploads CSV]. Show me the correlation
+<pre><code>Here's my delivery data [uploads CSV]. Show me the correlation
 between distance and time, create a scatter plot, and tell me
 if there are any outliers I should investigate.</code></pre>
 <p><strong>Time:</strong> 90 seconds</p>
 </section>
 </section>
 <section id="the-educational-piece-3" class="level2">
-<h2>The Educational Piece 📚</h2>
+<h2 class="anchored" data-anchor-id="the-educational-piece-3">The Educational Piece 📚</h2>
 <section id="what-is-code-execution" class="level3">
-<h3>What is Code Execution?</h3>
+<h3 class="anchored" data-anchor-id="what-is-code-execution">What is Code Execution?</h3>
 <p><strong>The problem it solves:</strong> - You have data but aren’t a Python expert - You know what question you want answered, not how to code it - You switch between ChatGPT (for code) and Jupyter (to run it)</p>
 <p><strong>The solution:</strong></p>
 <div class="cell" data-layout-align="default">
-<div class="sourceCode" id="cb25"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>graph LR</span>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>graph LR</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    A[Your Question] --&gt; B[AI writes Python code]</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[Code executes in Jupyter]</span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    C --&gt; D[Results/Graphs return]</span>
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    D --&gt; E[AI interprets results]</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[You get insights]</span></code></pre></div>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[You get insights]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<p><figure class=''></p>
+<p></p><figure class="figure"><p></p>
 <div>
 
 </div>
-<p></figure></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
 <p><strong>The magic:</strong> Everything happens in one conversation. No copying code. No switching tools.</p>
 </section>
 <section id="what-can-you-do-with-this" class="level3">
-<h3>What Can You Do With This?</h3>
+<h3 class="anchored" data-anchor-id="what-can-you-do-with-this">What Can You Do With This?</h3>
 <p><strong>Data analysis:</strong> - Descriptive statistics - Correlation analysis - Hypothesis testing - Time series analysis</p>
 <p><strong>Visualization:</strong> - Scatter plots, line graphs, bar charts - Heatmaps, distributions - Custom plots</p>
 <p><strong>Data processing:</strong> - Cleaning messy data - Merging datasets - Transforming formats - Calculating derived metrics</p>
 </section>
 </section>
 <section id="the-empowering-piece-3" class="level2">
-<h2>The Empowering Piece 💪</h2>
+<h2 class="anchored" data-anchor-id="the-empowering-piece-3">The Empowering Piece 💪</h2>
 <section id="your-first-code-execution" class="level3">
-<h3>Your First Code Execution</h3>
+<h3 class="anchored" data-anchor-id="your-first-code-execution">Your First Code Execution</h3>
 <p><strong>Learning Objective:</strong> Ask AI to perform a calculation and see the code run automatically.</p>
 </section>
 <section id="test-case-4-calculator-on-steroids" class="level3">
-<h3>🧪 Test Case #4: Calculator on Steroids</h3>
+<h3 class="anchored" data-anchor-id="test-case-4-calculator-on-steroids">🧪 Test Case #4: Calculator on Steroids</h3>
 <p><strong>Setup checklist:</strong></p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in OpenWebUI</span>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>□ You're in OpenWebUI</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>□ Code execution is enabled (should be by default)</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>□ You&#39;re in a new chat</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to &quot;DeepSeek Chat V3 Free&quot; (BEST for code generation)</span></code></pre></div>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>□ You're in a new chat</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>□ Model is set to "DeepSeek Chat V3 Free" (BEST for code generation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Why DeepSeek Chat V3 for this task?</strong> - <strong>Specifically trained on code</strong> - Exceptional at Python - Excellent at debugging and explaining code - Strong mathematical reasoning - Great at data analysis tasks</p>
 <p><strong>The Test:</strong></p>
 <p><strong>Step 1: Simple Calculation (AI Writes Code)</strong></p>
@@ -1169,11 +1181,11 @@ Python code to calculate it, then execute the code.</code></pre>
 </ol>
 <p><strong>What does code execution look like?</strong> - Code appears in a <strong>special box</strong> with syntax highlighting (colors) - You might see a <strong>“Run”</strong> button or it runs automatically - Output appears <strong>directly below the code</strong> (not in a new message) - Result: ~20.11%</p>
 <p><strong>Example of what you’ll see:</strong></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>initial <span class="op">=</span> <span class="dv">100</span></span>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>initial <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>final <span class="op">=</span> <span class="dv">250</span></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>cagr <span class="op">=</span> (final<span class="op">/</span>initial)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>years) <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;CAGR: </span><span class="sc">{</span>cagr<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss">%&quot;</span>)</span></code></pre></div>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"CAGR: </span><span class="sc">{</span>cagr<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss">%"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>The key insight:</strong> With good models, AI can WRITE and RUN code for you!</p>
 <p><strong>Step 2: Create a Visualization (AI Writes Code)</strong></p>
 <p>Now let’s have AI create a graph for us:</p>
@@ -1184,16 +1196,23 @@ and make it look professional. Execute the code to generate the plot.</code></pr
 <p><strong>What if I don’t see the image?</strong> - Don’t worry! The code ran successfully - Some setups show images inline, others save them as files - The important learning: AI wrote code that creates professional visualizations - If there’s a filename, you can download it</p>
 <p><strong>This is the magic moment</strong> - you went from question to visualization in ONE request, without knowing any matplotlib syntax!</p>
 <p><strong>Step 3: Test With Real Data Analysis (AI Generates Everything)</strong></p>
-<p>Now let’s test AI’s ability to do complete data analysis:</p>
-<pre><code>Generate a dataset of 10 cities with their population and CO2 emissions.
-Then create a scatter plot showing if there&#39;s a correlation.
-Calculate and display the correlation coefficient.
+<p>Now let’s test AI’s ability to do complete data analysis with REAL sustainability data:</p>
+<pre><code>Generate a realistic dataset of 10 breweries with:
+- Water usage (liters water per liter beer produced)
+- CO2 emissions (kg per hectoliter)
+- Percentage of renewable energy used
+
+Then create visualizations showing:
+1. Scatter plot: water usage vs CO2 emissions
+2. Bar chart: breweries ranked by sustainability score
+
+Calculate correlation and identify which factors matter most.
 Execute all the code.</code></pre>
 <p><strong>Expected behavior:</strong> - [ ] AI generates sample data - [ ] Creates visualization - [ ] Calculates correlation (r value) - [ ] Interprets the relationship - [ ] All code executes successfully</p>
 <p><strong>This is powerful:</strong> You described what you want, AI figured out how to do it, wrote the code, executed it, and interpreted results.</p>
 </section>
 <section id="advanced-challenge-1" class="level3">
-<h3>🎯 Advanced Challenge</h3>
+<h3 class="anchored" data-anchor-id="advanced-challenge-1">🎯 Advanced Challenge</h3>
 <p><strong>Upload your own data</strong> (CSV, Excel) and ask:</p>
 <pre><code>Analyze this dataset. Show me:
 1. Summary statistics
@@ -1207,9 +1226,9 @@ Execute all code and explain what you find.</code></pre>
 </section>
 </section>
 <section id="the-entertainment-piece-3" class="level2">
-<h2>The Entertainment Piece 🎭</h2>
+<h2 class="anchored" data-anchor-id="the-entertainment-piece-3">The Entertainment Piece 🎭</h2>
 <section id="model-comparison-exercise-3-code-quality-battle" class="level3">
-<h3>🎯 Model Comparison Exercise #3: Code Quality Battle</h3>
+<h3 class="anchored" data-anchor-id="model-comparison-exercise-3-code-quality-battle">🎯 Model Comparison Exercise #3: Code Quality Battle</h3>
 <p><strong>Goal:</strong> See which model writes better Python code for data analysis.</p>
 <p><strong>Part A: Test DeepSeek Chat V3 (Code Specialist)</strong></p>
 <p>Switch to <strong>DeepSeek Chat V3 Free</strong> and ask:</p>
@@ -1240,23 +1259,27 @@ Use realistic parameters and execute the code.</code></pre>
 <p><strong>Now try the SAME prompt with Gemini Flash.</strong></p>
 <p><strong>What you’ll see:</strong> - <strong>DeepSeek</strong> will write sophisticated, production-quality code with proper error handling - <strong>Gemini</strong> will write simpler code that may work but lacks polish - <strong>DeepSeek</strong> will better explain the financial concepts - <strong>DeepSeek</strong> will create more professional visualizations</p>
 <p><strong>This is the DRAMATIC difference</strong> - for complex technical tasks, specialist models shine!</p>
-<hr />
+<hr>
 </section>
 <section id="the-visualization-remix-game" class="level3">
-<h3>The “Visualization Remix” Game</h3>
+<h3 class="anchored" data-anchor-id="the-visualization-remix-game">The “Visualization Remix” Game</h3>
 <p><strong>Challenge:</strong> Take the same data and ask for it in different visualization styles.</p>
 <p><strong>Use DeepSeek Chat V3</strong> for this (best at visualization code)</p>
 <p><strong>Starting prompt:</strong></p>
-<pre><code>Create sample data of monthly renewable energy production
-(solar, wind, hydro) for a year.</code></pre>
-<p><strong>Then request:</strong> 1. “Show this as a line graph” 2. “Show this as a stacked area chart” 3. “Show this as a heatmap” 4. “Show this as an interactive plot if possible”</p>
-<p><strong>Point:</strong> Learn what visualization best communicates your insight.</p>
+<pre><code>Create sample data of monthly bread waste reduction initiatives
+at a large bakery over 12 months, showing:
+- Surplus bread (kg)
+- Bread donated to charity (kg)
+- Bread upcycled for brewing (kg)
+- Waste sent to landfill (kg)</code></pre>
+<p><strong>Then request:</strong> 1. “Show this as a stacked area chart to see waste distribution over time” 2. “Show this as a line graph comparing the three circular economy routes” 3. “Create a pie chart showing the final year distribution” 4. “Make a before/after comparison: Month 1 vs Month 12”</p>
+<p><strong>Point:</strong> Learn what visualization best communicates your circular economy impact story.</p>
 </section>
 </section>
 <section id="key-learnings-3" class="level2">
-<h2>Key Learnings 🎓</h2>
+<h2 class="anchored" data-anchor-id="key-learnings-3">Key Learnings 🎓</h2>
 <section id="what-you-now-know-3" class="level3">
-<h3>What You Now Know</h3>
+<h3 class="anchored" data-anchor-id="what-you-now-know-3">What You Now Know</h3>
 <ol type="1">
 <li><strong>Code execution happens in Jupyter</strong> - A real Python environment</li>
 <li><strong>AI writes the code for you</strong> - You describe what you want, it codes it</li>
@@ -1266,10 +1289,10 @@ Use realistic parameters and execute the code.</code></pre>
 </ol>
 </section>
 <section id="the-technical-flow" class="level3">
-<h3>The Technical Flow</h3>
+<h3 class="anchored" data-anchor-id="the-technical-flow">The Technical Flow</h3>
 <p>When you ask for analysis:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. AI interprets your question</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>user_intent <span class="op">=</span> understand_request(<span class="st">&quot;show me correlation...&quot;</span>)</span>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. AI interprets your question</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>user_intent <span class="op">=</span> understand_request(<span class="st">"show me correlation..."</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. AI writes Python code</span></span>
 <span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> generate_python_code(user_intent)</span>
@@ -1281,12 +1304,12 @@ Use realistic parameters and execute the code.</code></pre>
 <span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> capture_output(result)</span>
 <span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Displayed in chat</span></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>return_to_user(output)</span></code></pre></div>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>return_to_user(output)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Why Jupyter?</strong> It’s a standardized Python environment that’s: - Isolated (your code can’t break the system) - Stateful (variables persist between executions) - Rich (can return plots, dataframes, etc.)</p>
 </section>
 </section>
 <section id="questions-you-should-answer-3" class="level2">
-<h2>Questions You Should Answer</h2>
+<h2 class="anchored" data-anchor-id="questions-you-should-answer-3">Questions You Should Answer</h2>
 <ol type="1">
 <li>Where does the Python code actually run? <em>(In a Jupyter container on the server)</em></li>
 <li>Can you edit the code before it runs? <em>(Yes! You can copy it, modify it, and ask AI to run the modified version)</em></li>
@@ -1295,7 +1318,7 @@ Use realistic parameters and execute the code.</code></pre>
 </ol>
 </section>
 <section id="the-anecdote-3" class="level2">
-<h2>The Anecdote 🗣️</h2>
+<h2 class="anchored" data-anchor-id="the-anecdote-3">The Anecdote 🗣️</h2>
 <p>A PhD student in environmental science had 2 years of weather data in Excel. She needed to identify “heat wave events” (5+ consecutive days above 35°C).</p>
 <p>She’d been manually highlighting cells for a week.</p>
 <p>She asked OpenWebUI: <em>“Find all heat wave events in this data (5+ days above 35°C). Show me when they occurred and how long each lasted.”</em></p>
@@ -1303,76 +1326,76 @@ Use realistic parameters and execute the code.</code></pre>
 <p>She called her supervisor and said, “I need to change my methodology section.”</p>
 </section>
 <section id="the-quote-3" class="level2">
-<h2>The Quote 💭</h2>
-<blockquote>
+<h2 class="anchored" data-anchor-id="the-quote-3">The Quote 💭</h2>
+<blockquote class="blockquote">
 <p>“The real problem is not whether machines think but whether humans do.” - B.F. Skinner (though he meant it differently, it applies to data analysis)</p>
 </blockquote>
-<blockquote>
+<blockquote class="blockquote">
 <p>“Data is not information, information is not knowledge, knowledge is not understanding, understanding is not wisdom.” - Clifford Stoll, Astronomer &amp; Author</p>
 </blockquote>
-<hr />
+<hr>
 </section>
 </section>
 <section id="module-5-bringing-it-all-together---the-research-power-move" class="level1">
 <h1>Module 5: Bringing It All Together - The Research Power Move</h1>
 <section id="the-hook-5" class="level2">
-<h2>The Hook 🎣</h2>
+<h2 class="anchored" data-anchor-id="the-hook-5">The Hook 🎣</h2>
 <p><strong>The ultimate question:</strong> Can you use ALL four skills in ONE research workflow?</p>
 <p><strong>Answer:</strong> Yes. And it’s spectacular.</p>
 </section>
 <section id="the-story-4" class="level2">
-<h2>The Story 📖</h2>
+<h2 class="anchored" data-anchor-id="the-story-4">The Story 📖</h2>
 <section id="meet-dr.-yuki-tanaka" class="level3">
-<h3>Meet Dr. Yuki Tanaka</h3>
+<h3 class="anchored" data-anchor-id="meet-dr.-yuki-tanaka">Meet Dr.&nbsp;Yuki Tanaka</h3>
 <p>Yuki studies urban heat islands in Asian megacities. Her research question:</p>
 <p><em>“How do urban green spaces correlate with temperature reduction, and what do recent policy implementations suggest about effectiveness?”</em></p>
 <p><strong>This requires:</strong> - 📄 RAG - her uploaded research papers - 🌐 Web search - current policy implementations - 💻 Code execution - correlation analysis - 💬 Conversation - synthesis and interpretation</p>
 <p><strong>Her single conversation:</strong></p>
-<pre><code>I&#39;ve uploaded 15 papers about urban heat islands. Based on these,
-what&#39;s the theoretical cooling effect of increasing urban green space by 10%?</code></pre>
+<pre><code>I've uploaded 15 papers about urban heat islands. Based on these,
+what's the theoretical cooling effect of increasing urban green space by 10%?</code></pre>
 <p><em>(AI uses RAG, quotes papers)</em></p>
 <pre><code>Now search the web for cities that implemented urban greening policies
 in 2023-2024. What were their results?</code></pre>
 <p><em>(AI searches web, finds Seoul, Singapore, Barcelona examples)</em></p>
-<pre><code>Here&#39;s temperature data from Singapore [uploads CSV]. Calculate the
+<pre><code>Here's temperature data from Singapore [uploads CSV]. Calculate the
 correlation between green space coverage and temperature reduction.
 Compare this to the theoretical predictions from the papers.</code></pre>
 <p><em>(AI executes code, creates visualizations, compares empirical vs theoretical)</em></p>
-<pre><code>Synthesize all of this into a 200-word summary I can use in my paper&#39;s
+<pre><code>Synthesize all of this into a 200-word summary I can use in my paper's
 introduction, with citations.</code></pre>
 <p><em>(AI writes the summary, drawing from papers, web sources, and data analysis)</em></p>
 <p><strong>Time:</strong> 15 minutes <strong>Output:</strong> Publication-ready paragraph with citations <strong>Old method:</strong> 2 weeks</p>
 </section>
 </section>
 <section id="the-educational-piece-4" class="level2">
-<h2>The Educational Piece 📚</h2>
+<h2 class="anchored" data-anchor-id="the-educational-piece-4">The Educational Piece 📚</h2>
 <section id="the-integrated-research-workflow" class="level3">
-<h3>The Integrated Research Workflow</h3>
+<h3 class="anchored" data-anchor-id="the-integrated-research-workflow">The Integrated Research Workflow</h3>
 <p><strong>What makes this powerful:</strong></p>
 <div class="cell" data-layout-align="default">
-<div class="sourceCode" id="cb40"><pre class="sourceCode default cell-code"><code class="sourceCode default"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    A[Research Question] --&gt; B[RAG: Literature Review]</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[Web: Current Context]</span>
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    C --&gt; D[Code: Data Analysis]</span>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    D --&gt; E[AI: Synthesis]</span>
 <span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    E --&gt; F[Actionable Insight]</span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    F -.Iterate.-&gt; A</span></code></pre></div>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    F -.Iterate.-&gt; A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<p><figure class=''></p>
+<p></p><figure class="figure"><p></p>
 <div>
 
 </div>
-<p></figure></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
 <p><strong>Each capability enhances the others:</strong></p>
-<table class="caption-top">
+<table class="caption-top table">
 <colgroup>
-<col style="width: 38%" />
-<col style="width: 32%" />
-<col style="width: 29%" />
+<col style="width: 38%">
+<col style="width: 32%">
+<col style="width: 29%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1407,24 +1430,24 @@ introduction, with citations.</code></pre>
 </section>
 </section>
 <section id="the-empowering-piece-4" class="level2">
-<h2>The Empowering Piece 💪</h2>
+<h2 class="anchored" data-anchor-id="the-empowering-piece-4">The Empowering Piece 💪</h2>
 <section id="your-final-challenge-the-complete-research-cycle" class="level3">
-<h3>Your Final Challenge: The Complete Research Cycle</h3>
+<h3 class="anchored" data-anchor-id="your-final-challenge-the-complete-research-cycle">Your Final Challenge: The Complete Research Cycle</h3>
 <p><strong>Learning Objective:</strong> Use all four capabilities in one conversation to answer a research question.</p>
 </section>
 <section id="test-case-5-the-grand-finale" class="level3">
-<h3>🧪 Test Case #5: The Grand Finale</h3>
+<h3 class="anchored" data-anchor-id="test-case-5-the-grand-finale">🧪 Test Case #5: The Grand Finale</h3>
 <p><strong>Setup checklist:</strong></p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>□ You have 1-2 PDFs related to your research area</span>
+<div class="sourceCode" id="cb41"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>□ You have 1-2 PDFs related to your research area</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>□ You have a CSV of data (or can generate sample data)</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>□ You have a research question in mind</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>□ Web search is enabled</span></code></pre></div>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>□ Web search is enabled</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>The Test:</strong></p>
 <p><strong>Your mission:</strong> Answer this question using all four capabilities:</p>
 <p><em>“What does the literature say about [YOUR TOPIC], what are current real-world examples, and what does the data show?”</em></p>
 <p><strong>Step-by-step guide:</strong></p>
 <p><strong>Step 1: Upload Your Literature (RAG)</strong></p>
-<pre><code>I&#39;m researching [YOUR TOPIC]. I&#39;ve uploaded papers about this.
+<pre><code>I'm researching [YOUR TOPIC]. I've uploaded papers about this.
 What are the main findings regarding [SPECIFIC ASPECT]?</code></pre>
 <p><strong>Expected:</strong> Summary with citations from YOUR papers.</p>
 <p><strong>Step 2: Add Current Context (Web Search)</strong></p>
@@ -1432,7 +1455,7 @@ What are the main findings regarding [SPECIFIC ASPECT]?</code></pre>
 being implemented. What are organizations doing?</code></pre>
 <p><strong>Expected:</strong> Real-world examples with URLs.</p>
 <p><strong>Step 3: Analyze Data (Code Execution)</strong></p>
-<pre><code>Here&#39;s data related to [YOUR TOPIC] [upload CSV or ask AI to generate sample data].
+<pre><code>Here's data related to [YOUR TOPIC] [upload CSV or ask AI to generate sample data].
 Analyze it and create a visualization showing [RELATIONSHIP YOU WANT TO EXPLORE].</code></pre>
 <p><strong>Expected:</strong> Code execution, graph, statistical analysis.</p>
 <p><strong>Step 4: Synthesize Everything (Integration)</strong></p>
@@ -1448,53 +1471,66 @@ Include citations and reference the data visualization.</code></pre>
 <p><strong>❌ If it fails:</strong> - Break it down - do each step separately first - Check each capability works individually before combining - Be more specific in your synthesis request</p>
 </section>
 <section id="real-world-application" class="level3">
-<h3>🎯 Real-World Application</h3>
+<h3 class="anchored" data-anchor-id="real-world-application">🎯 Real-World Application</h3>
 <p><strong>Your homework:</strong> Use this workflow for an actual research task this week.</p>
 <p><strong>Ideas:</strong> 1. Literature review + current policy landscape + statistical validation 2. Historical data analysis + recent trends + predictive insights 3. Theoretical framework + case studies + empirical testing</p>
 </section>
 </section>
 <section id="the-entertainment-piece-4" class="level2">
-<h2>The Entertainment Piece 🎭</h2>
+<h2 class="anchored" data-anchor-id="the-entertainment-piece-4">The Entertainment Piece 🎭</h2>
 <section id="ultimate-model-comparison-exercise-the-perfect-workflow" class="level3">
-<h3>🎯 ULTIMATE Model Comparison Exercise: The Perfect Workflow</h3>
+<h3 class="anchored" data-anchor-id="ultimate-model-comparison-exercise-the-perfect-workflow">🎯 ULTIMATE Model Comparison Exercise: The Perfect Workflow</h3>
 <p><strong>Goal:</strong> Use the RIGHT model for each step of a complete research workflow.</p>
-<p><strong>The Challenge:</strong> Research the topic “AI in sustainable agriculture” using optimal models for each task.</p>
+<p><strong>The Challenge:</strong> Research the topic “Circular economy in beer brewing: using surplus bread to reduce environmental impact” using optimal models for each task.</p>
 <p><strong>Step 1: Web Search for Current Examples (Use Gemini 2.5 Flash)</strong></p>
-<pre><code>Search for the latest (2024-2025) AI applications in sustainable farming.
-What companies are implementing this? What results are they seeing?</code></pre>
-<p><strong>Expected:</strong> Fast response with current examples and URLs (2-3 min)</p>
+<pre><code>Search for the latest (2024-2025) examples of breweries using surplus bread
+to replace malted barley. Focus on Toast Ale and their verified environmental
+impact data. Include specific CO2 savings and waste reduction numbers.</code></pre>
+<p><strong>Expected:</strong> Fast response with Toast Ale’s data (2.9M slices, 5.3t CO2e saved), URLs to sustainability reports (2-3 min)</p>
 <p><strong>Step 2: Document Analysis (Switch to Llama 4 Maverick)</strong></p>
-<p>Upload 1-2 research papers about AI and agriculture, then ask:</p>
-<pre><code>Based on these papers, what are the theoretical benefits and challenges
-of AI in sustainable agriculture? Provide detailed citations.</code></pre>
-<p><strong>Expected:</strong> Deep analysis with accurate quotes (3-4 min)</p>
+<p>Upload 1-2 research papers about circular economy in food systems or bread waste valorization, then ask:</p>
+<pre><code>Based on these papers, what are the theoretical CO2 savings from
+replacing malted barley with surplus bread in brewing? What percentage
+of barley can bread realistically replace? Provide detailed citations.</code></pre>
+<p><strong>Expected:</strong> Deep analysis with accurate quotes about 25-30% replacement rate, land/water savings (3-4 min)</p>
 <p><strong>Step 3: Citation Verification (Switch to Mistral Small)</strong></p>
 <pre><code>Review the previous response. Provide page-specific citations for each
-major claim about AI benefits and challenges.</code></pre>
-<p><strong>Expected:</strong> Precise citations and quote verification (2-3 min)</p>
+major claim about bread replacement percentages and environmental benefits.
+Cross-reference with the Toast Ale data from our web search.</code></pre>
+<p><strong>Expected:</strong> Precise citations, confirmation that real-world data (Toast Ale 25% replacement) matches academic predictions (2-3 min)</p>
 <p><strong>Step 4: Data Analysis (Switch to DeepSeek Chat V3)</strong></p>
 <p>Generate or upload sample data, then ask:</p>
-<pre><code>Generate sample data showing crop yield improvements with AI vs traditional
-methods (30 farms, 2 years). Perform statistical analysis and create
-visualizations. Calculate if the difference is significant.</code></pre>
-<p><strong>Expected:</strong> Clean code, professional visualizations, statistical analysis (3-4 min)</p>
+<pre><code>Generate realistic data comparing traditional brewing vs bread-supplemented
+brewing for 20 breweries over 2 years:
+- Water usage (L per L beer)
+- CO2 emissions (kg per hL)
+- Land use (m² per hL)
+- Cost savings (% reduction)
+
+Perform statistical analysis: Is the difference significant?
+Create professional visualizations showing the circular economy impact.</code></pre>
+<p><strong>Expected:</strong> Clean code, professional charts, t-tests showing significant differences (3-4 min)</p>
 <p><strong>Step 5: Final Synthesis (Use Llama 4 Maverick for complex reasoning)</strong></p>
 <pre><code>Based on:
-1. Current industry examples (from web search)
-2. Academic literature (from uploaded papers)
-3. Statistical analysis (from our data analysis)
+1. Toast Ale's verified impact (web search: 2.9M slices, 5.3t CO2e saved)
+2. Academic literature (uploaded papers: theoretical 25-30% replacement)
+3. Statistical analysis (our data: significant reductions across metrics)
 
-Write a 300-word executive summary about AI in sustainable agriculture.
-Include citations, data references, and practical recommendations.</code></pre>
-<p><strong>Expected:</strong> Coherent synthesis connecting all sources (3-4 min)</p>
+Write a 300-word executive summary for policymakers about scaling
+bread-to-beer circular economy models. Include:
+- Environmental benefits (with specific numbers)
+- Economic viability
+- Policy recommendations
+- Citations from all three sources</code></pre>
+<p><strong>Expected:</strong> Coherent synthesis proving circular economy works, with verified data (3-4 min)</p>
 <p><strong>Total Time:</strong> 15-20 minutes for complete research cycle!</p>
 <p><strong>Compare this to:</strong> Using ONE model for everything (would be slower and lower quality) or using the WRONG models for each task.</p>
 <p><strong>Success Criteria:</strong> - [ ] Each model performed better at its specialized task - [ ] Total output is publication-quality - [ ] All sources properly cited - [ ] Data analysis is rigorous - [ ] Synthesis is coherent</p>
 <p><strong>Key Insight:</strong> The power isn’t just in the tools—it’s in knowing WHICH tool to use WHEN!</p>
-<hr />
+<hr>
 </section>
 <section id="the-research-relay-race" class="level3">
-<h3>The “Research Relay Race”</h3>
+<h3 class="anchored" data-anchor-id="the-research-relay-race">The “Research Relay Race”</h3>
 <p><strong>For group workshops:</strong></p>
 <ol type="1">
 <li><strong>Team 1:</strong> Uploads papers, asks RAG question (choose best model!)</li>
@@ -1508,9 +1544,9 @@ Include citations, data references, and practical recommendations.</code></pre>
 </section>
 </section>
 <section id="key-learnings-4" class="level2">
-<h2>Key Learnings 🎓</h2>
+<h2 class="anchored" data-anchor-id="key-learnings-4">Key Learnings 🎓</h2>
 <section id="what-you-now-know-4" class="level3">
-<h3>What You Now Know</h3>
+<h3 class="anchored" data-anchor-id="what-you-now-know-4">What You Now Know</h3>
 <ol type="1">
 <li><strong>Integration is the superpower</strong> - Individual tools are good; combined, they’re transformative</li>
 <li><strong>Model selection matters</strong> - Using the RIGHT model for each task dramatically improves results</li>
@@ -1521,14 +1557,14 @@ Include citations, data references, and practical recommendations.</code></pre>
 </ol>
 </section>
 <section id="the-meta-skills-prompt-engineering-model-selection" class="level3">
-<h3>The Meta-Skills: Prompt Engineering &amp; Model Selection</h3>
+<h3 class="anchored" data-anchor-id="the-meta-skills-prompt-engineering-model-selection">The Meta-Skills: Prompt Engineering &amp; Model Selection</h3>
 <p><strong>You’ve been learning to:</strong> - Ask specific questions (Module 1) - Request citations (Module 2) - Enable/disable features strategically (Module 3) - Describe desired outputs (Module 4) - Chain complex requests (Module 5) - <strong>Choose the right model for each task</strong> (All modules)</p>
 <p><strong>This is prompt engineering + model selection.</strong> These are the literacy skills of the AI age.</p>
 <p><strong>Model Selection Summary:</strong> - 🐳 <strong>DeepSeek Chat V3</strong> → Code, technical analysis, data science - ⚡ <strong>Gemini 2.5 Flash</strong> → Quick questions, web search, speed - 📚 <strong>Llama 4 Maverick</strong> → Long documents, complex reasoning, synthesis - 🎯 <strong>Mistral Small</strong> → Citations, academic accuracy, balanced tasks</p>
 </section>
 </section>
 <section id="questions-you-should-answer-4" class="level2">
-<h2>Questions You Should Answer</h2>
+<h2 class="anchored" data-anchor-id="questions-you-should-answer-4">Questions You Should Answer</h2>
 <ol type="1">
 <li>Which capability should you use first? <em>(Usually RAG or Web Search to gather information, then Code to analyze)</em></li>
 <li>Which model should you use for coding tasks? <em>(DeepSeek Chat V3 - it’s trained specifically on code)</em></li>
@@ -1541,8 +1577,8 @@ Include citations, data references, and practical recommendations.</code></pre>
 </ol>
 </section>
 <section id="the-anecdote-4" class="level2">
-<h2>The Anecdote 🗣️</h2>
-<p>We ran this workshop with a group of sustainability researchers. One participant, Dr. Amara, was skeptical.</p>
+<h2 class="anchored" data-anchor-id="the-anecdote-4">The Anecdote 🗣️</h2>
+<p>We ran this workshop with a group of sustainability researchers. One participant, Dr.&nbsp;Amara, was skeptical.</p>
 <p>“I’ve been doing research for 15 years. I know my workflow.”</p>
 <p>We gave her the final challenge. She chose to analyze plastic waste policy effectiveness.</p>
 <p>15 minutes later, she had: - Synthesized 8 papers she’d uploaded - Found 6 current policy examples from 4 countries - Analyzed waste reduction data - Generated 3 graphs - Written a draft introduction with 14 citations</p>
@@ -1552,29 +1588,29 @@ Include citations, data references, and practical recommendations.</code></pre>
 <p><strong>That’s the real transformation.</strong></p>
 </section>
 <section id="the-quote-4" class="level2">
-<h2>The Quote 💭</h2>
-<blockquote>
+<h2 class="anchored" data-anchor-id="the-quote-4">The Quote 💭</h2>
+<blockquote class="blockquote">
 <p>“The real voyage of discovery consists not in seeking new landscapes, but in having new eyes.” - Marcel Proust</p>
 </blockquote>
-<blockquote>
+<blockquote class="blockquote">
 <p>“We live in a society absolutely dependent on science and technology and yet have cleverly arranged things so that almost no one understands science and technology. That’s a clear prescription for disaster.” - Carl Sagan</p>
 </blockquote>
 <p><strong>Today, you’ve gained new eyes. Use them.</strong></p>
-<hr />
+<hr>
 </section>
 </section>
 <section id="workshop-conclusion-your-next-steps" class="level1">
 <h1>Workshop Conclusion: Your Next Steps</h1>
 <section id="what-youve-accomplished-today" class="level2">
-<h2>What You’ve Accomplished Today</h2>
+<h2 class="anchored" data-anchor-id="what-youve-accomplished-today">What You’ve Accomplished Today</h2>
 <p>In 2.5 hours, you learned to:</p>
 <p>✅ Have AI conversations that remember context ✅ Upload documents and query them with citations ✅ Search the web without leaving your conversation ✅ Execute code and create visualizations instantly ✅ Integrate all four into a research workflow ✅ <strong>Select the optimal FREE model for each task type</strong></p>
 <p><strong>More importantly:</strong> You’ve experienced a new way of doing research.</p>
 <p><strong>And you did it all with 100% FREE models!</strong></p>
 <section id="your-model-arsenal-quick-reference" class="level3">
-<h3>Your Model Arsenal (Quick Reference)</h3>
+<h3 class="anchored" data-anchor-id="your-model-arsenal-quick-reference">Your Model Arsenal (Quick Reference)</h3>
 <p>Remember, you now have access to 4 specialized FREE models:</p>
-<table class="caption-top">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>When you need to…</th>
@@ -1604,45 +1640,45 @@ Include citations, data references, and practical recommendations.</code></pre>
 </section>
 </section>
 <section id="the-3-day-challenge" class="level2">
-<h2>The 3-Day Challenge</h2>
+<h2 class="anchored" data-anchor-id="the-3-day-challenge">The 3-Day Challenge</h2>
 <p><strong>Your mission:</strong> Use OpenWebUI for one research task in the next 3 days.</p>
 <p><strong>Why 3 days?</strong> Research on learning retention shows: - Use a skill within 24 hours → 65% retention - Use within 3 days → 50% retention - Wait a week → 20% retention</p>
 <p><strong>Suggested tasks:</strong> 1. Literature review for a section you’re writing 2. Analyze a dataset that’s been sitting in your folder 3. Fact-check something with current web search 4. Draft a research summary from multiple sources</p>
 </section>
 <section id="common-pitfalls-and-how-to-avoid-them" class="level2">
-<h2>Common Pitfalls (And How to Avoid Them)</h2>
+<h2 class="anchored" data-anchor-id="common-pitfalls-and-how-to-avoid-them">Common Pitfalls (And How to Avoid Them)</h2>
 <section id="pitfall-1-treating-ai-like-google" class="level3">
-<h3>Pitfall 1: Treating AI Like Google</h3>
+<h3 class="anchored" data-anchor-id="pitfall-1-treating-ai-like-google">Pitfall 1: Treating AI Like Google</h3>
 <p><strong>Problem:</strong> Vague questions get vague answers <strong>Solution:</strong> Be specific. “Summarize this paper” → “What does this paper say about [SPECIFIC CLAIM]?”</p>
 </section>
 <section id="pitfall-2-not-verifying-citations" class="level3">
-<h3>Pitfall 2: Not Verifying Citations</h3>
+<h3 class="anchored" data-anchor-id="pitfall-2-not-verifying-citations">Pitfall 2: Not Verifying Citations</h3>
 <p><strong>Problem:</strong> AI can misquote or misinterpret <strong>Solution:</strong> Spot-check citations. Click through to sources. Trust, but verify.</p>
 </section>
 <section id="pitfall-3-asking-it-to-do-everything" class="level3">
-<h3>Pitfall 3: Asking It to Do Everything</h3>
+<h3 class="anchored" data-anchor-id="pitfall-3-asking-it-to-do-everything">Pitfall 3: Asking It to Do Everything</h3>
 <p><strong>Problem:</strong> One massive prompt trying to solve your entire research project <strong>Solution:</strong> Break it down. Iterate. Refine.</p>
 </section>
 <section id="pitfall-4-forgetting-its-a-tool-not-magic" class="level3">
-<h3>Pitfall 4: Forgetting It’s a Tool, Not Magic</h3>
+<h3 class="anchored" data-anchor-id="pitfall-4-forgetting-its-a-tool-not-magic">Pitfall 4: Forgetting It’s a Tool, Not Magic</h3>
 <p><strong>Problem:</strong> Expecting AI to understand unstated context <strong>Solution:</strong> Provide context. If YOU need background to answer the question, so does the AI.</p>
 </section>
 <section id="pitfall-5-using-the-wrong-model-for-the-task-new" class="level3">
-<h3>Pitfall 5: Using the Wrong Model for the Task ⚠️ NEW!</h3>
+<h3 class="anchored" data-anchor-id="pitfall-5-using-the-wrong-model-for-the-task-new">Pitfall 5: Using the Wrong Model for the Task ⚠️ NEW!</h3>
 <p><strong>Problem:</strong> Using Gemini Flash for complex coding, or DeepSeek for quick lookups (slower than needed) <strong>Solution:</strong> Match the model to the task: - <strong>Code?</strong> → DeepSeek Chat V3 - <strong>Quick question?</strong> → Gemini 2.5 Flash - <strong>Long document?</strong> → Llama 4 Maverick - <strong>Need citations?</strong> → Mistral Small</p>
 </section>
 <section id="pitfall-6-staying-with-one-model-the-whole-time-new" class="level3">
-<h3>Pitfall 6: Staying with One Model the Whole Time ⚠️ NEW!</h3>
+<h3 class="anchored" data-anchor-id="pitfall-6-staying-with-one-model-the-whole-time-new">Pitfall 6: Staying with One Model the Whole Time ⚠️ NEW!</h3>
 <p><strong>Problem:</strong> Missing out on specialized capabilities <strong>Solution:</strong> Switch models as your task changes! Start with Gemini for exploration, switch to DeepSeek when you need code, switch to Mistral for citations. It takes 2 seconds!</p>
 </section>
 </section>
 <section id="resources-for-continued-learning" class="level2">
-<h2>Resources for Continued Learning</h2>
+<h2 class="anchored" data-anchor-id="resources-for-continued-learning">Resources for Continued Learning</h2>
 <p><strong>Within OpenWebUI:</strong> - Check the Admin Panel (if you’re admin) for configuration options - Explore model settings (temperature, etc.) for different behaviors - Try different models for different tasks</p>
 <p><strong>External Resources:</strong> - OpenWebUI Documentation: <a href="https://github.com/open-webui/open-webui">github.com/open-webui/open-webui</a> - Prompt Engineering Guide: <a href="https://www.promptingguide.ai/">promptingguide.ai</a> - Research Ethics &amp; AI: [guidelines from your institution]</p>
 </section>
 <section id="final-reflection-questions" class="level2">
-<h2>Final Reflection Questions</h2>
+<h2 class="anchored" data-anchor-id="final-reflection-questions">Final Reflection Questions</h2>
 <p>Take 5 minutes to write down:</p>
 <ol type="1">
 <li><strong>What surprised you most today?</strong></li>
@@ -1652,75 +1688,75 @@ Include citations, data references, and practical recommendations.</code></pre>
 </ol>
 </section>
 <section id="the-last-quote" class="level2">
-<h2>The Last Quote</h2>
-<blockquote>
+<h2 class="anchored" data-anchor-id="the-last-quote">The Last Quote</h2>
+<blockquote class="blockquote">
 <p>“The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.” - Alvin Toffler</p>
 </blockquote>
 <p><strong>You just learned. Now go use it.</strong></p>
-<hr />
+<hr>
 </section>
 </section>
 <section id="appendix-quick-reference-guide" class="level1">
 <h1>Appendix: Quick Reference Guide</h1>
 <section id="checklist-for-each-module" class="level2">
-<h2>Checklist for Each Module</h2>
+<h2 class="anchored" data-anchor-id="checklist-for-each-module">Checklist for Each Module</h2>
 <section id="module-1-basic-chat" class="level3">
-<h3>Module 1: Basic Chat</h3>
+<h3 class="anchored" data-anchor-id="module-1-basic-chat">Module 1: Basic Chat</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Create account</label></li>
-<li><label><input type="checkbox" />Send first message</label></li>
-<li><label><input type="checkbox" />Receive response &lt; 10 seconds</label></li>
-<li><label><input type="checkbox" />Start new chat</label></li>
-<li><label><input type="checkbox" />Access chat history</label></li>
+<li><label><input type="checkbox">Create account</label></li>
+<li><label><input type="checkbox">Send first message</label></li>
+<li><label><input type="checkbox">Receive response &lt; 10 seconds</label></li>
+<li><label><input type="checkbox">Start new chat</label></li>
+<li><label><input type="checkbox">Access chat history</label></li>
 </ul>
 </section>
 <section id="module-2-rag" class="level3">
-<h3>Module 2: RAG</h3>
+<h3 class="anchored" data-anchor-id="module-2-rag">Module 2: RAG</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Upload PDF</label></li>
-<li><label><input type="checkbox" />Wait for processing</label></li>
-<li><label><input type="checkbox" />Ask document-specific question</label></li>
-<li><label><input type="checkbox" />Verify citation</label></li>
-<li><label><input type="checkbox" />Test multi-document query</label></li>
+<li><label><input type="checkbox">Upload PDF</label></li>
+<li><label><input type="checkbox">Wait for processing</label></li>
+<li><label><input type="checkbox">Ask document-specific question</label></li>
+<li><label><input type="checkbox">Verify citation</label></li>
+<li><label><input type="checkbox">Test multi-document query</label></li>
 </ul>
 </section>
 <section id="module-3-web-search" class="level3">
-<h3>Module 3: Web Search</h3>
+<h3 class="anchored" data-anchor-id="module-3-web-search">Module 3: Web Search</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Enable web search toggle</label></li>
-<li><label><input type="checkbox" />Ask current-info question</label></li>
-<li><label><input type="checkbox" />Receive response with URLs</label></li>
-<li><label><input type="checkbox" />Compare with/without web search</label></li>
-<li><label><input type="checkbox" />Verify source quality</label></li>
+<li><label><input type="checkbox">Enable web search toggle</label></li>
+<li><label><input type="checkbox">Ask current-info question</label></li>
+<li><label><input type="checkbox">Receive response with URLs</label></li>
+<li><label><input type="checkbox">Compare with/without web search</label></li>
+<li><label><input type="checkbox">Verify source quality</label></li>
 </ul>
 </section>
 <section id="module-4-code-execution" class="level3">
-<h3>Module 4: Code Execution</h3>
+<h3 class="anchored" data-anchor-id="module-4-code-execution">Module 4: Code Execution</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Request calculation</label></li>
-<li><label><input type="checkbox" />See code execute</label></li>
-<li><label><input type="checkbox" />View result</label></li>
-<li><label><input type="checkbox" />Generate visualization</label></li>
-<li><label><input type="checkbox" />Interpret output</label></li>
+<li><label><input type="checkbox">Request calculation</label></li>
+<li><label><input type="checkbox">See code execute</label></li>
+<li><label><input type="checkbox">View result</label></li>
+<li><label><input type="checkbox">Generate visualization</label></li>
+<li><label><input type="checkbox">Interpret output</label></li>
 </ul>
 </section>
 <section id="module-5-integration" class="level3">
-<h3>Module 5: Integration</h3>
+<h3 class="anchored" data-anchor-id="module-5-integration">Module 5: Integration</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Use RAG + Web + Code in sequence</label></li>
-<li><label><input type="checkbox" />Request synthesis</label></li>
-<li><label><input type="checkbox" />Receive coherent output</label></li>
-<li><label><input type="checkbox" />Verify all sources included</label></li>
+<li><label><input type="checkbox">Use RAG + Web + Code in sequence</label></li>
+<li><label><input type="checkbox">Request synthesis</label></li>
+<li><label><input type="checkbox">Receive coherent output</label></li>
+<li><label><input type="checkbox">Verify all sources included</label></li>
 </ul>
 </section>
 </section>
 <section id="troubleshooting-guide" class="level2">
-<h2>Troubleshooting Guide</h2>
-<table class="caption-top">
+<h2 class="anchored" data-anchor-id="troubleshooting-guide">Troubleshooting Guide</h2>
+<table class="caption-top table">
 <colgroup>
-<col style="width: 34%" />
-<col style="width: 26%" />
-<col style="width: 38%" />
+<col style="width: 34%">
+<col style="width: 26%">
+<col style="width: 38%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1764,10 +1800,10 @@ Include citations, data references, and practical recommendations.</code></pre>
 </table>
 </section>
 <section id="model-selection-cheat-sheet" class="level2">
-<h2>Model Selection Cheat Sheet 🆕</h2>
+<h2 class="anchored" data-anchor-id="model-selection-cheat-sheet">Model Selection Cheat Sheet 🆕</h2>
 <p><strong>Print this out and keep it handy!</strong></p>
 <section id="quick-decision-tree" class="level3">
-<h3>Quick Decision Tree</h3>
+<h3 class="anchored" data-anchor-id="quick-decision-tree">Quick Decision Tree</h3>
 <pre><code>Need to write code or analyze data?
   └─→ Use DeepSeek Chat V3 🐳
 
@@ -1783,14 +1819,14 @@ Need precise citations?
 Not sure? Start with Gemini, switch later!</code></pre>
 </section>
 <section id="detailed-model-comparison" class="level3">
-<h3>Detailed Model Comparison</h3>
-<table class="caption-top">
+<h3 class="anchored" data-anchor-id="detailed-model-comparison">Detailed Model Comparison</h3>
+<table class="caption-top table">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 21%" />
-<col style="width: 23%" />
-<col style="width: 15%" />
-<col style="width: 25%" />
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 23%">
+<col style="width: 15%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1849,49 +1885,49 @@ Not sure? Start with Gemini, switch later!</code></pre>
 </section>
 </section>
 <section id="command-cheat-sheet" class="level2">
-<h2>Command Cheat Sheet</h2>
+<h2 class="anchored" data-anchor-id="command-cheat-sheet">Command Cheat Sheet</h2>
 <section id="basic-prompts" class="level3">
-<h3>Basic Prompts</h3>
+<h3 class="anchored" data-anchor-id="basic-prompts">Basic Prompts</h3>
 <pre><code># Good question structure
-&quot;Based on [SOURCE], what does [SUBJECT] indicate about [TOPIC]?&quot;
+"Based on [SOURCE], what does [SUBJECT] indicate about [TOPIC]?"
 
 # Citation request
-&quot;Provide specific quotes and page numbers.&quot;
+"Provide specific quotes and page numbers."
 
 # Refinement
-&quot;Make that more concise / more detailed / more technical.&quot;
+"Make that more concise / more detailed / more technical."
 
 # Model switching (during conversation)
-&quot;Let me switch to DeepSeek for the coding part...&quot;
+"Let me switch to DeepSeek for the coding part..."
 [Change model in dropdown]
-&quot;Now write the Python code for...&quot;</code></pre>
+"Now write the Python code for..."</code></pre>
 </section>
 <section id="rag-prompts" class="level3">
-<h3>RAG Prompts</h3>
-<pre><code>&quot;Summarize the main argument of the uploaded document.&quot;
-&quot;What do these papers agree/disagree on regarding [TOPIC]?&quot;
-&quot;Find every mention of [TERM] in the documents.&quot;</code></pre>
+<h3 class="anchored" data-anchor-id="rag-prompts">RAG Prompts</h3>
+<pre><code>"Summarize the main argument of the uploaded document."
+"What do these papers agree/disagree on regarding [TOPIC]?"
+"Find every mention of [TERM] in the documents."</code></pre>
 </section>
 <section id="web-search-prompts" class="level3">
-<h3>Web Search Prompts</h3>
-<pre><code>&quot;Search for recent developments in [TOPIC] since [DATE].&quot;
-&quot;What are current examples of [CONCEPT] being implemented?&quot;
-&quot;Fact-check this claim: [CLAIM]&quot;</code></pre>
+<h3 class="anchored" data-anchor-id="web-search-prompts">Web Search Prompts</h3>
+<pre><code>"Search for recent developments in [TOPIC] since [DATE]."
+"What are current examples of [CONCEPT] being implemented?"
+"Fact-check this claim: [CLAIM]"</code></pre>
 </section>
 <section id="code-execution-prompts" class="level3">
-<h3>Code Execution Prompts</h3>
-<pre><code>&quot;Calculate [FORMULA] where [VARIABLES].&quot;
-&quot;Create a [PLOT TYPE] showing [RELATIONSHIP].&quot;
-&quot;Analyze this data and tell me [WHAT TO LOOK FOR].&quot;</code></pre>
+<h3 class="anchored" data-anchor-id="code-execution-prompts">Code Execution Prompts</h3>
+<pre><code>"Calculate [FORMULA] where [VARIABLES]."
+"Create a [PLOT TYPE] showing [RELATIONSHIP]."
+"Analyze this data and tell me [WHAT TO LOOK FOR]."</code></pre>
 </section>
 <section id="integration-prompts" class="level3">
-<h3>Integration Prompts</h3>
-<pre><code>&quot;Based on the uploaded papers, web search for current examples,
-and analyze this data, what can we conclude about [QUESTION]?&quot;</code></pre>
+<h3 class="anchored" data-anchor-id="integration-prompts">Integration Prompts</h3>
+<pre><code>"Based on the uploaded papers, web search for current examples,
+and analyze this data, what can we conclude about [QUESTION]?"</code></pre>
 </section>
 </section>
 <section id="keyboard-shortcuts" class="level2">
-<h2>Keyboard Shortcuts</h2>
+<h2 class="anchored" data-anchor-id="keyboard-shortcuts">Keyboard Shortcuts</h2>
 <p>(These depend on OpenWebUI version, but commonly:)</p>
 <ul>
 <li><strong>Ctrl/Cmd + Enter:</strong> Send message</li>
@@ -1901,10 +1937,10 @@ and analyze this data, what can we conclude about [QUESTION]?&quot;</code></pre>
 </ul>
 </section>
 <section id="getting-help" class="level2">
-<h2>Getting Help</h2>
+<h2 class="anchored" data-anchor-id="getting-help">Getting Help</h2>
 <p><strong>During the workshop:</strong> - 🙋 Raise your hand - Ask your neighbor - Check this guide</p>
 <p><strong>After the workshop:</strong> - OpenWebUI GitHub Issues - Your institution’s support - AI Stack Exchange</p>
-<hr />
+<hr>
 </section>
 </section>
 <section id="acknowledgments" class="level1">
@@ -1919,20 +1955,20 @@ and analyze this data, what can we conclude about [QUESTION]?&quot;</code></pre>
 <li><strong>The Art of Hosting</strong> - Community learning practices</li>
 </ul>
 <p><strong>Special thanks to:</strong> - The Open-WebUI community - Researchers who piloted this workshop - You, for being here</p>
-<hr />
+<hr>
 </section>
 <section id="about-this-workshop" class="level1">
 <h1>About This Workshop</h1>
 <p><strong>Version:</strong> 1.0 <strong>Last Updated:</strong> 2025 <strong>License:</strong> CC BY-SA 4.0 (use it, adapt it, share it) <strong>Feedback:</strong> [your contact method]</p>
 <p><strong>If this workshop helped you:</strong> Pay it forward. Teach someone else.</p>
-<hr />
+<hr>
 <p><em>“The best way to learn is to teach. The best way to understand is to explain. The best way to master is to share.”</em> - Workshop Philosophy</p>
 <p><strong>Now go do research differently.</strong> 🚀</p>
 </section>
 
 </main>
 <!-- /main column -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1983,14 +2019,13 @@ and analyze this data, what can we conclude about [QUESTION]?&quot;</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -2334,6 +2369,7 @@ and analyze this data, what can we conclude about [QUESTION]?&quot;</code></pre>
   </script>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+
+</body></html>
