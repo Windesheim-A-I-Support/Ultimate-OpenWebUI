@@ -160,18 +160,19 @@ What if your AI remembered everything you told it - for the entire project?
 
 ## The Story 📖
 
-### Meet Dr. Sarah Chen
+### Meet Dr. Emma Bakker
 
-Dr. Sarah Chen studies urban sustainability. Last month, she spent 6 hours copying data between ChatGPT (for questions), Jupyter (for analysis), and Google Docs (for notes).
+Dr. Emma Bakker researches circular economy in food systems, specifically bread waste valorization. Last month, she spent 6 hours copying data between ChatGPT (for questions), Jupyter (for analysis), and Google Docs (for notes) while analyzing bakery supply chain data.
 
 Then she discovered OpenWebUI. Now she does everything in one conversation:
-- Ask questions about her research
-- Run data analysis
-- Save the entire workflow
-- Share it with her research partner in Tokyo
+- Ask questions about bread waste statistics
+- Analyze data from 50+ bakeries
+- Compare her findings with Toast Ale's circular economy model
+- Share the entire workflow with her research partner in Amsterdam
 
 **Her time investment to learn:** 15 minutes
 **Her time saved per week:** 4.5 hours
+**Real impact:** She discovered that 51% of bread waste happens at the supplier-retailer interface - exactly what recent 2024 research confirmed!
 
 ## The Educational Piece 📚
 
@@ -626,43 +627,46 @@ She used that as her elevator pitch for the next conference.
 
 **Quick scenario:**
 
-You're writing a paper about carbon offsets. You need:
-- Latest 2024 policy changes
-- Current carbon prices
-- Recent criticism of offset schemes
+You're writing a paper about sustainable beer brewing and circular economy. You need:
+- Latest 2024-2025 brewery sustainability initiatives
+- Current water-to-beer ratios for sustainable breweries
+- Toast Ale's verified CO2 savings from using surplus bread
+- HEINEKEN's net zero commitments
 
 **Your current workflow:**
-1. Google search
-2. Open 10 tabs
-3. Read each one
-4. Take notes
-5. Lose track of which tab had that one stat
-6. Accidentally close the browser
-7. Cry
+1. Google search "sustainable brewing 2024"
+2. Open 15 tabs (company reports, research papers, news articles)
+3. Read each one, take notes
+4. Lose track of which tab had Toast Ale's exact CO2 numbers
+5. Find the stat, accidentally close the tab
+6. Can't remember which site it was from
+7. Start over
 
-**New workflow:** Ask OpenWebUI. Get answer with sources. Done.
+**New workflow:** Ask OpenWebUI with web search. Get answer with sources. Done in 2 minutes.
 
 ## The Story 📖
 
-### Meet Dr. Maria Santos
+### Meet Dr. Javier Torres
 
-Maria studies renewable energy policy in Brazil. Her research question: *"How have feed-in tariffs changed in EU countries since 2023?"*
+Javier studies sustainable cocoa sourcing and deforestation. His research question: *"What progress has Barry Callebaut made on farm-level traceability in 2024?"*
 
-This needs CURRENT data. Her literature is from 2022. ChatGPT's data cutoff is 2023.
+This needs CURRENT data. His literature is from 2022. The Forever Chocolate initiative releases new reports annually.
 
-**She enabled web search in OpenWebUI and asked:**
+**He enabled web search in OpenWebUI and asked:**
 ```
-What changes have EU countries made to feed-in tariffs for solar energy
-in 2024? Include specific countries and dates.
+What is Barry Callebaut's latest progress on cocoa farm traceability
+and deforestation-free sourcing in their 2023/24 Forever Chocolate report?
+Include specific numbers for farm plots mapped and percentage traceable.
 ```
 
 **Result:**
 - AI searched the web
-- Found 8 recent sources
-- Synthesized an answer with citations
-- Included links to policy documents
+- Found the 2023/24 Forever Chocolate Progress Report
+- Extracted specific data: 669,174 farm plots mapped, 46.5% deforestation-free
+- Synthesized answer with citations
+- Included links to official reports and CFI updates
 
-**Time saved:** 2 hours of manual googling
+**Time saved:** 2 hours of manual googling through corporate sustainability reports
 
 ## The Educational Piece 📚
 
@@ -743,8 +747,9 @@ graph TD
 
 Send this:
 ```
-What are the latest (2024-2025) developments in battery recycling
-technology for electric vehicles? Include company names and dates.
+What are the latest (2024-2025) sustainability initiatives in the brewing
+industry? Include specific companies, their water reduction targets, and
+verified CO2 savings. Focus on circular economy approaches.
 ```
 
 **Expected behavior:**
@@ -770,15 +775,17 @@ Now **enable web search** again and ask the same question.
 
 Ask this WITH web search enabled:
 ```
-What is the current price of carbon credits in the EU ETS?
+How much CO2 has Toast Ale saved by using surplus bread instead of
+malted barley? What is their verified 2023 carbon footprint?
 ```
 
 **You should get:**
-- [ ] A specific number (€X per ton)
-- [ ] A recent date
-- [ ] A source URL
+- [ ] Specific number (5.3 tonnes CO2e avoided in 2023)
+- [ ] Their total footprint (150 tCO2e in 2023)
+- [ ] A source URL (toastbrewing.com or similar)
+- [ ] Context about their circular economy model
 
-**This is information the AI cannot know without searching.**
+**This is information the AI cannot know without searching** - it's from Toast Ale's 2024 sustainability report!
 
 ## The Entertainment Piece 🎭
 
@@ -826,15 +833,19 @@ OpenWebUI uses **SearxNG** - a privacy-respecting meta-search engine that:
 
 ## The Anecdote 🗣️
 
-A logistics researcher was writing a grant proposal about port automation. He needed current examples of AI implementation in European ports.
+A food systems researcher was writing a grant proposal about circular economy in brewing. She needed current examples of breweries using waste bread.
 
-He asked OpenWebUI with web search: *"Which European ports implemented AI-driven logistics systems in 2024?"*
+She asked OpenWebUI with web search: *"Which breweries are using surplus bread to replace malted barley in 2024? What are their verified environmental impacts?"*
 
-The AI found 6 examples he'd never heard of, with links to press releases and pilot project reports.
+The AI found:
+- Toast Ale's complete circular economy model
+- Their verified 2023 data (2.9 million slices, 5.3 tonnes CO2e saved)
+- Links to their sustainability report and Ellen MacArthur Foundation case study
+- Similar initiatives in other countries
 
-**He got 3 citations for his grant proposal in 5 minutes.**
+**She got 4 citations with specific numbers for her grant proposal in 5 minutes.**
 
-The grant got funded.
+The grant got funded. Her research now analyzes scaling potential for bread-to-beer circular models across Europe.
 
 ## The Quote 💭
 
@@ -1021,11 +1032,18 @@ and make it look professional. Execute the code to generate the plot.
 
 **Step 3: Test With Real Data Analysis (AI Generates Everything)**
 
-Now let's test AI's ability to do complete data analysis:
+Now let's test AI's ability to do complete data analysis with REAL sustainability data:
 ```
-Generate a dataset of 10 cities with their population and CO2 emissions.
-Then create a scatter plot showing if there's a correlation.
-Calculate and display the correlation coefficient.
+Generate a realistic dataset of 10 breweries with:
+- Water usage (liters water per liter beer produced)
+- CO2 emissions (kg per hectoliter)
+- Percentage of renewable energy used
+
+Then create visualizations showing:
+1. Scatter plot: water usage vs CO2 emissions
+2. Bar chart: breweries ranked by sustainability score
+
+Calculate correlation and identify which factors matter most.
 Execute all the code.
 ```
 
@@ -1135,17 +1153,21 @@ Use realistic parameters and execute the code.
 
 **Starting prompt:**
 ```
-Create sample data of monthly renewable energy production
-(solar, wind, hydro) for a year.
+Create sample data of monthly bread waste reduction initiatives
+at a large bakery over 12 months, showing:
+- Surplus bread (kg)
+- Bread donated to charity (kg)
+- Bread upcycled for brewing (kg)
+- Waste sent to landfill (kg)
 ```
 
 **Then request:**
-1. "Show this as a line graph"
-2. "Show this as a stacked area chart"
-3. "Show this as a heatmap"
-4. "Show this as an interactive plot if possible"
+1. "Show this as a stacked area chart to see waste distribution over time"
+2. "Show this as a line graph comparing the three circular economy routes"
+3. "Create a pie chart showing the final year distribution"
+4. "Make a before/after comparison: Month 1 vs Month 12"
 
-**Point:** Learn what visualization best communicates your insight.
+**Point:** Learn what visualization best communicates your circular economy impact story.
 
 ## Key Learnings 🎓
 
@@ -1380,52 +1402,65 @@ Include citations and reference the data visualization.
 
 **Goal:** Use the RIGHT model for each step of a complete research workflow.
 
-**The Challenge:** Research the topic "AI in sustainable agriculture" using optimal models for each task.
+**The Challenge:** Research the topic "Circular economy in beer brewing: using surplus bread to reduce environmental impact" using optimal models for each task.
 
 **Step 1: Web Search for Current Examples (Use Gemini 2.5 Flash)**
 ```
-Search for the latest (2024-2025) AI applications in sustainable farming.
-What companies are implementing this? What results are they seeing?
+Search for the latest (2024-2025) examples of breweries using surplus bread
+to replace malted barley. Focus on Toast Ale and their verified environmental
+impact data. Include specific CO2 savings and waste reduction numbers.
 ```
-**Expected:** Fast response with current examples and URLs (2-3 min)
+**Expected:** Fast response with Toast Ale's data (2.9M slices, 5.3t CO2e saved), URLs to sustainability reports (2-3 min)
 
 **Step 2: Document Analysis (Switch to Llama 4 Maverick)**
 
-Upload 1-2 research papers about AI and agriculture, then ask:
+Upload 1-2 research papers about circular economy in food systems or bread waste valorization, then ask:
 ```
-Based on these papers, what are the theoretical benefits and challenges
-of AI in sustainable agriculture? Provide detailed citations.
+Based on these papers, what are the theoretical CO2 savings from
+replacing malted barley with surplus bread in brewing? What percentage
+of barley can bread realistically replace? Provide detailed citations.
 ```
-**Expected:** Deep analysis with accurate quotes (3-4 min)
+**Expected:** Deep analysis with accurate quotes about 25-30% replacement rate, land/water savings (3-4 min)
 
 **Step 3: Citation Verification (Switch to Mistral Small)**
 ```
 Review the previous response. Provide page-specific citations for each
-major claim about AI benefits and challenges.
+major claim about bread replacement percentages and environmental benefits.
+Cross-reference with the Toast Ale data from our web search.
 ```
-**Expected:** Precise citations and quote verification (2-3 min)
+**Expected:** Precise citations, confirmation that real-world data (Toast Ale 25% replacement) matches academic predictions (2-3 min)
 
 **Step 4: Data Analysis (Switch to DeepSeek Chat V3)**
 
 Generate or upload sample data, then ask:
 ```
-Generate sample data showing crop yield improvements with AI vs traditional
-methods (30 farms, 2 years). Perform statistical analysis and create
-visualizations. Calculate if the difference is significant.
+Generate realistic data comparing traditional brewing vs bread-supplemented
+brewing for 20 breweries over 2 years:
+- Water usage (L per L beer)
+- CO2 emissions (kg per hL)
+- Land use (m² per hL)
+- Cost savings (% reduction)
+
+Perform statistical analysis: Is the difference significant?
+Create professional visualizations showing the circular economy impact.
 ```
-**Expected:** Clean code, professional visualizations, statistical analysis (3-4 min)
+**Expected:** Clean code, professional charts, t-tests showing significant differences (3-4 min)
 
 **Step 5: Final Synthesis (Use Llama 4 Maverick for complex reasoning)**
 ```
 Based on:
-1. Current industry examples (from web search)
-2. Academic literature (from uploaded papers)
-3. Statistical analysis (from our data analysis)
+1. Toast Ale's verified impact (web search: 2.9M slices, 5.3t CO2e saved)
+2. Academic literature (uploaded papers: theoretical 25-30% replacement)
+3. Statistical analysis (our data: significant reductions across metrics)
 
-Write a 300-word executive summary about AI in sustainable agriculture.
-Include citations, data references, and practical recommendations.
+Write a 300-word executive summary for policymakers about scaling
+bread-to-beer circular economy models. Include:
+- Environmental benefits (with specific numbers)
+- Economic viability
+- Policy recommendations
+- Citations from all three sources
 ```
-**Expected:** Coherent synthesis connecting all sources (3-4 min)
+**Expected:** Coherent synthesis proving circular economy works, with verified data (3-4 min)
 
 **Total Time:** 15-20 minutes for complete research cycle!
 

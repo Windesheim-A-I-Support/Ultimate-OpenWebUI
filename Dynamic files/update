@@ -1,0 +1,46 @@
+docker compose -p localai -f docker-compose.yml --profile cpu down
+docker compose -p localai -f docker-compose.yml --profile cpu pull
+python3 start_services.py --environment private --profile cpu
+
+
+N8N_HOSTNAME=weallhavebracelets-n8n.valuechainhackers.xyz
+WEBUI_HOSTNAME=weallhavebracelets-openwebui.valuechainhackers.xyz
+FLOWISE_HOSTNAME=weallhavebracelets-flowise.valuechainhackers.xyz
+SUPABASE_HOSTNAME=weallhavebracelets-supabase.valuechainhackers.xyz
+OLLAMA_HOSTNAME=weallhavebracelets-ollama.valuechainhackers.xyz
+SEARXNG_HOSTNAME=weallhavebracelets-searxng.valuechainhackers.xyz
+NEO4J_HOSTNAME=weallhavebracelets-neo4j.valuechainhackers.xyz
+
+N8N_HOSTNAME=beer-n8n.valuechainhackers.xyz
+WEBUI_HOSTNAME=beer-openwebui.valuechainhackers.xyz
+FLOWISE_HOSTNAME=beer-flowise.valuechainhackers.xyz
+SUPABASE_HOSTNAME=beer-supabase.valuechainhackers.xyz
+OLLAMA_HOSTNAME=beer-ollama.valuechainhackers.xyz
+SEARXNG_HOSTNAME=beer-searxng.valuechainhackers.xyz
+NEO4J_HOSTNAME=beer-neo4j.valuechainhackers.xyz
+
+N8N_HOSTNAME=chocolate-n8n.valuechainhackers.xyz
+WEBUI_HOSTNAME=chocolate-openwebui.valuechainhackers.xyz
+FLOWISE_HOSTNAME=chocolate-flowise.valuechainhackers.xyz
+SUPABASE_HOSTNAME=chocolate-supabase.valuechainhackers.xyz
+OLLAMA_HOSTNAME=chocolate-ollama.valuechainhackers.xyz
+SEARXNG_HOSTNAME=chocolate-searxng.valuechainhackers.xyz
+NEO4J_HOSTNAME=chocolate-neo4j.valuechainhackers.xyz
+
+N8N_HOSTNAME=qiana-n8n.valuechainhackers.xyz
+WEBUI_HOSTNAME=qiana-openwebui.valuechainhackers.xyz
+FLOWISE_HOSTNAME=qiana-flowise.valuechainhackers.xyz
+SUPABASE_HOSTNAME=qiana-supabase.valuechainhackers.xyz
+OLLAMA_HOSTNAME=qiana-ollama.valuechainhackers.xyz
+SEARXNG_HOSTNAME=qiana-searxng.valuechainhackers.xyz
+NEO4J_HOSTNAME=qiana-neo4j.valuechainhackers.xyz
+
+
+
+N8N_HOSTNAME=team6-n8n.valuechainhackers.xyz
+WEBUI_HOSTNAME=team6-openwebui.valuechainhackers.xyz
+FLOWISE_HOSTNAME=team6-flowise.valuechainhackers.xyz
+SUPABASE_HOSTNAME=team6-supabase.valuechainhackers.xyz
+OLLAMA_HOSTNAME=team6-ollama.valuechainhackers.xyz
+SEARXNG_HOSTNAME=team6-searxng.valuechainhackers.xyz
+NEO4J_HOSTNAME=team6-neo4j.valuechainhackers.xyz
